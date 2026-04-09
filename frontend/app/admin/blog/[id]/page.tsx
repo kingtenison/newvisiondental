@@ -46,7 +46,7 @@ export default function EditBlogPostPage({ params }: { params: { id: string } })
         .eq('id', session.user.id)
         .single();
       
-      if (profile?.role !== 'ADMIN') {
+      if (profile && profile.role !== 'ADMIN') {
         setAuthStatus("unauthenticated");
         router.push("/dashboard");
         return;

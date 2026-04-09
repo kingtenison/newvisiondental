@@ -20,7 +20,7 @@ export default function AdminBlogPage() {
       const { data: { session } } = await supabase.auth.getSession();
       if (!session?.user) { router.push("/login"); return; }
       const { data: profile } = await supabase.from('profiles').select('role').eq('id', session.user.id).single();
-      if (profile?.role !== 'ADMIN') { router.push("/dashboard"); return; }
+      if (profile && profile.role !== 'ADMIN') { router.push("/dashboard"); return; }
       fetchPosts();
     };
     checkAuth();

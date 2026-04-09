@@ -125,6 +125,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               sizes="100vw"
               className="object-cover"
               priority
+              unoptimized={post.featured_image.includes('cloudinary')}
             />
           </div>
         </section>

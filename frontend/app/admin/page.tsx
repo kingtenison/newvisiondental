@@ -17,7 +17,7 @@ async function getAdminDashboardData() {
     .eq("id", user.id)
     .single();
 
-  if (profile?.role !== "ADMIN") redirect("/dashboard");
+  if (profile && profile.role !== "ADMIN") redirect("/dashboard");
 
   const today = new Date().toISOString().split("T")[0];
 

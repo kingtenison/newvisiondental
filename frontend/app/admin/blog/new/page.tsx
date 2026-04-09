@@ -43,7 +43,7 @@ export default function NewBlogPostPage() {
         .eq('id', session.user.id)
         .single();
       
-      if (profile?.role !== 'ADMIN') {
+      if (profile && profile.role !== 'ADMIN') {
         router.push("/dashboard");
         return;
       }

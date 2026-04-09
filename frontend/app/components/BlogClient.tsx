@@ -94,7 +94,7 @@ export default function BlogClient({ posts }: { posts: any[] }) {
                       <div className="grid md:grid-cols-2 gap-0">
                         <div className="relative h-[280px] md:h-[400px] overflow-hidden">
                           {featuredPost.featured_image ? (
-                            <Image src={featuredPost.featured_image} alt={featuredPost.title} fill priority sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <Image src={featuredPost.featured_image} alt={featuredPost.title} fill priority sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-transform duration-700 group-hover:scale-105" unoptimized={featuredPost.featured_image.includes('cloudinary')} />
                           ) : (
                             <div className="w-full h-full bg-gradient-to-br from-[#5C0F22]/10 via-[#D4AF37]/5 to-[#5C0F22]/10 flex items-center justify-center">
                               <BookOpen className="w-16 h-16 text-[#D4AF37]/20" />
@@ -137,7 +137,7 @@ export default function BlogClient({ posts }: { posts: any[] }) {
                         <div className="group bg-white rounded-2xl border border-[#D4AF37]/10 overflow-hidden hover:shadow-lg hover:shadow-[#D4AF37]/6 hover:border-[#D4AF37]/25 transition-all duration-300 h-full flex flex-col">
                           <div className="relative h-56 w-full overflow-hidden">
                             {post.featured_image ? (
-                              <Image src={post.featured_image} alt={post.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-105" loading={index < 3 ? "eager" : "lazy"} />
+                              <Image src={post.featured_image} alt={post.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-105" loading={index < 3 ? "eager" : "lazy"} unoptimized={post.featured_image.includes('cloudinary')} />
                             ) : (
                               <div className="w-full h-full bg-gradient-to-br from-[#5C0F22]/5 via-[#D4AF37]/5 to-[#5C0F22]/5 flex items-center justify-center"><BookOpen className="w-10 h-10 text-[#D4AF37]/20" /></div>
                             )}

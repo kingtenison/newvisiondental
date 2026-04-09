@@ -29,7 +29,7 @@ export default function LoginPage() {
     if (error) {
       setError(error.message);
     } else if (data?.session) {
-      router.push("/dashboard");
+      router.push("/admin");
       router.refresh();
     }
   };
