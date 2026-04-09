@@ -184,18 +184,18 @@ export default function BookPage() {
   return (
     <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative w-full overflow-hidden">
+      <section className="relative w-full min-h-[25vh] md:min-h-[35vh] overflow-hidden py-6 md:py-10">
         <div className="absolute inset-0 bg-gradient-to-br from-[#5C0F22] via-[#4a0c1b] to-[#5C0F22]" />
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
-        <div className="relative w-full px-4 sm:px-6 lg:px-12 py-10 md:py-14 text-center">
+        <div className="relative w-full px-4 sm:px-6 lg:px-12 text-center">
           <div className="animate-[fadeInUp_0.8s_ease-out]">
-            <span className="inline-flex items-center gap-2 text-[#D4AF37] text-xs font-semibold tracking-wide uppercase mb-3">
-              <Calendar className="w-4 h-4" /> Book Online
+            <span className="inline-flex items-center gap-2 text-[#D4AF37] text-xs font-semibold tracking-wide uppercase mb-2">
+              <Calendar className="w-3 h-3" /> Book Online
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-2">
               Book Your <span className="text-golden-shine">Appointment</span>
             </h1>
-            <p className="text-white/60 text-base max-w-xl mx-auto">
+            <p className="text-white/60 text-sm sm:text-base max-w-xl mx-auto hidden sm:block">
               Schedule your dental visit in minutes. Fill in your details, choose your service, date and location.
             </p>
           </div>

@@ -146,7 +146,7 @@ export default function ServicesPage() {
       <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 overflow-x-hidden">
 
         {/* Hero Section */}
-        <section className="relative w-full min-h-[35vh] flex flex-col overflow-hidden">
+        <section className="relative w-full min-h-[25vh] md:min-h-[35vh] flex flex-col overflow-hidden">
           {/* Full Width 4x2 Image Grid */}
           <div className="absolute inset-0 grid grid-cols-4 grid-rows-2">
             {[...Array(8)].map((_, i) => (
@@ -165,13 +165,16 @@ export default function ServicesPage() {
           {/* Wine Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#3D0814]/95 via-[#5C0F22]/70 to-[#7A1A2E]/30" />
           
+          {/* Pattern Overlay */}
+          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+          
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
           
           {/* Gold blurs on wine */}
           <div className="absolute top-10 right-[20%] w-64 h-64 bg-[#D4AF37]/8 rounded-full blur-[120px]" />
           <div className="absolute bottom-10 left-[15%] w-48 h-48 bg-[#D4AF37]/6 rounded-full blur-[100px]" />
 
-          <div className="relative w-full px-4 sm:px-6 lg:px-12 flex-1 flex items-center justify-center py-10 md:py-14">
+          <div className="relative w-full px-4 sm:px-6 lg:px-12 flex-1 flex items-center justify-center py-6 md:py-14">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -182,9 +185,9 @@ export default function ServicesPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="inline-flex items-center gap-2 text-white text-xs sm:text-sm font-semibold tracking-wide uppercase mb-4"
+                className="inline-flex items-center gap-2 text-white text-xs sm:text-sm font-semibold tracking-wide uppercase mb-2"
               >
-                <Sparkles className="w-4 h-4" />
+                <Sparkles className="w-3 h-3" />
                 Our Services
               </motion.span>
 
@@ -192,10 +195,10 @@ export default function ServicesPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
-                className="text-4xl sm:text-5xl md:text-6xl font-bold mb-5 leading-tight"
+                className="text-2xl sm:text-4xl md:text-6xl font-bold mb-3 leading-tight"
               >
                 <span className="text-white">Comprehensive</span>
-                <span className="block text-golden-shine mt-1">
+                <span className="block text-golden-shine mt-0.5">
                   Dental Care
                 </span>
               </motion.h1>
@@ -204,7 +207,7 @@ export default function ServicesPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="text-white/70 text-lg md:text-xl leading-relaxed"
+                className="text-white/70 text-sm md:text-xl leading-relaxed hidden sm:block"
               >
                 From routine checkups to advanced procedures, we provide world-class dental 
                 care for your whole family in a luxury environment.
@@ -215,7 +218,7 @@ export default function ServicesPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
-                className="flex flex-wrap justify-center gap-8 md:gap-12 mt-8 pt-6 border-t border-white/15"
+                className="flex flex-wrap justify-center gap-6 md:gap-12 mt-4 pt-4 border-t border-white/15"
               >
                 {[
                   { value: "12", label: "Services" },
@@ -316,8 +319,10 @@ export default function ServicesPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="relative w-full py-20 overflow-hidden">
+        <section className="relative w-full py-12 md:py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-[#5C0F22] via-[#4a0c1b] to-[#5C0F22]" />
+          {/* Pattern Overlay */}
+          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
           
           {/* Gold blurs */}
@@ -332,28 +337,30 @@ export default function ServicesPage() {
               transition={{ duration: 0.8 }}
               className="max-w-2xl mx-auto"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-5">
+              <h2 className="text-lg sm:text-2xl md:text-5xl font-bold text-white mb-2 md:mb-5">
                 Not Sure Which Service You Need?
               </h2>
-              <p className="text-lg text-white/70 mb-10 leading-relaxed">
+              <p className="text-sm md:text-lg text-white/70 mb-4 md:mb-10 leading-relaxed hidden md:block">
                 Book a consultation and let our experienced dentists help you 
                 find the best treatment for your needs.
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex flex-row items-center justify-center gap-2 md:gap-4">
                 <Link
                   href="/book"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold btn-golden-shine shadow-lg shadow-[#D4AF37]/25 hover:shadow-xl hover:shadow-[#D4AF37]/40 transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center gap-1.5 px-3 py-2 md:px-8 md:py-4 rounded-full font-semibold btn-golden-shine shadow-lg shadow-[#D4AF37]/25 hover:shadow-xl hover:shadow-[#D4AF37]/40 transition-all duration-300 hover:scale-105 text-xs md:text-base"
                 >
-                  <span className="relative z-10 flex items-center gap-2">
-                    Book a Consultation
-                    <ArrowRight className="w-5 h-5" />
+                  <span className="relative z-10 flex items-center gap-1.5">
+                    <span className="hidden sm:inline">Book a Consultation</span>
+                    <span className="sm:hidden">Book</span>
+                    <ArrowRight className="w-3 h-3 md:w-5 md:h-5" />
                   </span>
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold border-2 border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+                  className="inline-flex items-center gap-1.5 px-3 py-2 md:px-8 md:py-4 rounded-full font-semibold border-2 border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300 text-xs md:text-base"
                 >
-                  Contact Us
+                  <span className="hidden sm:inline">Contact Us</span>
+                  <span className="sm:hidden">Contact</span>
                 </Link>
               </div>
             </motion.div>

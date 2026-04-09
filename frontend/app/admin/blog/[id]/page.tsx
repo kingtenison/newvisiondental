@@ -52,7 +52,7 @@ export default function EditBlogPostPage({ params }: { params: { id: string } })
         return;
       }
       
-      setUser({ ...session.user, role: profile.role });
+      setUser({ ...session.user, role: profile?.role || 'USER' });
       setAuthStatus("authenticated");
     };
     checkAuth();

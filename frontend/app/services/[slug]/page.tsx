@@ -594,28 +594,32 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       
       <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 overflow-x-hidden">
-        <section className="w-full bg-gradient-to-r from-primary to-primary-dark py-16 md:py-20">
+        <section className="w-full bg-gradient-to-r from-primary to-primary-dark py-6 md:py-20 relative overflow-hidden">
+          {/* Pattern Overlay */}
+          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
           <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12">
             <FadeIn>
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-6">
-                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                  <service.icon className="w-8 h-8 text-white" />
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 md:gap-6 mb-3 md:mb-6">
+                <div className="w-10 h-10 md:w-16 md:h-16 bg-white/20 rounded-xl md:rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                  <service.icon className="w-5 h-5 md:w-8 md:h-8 text-white" />
                 </div>
                 <div className="text-center sm:text-left">
-                  <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                  <h1 className="text-xl md:text-4xl lg:text-5xl font-bold text-white">
                     {service.name} in <span className="text-white">Accra, Ghana</span>
                   </h1>
-                  <p className="text-lg md:text-xl text-white/90 mt-4 max-w-3xl">{service.description}</p>
+                  <p className="text-sm md:text-xl text-white/90 mt-1 md:mt-4 max-w-3xl hidden sm:block">{service.description}</p>
                 </div>
               </div>
-              <div className="flex flex-wrap justify-center sm:justify-start gap-4 mt-6">
-                <Link href="/book" className="bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all shadow-xl inline-flex items-center gap-2">
-                  <CalendarIcon className="w-5 h-5" />
-                  Book Appointment
+              <div className="flex flex-wrap justify-center sm:justify-start gap-2 md:gap-4 mt-3 md:mt-6">
+                <Link href="/book" className="bg-white text-primary px-4 py-2 md:px-8 md:py-4 rounded-full font-bold hover:bg-gray-100 transition-all shadow-xl inline-flex items-center gap-2 text-sm md:text-base">
+                  <CalendarIcon className="w-4 h-4" />
+                  <span className="hidden sm:inline">Book Appointment</span>
+                  <span className="sm:hidden">Book</span>
                 </Link>
-                <a href="tel:+233257091176" className="bg-white/10 backdrop-blur-sm border border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-primary transition-all inline-flex items-center gap-2">
-                  <Phone className="w-5 h-5" />
-                  Call Us
+                <a href="tel:+233257091176" className="bg-white/10 backdrop-blur-sm border border-white text-white px-4 py-2 md:px-8 md:py-4 rounded-full font-bold hover:bg-white hover:text-primary transition-all inline-flex items-center gap-2 text-sm md:text-base">
+                  <Phone className="w-4 h-4" />
+                  <span className="hidden sm:inline">Call Us</span>
+                  <span className="sm:hidden">Call</span>
                 </a>
               </div>
             </FadeIn>

@@ -158,14 +158,16 @@ export default function GalleryContent() {
       </AnimatePresence>
 
       {/* CTA Section */}
-      <section className="relative w-full py-20 overflow-hidden">
+      <section className="relative w-full py-12 md:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#5C0F22] via-[#4a0c1b] to-[#5C0F22]" />
+        {/* Pattern Overlay */}
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
         <div className="relative w-full px-4 sm:px-6 lg:px-12 text-center">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-5">Ready to Transform Your Smile?</h2>
-            <p className="text-lg text-white/70 mb-10 leading-relaxed">Book a consultation today and start your journey to a beautiful smile.</p>
-            <Link href="/book" className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold btn-golden-shine shadow-lg shadow-[#D4AF37]/25 hover:shadow-xl hover:shadow-[#D4AF37]/40 transition-all duration-300 hover:scale-105">
-              <span className="relative z-10 flex items-center gap-2"><Calendar className="w-5 h-5" /> Book Your Consultation</span>
+            <h2 className="text-xl sm:text-3xl md:text-5xl font-bold text-white mb-3 md:mb-5">Ready to Transform Your Smile?</h2>
+            <p className="text-sm md:text-lg text-white/70 mb-4 md:mb-10 leading-relaxed hidden md:block">Book a consultation today and start your journey to a beautiful smile.</p>
+            <Link href="/book" className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold btn-golden-shine shadow-lg shadow-[#D4AF37]/25 hover:shadow-xl hover:shadow-[#D4AF37]/40 transition-all duration-300 hover:scale-105 text-sm md:text-base">
+              <span className="relative z-10 flex items-center gap-2"><Calendar className="w-4 h-4 md:w-5 md:h-5" /> Book Your Consultation</span>
             </Link>
           </div>
         </div>

@@ -36,6 +36,7 @@ const mobileNavItems = [
   { href: "/services", label: "Services", icon: Stethoscope },
   { href: "/book", label: "Book", icon: Calendar, isPrimary: true },
   { href: "/gallery", label: "Gallery", icon: ImageIcon },
+  { href: "/about", label: "About", icon: Info },
   { href: "tel:+2330559497906", label: "Call", icon: Phone, isCall: true },
 ]
 
@@ -338,9 +339,15 @@ export function Header() {
                 </nav>
 
                 {/* RIGHT: Auth & CTA */}
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2">
                   {/* Mobile Auth - Shows opposite to logo on mobile */}
-                  <div className="flex md:hidden items-center">
+                  <div className="flex md:hidden items-center gap-2">
+                    <a
+                      href="tel:+2330559497906"
+                      className="flex items-center justify-center w-10 h-10 rounded-full bg-[#5C0F22]/10 hover:bg-[#5C0F22]/20 transition-all duration-300"
+                    >
+                      <Phone className="w-5 h-5 text-[#5C0F22]" />
+                    </a>
                     {!isLoading && (
                       session ? (
                         <Link
@@ -352,7 +359,7 @@ export function Header() {
                       ) : (
                         <Link
                           href="/login"
-                          className="px-4 py-2 text-white text-sm font-medium rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 border border-white/20"
+                          className="px-3 py-2 text-white text-sm font-medium rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 border border-white/20"
                         >
                           Log in
                         </Link>
@@ -410,39 +417,25 @@ export function Header() {
         )}
       </AnimatePresence>
 
-      {/* Mobile Bottom Navigation - YouTube/Android Style */}
-      <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-t border-gray-200 shadow-2xl shadow-black/10">
-        <div className="flex items-center justify-around px-2 py-1">
-          {mobileNavItems.map((item) => {
+      {/* Mobile Bottom Navigation */}
+      <nav className="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-t border-gray-200 shadow-2xl shadow-black/10">
+        <div className="flex items-center justify-between px-2 py-1">
+          {[{ href: "/", label: "Home", icon: Home }, { href: "/services", label: "Services", icon: Stethoscope }, { href: "/book", label: "Book", icon: Calendar, isPrimary: true }, { href: "/gallery", label: "Gallery", icon: ImageIcon }, { href: "/about", label: "About", icon: Info }].map((item) => {
             const Icon = item.icon
             const isBookNow = item.isPrimary
-            const isCallItem = item.isCall
             
             if (isBookNow) {
               return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="flex flex-col items-center justify-center py-2 px-3 -mt-6"
-                  >
-                    <div className="w-14 h-14 rounded-full btn-golden-shine flex items-center justify-center shadow-lg shadow-[#D4AF37]/30 mb-1">
-                      <Icon className="w-6 h-6" />
-                    </div>
-                  <span className="text-[10px] font-semibold text-[#D4AF37]">{item.label}</span>
-                </Link>
-              )
-            }
-
-            if (isCallItem) {
-              return (
-                <a
+                <Link
                   key={item.href}
                   href={item.href}
-                  className="flex flex-col items-center justify-center py-2 px-3 text-[#5C0F22] hover:text-[#D4AF37] transition-colors duration-200"
+                  className="flex flex-col items-center justify-center py-2 -mt-5"
                 >
-                  <Icon className="w-6 h-6 mb-1" />
-                  <span className="text-[10px] font-medium">{item.label}</span>
-                </a>
+                  <div className="w-12 h-12 rounded-full btn-golden-shine flex items-center justify-center shadow-lg shadow-[#D4AF37]/30 mb-0.5">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <span className="text-[9px] font-semibold text-[#D4AF37]">{item.label}</span>
+                </Link>
               )
             }
             
@@ -450,16 +443,34 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="flex flex-col items-center justify-center py-2 px-3 text-gray-500 hover:text-[#D4AF37] transition-colors duration-200"
+                className="flex flex-col items-center justify-center py-2 px-2 text-gray-500 hover:text-[#D4AF37] transition-colors duration-200"
               >
-                <Icon className="w-6 h-6 mb-1" />
+                <Icon className="w-5 h-5 mb-0.5" />
+                <span className="text-[9px] font-medium">{item.label}</span>
+              </Link>
+            )
+          })}
+        </div>
+        <div className="h-safe-area-inset-bottom bg-white" />
+      </nav>
+
+      {/* Tablet Top Navigation */}
+      <nav className="hidden sm:block lg:hidden fixed top-[72px] left-0 right-0 z-40 bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-sm">
+        <div className="flex items-center justify-around px-2 py-2 max-w-2xl mx-auto">
+          {[{ href: "/", label: "Home", icon: Home }, { href: "/services", label: "Services", icon: Stethoscope }, { href: "/book", label: "Book", icon: Calendar }, { href: "/gallery", label: "Gallery", icon: ImageIcon }, { href: "/about", label: "About", icon: Info }].map((item) => {
+            const Icon = item.icon
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="flex flex-col items-center justify-center px-2 py-1 text-gray-600 hover:text-[#D4AF37] transition-colors duration-200"
+              >
+                <Icon className="w-4 h-4 mb-0.5" />
                 <span className="text-[10px] font-medium">{item.label}</span>
               </Link>
             )
           })}
         </div>
-        {/* Safe area padding for phones with home indicator */}
-        <div className="h-safe-area-inset-bottom bg-white" />
       </nav>
 
       {/* Mobile Side Panel (for additional options) */}
