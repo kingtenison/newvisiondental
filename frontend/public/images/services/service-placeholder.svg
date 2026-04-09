@@ -1,0 +1,5 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#2E7D32" opacity="0.1"/>
+  <circle cx="200" cy="150" r="80" fill="#C1121F" opacity="0.2"/>
+  <text x="200" y="160" font-family="Arial" font-size="18" fill="#C1121F" text-anchor="middle">Service Image</text>
+</svg>

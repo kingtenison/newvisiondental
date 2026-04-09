@@ -1,0 +1,6 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#C1121F" opacity="0.1"/>
+  <rect x="100" y="100" width="600" height="400" fill="#C1121F" opacity="0.2" rx="20"/>
+  <text x="400" y="300" font-family="Arial" font-size="24" fill="#C1121F" text-anchor="middle">Dental Clinic Hero</text>
+  <text x="400" y="350" font-family="Arial" font-size="16" fill="#2E7D32" text-anchor="middle">New Vision Dental</text>
+</svg>
