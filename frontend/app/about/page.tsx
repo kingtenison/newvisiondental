@@ -104,57 +104,32 @@ export default function AboutPage() {
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
         
         <div className="relative w-full px-4 sm:px-6 lg:px-12 flex-1 flex items-center justify-center py-4 md:py-14">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="inline-flex items-center gap-2 text-white text-xs sm:text-sm font-semibold tracking-wide uppercase mb-2"
-            >
+          <div className="text-center max-w-3xl mx-auto animate-[fadeInUp_0.8s_ease-out]">
+            <span className="inline-flex items-center gap-2 text-white text-xs sm:text-sm font-semibold tracking-wide uppercase mb-2">
               <Sparkles className="w-3 h-3" />
               About Us
-            </motion.span>
+            </span>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="text-2xl sm:text-4xl md:text-6xl font-bold mb-2 leading-tight"
-            >
+            <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold mb-2 leading-tight">
               <span className="text-white">About</span>
               <span className="block text-golden-shine mt-0.5">New Vision Dental</span>
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-white/70 text-sm md:text-xl leading-relaxed hidden sm:block"
-            >
+            <p className="text-white/70 text-sm md:text-xl leading-relaxed hidden sm:block">
               Your complete oral healthcare centre in Accra, Ghana. 
               Dedicated to creating confident smiles since 2011.
-            </motion.p>
+            </p>
 
             {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className="flex flex-wrap justify-center gap-4 md:gap-12 mt-3 pt-3 border-t border-white/15"
-            >
+            <div className="flex flex-wrap justify-center gap-4 md:gap-12 mt-3 pt-3 border-t border-white/15">
               {stats.map((stat, i) => (
                 <div key={i} className="text-center">
                   <p className="text-xl sm:text-3xl font-bold text-white">{stat.value}</p>
                   <p className="text-xs text-white/50 mt-0.5">{stat.label}</p>
                 </div>
               ))}
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 

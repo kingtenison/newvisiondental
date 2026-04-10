@@ -175,51 +175,26 @@ export default function ServicesPage() {
           <div className="absolute bottom-10 left-[15%] w-48 h-48 bg-[#D4AF37]/6 rounded-full blur-[100px]" />
 
           <div className="relative w-full px-4 sm:px-6 lg:px-12 flex-1 flex items-center justify-center py-6 md:py-14">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-3xl mx-auto"
-            >
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-                className="inline-flex items-center gap-2 text-white text-xs sm:text-sm font-semibold tracking-wide uppercase mb-2"
-              >
+            <div className="text-center max-w-3xl mx-auto animate-[fadeInUp_0.8s_ease-out]">
+              <span className="inline-flex items-center gap-2 text-white text-xs sm:text-sm font-semibold tracking-wide uppercase mb-2">
                 <Sparkles className="w-3 h-3" />
                 Our Services
-              </motion.span>
+              </span>
 
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.6 }}
-                className="text-2xl sm:text-4xl md:text-6xl font-bold mb-3 leading-tight"
-              >
+              <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold mb-3 leading-tight">
                 <span className="text-white">Comprehensive</span>
                 <span className="block text-golden-shine mt-0.5">
                   Dental Care
                 </span>
-              </motion.h1>
+              </h1>
 
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
-                className="text-white/70 text-sm md:text-xl leading-relaxed hidden sm:block"
-              >
+              <p className="text-white/70 text-sm md:text-xl leading-relaxed hidden sm:block">
                 From routine checkups to advanced procedures, we provide world-class dental 
                 care for your whole family in a luxury environment.
-              </motion.p>
+              </p>
 
               {/* Stats bar */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-                className="flex flex-wrap justify-center gap-6 md:gap-12 mt-4 pt-4 border-t border-white/15"
-              >
+              <div className="flex flex-wrap justify-center gap-6 md:gap-12 mt-4 pt-4 border-t border-white/15">
                 {[
                   { value: "12", label: "Services" },
                   { value: "4.9", label: "Rating", showStar: true },
@@ -234,8 +209,8 @@ export default function ServicesPage() {
                     <p className="text-sm text-white/50 mt-1">{stat.label}</p>
                   </div>
                 ))}
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -244,75 +219,72 @@ export default function ServicesPage() {
           <div className="w-full px-4 sm:px-6 lg:px-12">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <motion.div
-                  key={service.slug}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                <Link 
+                  key={service.slug} 
+                  href={`/services/${service.slug}`} 
+                  className="block h-full animate-[fadeIn_0.5s_ease-out] opacity-0" 
+                  style={{ animationDelay: `${index * 50}ms`, animationFillMode: 'both' }}
                 >
-                  <Link href={`/services/${service.slug}`} className="block h-full">
-                    <div className="group relative h-full bg-white rounded-2xl border border-[#D4AF37]/15 shadow-lg shadow-black/5 hover:shadow-2xl hover:shadow-[#D4AF37]/20 hover:border-[#D4AF37]/40 transition-all duration-300 overflow-hidden flex flex-col hover:ring-2 hover:ring-[#D4AF37]/10">
+                  <div className="group relative h-full bg-white rounded-2xl border border-[#D4AF37]/15 shadow-lg shadow-black/5 hover:shadow-2xl hover:shadow-[#D4AF37]/20 hover:border-[#D4AF37]/40 transition-all duration-300 overflow-hidden flex flex-col hover:ring-2 hover:ring-[#D4AF37]/10">
+                    
+                    {/* Image */}
+                    <div className="relative h-52 w-full overflow-hidden">
+                      <Image
+                        src={service.image}
+                        alt={service.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                       
-                      {/* Image */}
-                      <div className="relative h-52 w-full overflow-hidden">
-                        <Image
-                          src={service.image}
-                          alt={service.name}
-                          fill
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          className="object-cover transition-transform duration-700 group-hover:scale-110"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                        
-                        {/* Rating badge */}
-                        <div className="absolute top-3 left-3 flex items-center gap-1 px-2.5 py-1 bg-white/95 backdrop-blur-sm rounded-full shadow-sm">
-                          <Star className="w-3.5 h-3.5 text-[#D4AF37] fill-[#D4AF37]" />
-                          <span className="text-xs font-bold text-gray-900">{service.rating}</span>
-                        </div>
+                      {/* Rating badge */}
+                      <div className="absolute top-3 left-3 flex items-center gap-1 px-2.5 py-1 bg-white/95 backdrop-blur-sm rounded-full shadow-sm">
+                        <Star className="w-3.5 h-3.5 text-[#D4AF37] fill-[#D4AF37]" />
+                        <span className="text-xs font-bold text-gray-900">{service.rating}</span>
                       </div>
-
-                      {/* Content */}
-                      <div className="p-6 flex-1 flex flex-col">
-                        {/* Icon + Title */}
-                        <div className="flex items-center gap-3 mb-3">
-                          <div className="w-10 h-10 bg-[#D4AF37]/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-[#D4AF37]/20 transition-colors">
-                            <service.icon className="w-5 h-5 text-[#D4AF37]" />
-                          </div>
-                          <h2 className="text-lg font-bold text-[#5C0F22]">{service.name}</h2>
-                        </div>
-
-                        {/* Description */}
-                        <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-1">{service.description}</p>
-
-                        {/* Features */}
-                        <div className="flex flex-wrap gap-2 mb-5">
-                          {service.features.map((feature, i) => (
-                            <span key={i} className="inline-flex items-center gap-1 text-xs text-gray-500 bg-gray-50 px-2.5 py-1 rounded-full">
-                              <Check className="w-3 h-3 text-[#D4AF37]" />
-                              {feature}
-                            </span>
-                          ))}
-                        </div>
-
-                        {/* Footer */}
-                        <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                          <span className="flex items-center text-sm text-gray-500">
-                            <Clock className="w-4 h-4 mr-1.5 text-[#D4AF37]/60" />
-                            {service.duration}
-                          </span>
-                          <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#5C0F22] group-hover:gap-2 transition-all">
-                            Learn more
-                            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
-                          </span>
-                        </div>
-                      </div>
-
-                      {/* Gold accent line at bottom */}
-                      <div className="h-0.5 bg-gradient-to-r from-[#D4AF37] via-[#B8941F] to-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
-                  </Link>
-                </motion.div>
+
+                    {/* Content */}
+                    <div className="p-6 flex-1 flex flex-col">
+                      {/* Icon + Title */}
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="w-10 h-10 bg-[#D4AF37]/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-[#D4AF37]/20 transition-colors">
+                          <service.icon className="w-5 h-5 text-[#D4AF37]" />
+                        </div>
+                        <h2 className="text-lg font-bold text-[#5C0F22]">{service.name}</h2>
+                      </div>
+
+                      {/* Description */}
+                      <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-1">{service.description}</p>
+
+                      {/* Features */}
+                      <div className="flex flex-wrap gap-2 mb-5">
+                        {service.features.map((feature, i) => (
+                          <span key={i} className="inline-flex items-center gap-1 text-xs text-gray-500 bg-gray-50 px-2.5 py-1 rounded-full">
+                            <Check className="w-3 h-3 text-[#D4AF37]" />
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Footer */}
+                      <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                        <span className="flex items-center text-sm text-gray-500">
+                          <Clock className="w-4 h-4 mr-1.5 text-[#D4AF37]/60" />
+                          {service.duration}
+                        </span>
+                        <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#5C0F22] group-hover:gap-2 transition-all">
+                          Learn more
+                          <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Gold accent line at bottom */}
+                    <div className="h-0.5 bg-gradient-to-r from-[#D4AF37] via-[#B8941F] to-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                </Link>
               ))}
             </div>
           </div>
