@@ -147,19 +147,15 @@ export default function ServicesPage() {
 
         {/* Hero Section */}
         <section className="relative w-full min-h-[25vh] md:min-h-[35vh] flex flex-col overflow-hidden">
-          {/* Full Width 4x2 Image Grid */}
-          <div className="absolute inset-0 grid grid-cols-4 grid-rows-2">
-            {[...Array(8)].map((_, i) => (
-              <div key={i} className="relative h-full w-full">
-                <Image
-                  src="/images/gallery/dental bacccccc.png"
-                  alt="Dental background"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-            ))}
+          {/* Single Background Image */}
+          <div className="absolute inset-0">
+            <Image
+              src="/images/gallery/dental bacccccc.png"
+              alt="Dental background"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
           
           {/* Wine Gradient Overlay */}
@@ -175,7 +171,7 @@ export default function ServicesPage() {
           <div className="absolute bottom-10 left-[15%] w-48 h-48 bg-[#D4AF37]/6 rounded-full blur-[100px]" />
 
           <div className="relative w-full px-4 sm:px-6 lg:px-12 flex-1 flex items-center justify-center py-6 md:py-14">
-            <div className="text-center max-w-3xl mx-auto animate-[fadeInUp_0.8s_ease-out]">
+            <div className="text-center max-w-3xl mx-auto">
               <span className="inline-flex items-center gap-2 text-white text-xs sm:text-sm font-semibold tracking-wide uppercase mb-2">
                 <Sparkles className="w-3 h-3" />
                 Our Services
@@ -218,14 +214,13 @@ export default function ServicesPage() {
         <section className="w-full pt-8 md:pt-12 pb-16 md:pb-20">
           <div className="w-full px-4 sm:px-6 lg:px-12">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
+              {services.map((service) => (
                 <Link 
                   key={service.slug} 
                   href={`/services/${service.slug}`} 
-                  className="block h-full animate-[fadeIn_0.5s_ease-out] opacity-0" 
-                  style={{ animationDelay: `${index * 50}ms`, animationFillMode: 'both' }}
+                  className="block h-full"
                 >
-                  <div className="group relative h-full bg-white rounded-2xl border border-[#D4AF37]/15 shadow-lg shadow-black/5 hover:shadow-2xl hover:shadow-[#D4AF37]/20 hover:border-[#D4AF37]/40 transition-all duration-300 overflow-hidden flex flex-col hover:ring-2 hover:ring-[#D4AF37]/10">
+                  <div className="group relative h-full bg-white rounded-2xl border border-[#D4AF37]/15 shadow-lg shadow-black/5 hover:shadow-xl hover:shadow-[#D4AF37]/20 hover:border-[#D4AF37]/40 transition-all duration-300 overflow-hidden flex flex-col">
                     
                     {/* Image */}
                     <div className="relative h-52 w-full overflow-hidden">
@@ -234,7 +229,7 @@ export default function ServicesPage() {
                         alt={service.name}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                       

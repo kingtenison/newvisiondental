@@ -27,19 +27,15 @@ export default function GalleryClient({ images, categories }: { images: GalleryI
     <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative w-full min-h-[25vh] md:min-h-[35vh] flex flex-col overflow-hidden">
-        {/* Full Width 4x2 Image Grid */}
-        <div className="absolute inset-0 grid grid-cols-4 grid-rows-2">
-          {[...Array(8)].map((_, i) => (
-            <div key={i} className="relative h-full w-full">
-              <Image
-                src="/images/gallery/dental bacccccc.png"
-                alt="Dental background"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-          ))}
+        {/* Single Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/gallery/dental bacccccc.png"
+            alt="Dental background"
+            fill
+            className="object-cover"
+            priority
+          />
         </div>
         
         {/* Wine Gradient Overlay */}
@@ -51,7 +47,7 @@ export default function GalleryClient({ images, categories }: { images: GalleryI
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
         
         <div className="relative w-full px-4 sm:px-6 lg:px-12 flex-1 flex items-center justify-center py-4 md:py-14">
-          <div className="text-center max-w-3xl mx-auto animate-[fadeInUp_0.8s_ease-out]">
+          <div className="text-center max-w-3xl mx-auto">
             <span className="inline-flex items-center gap-2 text-white text-xs sm:text-sm font-semibold tracking-wide uppercase mb-2">
               <Camera className="w-3 h-3" /> Smile Gallery
             </span>
