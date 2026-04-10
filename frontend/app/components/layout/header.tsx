@@ -418,7 +418,7 @@ export function Header() {
       </AnimatePresence>
 
       {/* Mobile Bottom Navigation */}
-      <nav className="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-t border-gray-200 shadow-2xl shadow-black/10">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-t border-gray-200 shadow-2xl shadow-black/10">
         <div className="flex items-center justify-between px-2 py-1">
           {[{ href: "/", label: "Home", icon: Home }, { href: "/services", label: "Services", icon: Stethoscope }, { href: "/book", label: "Book", icon: Calendar, isPrimary: true }, { href: "/gallery", label: "Gallery", icon: ImageIcon }, { href: "/about", label: "About", icon: Info }].map((item) => {
             const Icon = item.icon
@@ -455,7 +455,7 @@ export function Header() {
       </nav>
 
       {/* Tablet Top Navigation */}
-      <nav className="hidden sm:block lg:hidden fixed top-[72px] left-0 right-0 z-40 bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-sm">
+      <nav className="hidden md:block lg:hidden fixed top-[72px] left-0 right-0 z-40 bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-sm">
         <div className="flex items-center justify-around px-2 py-2 max-w-2xl mx-auto">
           {[{ href: "/", label: "Home", icon: Home }, { href: "/services", label: "Services", icon: Stethoscope }, { href: "/book", label: "Book", icon: Calendar }, { href: "/gallery", label: "Gallery", icon: ImageIcon }, { href: "/about", label: "About", icon: Info }].map((item) => {
             const Icon = item.icon
