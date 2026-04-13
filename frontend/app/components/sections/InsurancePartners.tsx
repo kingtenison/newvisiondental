@@ -83,12 +83,12 @@ export default function InsurancePartners() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
             >
-              <div className="relative h-28 w-full flex items-center justify-center">
+              <div className="relative h-40 w-full flex items-center justify-center">
                 <Image
                   src={partner.img}
                   alt={partner.name}
                   fill
-                  className="object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  className="object-contain transition-all duration-300"
                   sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
                 />
               </div>

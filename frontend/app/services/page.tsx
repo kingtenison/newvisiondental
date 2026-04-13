@@ -147,15 +147,19 @@ export default function ServicesPage() {
 
         {/* Hero Section */}
         <section className="relative w-full min-h-[25vh] md:min-h-[35vh] flex flex-col overflow-hidden">
-          {/* Single Background Image */}
-          <div className="absolute inset-0">
-            <Image
-              src="/images/gallery/dental bacccccc.png"
-              alt="Dental background"
-              fill
-              className="object-cover"
-              priority
-            />
+          {/* 4x2 Image Grid */}
+          <div className="absolute inset-0 grid grid-cols-4 grid-rows-2">
+            {[...Array(8)].map((_, i) => (
+              <div key={i} className="relative h-full w-full">
+                <Image
+                  src="/images/gallery/dental bacccccc.png"
+                  alt="Dental background"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            ))}
           </div>
           
           {/* Wine Gradient Overlay */}
