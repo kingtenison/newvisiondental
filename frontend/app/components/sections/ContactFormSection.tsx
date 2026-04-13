@@ -73,23 +73,48 @@ export default function ContactFormSection() {
         backgroundSize: '60px 60px'
       }} />
       
-      {/* Background Images - 4x2 grid */}
-      <div className="absolute inset-0 grid grid-cols-4 grid-rows-2">
-        {[...Array(8)].map((_, i) => (
-          <div key={i} className="relative h-full w-full">
-            <Image
-              src="/images/gallery/dental bacccccc.png"
-              alt="Dental background"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-        ))}
+      {/* Background Images - 2x2 grid - subtle */}
+      <div className="absolute inset-0 grid grid-cols-2 grid-rows-2">
+        <div className="relative h-full w-full">
+          <Image
+            src="/images/gallery/dental bacccccc.png"
+            alt="Dental background"
+            fill
+            className="object-cover opacity-20"
+            priority
+          />
+        </div>
+        <div className="relative h-full w-full">
+          <Image
+            src="/images/gallery/dental bacccccc.png"
+            alt="Dental background"
+            fill
+            className="object-cover opacity-20"
+            priority
+          />
+        </div>
+        <div className="relative h-full w-full">
+          <Image
+            src="/images/gallery/dental bacccccc.png"
+            alt="Dental background"
+            fill
+            className="object-cover opacity-20"
+            priority
+          />
+        </div>
+        <div className="relative h-full w-full">
+          <Image
+            src="/images/gallery/dental bacccccc.png"
+            alt="Dental background"
+            fill
+            className="object-cover opacity-20"
+            priority
+          />
+        </div>
       </div>
       
       {/* Overlay - helps blend from rich wine at top to white at bottom */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#2a0a15]/50 via-white/20 to-white/60" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#2a0a15]/50 via-white/10 to-white/30" />
 
       <div className="relative w-full px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto">
         <motion.div 
