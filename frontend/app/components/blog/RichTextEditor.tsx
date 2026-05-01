@@ -65,79 +65,79 @@ if (!isMounted) {
   };
 
   return (
-<div className="border-2 border-[#D4AF37]/20 rounded-lg overflow-hidden bg-white">
+<div className="border-2 border-[#E8B830]/20 rounded-lg overflow-hidden bg-white">
       {/* Toolbar */}
-      <div className="flex flex-wrap gap-1 p-2 border-b border-[#D4AF37]/20 bg-[#FFFDF5]">
+      <div className="flex flex-wrap gap-1 p-2 border-b border-[#E8B830]/20 bg-[#FFFDF5]">
         <button
           onClick={() => editor.chain().focus().toggleBold().run()}
-          className={`p-2 rounded hover:bg-[#D4AF37]/10 transition ${editor.isActive('bold') ? 'bg-[#D4AF37]/20 text-[#5C0F22]' : 'text-gray-600'}`}
+          className={`p-2 rounded hover:bg-[#E8B830]/10 transition ${editor.isActive('bold') ? 'bg-[#E8B830]/20 text-[#1A4FAD]' : 'text-gray-600'}`}
           title="Bold"
         >
           <Bold className="w-4 h-4" />
         </button>
         <button
           onClick={() => editor.chain().focus().toggleItalic().run()}
-          className={`p-2 rounded hover:bg-[#D4AF37]/10 transition ${editor.isActive('italic') ? 'bg-[#D4AF37]/20 text-[#5C0F22]' : 'text-gray-600'}`}
+          className={`p-2 rounded hover:bg-[#E8B830]/10 transition ${editor.isActive('italic') ? 'bg-[#E8B830]/20 text-[#1A4FAD]' : 'text-gray-600'}`}
           title="Italic"
         >
           <Italic className="w-4 h-4" />
         </button>
-        <div className="w-px h-6 bg-[#D4AF37]/20 mx-1"></div>
+        <div className="w-px h-6 bg-[#E8B830]/20 mx-1"></div>
         <button
           onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
-          className={`p-2 rounded hover:bg-[#D4AF37]/10 transition ${editor.isActive('heading', { level: 1 }) ? 'bg-[#D4AF37]/20 text-[#5C0F22]' : 'text-gray-600'}`}
+          className={`p-2 rounded hover:bg-[#E8B830]/10 transition ${editor.isActive('heading', { level: 1 }) ? 'bg-[#E8B830]/20 text-[#1A4FAD]' : 'text-gray-600'}`}
           title="Heading 1"
         >
           <Heading1 className="w-4 h-4" />
         </button>
         <button
           onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
-          className={`p-2 rounded hover:bg-[#D4AF37]/10 transition ${editor.isActive('heading', { level: 2 }) ? 'bg-[#D4AF37]/20 text-[#5C0F22]' : 'text-gray-600'}`}
+          className={`p-2 rounded hover:bg-[#E8B830]/10 transition ${editor.isActive('heading', { level: 2 }) ? 'bg-[#E8B830]/20 text-[#1A4FAD]' : 'text-gray-600'}`}
           title="Heading 2"
         >
           <Heading2 className="w-4 h-4" />
         </button>
-        <div className="w-px h-6 bg-[#D4AF37]/20 mx-1"></div>
+        <div className="w-px h-6 bg-[#E8B830]/20 mx-1"></div>
         <button
           onClick={() => editor.chain().focus().toggleBulletList().run()}
-          className={`p-2 rounded hover:bg-[#D4AF37]/10 transition ${editor.isActive('bulletList') ? 'bg-[#D4AF37]/20 text-[#5C0F22]' : 'text-gray-600'}`}
+          className={`p-2 rounded hover:bg-[#E8B830]/10 transition ${editor.isActive('bulletList') ? 'bg-[#E8B830]/20 text-[#1A4FAD]' : 'text-gray-600'}`}
           title="Bullet List"
         >
           <List className="w-4 h-4" />
         </button>
         <button
           onClick={() => editor.chain().focus().toggleOrderedList().run()}
-          className={`p-2 rounded hover:bg-[#D4AF37]/10 transition ${editor.isActive('orderedList') ? 'bg-[#D4AF37]/20 text-[#5C0F22]' : 'text-gray-600'}`}
+          className={`p-2 rounded hover:bg-[#E8B830]/10 transition ${editor.isActive('orderedList') ? 'bg-[#E8B830]/20 text-[#1A4FAD]' : 'text-gray-600'}`}
           title="Numbered List"
         >
           <ListOrdered className="w-4 h-4" />
         </button>
-        <div className="w-px h-6 bg-[#D4AF37]/20 mx-1"></div>
+        <div className="w-px h-6 bg-[#E8B830]/20 mx-1"></div>
         <button
           onClick={addImage}
-          className="p-2 rounded hover:bg-[#D4AF37]/10 transition text-gray-600"
+          className="p-2 rounded hover:bg-[#E8B830]/10 transition text-gray-600"
           title="Add Image"
         >
           <ImageIcon className="w-4 h-4" />
         </button>
         <button
           onClick={addLink}
-          className={`p-2 rounded hover:bg-[#D4AF37]/10 transition ${editor.isActive('link') ? 'bg-[#D4AF37]/20 text-[#5C0F22]' : 'text-gray-600'}`}
+          className={`p-2 rounded hover:bg-[#E8B830]/10 transition ${editor.isActive('link') ? 'bg-[#E8B830]/20 text-[#1A4FAD]' : 'text-gray-600'}`}
           title="Add Link"
         >
           <LinkIcon className="w-4 h-4" />
         </button>
-        <div className="w-px h-6 bg-[#D4AF37]/20 mx-1"></div>
+        <div className="w-px h-6 bg-[#E8B830]/20 mx-1"></div>
         <button
           onClick={() => editor.chain().focus().undo().run()}
-          className="p-2 rounded hover:bg-[#D4AF37]/10 transition text-gray-600"
+          className="p-2 rounded hover:bg-[#E8B830]/10 transition text-gray-600"
           title="Undo"
         >
           <Undo className="w-4 h-4" />
         </button>
         <button
           onClick={() => editor.chain().focus().redo().run()}
-          className="p-2 rounded hover:bg-[#D4AF37]/10 transition text-gray-600"
+          className="p-2 rounded hover:bg-[#E8B830]/10 transition text-gray-600"
           title="Redo"
         >
           <Redo className="w-4 h-4" />

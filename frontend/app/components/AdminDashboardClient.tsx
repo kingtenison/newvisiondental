@@ -50,18 +50,18 @@ export default function AdminDashboardClient({
   ];
 
   return (
-    <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 overflow-x-hidden">
+    <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 overflow-x-hidden">
       <section className="relative w-full overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#5C0F22] via-[#4a0c1b] to-[#5C0F22]" />
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8]" />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E8B830]/30 to-transparent" />
         <div className="relative w-full px-4 sm:px-6 lg:px-12 py-10 md:py-14">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
               <div className="flex items-center gap-3 mb-2">
-                <div className="w-10 h-10 bg-[#D4AF37]/10 rounded-xl flex items-center justify-center border border-[#D4AF37]/20">
-                  <LayoutDashboard className="w-5 h-5 text-[#D4AF37]" />
+                <div className="w-10 h-10 bg-[#E8B830]/10 rounded-xl flex items-center justify-center border border-[#E8B830]/20">
+                  <LayoutDashboard className="w-5 h-5 text-[#E8B830]" />
                 </div>
-                <span className="text-[#D4AF37] text-xs font-semibold tracking-wide uppercase">Admin</span>
+                <span className="text-[#E8B830] text-xs font-semibold tracking-wide uppercase">Admin</span>
               </div>
               <h1 className="text-3xl md:text-4xl font-bold text-white mb-1">Dashboard</h1>
               <p className="text-white/60 text-sm">Welcome back, {user.email?.split("@")[0]}!</p>
@@ -77,9 +77,9 @@ export default function AdminDashboardClient({
         <div className="w-full px-4 sm:px-6 lg:px-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {statCards.map((stat, i) => (
-              <div key={i} className="bg-[#5C0F22] rounded-xl p-5 border border-[#5C0F22] hover:border-[#D4AF37]/30 hover:shadow-md transition-all animate-[fadeInUp_0.5s_ease-out_both]" style={{ animationDelay: `${i * 100}ms` }}>
+              <div key={i} className="bg-[#1A4FAD] rounded-xl p-5 border border-[#1A4FAD] hover:border-[#E8B830]/30 hover:shadow-md transition-all animate-[fadeInUp_0.5s_ease-out_both]" style={{ animationDelay: `${i * 100}ms` }}>
                 <div className="flex items-center justify-between mb-3">
-                  <div className="w-10 h-10 bg-[#D4AF37]/10 rounded-lg flex items-center justify-center"><stat.icon className="w-5 h-5 text-[#D4AF37]" /></div>
+                  <div className="w-10 h-10 bg-[#E8B830]/10 rounded-lg flex items-center justify-center"><stat.icon className="w-5 h-5 text-[#E8B830]" /></div>
                   <span className="text-2xl font-bold text-white">{stat.value}</span>
                 </div>
                 <p className="text-white/70 text-sm">{stat.label}</p>
@@ -91,11 +91,11 @@ export default function AdminDashboardClient({
 
       <section className="w-full py-6 bg-[#FFFDF5]">
         <div className="w-full px-4 sm:px-6 lg:px-12">
-          <h2 className="text-lg font-bold text-[#5C0F22] mb-4">Quick Actions</h2>
+          <h2 className="text-lg font-bold text-[#1A4FAD] mb-4">Quick Actions</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3">
             {quickActions.map((action) => (
-              <Link key={action.href} href={action.href} className="bg-[#5C0F22] rounded-xl p-4 text-center border border-[#5C0F22] hover:shadow-md hover:border-[#D4AF37]/30 hover:-translate-y-0.5 transition-all duration-300 group">
-                <div className="w-10 h-10 bg-[#D4AF37]/10 rounded-lg flex items-center justify-center mx-auto mb-2 group-hover:bg-[#D4AF37]/20 transition-colors"><action.icon className="w-5 h-5 text-[#D4AF37]" /></div>
+              <Link key={action.href} href={action.href} className="bg-[#1A4FAD] rounded-xl p-4 text-center border border-[#1A4FAD] hover:shadow-md hover:border-[#E8B830]/30 hover:-translate-y-0.5 transition-all duration-300 group">
+                <div className="w-10 h-10 bg-[#E8B830]/10 rounded-lg flex items-center justify-center mx-auto mb-2 group-hover:bg-[#E8B830]/20 transition-colors"><action.icon className="w-5 h-5 text-[#E8B830]" /></div>
                 <span className="text-xs font-medium text-white">{action.label}</span>
               </Link>
             ))}
@@ -106,10 +106,10 @@ export default function AdminDashboardClient({
       <section className="w-full py-8 bg-[#FFFDF5]">
         <div className="w-full px-4 sm:px-6 lg:px-12">
           <div className="flex justify-between items-center mb-4">
-            <h2 className="text-lg font-bold text-[#5C0F22]">Recent Appointments</h2>
-            <Link href="/admin/appointments" className="text-[#5C0F22] hover:text-[#D4AF37] text-sm font-medium flex items-center gap-1 transition-colors">View All <ArrowRight className="w-4 h-4" /></Link>
+            <h2 className="text-lg font-bold text-[#1A4FAD]">Recent Appointments</h2>
+            <Link href="/admin/appointments" className="text-[#1A4FAD] hover:text-[#E8B830] text-sm font-medium flex items-center gap-1 transition-colors">View All <ArrowRight className="w-4 h-4" /></Link>
           </div>
-          <div className="bg-white rounded-xl overflow-hidden border border-[#D4AF37]/15">
+          <div className="bg-white rounded-xl overflow-hidden border border-[#E8B830]/15">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead className="bg-white">
@@ -125,7 +125,7 @@ export default function AdminDashboardClient({
                   ) : (
                     recentAppointments.map((apt) => (
                       <tr key={apt.id} className="hover:bg-[#FFFDF5] transition">
-                        <td className="px-5 py-3.5 text-sm font-medium text-[#5C0F22]">{apt.patient_name}</td>
+                        <td className="px-5 py-3.5 text-sm font-medium text-[#1A4FAD]">{apt.patient_name}</td>
                         <td className="px-5 py-3.5 text-sm text-gray-600">{apt.service}</td>
                         <td className="px-5 py-3.5 text-sm text-gray-600">{new Date(apt.appointment_date).toLocaleDateString("en-US", { month: "short", day: "numeric" })}</td>
                         <td className="px-5 py-3.5 text-sm text-gray-600">{apt.appointment_time}</td>

@@ -6,7 +6,13 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Codec Warm Trial', 'Plus Jakarta Sans', 'sans-serif'],
+        heading: ['Nexa', 'Nunito', 'sans-serif'],
+        body: ['Codec Warm Trial', 'Plus Jakarta Sans', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }

@@ -1,7 +1,7 @@
-﻿"use client"
+"use client"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { Shield } from "lucide-react"
+import { Shield, CheckCircle2 } from "lucide-react"
 
 // Matches your exact public/images/insurance folder and filenames
 const partners = [
@@ -16,87 +16,98 @@ const partners = [
 
 export default function InsurancePartners() {
   return (
-    <section className="relative w-full py-20 md:py-24 overflow-hidden bg-gradient-to-b from-[#5C0F22] to-[#3D0A17]">
-      {/* Subtle Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(212,175,55,0.6) 1px, transparent 0)',
-        backgroundSize: '32px 32px'
-      }} />
-
-      {/* Gold Accent Lines */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent" />
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent" />
-      
-      <div className="relative w-full px-4 sm:px-6 lg:px-12 mb-12">
-        <motion.div 
-          className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 bg-[#D4AF37]/10 rounded-full mb-4"
-            whileHover={{ scale: 1.05 }}
-          >
-            <Shield className="w-4 h-4 text-[#D4AF37]" />
-            <span className="text-[#D4AF37] text-sm font-semibold tracking-wide">Insurance Partners</span>
-          </motion.div>
-
-          <motion.h2
-            className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#D4AF37] to-[#B8941F] bg-clip-text text-transparent mb-3"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1, duration: 0.5 }}
-          >
-            Insurance
-          </motion.h2>
-
-          <motion.p
-            className="text-white/80 text-lg max-w-xl mx-auto"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-          >
-            We accept most major insurance providers for your convenience
-          </motion.p>
-        </motion.div>
+    <section className="relative w-full lg:h-screen min-h-fit lg:min-h-[700px] overflow-hidden bg-[#0A0A0A] flex items-center justify-center py-16 lg:py-0">
+      {/* Background Image with Deep Immersive Overlay */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/gallery/why-choose-us.jpg"
+          alt="Insurance Background"
+          fill
+          className="object-cover opacity-50 scale-105"
+          priority
+          quality={100}
+        />
+        {/* Multilayered Gradient for Ultra-Premium Feel */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-[#1A4FAD]/80 to-[#0A0A0A]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/60 via-transparent to-[#0A0A0A]/60" />
       </div>
 
-      {/* Insurance Partners Grid */}
-      <motion.div 
-        className="relative w-full px-4 sm:px-6 lg:px-12"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-      >
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-          {partners.map((partner, i) => (
+      {/* Dynamic Ambient Particles */}
+      <div className="absolute inset-0 z-0 opacity-20">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#00C8E8] rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#E8B830] rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '2s' }} />
+      </div>
+      
+      <div className="relative z-10 w-full px-0">
+        <div className="grid lg:grid-cols-2 gap-0 items-stretch">
+          
+          {/* Left Side: Content - Full Screen Height on Desktop */}
+          <motion.div 
+            className="flex flex-col justify-center px-6 sm:px-16 md:px-24 py-12 lg:py-0"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
             <motion.div
-              key={i}
-              className="flex items-center justify-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
+              className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#E8B830]/20 rounded-full mb-4 lg:mb-6 border border-[#E8B830]/30 backdrop-blur-md w-fit"
+              whileHover={{ scale: 1.05 }}
             >
-              <div className="relative h-40 w-full flex items-center justify-center">
-                <Image
-                  src={partner.img}
-                  alt={partner.name}
-                  fill
-                  className="object-contain transition-all duration-300"
-                  sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
-                />
-              </div>
+              <Shield className="w-4 h-4 lg:w-5 lg:h-5 text-[#E8B830]" />
+              <span className="text-[#E8B830] text-[10px] lg:text-sm font-bold uppercase tracking-widest">Global Coverage</span>
             </motion.div>
-          ))}
+
+            <h2 className="text-3xl sm:text-5xl md:text-6xl xl:text-8xl font-bold text-white mb-4 lg:mb-8 leading-tight">
+              Seamless <br className="hidden lg:block" />
+              <span className="text-[#00C8E8]">Insurance</span>
+            </h2>
+
+            <p className="text-base sm:text-2xl text-white/70 mb-6 lg:mb-10 max-w-xl leading-relaxed">
+              We partner with leading global providers to ensure your premium dental journey is entirely stress-free.
+            </p>
+
+            <div className="space-y-3 lg:space-y-4">
+              {["Direct Billing Available", "Hassle-Free Processing"].map((item, i) => (
+                <div key={i} className="flex items-center gap-2 lg:gap-3 text-white/90 text-sm lg:text-lg font-medium">
+                  <CheckCircle2 className="w-5 h-5 lg:w-7 lg:h-7 text-[#00C8E8]" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Right Side: Seamless Logos Grid */}
+          <motion.div 
+            className="grid grid-cols-2 sm:grid-cols-3 gap-0"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+          >
+            {partners.map((partner, i) => (
+              <motion.div
+                key={i}
+                className="group relative h-28 sm:h-64 md:h-72 lg:h-80 bg-white/[0.03] flex items-center justify-center p-4 lg:p-6 transition-all duration-700 hover:bg-white/[0.08] border-[0.5px] border-white/5"
+                whileHover={{ zIndex: 1 }}
+              >
+                {/* Subtle Hover Glow */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-br from-[#1A4FAD]/20 to-transparent" />
+                
+                <div className="relative w-full h-full max-w-[120px] max-h-[60px] sm:max-w-[320px] sm:max-h-[220px]">
+                  <Image
+                    src={partner.img}
+                    alt={partner.name}
+                    fill
+                    className="object-contain transition-all duration-700 group-hover:scale-110 filter brightness-110"
+                    sizes="(max-width: 640px) 50vw, 33vw"
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
 
     </section>
-  )
+  );
 }

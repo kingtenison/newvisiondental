@@ -182,14 +182,14 @@ export default function BookPage() {
   const currentStepIndex = steps.findIndex(s => s.key === currentStep);
 
   return (
-    <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 overflow-x-hidden">
+    <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative w-full min-h-[25vh] md:min-h-[35vh] overflow-hidden py-6 md:py-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#5C0F22] via-[#4a0c1b] to-[#5C0F22]" />
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8]" />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E8B830]/30 to-transparent" />
         <div className="relative w-full px-4 sm:px-6 lg:px-12 text-center">
           <div className="animate-[fadeInUp_0.8s_ease-out]">
-            <span className="inline-flex items-center gap-2 text-[#D4AF37] text-xs font-semibold tracking-wide uppercase mb-2">
+            <span className="inline-flex items-center gap-2 text-[#E8B830] text-xs font-semibold tracking-wide uppercase mb-2">
               <Calendar className="w-3 h-3" /> Book Online
             </span>
             <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-2">
@@ -203,22 +203,22 @@ export default function BookPage() {
       </section>
 
       {/* Progress Bar */}
-      <section className="w-full bg-[#FFFDF5] border-b border-[#D4AF37]/10">
+      <section className="w-full bg-[#FFFDF5] border-b border-[#E8B830]/10">
         <div className="w-full px-4 sm:px-6 lg:px-12 py-5">
           <div className="flex items-center justify-between max-w-3xl mx-auto">
             {steps.map((step, index) => (
               <div key={step.key} className="flex flex-col items-center flex-1">
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${
                   currentStepIndex > index
-                    ? "bg-[#D4AF37] text-[#1a0a10]"
+                    ? "bg-[#E8B830] text-[#1a0a10]"
                     : currentStepIndex === index
-                    ? "bg-[#5C0F22] text-white shadow-md shadow-[#5C0F22]/30"
+                    ? "bg-[#1A4FAD] text-white shadow-md shadow-[#1A4FAD]/30"
                     : "bg-white text-gray-400 border-2 border-gray-200"
                 }`}>
                   {currentStepIndex > index ? <CheckCircle className="w-4 h-4" /> : index + 1}
                 </div>
                 <span className={`text-xs mt-1.5 hidden sm:block font-medium ${
-                  currentStepIndex >= index ? "text-[#5C0F22]" : "text-gray-400"
+                  currentStepIndex >= index ? "text-[#1A4FAD]" : "text-gray-400"
                 }`}>
                   {step.label}
                 </span>
@@ -227,7 +227,7 @@ export default function BookPage() {
           </div>
           <div className="relative mt-3 max-w-3xl mx-auto">
             <div className="absolute top-0 left-0 right-0 h-1 bg-gray-200 rounded-full">
-              <div className="h-1 bg-gradient-to-r from-[#D4AF37] to-[#B8941F] rounded-full transition-all duration-500" style={{ width: `${(currentStepIndex / (steps.length - 1)) * 100}%` }} />
+              <div className="h-1 bg-gradient-to-r from-[#E8B830] to-[#B07820] rounded-full transition-all duration-500" style={{ width: `${(currentStepIndex / (steps.length - 1)) * 100}%` }} />
             </div>
           </div>
         </div>
@@ -253,14 +253,14 @@ export default function BookPage() {
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
                   <div className="relative">
-                    <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#D4AF37]/60" />
+                    <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#E8B830]/60" />
                     <input
                       type="text"
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full pl-10 pr-4 py-3 border-2 border-[#D4AF37]/20 bg-white text-gray-900 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/20 focus:border-[#D4AF37]/50 transition-all text-sm"
+                      className="w-full pl-10 pr-4 py-3 border-2 border-[#E8B830]/20 bg-white text-gray-900 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E8B830]/20 focus:border-[#E8B830]/50 transition-all text-sm"
                       placeholder="John Doe"
                     />
                   </div>
@@ -269,14 +269,14 @@ export default function BookPage() {
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
                   <div className="relative">
-                    <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#D4AF37]/60" />
+                    <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#E8B830]/60" />
                     <input
                       type="tel"
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
-                      className="w-full pl-10 pr-4 py-3 border-2 border-[#D4AF37]/20 bg-white text-gray-900 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/20 focus:border-[#D4AF37]/50 transition-all text-sm"
+                      className="w-full pl-10 pr-4 py-3 border-2 border-[#E8B830]/20 bg-white text-gray-900 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E8B830]/20 focus:border-[#E8B830]/50 transition-all text-sm"
                       placeholder="+233 XX XXX XXXX"
                     />
                   </div>
@@ -285,13 +285,13 @@ export default function BookPage() {
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
                   <div className="relative">
-                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#D4AF37]/60" />
+                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#E8B830]/60" />
                     <input
                       type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full pl-10 pr-4 py-3 border-2 border-[#D4AF37]/20 bg-white text-gray-900 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/20 focus:border-[#D4AF37]/50 transition-all text-sm"
+                      className="w-full pl-10 pr-4 py-3 border-2 border-[#E8B830]/20 bg-white text-gray-900 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E8B830]/20 focus:border-[#E8B830]/50 transition-all text-sm"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -304,7 +304,7 @@ export default function BookPage() {
                     value={formData.notes}
                     onChange={handleInputChange}
                     rows={3}
-                    className="w-full px-4 py-3 border-2 border-[#D4AF37]/20 bg-white text-gray-900 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/20 focus:border-[#D4AF37]/50 transition-all text-sm resize-none"
+                    className="w-full px-4 py-3 border-2 border-[#E8B830]/20 bg-white text-gray-900 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E8B830]/20 focus:border-[#E8B830]/50 transition-all text-sm resize-none"
                     placeholder="Any special requests or questions?"
                   />
                 </div>
@@ -312,7 +312,7 @@ export default function BookPage() {
                 <button
                   type="submit"
                   disabled={!formData.name || !formData.phone}
-                  className="w-full py-3 bg-[#5C0F22] text-white rounded-xl font-semibold hover:bg-[#7a1830] shadow-lg shadow-[#5C0F22]/20 hover:shadow-xl transition-all duration-300 disabled:opacity-50 inline-flex items-center justify-center gap-2 text-sm"
+                  className="w-full py-3 bg-[#1A4FAD] text-white rounded-xl font-semibold hover:bg-[#163E8A] shadow-lg shadow-[#1A4FAD]/20 hover:shadow-xl transition-all duration-300 disabled:opacity-50 inline-flex items-center justify-center gap-2 text-sm"
                 >
                   Continue
                   <ArrowRight className="w-4 h-4" />
@@ -331,22 +331,22 @@ export default function BookPage() {
                   <button
                     key={service.id}
                     onClick={() => handleServiceSelect(service)}
-                    className="bg-white rounded-2xl p-5 text-left border-2 border-[#D4AF37]/10 hover:border-[#D4AF37]/40 hover:shadow-lg hover:shadow-[#D4AF37]/10 transition-all duration-300 group text-left"
+                    className="bg-white rounded-2xl p-5 text-left border-2 border-[#E8B830]/10 hover:border-[#E8B830]/40 hover:shadow-lg hover:shadow-[#E8B830]/10 transition-all duration-300 group text-left"
                   >
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-[#D4AF37]/10 rounded-xl flex items-center justify-center text-xl shrink-0 group-hover:bg-[#D4AF37]/20 transition-colors">
+                      <div className="w-12 h-12 bg-[#E8B830]/10 rounded-xl flex items-center justify-center text-xl shrink-0 group-hover:bg-[#E8B830]/20 transition-colors">
                         {service.icon}
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-bold text-[#5C0F22] group-hover:text-[#D4AF37] transition-colors text-sm">
+                        <h3 className="font-bold text-[#1A4FAD] group-hover:text-[#E8B830] transition-colors text-sm">
                           {service.name}
                         </h3>
                         <span className="text-xs text-gray-500 flex items-center gap-1 mt-1">
-                          <Clock className="w-3 h-3 text-[#D4AF37]" />
+                          <Clock className="w-3 h-3 text-[#E8B830]" />
                           {service.duration}
                         </span>
                       </div>
-                      <ChevronRight className="w-5 h-5 text-gray-300 group-hover:text-[#D4AF37] group-hover:translate-x-1 transition-all shrink-0" />
+                      <ChevronRight className="w-5 h-5 text-gray-300 group-hover:text-[#E8B830] group-hover:translate-x-1 transition-all shrink-0" />
                     </div>
                   </button>
                 ))}
@@ -355,7 +355,7 @@ export default function BookPage() {
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                 30+ patients booked today
               </p>
-              <button onClick={() => setCurrentStep("details")} className="mt-4 flex items-center gap-2 text-[#5C0F22] hover:text-[#D4AF37] text-sm font-medium transition-colors mx-auto">
+              <button onClick={() => setCurrentStep("details")} className="mt-4 flex items-center gap-2 text-[#1A4FAD] hover:text-[#E8B830] text-sm font-medium transition-colors mx-auto">
                 <ArrowLeft className="w-4 h-4" /> Back to details
               </button>
             </div>
@@ -377,8 +377,8 @@ export default function BookPage() {
                       onClick={() => handleDateSelect(date)}
                       className={`py-3 px-2 rounded-xl font-medium transition-all duration-300 text-sm ${
                         isSelected
-                          ? "bg-[#D4AF37] text-[#1a0a10] shadow-lg shadow-[#D4AF37]/30"
-                          : "bg-white text-gray-700 border-2 border-[#D4AF37]/10 hover:border-[#D4AF37]/40 hover:shadow-md"
+                          ? "bg-[#E8B830] text-[#1a0a10] shadow-lg shadow-[#E8B830]/30"
+                          : "bg-white text-gray-700 border-2 border-[#E8B830]/10 hover:border-[#E8B830]/40 hover:shadow-md"
                       }`}
                     >
                       {formatDate(date)}
@@ -386,7 +386,7 @@ export default function BookPage() {
                   );
                 })}
               </div>
-              <button onClick={() => setCurrentStep("service")} className="mt-8 flex items-center gap-2 text-[#5C0F22] hover:text-[#D4AF37] text-sm font-medium transition-colors mx-auto">
+              <button onClick={() => setCurrentStep("service")} className="mt-8 flex items-center gap-2 text-[#1A4FAD] hover:text-[#E8B830] text-sm font-medium transition-colors mx-auto">
                 <ArrowLeft className="w-4 h-4" /> Back to service
               </button>
             </div>
@@ -404,8 +404,8 @@ export default function BookPage() {
                     onClick={() => handleTimeSelect(slot)}
                     className={`py-3 px-2 rounded-xl font-medium transition-all duration-300 text-sm ${
                       selectedTime === slot
-                        ? "bg-[#D4AF37] text-[#1a0a10] shadow-lg shadow-[#D4AF37]/30"
-                        : "bg-white text-gray-700 border-2 border-[#D4AF37]/10 hover:border-[#D4AF37]/40 hover:shadow-md"
+                        ? "bg-[#E8B830] text-[#1a0a10] shadow-lg shadow-[#E8B830]/30"
+                        : "bg-white text-gray-700 border-2 border-[#E8B830]/10 hover:border-[#E8B830]/40 hover:shadow-md"
                     }`}
                   >
                     {slot}
@@ -415,12 +415,12 @@ export default function BookPage() {
               {availableSlots.length === 0 && (
                 <div className="text-center py-8">
                   <p className="text-gray-500">No available slots for this date.</p>
-                  <button onClick={() => setCurrentStep("date")} className="mt-4 text-[#5C0F22] hover:text-[#D4AF37] font-medium text-sm">
+                  <button onClick={() => setCurrentStep("date")} className="mt-4 text-[#1A4FAD] hover:text-[#E8B830] font-medium text-sm">
                     Choose another date
                   </button>
                 </div>
               )}
-              <button onClick={() => setCurrentStep("date")} className="mt-8 flex items-center gap-2 text-[#5C0F22] hover:text-[#D4AF37] text-sm font-medium transition-colors mx-auto">
+              <button onClick={() => setCurrentStep("date")} className="mt-8 flex items-center gap-2 text-[#1A4FAD] hover:text-[#E8B830] text-sm font-medium transition-colors mx-auto">
                 <ArrowLeft className="w-4 h-4" /> Back to date
               </button>
             </div>
@@ -433,9 +433,9 @@ export default function BookPage() {
               <p className="text-gray-500 text-center mb-8">Select the clinic nearest to you</p>
 
               {/* Summary */}
-              <div className="bg-[#FFFDF5] rounded-2xl p-5 mb-8 border border-[#D4AF37]/15 max-w-2xl mx-auto">
-                <h3 className="font-semibold text-[#5C0F22] mb-3 flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-[#D4AF37]" /> Appointment Summary
+              <div className="bg-[#FFFDF5] rounded-2xl p-5 mb-8 border border-[#E8B830]/15 max-w-2xl mx-auto">
+                <h3 className="font-semibold text-[#1A4FAD] mb-3 flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-[#E8B830]" /> Appointment Summary
                 </h3>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
@@ -469,18 +469,18 @@ export default function BookPage() {
                     key={location.id}
                     onClick={() => handleLocationSelect(location)}
                     disabled={isLoading}
-                    className="bg-white rounded-2xl p-6 text-left border-2 border-[#D4AF37]/10 hover:border-[#D4AF37]/40 hover:shadow-lg hover:shadow-[#D4AF37]/10 transition-all duration-300 group disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="bg-white rounded-2xl p-6 text-left border-2 border-[#E8B830]/10 hover:border-[#E8B830]/40 hover:shadow-lg hover:shadow-[#E8B830]/10 transition-all duration-300 group disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isLoading ? (
                       <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4">
-                        <div className="w-6 h-6 border-2 border-[#D4AF37] border-t-transparent rounded-full animate-spin" />
+                        <div className="w-6 h-6 border-2 border-[#E8B830] border-t-transparent rounded-full animate-spin" />
                       </div>
                     ) : (
-                      <div className="w-12 h-12 bg-[#D4AF37]/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#D4AF37]/20 transition-colors">
-                        <MapPin className="w-6 h-6 text-[#D4AF37]" />
+                      <div className="w-12 h-12 bg-[#E8B830]/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#E8B830]/20 transition-colors">
+                        <MapPin className="w-6 h-6 text-[#E8B830]" />
                       </div>
                     )}
-                    <h3 className="font-bold text-[#5C0F22] group-hover:text-[#D4AF37] transition-colors mb-1">
+                    <h3 className="font-bold text-[#1A4FAD] group-hover:text-[#E8B830] transition-colors mb-1">
                       {location.name}
                     </h3>
                     <p className="text-sm text-gray-500 leading-relaxed">{location.address}</p>
@@ -488,7 +488,7 @@ export default function BookPage() {
                 ))}
               </div>
 
-              <button onClick={() => setCurrentStep("time")} className="mt-8 flex items-center gap-2 text-[#5C0F22] hover:text-[#D4AF37] text-sm font-medium transition-colors mx-auto">
+              <button onClick={() => setCurrentStep("time")} className="mt-8 flex items-center gap-2 text-[#1A4FAD] hover:text-[#E8B830] text-sm font-medium transition-colors mx-auto">
                 <ArrowLeft className="w-4 h-4" /> Back to time
               </button>
             </div>
@@ -497,15 +497,15 @@ export default function BookPage() {
           {/* Step 5: Confirmation */}
           {currentStep === "confirmation" && bookingSuccess && (
             <div className="animate-[fadeInUp_0.5s_ease-out]">
-              <div className="bg-[#FFFDF5] rounded-2xl p-8 text-center border border-[#D4AF37]/20 max-w-2xl mx-auto">
-                <div className="w-20 h-20 bg-[#D4AF37]/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-[#D4AF37]/20">
-                  <CheckCircle className="w-10 h-10 text-[#D4AF37]" />
+              <div className="bg-[#FFFDF5] rounded-2xl p-8 text-center border border-[#E8B830]/20 max-w-2xl mx-auto">
+                <div className="w-20 h-20 bg-[#E8B830]/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-[#E8B830]/20">
+                  <CheckCircle className="w-10 h-10 text-[#E8B830]" />
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">Appointment Confirmed!</h2>
                 <p className="text-gray-500 mb-6">Your appointment has been successfully booked.</p>
-                <div className="bg-white rounded-xl p-4 max-w-sm mx-auto mb-6 border border-[#D4AF37]/15">
+                <div className="bg-white rounded-xl p-4 max-w-sm mx-auto mb-6 border border-[#E8B830]/15">
                   <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">Booking Reference</p>
-                  <p className="font-mono font-bold text-[#D4AF37] text-lg">{bookingId}</p>
+                  <p className="font-mono font-bold text-[#E8B830] text-lg">{bookingId}</p>
                 </div>
                 <p className="text-sm text-gray-500 mb-6">
                   {formData.email ? `A confirmation has been sent to ${formData.email}.` : "We'll contact you to confirm your appointment."}
@@ -513,13 +513,13 @@ export default function BookPage() {
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <button
                     onClick={handleNewBooking}
-                    className="px-8 py-3 bg-[#D4AF37] text-[#1a0a10] rounded-full font-semibold hover:bg-[#E8C547] shadow-lg shadow-[#D4AF37]/25 transition-all duration-300 hover:scale-105 text-sm"
+                    className="px-8 py-3 bg-[#E8B830] text-[#1a0a10] rounded-full font-semibold hover:bg-[#E8B830] shadow-lg shadow-[#E8B830]/25 transition-all duration-300 hover:scale-105 text-sm"
                   >
                     Book Another Appointment
                   </button>
                   <Link
                     href="/"
-                    className="px-8 py-3 border-2 border-[#5C0F22]/20 text-[#5C0F22] rounded-full font-semibold hover:bg-[#5C0F22] hover:text-white hover:border-[#5C0F22] transition-all duration-300 text-sm"
+                    className="px-8 py-3 border-2 border-[#1A4FAD]/20 text-[#1A4FAD] rounded-full font-semibold hover:bg-[#1A4FAD] hover:text-white hover:border-[#1A4FAD] transition-all duration-300 text-sm"
                   >
                     Return Home
                   </Link>
@@ -532,11 +532,11 @@ export default function BookPage() {
       </section>
 
       {/* Emergency Contact */}
-      <section className="w-full bg-[#FFFDF5] py-8 border-t border-[#D4AF37]/10">
+      <section className="w-full bg-[#FFFDF5] py-8 border-t border-[#E8B830]/10">
         <div className="w-full px-4 sm:px-6 lg:px-12 text-center">
           <p className="text-gray-500 text-sm">
             Need immediate assistance?
-            <a href="tel:+233257091176" className="text-[#5C0F22] font-semibold ml-2 inline-flex items-center gap-1 hover:text-[#D4AF37] transition-colors">
+            <a href="tel:+233257091176" className="text-[#1A4FAD] font-semibold ml-2 inline-flex items-center gap-1 hover:text-[#E8B830] transition-colors">
               Call us <Phone className="w-3 h-3" />
             </a>
             <span className="mx-2 text-gray-300">or</span>

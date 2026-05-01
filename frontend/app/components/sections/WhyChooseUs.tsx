@@ -10,7 +10,7 @@
         <div className="grid md:grid-cols-3 gap-12">
           {features.map((f) => (
             <div key={f.title} className="group">
-              <h3 className="text-[#D4AF37] text-xs font-black tracking-[0.3em] mb-4 uppercase">{f.title}</h3>
+              <h3 className="text-[#E8B830] text-xs font-black tracking-[0.3em] mb-4 uppercase">{f.title}</h3>
               <p className="text-white text-lg font-bold tracking-tight leading-snug">{f.desc}</p>
             </div>
           ))}

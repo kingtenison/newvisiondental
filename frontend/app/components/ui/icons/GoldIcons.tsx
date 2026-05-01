@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 
 // All icons with gold color by default
-const goldColor = "#C5A059";
+const goldColor = "#E8B830";
 const goldHoverColor = "#A68A46";
 
 export const Icons = {
@@ -36,4 +36,4 @@ export const Icons = {
 };
 
 // Gold icon class for direct use
-export const iconClass = "text-[#C5A059] group-hover:text-[#A68A46] transition-colors duration-300";
+export const iconClass = "text-[#E8B830] group-hover:text-[#A68A46] transition-colors duration-300";

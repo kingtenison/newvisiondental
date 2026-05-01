@@ -77,7 +77,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
 
-      <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 overflow-x-hidden">
+      <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 overflow-x-hidden">
         {/* Hero */}
         <section className="relative w-full min-h-[35vh] overflow-hidden">
           {/* Full Width 4x2 Image Grid */}
@@ -95,13 +95,13 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             ))}
           </div>
           
-          {/* Wine Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#3D0814]/95 via-[#5C0F22]/70 to-[#7A1A2E]/30" />
+          {/* Blue-Cyan Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1A4FAD]/95 via-[#0D2A60]/80 to-[#00C8E8]/40" />
           
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E8B830]/30 to-transparent" />
 
           <div className="relative w-full px-4 sm:px-6 lg:px-12 py-12 md:py-16">
-            <Link href="/locations" className="inline-flex items-center gap-2 text-white/60 hover:text-[#D4AF37] text-sm font-medium mb-6 transition-colors">
+            <Link href="/locations" className="inline-flex items-center gap-2 text-white/60 hover:text-[#E8B830] text-sm font-medium mb-6 transition-colors">
               <ArrowLeft className="w-4 h-4" />
               All Locations
             </Link>
@@ -109,20 +109,20 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
               <div>
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 bg-[#D4AF37]/10 rounded-xl flex items-center justify-center border border-[#D4AF37]/20">
-                    <MapPin className="w-5 h-5 text-[#D4AF37]" />
+                  <div className="w-10 h-10 bg-[#E8B830]/10 rounded-xl flex items-center justify-center border border-[#E8B830]/20">
+                    <MapPin className="w-5 h-5 text-[#E8B830]" />
                   </div>
-                  <span className="text-[#D4AF37] text-xs font-semibold tracking-wide uppercase">Our Clinic</span>
+                  <span className="text-[#E8B830] text-xs font-semibold tracking-wide uppercase">Our Clinic</span>
                 </div>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">{location.name}</h1>
                 <p className="text-white/60 text-base md:text-lg">{location.address}</p>
               </div>
 
               <div className="flex flex-wrap gap-3">
-                <a href={`tel:${location.phone}`} className="inline-flex items-center gap-2 px-6 py-3 bg-[#D4AF37] text-[#1a0a10] text-sm font-semibold rounded-full hover:bg-[#E8C547] transition-colors shadow-lg shadow-[#D4AF37]/25">
+                <a href={`tel:${location.phone}`} className="inline-flex items-center gap-2 px-6 py-3 bg-[#E8B830] text-[#1a0a10] text-sm font-semibold rounded-full hover:bg-[#E8B830] transition-colors shadow-lg shadow-[#E8B830]/25">
                   <Phone className="w-4 h-4" /> Call {location.phone}
                 </a>
-                <a href={directionsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-3 bg-white text-[#5C0F22] text-sm font-semibold rounded-full border border-white hover:bg-gray-100 transition-all">
+                <a href={directionsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-3 bg-white text-[#1A4FAD] text-sm font-semibold rounded-full border border-white hover:bg-gray-100 transition-all">
                   <Navigation className="w-4 h-4" /> Get Directions
                 </a>
               </div>
@@ -139,7 +139,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               <div className="lg:col-span-2 space-y-8">
                 {/* Image matched to sidebar height */}
                 <FadeIn>
-                  <div className="relative w-full h-[500px] lg:h-auto lg:min-h-[600px] rounded-2xl overflow-hidden border border-[#D4AF37]/10">
+                  <div className="relative w-full h-[500px] lg:h-auto lg:min-h-[600px] rounded-2xl overflow-hidden border border-[#E8B830]/10">
                     <Image
                       src={location.image}
                       alt={`New Vision Dental Clinic ${location.name}`}
@@ -153,10 +153,10 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                 {/* Description */}
                 <FadeIn delay={0.1}>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 bg-[#D4AF37]/10 rounded-lg flex items-center justify-center">
-                      <Sparkles className="w-4 h-4 text-[#D4AF37]" />
+                    <div className="w-8 h-8 bg-[#E8B830]/10 rounded-lg flex items-center justify-center">
+                      <Sparkles className="w-4 h-4 text-[#E8B830]" />
                     </div>
-                    <h2 className="text-xl md:text-2xl font-bold text-[#5C0F22]">About This Location</h2>
+                    <h2 className="text-xl md:text-2xl font-bold text-[#1A4FAD]">About This Location</h2>
                   </div>
                   <p className="text-gray-600 leading-relaxed">{location.description}</p>
                 </FadeIn>
@@ -164,15 +164,15 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                 {/* Facilities */}
                 <FadeIn delay={0.15}>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 bg-[#D4AF37]/10 rounded-lg flex items-center justify-center">
-                      <Award className="w-4 h-4 text-[#D4AF37]" />
+                    <div className="w-8 h-8 bg-[#E8B830]/10 rounded-lg flex items-center justify-center">
+                      <Award className="w-4 h-4 text-[#E8B830]" />
                     </div>
-                    <h2 className="text-xl md:text-2xl font-bold text-[#5C0F22]">Facilities</h2>
+                    <h2 className="text-xl md:text-2xl font-bold text-[#1A4FAD]">Facilities</h2>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {location.facilities.map((facility, i) => (
-                      <div key={i} className="flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3 border border-[#D4AF37]/8">
-                        <div className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full shrink-0" />
+                      <div key={i} className="flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3 border border-[#E8B830]/8">
+                        <div className="w-1.5 h-1.5 bg-[#E8B830] rounded-full shrink-0" />
                         <span className="text-gray-700 text-sm">{facility}</span>
                       </div>
                     ))}
@@ -182,15 +182,15 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                 {/* Services */}
                 <FadeIn delay={0.2}>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 bg-[#D4AF37]/10 rounded-lg flex items-center justify-center">
-                      <Users className="w-4 h-4 text-[#D4AF37]" />
+                    <div className="w-8 h-8 bg-[#E8B830]/10 rounded-lg flex items-center justify-center">
+                      <Users className="w-4 h-4 text-[#E8B830]" />
                     </div>
-                    <h2 className="text-xl md:text-2xl font-bold text-[#5C0F22]">Services Available</h2>
+                    <h2 className="text-xl md:text-2xl font-bold text-[#1A4FAD]">Services Available</h2>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {location.services.map((service, i) => (
-                      <div key={i} className="flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3 border border-[#D4AF37]/8">
-                        <div className="w-1.5 h-1.5 bg-[#D4AF37] rounded-full shrink-0" />
+                      <div key={i} className="flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3 border border-[#E8B830]/8">
+                        <div className="w-1.5 h-1.5 bg-[#E8B830] rounded-full shrink-0" />
                         <span className="text-gray-700 text-sm">{service}</span>
                       </div>
                     ))}
@@ -201,34 +201,34 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               {/* Right - Sidebar */}
               <div className="lg:col-span-1">
                 <FadeIn delay={0.2}>
-                  <div className="bg-gray-50 rounded-2xl p-6 sticky top-24 border border-[#D4AF37]/10">
-                    <h3 className="text-xl font-bold text-[#5C0F22] mb-5">Location Details</h3>
+                  <div className="bg-gray-50 rounded-2xl p-6 sticky top-24 border border-[#E8B830]/10">
+                    <h3 className="text-xl font-bold text-[#1A4FAD] mb-5">Location Details</h3>
 
                     <div className="space-y-4 mb-6">
-                      <div className="pb-4 border-b border-[#D4AF37]/10">
+                      <div className="pb-4 border-b border-[#E8B830]/10">
                         <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Address</p>
-                        <p className="font-medium text-[#5C0F22] text-sm">{location.address}</p>
+                        <p className="font-medium text-[#1A4FAD] text-sm">{location.address}</p>
                       </div>
-                      <div className="pb-4 border-b border-[#D4AF37]/10">
+                      <div className="pb-4 border-b border-[#E8B830]/10">
                         <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Phone</p>
-                        <a href={`tel:${location.phone}`} className="font-medium text-[#D4AF37] text-sm hover:underline">{location.phone}</a>
+                        <a href={`tel:${location.phone}`} className="font-medium text-[#E8B830] text-sm hover:underline">{location.phone}</a>
                       </div>
-                      <div className="pb-4 border-b border-[#D4AF37]/10">
+                      <div className="pb-4 border-b border-[#E8B830]/10">
                         <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Hours</p>
-                        <p className="font-medium text-[#5C0F22] text-sm">{location.hours}</p>
+                        <p className="font-medium text-[#1A4FAD] text-sm">{location.hours}</p>
                       </div>
                     </div>
 
-                    <Link href="/book" className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#5C0F22] text-white rounded-xl font-semibold text-sm hover:bg-[#7a1830] transition-colors mb-3">
+                    <Link href="/book" className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#1A4FAD] text-white rounded-xl font-semibold text-sm hover:bg-[#163E8A] transition-colors mb-3">
                       <Calendar className="w-4 h-4" /> Book Appointment
                     </Link>
 
-                    <a href={directionsUrl} target="_blank" rel="noopener noreferrer" className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 border-2 border-[#5C0F22] text-[#5C0F22] rounded-xl font-semibold text-sm hover:bg-[#5C0F22] hover:text-white transition-all">
+                    <a href={directionsUrl} target="_blank" rel="noopener noreferrer" className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 border-2 border-[#1A4FAD] text-[#1A4FAD] rounded-xl font-semibold text-sm hover:bg-[#1A4FAD] hover:text-white transition-all">
                       <MapPin className="w-4 h-4" /> Get Directions
                     </a>
 
                     {/* Map Preview */}
-                    <div className="mt-6 rounded-xl overflow-hidden border border-[#D4AF37]/10">
+                    <div className="mt-6 rounded-xl overflow-hidden border border-[#E8B830]/10">
                       <iframe
                         title={`Map of ${location.name}`}
                         src={location.mapEmbed}
@@ -240,7 +240,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                         referrerPolicy="no-referrer-when-downgrade"
                       />
                     </div>
-                    <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="text-[#D4AF37] text-xs font-medium hover:underline flex items-center gap-1 mt-3">
+                    <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="text-[#E8B830] text-xs font-medium hover:underline flex items-center gap-1 mt-3">
                       View larger map <ChevronRight className="w-3 h-3" />
                     </a>
                   </div>
@@ -255,10 +255,10 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
           <div className="w-full px-4 sm:px-6 lg:px-12">
             <FadeIn>
               <div className="flex items-center justify-center gap-3 mb-3">
-                <div className="w-8 h-8 bg-[#D4AF37]/10 rounded-lg flex items-center justify-center">
-                  <MapPin className="w-4 h-4 text-[#D4AF37]" />
+                <div className="w-8 h-8 bg-[#E8B830]/10 rounded-lg flex items-center justify-center">
+                  <MapPin className="w-4 h-4 text-[#E8B830]" />
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#5C0F22]">Find Us Here</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#1A4FAD]">Find Us Here</h2>
               </div>
               <p className="text-gray-500 text-sm md:text-base text-center mb-8 max-w-xl mx-auto">
                 {location.name} &mdash; {location.address}
@@ -266,7 +266,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             </FadeIn>
 
             <FadeIn delay={0.15}>
-              <div className="rounded-2xl overflow-hidden border border-[#D4AF37]/10 shadow-lg max-w-6xl mx-auto">
+              <div className="rounded-2xl overflow-hidden border border-[#E8B830]/10 shadow-lg max-w-6xl mx-auto">
                 <iframe
                   title={`Full map of ${location.name}`}
                   src={location.mapEmbed}
@@ -281,10 +281,10 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             </FadeIn>
 
             <div className="flex flex-wrap justify-center gap-4 mt-6">
-              <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-[#5C0F22] text-white rounded-full font-medium text-sm hover:bg-[#7a1830] transition-colors">
+              <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-[#1A4FAD] text-white rounded-full font-medium text-sm hover:bg-[#163E8A] transition-colors">
                 <MapPin className="w-4 h-4" /> Open in Google Maps
               </a>
-              <a href={directionsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[#5C0F22] text-[#5C0F22] rounded-full font-medium text-sm hover:bg-[#5C0F22] hover:text-white transition-all">
+              <a href={directionsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[#1A4FAD] text-[#1A4FAD] rounded-full font-medium text-sm hover:bg-[#1A4FAD] hover:text-white transition-all">
                 <Navigation className="w-4 h-4" /> Get Directions
               </a>
             </div>
@@ -293,8 +293,8 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
         {/* CTA */}
         <section className="relative w-full overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#5C0F22] via-[#4a0c1b] to-[#5C0F22]" />
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8]" />
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E8B830]/30 to-transparent" />
 
           <div className="relative w-full px-4 sm:px-6 lg:px-12 py-14 md:py-16">
             <FadeIn>
@@ -304,7 +304,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                   Book your appointment today and experience quality dental care at our {location.name} clinic.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
-                  <Link href="/book" className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#D4AF37] text-[#1a0a10] text-sm font-semibold rounded-full hover:bg-[#E8C547] transition-colors shadow-lg shadow-[#D4AF37]/25">
+                  <Link href="/book" className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#E8B830] text-[#1a0a10] text-sm font-semibold rounded-full hover:bg-[#E8B830] transition-colors shadow-lg shadow-[#E8B830]/25">
                     <Calendar className="w-4 h-4" /> Book Appointment
                   </Link>
                   <a href={`tel:${location.phone}`} className="inline-flex items-center gap-2 px-8 py-3.5 bg-white/10 text-white text-sm font-medium rounded-full border border-white/15 hover:bg-white/20 transition-all">

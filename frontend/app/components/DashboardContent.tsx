@@ -53,8 +53,8 @@ export default function DashboardContent() {
   };
 
   if (isLoading || !user) return (
-    <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 flex items-center justify-center">
-      <div className="w-12 h-12 border-4 border-[#D4AF37] border-t-transparent rounded-full animate-spin"></div>
+    <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 flex items-center justify-center">
+      <div className="w-12 h-12 border-4 border-[#E8B830] border-t-transparent rounded-full animate-spin"></div>
     </div>
   );
 
@@ -66,17 +66,17 @@ export default function DashboardContent() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 overflow-x-hidden">
+    <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 overflow-x-hidden">
       {/* Header */}
       <section className="relative w-full overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#5C0F22] via-[#4a0c1b] to-[#5C0F22]" />
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8]" />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E8B830]/30 to-transparent" />
         <div className="relative w-full px-4 sm:px-6 lg:px-12 py-10 md:py-14">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
               <div className="flex items-center gap-3 mb-2">
-                <div className="w-10 h-10 bg-[#D4AF37]/10 rounded-xl flex items-center justify-center border border-[#D4AF37]/20"><User className="w-5 h-5 text-[#D4AF37]" /></div>
-                <span className="text-[#D4AF37] text-xs font-semibold tracking-wide uppercase">Patient Portal</span>
+                <div className="w-10 h-10 bg-[#E8B830]/10 rounded-xl flex items-center justify-center border border-[#E8B830]/20"><User className="w-5 h-5 text-[#E8B830]" /></div>
+                <span className="text-[#E8B830] text-xs font-semibold tracking-wide uppercase">Patient Portal</span>
               </div>
               <h1 className="text-3xl md:text-4xl font-bold text-white mb-1">My Dashboard</h1>
               <p className="text-white/60 text-sm">Welcome back, {user.email?.split('@')[0]}!</p>
@@ -98,9 +98,9 @@ export default function DashboardContent() {
                 className="animate-[fadeInUp_0.5s_ease-out_both]"
                 style={{ animationDelay: `${i * 100}ms` }}
               >
-                <Link href={action.href} className="block bg-gray-50 rounded-xl p-5 border border-[#D4AF37]/10 hover:border-[#D4AF37]/25 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group h-full">
-                  <div className="w-10 h-10 bg-[#D4AF37]/10 rounded-lg flex items-center justify-center mb-3 group-hover:bg-[#D4AF37]/20 transition-colors"><action.icon className="w-5 h-5 text-[#D4AF37]" /></div>
-                  <h3 className="text-[#5C0F22] font-semibold text-sm mb-1">{action.label}</h3>
+                <Link href={action.href} className="block bg-gray-50 rounded-xl p-5 border border-[#E8B830]/10 hover:border-[#E8B830]/25 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group h-full">
+                  <div className="w-10 h-10 bg-[#E8B830]/10 rounded-lg flex items-center justify-center mb-3 group-hover:bg-[#E8B830]/20 transition-colors"><action.icon className="w-5 h-5 text-[#E8B830]" /></div>
+                  <h3 className="text-[#1A4FAD] font-semibold text-sm mb-1">{action.label}</h3>
                   <p className="text-gray-500 text-xs">{action.desc}</p>
                 </Link>
               </div>
@@ -112,24 +112,24 @@ export default function DashboardContent() {
       {/* Upcoming Appointments */}
       <section className="w-full py-4 pb-12">
         <div className="w-full px-4 sm:px-6 lg:px-12">
-          <h2 className="text-lg font-bold text-[#5C0F22] mb-4">Upcoming Appointments</h2>
+          <h2 className="text-lg font-bold text-[#1A4FAD] mb-4">Upcoming Appointments</h2>
           {appointments.length === 0 ? (
-            <div className="bg-gray-50 rounded-xl p-8 text-center border border-[#D4AF37]/10">
-              <Calendar className="w-12 h-12 text-[#D4AF37]/30 mx-auto mb-3" />
+            <div className="bg-gray-50 rounded-xl p-8 text-center border border-[#E8B830]/10">
+              <Calendar className="w-12 h-12 text-[#E8B830]/30 mx-auto mb-3" />
               <p className="text-gray-500 mb-4">No upcoming appointments</p>
-              <Link href="/book" className="inline-flex items-center gap-2 px-6 py-3 bg-[#5C0F22] text-white rounded-full text-sm font-semibold hover:bg-[#7a1830] transition-colors">Book an Appointment</Link>
+              <Link href="/book" className="inline-flex items-center gap-2 px-6 py-3 bg-[#1A4FAD] text-white rounded-full text-sm font-semibold hover:bg-[#163E8A] transition-colors">Book an Appointment</Link>
             </div>
           ) : (
             <div className="space-y-4">
               {appointments.map((apt) => (
-                <div key={apt.id} className="bg-gray-50 rounded-xl p-5 border border-[#D4AF37]/10 hover:border-[#D4AF37]/25 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div key={apt.id} className="bg-gray-50 rounded-xl p-5 border border-[#E8B830]/10 hover:border-[#E8B830]/25 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-[#D4AF37]/10 rounded-xl flex items-center justify-center shrink-0"><Calendar className="w-6 h-6 text-[#D4AF37]" /></div>
+                    <div className="w-12 h-12 bg-[#E8B830]/10 rounded-xl flex items-center justify-center shrink-0"><Calendar className="w-6 h-6 text-[#E8B830]" /></div>
                     <div>
-                      <h3 className="text-[#5C0F22] font-semibold">{apt.service}</h3>
+                      <h3 className="text-[#1A4FAD] font-semibold">{apt.service}</h3>
                       <div className="flex flex-wrap items-center gap-3 text-sm text-gray-500 mt-1">
-                        <span className="flex items-center gap-1"><CalendarDays className="w-3.5 h-3.5 text-[#D4AF37]/50" />{new Date(apt.appointment_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
-                        <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5 text-[#D4AF37]/50" />{apt.appointment_time}</span>
+                        <span className="flex items-center gap-1"><CalendarDays className="w-3.5 h-3.5 text-[#E8B830]/50" />{new Date(apt.appointment_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                        <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5 text-[#E8B830]/50" />{apt.appointment_time}</span>
                       </div>
                     </div>
                   </div>

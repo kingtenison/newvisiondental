@@ -12,7 +12,7 @@ export default function ConfirmationPage({ searchParams }: ConfirmationPageProps
   
   if (!appointmentId) {
     return (
-      <div className="min-h-screen bg-[#e7e7e7] dark:bg-[#222222] pt-[72px] md:pt-20">
+      <div className="min-h-screen bg-[#F2F4F8] dark:bg-[#222222] pt-[72px] md:pt-20">
         <div className="container mx-auto px-4 py-20 text-center">
           <h1 className="text-2xl font-bold text-gray-800 dark:text-white">No appointment found</h1>
           <Link href="/book" className="mt-4 inline-flex items-center gap-2 text-primary hover:underline">
@@ -25,7 +25,7 @@ export default function ConfirmationPage({ searchParams }: ConfirmationPageProps
   }
   
   return (
-    <div className="min-h-screen bg-[#e7e7e7] dark:bg-[#222222] pt-[72px] md:pt-20 overflow-x-hidden">
+    <div className="min-h-screen bg-[#F2F4F8] dark:bg-[#222222] pt-[72px] md:pt-20 overflow-x-hidden">
       <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12 py-12 md:py-20">
         <div className="max-w-2xl mx-auto">
           <div className="bg-green-50 dark:bg-green-900/20 rounded-2xl p-8 text-center border border-green-200 dark:border-green-800">

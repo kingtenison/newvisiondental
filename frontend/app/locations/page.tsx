@@ -38,7 +38,7 @@ const locations = [
 
 export default function LocationsPage() {
   return (
-    <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 overflow-x-hidden">
+    <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 overflow-x-hidden">
       <section className="relative w-full min-h-[35vh] flex flex-col overflow-hidden">
         <div className="absolute inset-0 grid grid-cols-4 grid-rows-2">
           {[...Array(8)].map((_, i) => (
@@ -47,13 +47,13 @@ export default function LocationsPage() {
             </div>
           ))}
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#3D0814]/95 via-[#5C0F22]/70 to-[#7A1A2E]/30" />
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1A4FAD]/95 via-[#0D2A60]/80 to-[#00C8E8]/40" />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E8B830]/30 to-transparent" />
         <div className="relative w-full px-4 sm:px-6 lg:px-12 flex-1 flex items-center justify-center py-16 md:py-20">
           <div className="text-center max-w-3xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <span className="inline-flex items-center gap-2 text-white text-xs sm:text-sm font-semibold tracking-wide uppercase mb-4">
-                <Sparkles className="w-4 h-4 text-[#D4AF37]" /><span className="text-[#D4AF37]">Visit Us</span>
+                <Sparkles className="w-4 h-4 text-[#E8B830]" /><span className="text-[#E8B830]">Visit Us</span>
               </span>
             </motion.div>
             <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1, duration: 0.6 }} className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight">
@@ -66,7 +66,7 @@ export default function LocationsPage() {
         </div>
       </section>
 
-      <section className="w-full bg-[#e7e7e7] py-16">
+      <section className="w-full bg-[#F2F4F8] py-16">
         <div className="w-full px-4 sm:px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {locations.map((location, index) => (
@@ -79,7 +79,7 @@ export default function LocationsPage() {
                     <h2 className="text-2xl font-bold text-gray-800 mb-2">{location.name}</h2>
                     <p className="text-gray-600 mb-4">{location.address}</p>
                     <div className="space-y-2 mb-6">
-                      <a href={"tel:" + location.phone} className="flex items-center gap-2 text-gray-600 hover:text-[#5C0F22] transition">
+                      <a href={"tel:" + location.phone} className="flex items-center gap-2 text-gray-600 hover:text-[#1A4FAD] transition">
                         <Phone className="w-4 h-4" />{location.phone}
                       </a>
                       <p className="flex items-start gap-2 text-gray-600">
@@ -87,10 +87,10 @@ export default function LocationsPage() {
                       </p>
                     </div>
                     <div className="flex flex-wrap gap-3">
-                      <Link href={"/locations/" + location.slug} className="flex-1 bg-[#5C0F22] text-white px-4 py-3 rounded-xl font-medium hover:bg-[#4a0c1b] transition-all inline-flex items-center justify-center gap-2">
+                      <Link href={"/locations/" + location.slug} className="flex-1 bg-[#1A4FAD] text-white px-4 py-3 rounded-xl font-medium hover:bg-[#1A4FAD] transition-all inline-flex items-center justify-center gap-2">
                         View Details <ChevronRight className="w-4 h-4" />
                       </Link>
-                      <a href={location.mapLink} target="_blank" rel="noopener noreferrer" className="flex-1 border-2 border-[#5C0F22] text-[#5C0F22] px-4 py-3 rounded-xl font-medium hover:bg-[#5C0F22] hover:text-white transition-all inline-flex items-center justify-center gap-2">
+                      <a href={location.mapLink} target="_blank" rel="noopener noreferrer" className="flex-1 border-2 border-[#1A4FAD] text-[#1A4FAD] px-4 py-3 rounded-xl font-medium hover:bg-[#1A4FAD] hover:text-white transition-all inline-flex items-center justify-center gap-2">
                         <MapPin className="w-4 h-4" /> Directions
                       </a>
                     </div>
@@ -102,12 +102,12 @@ export default function LocationsPage() {
         </div>
       </section>
 
-      <section className="w-full bg-[#5C0F22] py-16">
+      <section className="w-full bg-[#1A4FAD] py-16">
         <div className="w-full px-4 sm:px-6 lg:px-12 text-center">
           <FadeIn>
             <h2 className="text-3xl font-bold text-white mb-4">Visit Us Today</h2>
             <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">Experience quality dental care at any of our convenient locations.</p>
-            <Link href="/book" className="inline-flex items-center gap-2 bg-[#D4AF37] text-[#1a0a10] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#B8941F] transition-all shadow-xl">Book an Appointment</Link>
+            <Link href="/book" className="inline-flex items-center gap-2 bg-[#E8B830] text-[#1a0a10] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#B07820] transition-all shadow-xl">Book an Appointment</Link>
           </FadeIn>
         </div>
       </section>

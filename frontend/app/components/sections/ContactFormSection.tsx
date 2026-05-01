@@ -44,13 +44,13 @@ export default function ContactFormSection() {
 
   return (
 <section className="relative w-full py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden">
-      {/* Gradient - rich wine at top transitioning to white at bottom */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#2a0a15] via-[#e8e0e5] to-white" />
+      {/* Gradient - rich blue at top transitioning to white at bottom */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0D2A60] via-[#F2F4F8] to-white" />
       
-      {/* Animated Background Orbs - positioned at top for the wine area */}
+      {/* Animated Background Orbs - positioned at top for the blue area */}
       <motion.div
         className="absolute top-0 left-0 w-[300px] sm:w-[400px] md:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] rounded-full blur-3xl opacity-15"
-        style={{ background: 'radial-gradient(circle, #D4AF37, transparent)' }}
+        style={{ background: 'radial-gradient(circle, #E8B830, transparent)' }}
         animate={{
           x: [0, 100, 0],
           y: [0, 50, 0],
@@ -59,7 +59,7 @@ export default function ContactFormSection() {
       />
       <motion.div
         className="absolute top-0 right-0 w-[250px] sm:w-[350px] md:w-[400px] h-[250px] sm:h-[350px] md:h-[400px] rounded-full blur-3xl opacity-15"
-        style={{ background: 'radial-gradient(circle, #B8941F, transparent)' }}
+        style={{ background: 'radial-gradient(circle, #B07820, transparent)' }}
         animate={{
           x: [0, -80, 0],
           y: [0, -40, 0],
@@ -113,8 +113,8 @@ export default function ContactFormSection() {
         </div>
       </div>
       
-      {/* Overlay - helps blend from rich wine at top to white at bottom */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#2a0a15]/50 via-white/10 to-white/30" />
+      {/* Overlay - helps blend from rich blue at top to white at bottom */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0D2A60]/50 via-white/10 to-white/30" />
 
       <div className="relative w-full px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto">
         <motion.div 
@@ -129,7 +129,7 @@ export default function ContactFormSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1, duration: 0.5 }}
-            className="inline-flex items-center gap-2 text-[#D4AF37] text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase mb-4"
+            className="inline-flex items-center gap-2 text-[#E8B830] text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase mb-4"
           >
             <Sparkles className="w-3.5 h-3.5" />
             Get In Touch
@@ -180,8 +180,8 @@ export default function ContactFormSection() {
                 animate={{ opacity: 1, scale: 1 }}
                 className="text-center py-8"
               >
-                <div className="w-16 h-16 bg-[#D4AF37]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Sparkles className="w-8 h-8 text-[#D4AF37]" />
+                <div className="w-16 h-16 bg-[#E8B830]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Sparkles className="w-8 h-8 text-[#E8B830]" />
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
                 <p className="text-gray-600">We&apos;ll be in touch with you shortly.</p>
@@ -198,7 +198,7 @@ export default function ContactFormSection() {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 sm:py-4 rounded-lg border border-gray-200 bg-gray-50 text-gray-900 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/30 focus:border-[#D4AF37] transition-all"
+                      className="w-full px-4 py-3 sm:py-4 rounded-lg border border-gray-200 bg-gray-50 text-gray-900 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#E8B830]/30 focus:border-[#E8B830] transition-all"
                       placeholder="John Doe"
                     />
                   </div>
@@ -212,7 +212,7 @@ export default function ContactFormSection() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 sm:py-4 rounded-lg border border-gray-200 bg-gray-50 text-gray-900 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/30 focus:border-[#D4AF37] transition-all"
+                      className="w-full px-4 py-3 sm:py-4 rounded-lg border border-gray-200 bg-gray-50 text-gray-900 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#E8B830]/30 focus:border-[#E8B830] transition-all"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -228,7 +228,7 @@ export default function ContactFormSection() {
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 sm:py-4 rounded-lg border border-gray-200 bg-gray-50 text-gray-900 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/30 focus:border-[#D4AF37] transition-all"
+                      className="w-full px-4 py-3 sm:py-4 rounded-lg border border-gray-200 bg-gray-50 text-gray-900 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#E8B830]/30 focus:border-[#E8B830] transition-all"
                       placeholder="+233 XX XXX XXXX"
                     />
                   </div>
@@ -240,7 +240,7 @@ export default function ContactFormSection() {
                     <select
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                      className="w-full px-4 py-3 sm:py-4 rounded-lg border border-gray-200 bg-gray-50 text-gray-900 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/30 focus:border-[#D4AF37] transition-all"
+                      className="w-full px-4 py-3 sm:py-4 rounded-lg border border-gray-200 bg-gray-50 text-gray-900 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#E8B830]/30 focus:border-[#E8B830] transition-all"
                     >
                       <option value="">Select a service</option>
                       {services.map((service) => (
@@ -258,7 +258,7 @@ export default function ContactFormSection() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     rows={4}
-                    className="w-full px-4 py-3 sm:py-4 rounded-lg border border-gray-200 bg-gray-50 text-gray-900 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/30 focus:border-[#D4AF37] transition-all resize-none"
+                    className="w-full px-4 py-3 sm:py-4 rounded-lg border border-gray-200 bg-gray-50 text-gray-900 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#E8B830]/30 focus:border-[#E8B830] transition-all resize-none"
                     placeholder="Tell us about your dental concerns or questions..."
                   />
                 </div>
@@ -269,7 +269,7 @@ export default function ContactFormSection() {
                     disabled={isSubmitting}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-auto min-w-[200px] group relative inline-flex items-center justify-center px-8 sm:px-10 py-4 rounded-full text-sm sm:text-base font-semibold overflow-hidden btn-golden-shine shadow-xl shadow-[#D4AF37]/25 hover:shadow-2xl hover:shadow-[#D4AF37]/40 transition-shadow duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+                    className="w-auto min-w-[200px] group relative inline-flex items-center justify-center px-8 sm:px-10 py-4 rounded-full text-sm sm:text-base font-semibold overflow-hidden btn-golden-shine shadow-xl shadow-[#E8B830]/25 hover:shadow-2xl hover:shadow-[#E8B830]/40 transition-shadow duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     <span className="relative z-10 flex items-center gap-2 sm:gap-3">
                       {isSubmitting ? (
@@ -287,11 +287,11 @@ export default function ContactFormSection() {
                   </motion.button>
                   
                   <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-                    <a href="tel:+233559497906" className="flex items-center gap-2 text-gray-600 hover:text-[#D4AF37] transition-colors">
+                    <a href="tel:+233559497906" className="flex items-center gap-2 text-gray-600 hover:text-[#E8B830] transition-colors">
                       <Phone className="w-4 h-4" />
                       <span className="text-sm">+233 55 949 7906</span>
                     </a>
-                    <a href="mailto:info@newvisiondental.com" className="flex items-center gap-2 text-gray-600 hover:text-[#D4AF37] transition-colors">
+                    <a href="mailto:info@newvisiondental.com" className="flex items-center gap-2 text-gray-600 hover:text-[#E8B830] transition-colors">
                       <Mail className="w-4 h-4" />
                       <span className="text-sm">info@newvisiondental.com</span>
                     </a>

@@ -143,7 +143,7 @@ export default function ServicesPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       
-      <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 overflow-x-hidden">
+      <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 overflow-x-hidden">
 
         {/* Hero Section */}
         <section className="relative w-full min-h-[25vh] md:min-h-[35vh] flex flex-col overflow-hidden">
@@ -162,17 +162,17 @@ export default function ServicesPage() {
             ))}
           </div>
           
-          {/* Wine Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#3D0814]/95 via-[#5C0F22]/70 to-[#7A1A2E]/30" />
+          {/* Blue-Cyan Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1A4FAD]/95 via-[#0D2A60]/80 to-[#00C8E8]/40" />
           
           {/* Pattern Overlay */}
-          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #E8B830 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
           
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E8B830]/30 to-transparent" />
           
-          {/* Gold blurs on wine */}
-          <div className="absolute top-10 right-[20%] w-64 h-64 bg-[#D4AF37]/8 rounded-full blur-[120px]" />
-          <div className="absolute bottom-10 left-[15%] w-48 h-48 bg-[#D4AF37]/6 rounded-full blur-[100px]" />
+          {/* Gold blurs on blue */}
+          <div className="absolute top-10 right-[20%] w-64 h-64 bg-[#E8B830]/8 rounded-full blur-[120px]" />
+          <div className="absolute bottom-10 left-[15%] w-48 h-48 bg-[#E8B830]/6 rounded-full blur-[100px]" />
 
           <div className="relative w-full px-4 sm:px-6 lg:px-12 flex-1 flex items-center justify-center py-6 md:py-14">
             <div className="text-center max-w-3xl mx-auto">
@@ -204,7 +204,7 @@ export default function ServicesPage() {
                   <div key={i} className="text-center">
                     <p className="text-2xl sm:text-3xl font-bold text-white">
                       {stat.value}
-                      {stat.showStar && <Star className="inline w-4 h-4 text-[#D4AF37] fill-[#D4AF37] ml-1" />}
+                      {stat.showStar && <Star className="inline w-4 h-4 text-[#E8B830] fill-[#E8B830] ml-1" />}
                     </p>
                     <p className="text-sm text-white/50 mt-1">{stat.label}</p>
                   </div>
@@ -224,7 +224,7 @@ export default function ServicesPage() {
                   href={`/services/${service.slug}`} 
                   className="block h-full"
                 >
-                  <div className="group relative h-full bg-white rounded-2xl border border-[#D4AF37]/15 shadow-lg shadow-black/5 hover:shadow-xl hover:shadow-[#D4AF37]/20 hover:border-[#D4AF37]/40 transition-all duration-300 overflow-hidden flex flex-col">
+                  <div className="group relative h-full bg-white rounded-2xl border border-[#E8B830]/15 shadow-lg shadow-black/5 hover:shadow-xl hover:shadow-[#E8B830]/20 hover:border-[#E8B830]/40 transition-all duration-300 overflow-hidden flex flex-col">
                     
                     {/* Image */}
                     <div className="relative h-52 w-full overflow-hidden">
@@ -239,7 +239,7 @@ export default function ServicesPage() {
                       
                       {/* Rating badge */}
                       <div className="absolute top-3 left-3 flex items-center gap-1 px-2.5 py-1 bg-white/95 backdrop-blur-sm rounded-full shadow-sm">
-                        <Star className="w-3.5 h-3.5 text-[#D4AF37] fill-[#D4AF37]" />
+                        <Star className="w-3.5 h-3.5 text-[#E8B830] fill-[#E8B830]" />
                         <span className="text-xs font-bold text-gray-900">{service.rating}</span>
                       </div>
                     </div>
@@ -248,10 +248,10 @@ export default function ServicesPage() {
                     <div className="p-6 flex-1 flex flex-col">
                       {/* Icon + Title */}
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="w-10 h-10 bg-[#D4AF37]/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-[#D4AF37]/20 transition-colors">
-                          <service.icon className="w-5 h-5 text-[#D4AF37]" />
+                        <div className="w-10 h-10 bg-[#E8B830]/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-[#E8B830]/20 transition-colors">
+                          <service.icon className="w-5 h-5 text-[#E8B830]" />
                         </div>
-                        <h2 className="text-lg font-bold text-[#5C0F22]">{service.name}</h2>
+                        <h2 className="text-lg font-bold text-[#1A4FAD]">{service.name}</h2>
                       </div>
 
                       {/* Description */}
@@ -261,7 +261,7 @@ export default function ServicesPage() {
                       <div className="flex flex-wrap gap-2 mb-5">
                         {service.features.map((feature, i) => (
                           <span key={i} className="inline-flex items-center gap-1 text-xs text-gray-500 bg-gray-50 px-2.5 py-1 rounded-full">
-                            <Check className="w-3 h-3 text-[#D4AF37]" />
+                            <Check className="w-3 h-3 text-[#E8B830]" />
                             {feature}
                           </span>
                         ))}
@@ -270,10 +270,10 @@ export default function ServicesPage() {
                       {/* Footer */}
                       <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                         <span className="flex items-center text-sm text-gray-500">
-                          <Clock className="w-4 h-4 mr-1.5 text-[#D4AF37]/60" />
+                          <Clock className="w-4 h-4 mr-1.5 text-[#E8B830]/60" />
                           {service.duration}
                         </span>
-                        <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#5C0F22] group-hover:gap-2 transition-all">
+                        <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#1A4FAD] group-hover:gap-2 transition-all">
                           Learn more
                           <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                         </span>
@@ -281,7 +281,7 @@ export default function ServicesPage() {
                     </div>
 
                     {/* Gold accent line at bottom */}
-                    <div className="h-0.5 bg-gradient-to-r from-[#D4AF37] via-[#B8941F] to-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="h-0.5 bg-gradient-to-r from-[#E8B830] via-[#B07820] to-[#E8B830] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </Link>
               ))}
@@ -291,14 +291,14 @@ export default function ServicesPage() {
 
         {/* CTA Section */}
         <section className="relative w-full py-12 md:py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#5C0F22] via-[#4a0c1b] to-[#5C0F22]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8]" />
           {/* Pattern Overlay */}
-          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
+          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #E8B830 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E8B830]/30 to-transparent" />
           
           {/* Gold blurs */}
-          <div className="absolute top-10 left-[20%] w-48 h-48 bg-[#D4AF37]/8 rounded-full blur-[100px]" />
-          <div className="absolute bottom-10 right-[25%] w-64 h-64 bg-[#D4AF37]/6 rounded-full blur-[120px]" />
+          <div className="absolute top-10 left-[20%] w-48 h-48 bg-[#E8B830]/8 rounded-full blur-[100px]" />
+          <div className="absolute bottom-10 right-[25%] w-64 h-64 bg-[#E8B830]/6 rounded-full blur-[120px]" />
 
           <div className="relative w-full px-4 sm:px-6 lg:px-12 text-center">
             <motion.div
@@ -318,7 +318,7 @@ export default function ServicesPage() {
               <div className="flex flex-row items-center justify-center gap-2 md:gap-4">
                 <Link
                   href="/book"
-                  className="inline-flex items-center gap-1.5 px-3 py-2 md:px-8 md:py-4 rounded-full font-semibold btn-golden-shine shadow-lg shadow-[#D4AF37]/25 hover:shadow-xl hover:shadow-[#D4AF37]/40 transition-all duration-300 hover:scale-105 text-xs md:text-base"
+                  className="inline-flex items-center gap-1.5 px-3 py-2 md:px-8 md:py-4 rounded-full font-semibold btn-golden-shine shadow-lg shadow-[#E8B830]/25 hover:shadow-xl hover:shadow-[#E8B830]/40 transition-all duration-300 hover:scale-105 text-xs md:text-base"
                 >
                   <span className="relative z-10 flex items-center gap-1.5">
                     <span className="hidden sm:inline">Book a Consultation</span>

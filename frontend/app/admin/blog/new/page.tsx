@@ -149,9 +149,9 @@ export default function NewBlogPostPage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 flex items-center justify-center">
+      <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 flex items-center justify-center">
         <div className="text-center">
-          <div className="w-12 h-12 border-4 border-[#D4AF37] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="w-12 h-12 border-4 border-[#E8B830] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-gray-600">Loading...</p>
         </div>
       </div>
@@ -159,14 +159,14 @@ export default function NewBlogPostPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 overflow-x-hidden">
+    <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 overflow-x-hidden">
       {/* Header */}
-      <section className="w-full bg-gradient-to-r from-[#5C0F22] to-[#4a0c1b] py-6 md:py-8">
+      <section className="w-full bg-gradient-to-r from-[#1A4FAD] to-[#1A4FAD] py-6 md:py-8">
         <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12">
           <FadeIn>
             <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-4">
               <div>
-                <Link href="/admin/blog" className="inline-flex items-center gap-2 text-white/80 hover:text-[#D4AF37] mb-2 transition">
+                <Link href="/admin/blog" className="inline-flex items-center gap-2 text-white/80 hover:text-[#E8B830] mb-2 transition">
                   <ArrowLeft className="w-4 h-4" />
                   Back to Blog
                 </Link>
@@ -183,7 +183,7 @@ export default function NewBlogPostPage() {
                 <button
                   onClick={() => handleSave(false)}
                   disabled={isSaving}
-                  className="px-5 py-2 rounded-full bg-white text-[#5C0F22] hover:bg-white/90 transition flex items-center gap-2 disabled:opacity-50"
+                  className="px-5 py-2 rounded-full bg-white text-[#1A4FAD] hover:bg-white/90 transition flex items-center gap-2 disabled:opacity-50"
                 >
                   <Save className="w-4 h-4" />
                   {isSaving ? "Saving..." : "Save Draft"}
@@ -191,7 +191,7 @@ export default function NewBlogPostPage() {
                 <button
                   onClick={() => handleSave(true)}
                   disabled={isSaving}
-                  className="px-5 py-2 rounded-full bg-[#D4AF37] text-[#1a0a10] hover:bg-[#E8C547] transition flex items-center gap-2 disabled:opacity-50"
+                  className="px-5 py-2 rounded-full bg-[#E8B830] text-[#1a0a10] hover:bg-[#E8B830] transition flex items-center gap-2 disabled:opacity-50"
                 >
                   <Save className="w-4 h-4" />
                   {isSaving ? "Publishing..." : "Publish"}
@@ -219,26 +219,26 @@ export default function NewBlogPostPage() {
               <div className="space-y-6">
                 {/* Title */}
                 <div>
-                  <label className="block text-sm font-medium text-[#5C0F22] mb-2">Title *</label>
+                  <label className="block text-sm font-medium text-[#1A4FAD] mb-2">Title *</label>
                   <input
                     type="text"
                     value={formData.title}
                     onChange={handleTitleChange}
-                    className="w-full px-4 py-3 text-2xl font-bold border-2 border-[#D4AF37]/20 bg-white text-gray-900 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 focus:border-[#D4AF37]/50"
+                    className="w-full px-4 py-3 text-2xl font-bold border-2 border-[#E8B830]/20 bg-white text-gray-900 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E8B830]/50 focus:border-[#E8B830]/50"
                     placeholder="Enter blog title..."
                   />
                 </div>
 
                 {/* Slug */}
                 <div>
-                  <label className="block text-sm font-medium text-[#5C0F22] mb-2">URL Slug</label>
+                  <label className="block text-sm font-medium text-[#1A4FAD] mb-2">URL Slug</label>
                   <div className="flex items-center gap-2">
                     <span className="text-gray-500">/blog/</span>
                     <input
                       type="text"
                       value={formData.slug}
                       onChange={(e) => setFormData({ ...formData, slug: e.target.value })}
-                      className="flex-1 px-4 py-2 border-2 border-[#D4AF37]/20 bg-white text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50"
+                      className="flex-1 px-4 py-2 border-2 border-[#E8B830]/20 bg-white text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E8B830]/50"
                       placeholder="url-slug"
                     />
                   </div>
@@ -246,7 +246,7 @@ export default function NewBlogPostPage() {
 
                 {/* Featured Image with Upload */}
                 <div>
-                  <label className="block text-sm font-medium text-[#5C0F22] mb-2">Featured Image</label>
+                  <label className="block text-sm font-medium text-[#1A4FAD] mb-2">Featured Image</label>
                   <ImageUpload
                     onUpload={(url) => setFormData({ ...formData, featured_image: url })}
                     currentImage={formData.featured_image}
@@ -255,50 +255,50 @@ export default function NewBlogPostPage() {
 
                 {/* Excerpt */}
                 <div>
-                  <label className="block text-sm font-medium text-[#5C0F22] mb-2">Excerpt / Summary</label>
+                  <label className="block text-sm font-medium text-[#1A4FAD] mb-2">Excerpt / Summary</label>
                   <textarea
                     value={formData.excerpt}
                     onChange={(e) => setFormData({ ...formData, excerpt: e.target.value })}
                     rows={3}
-                    className="w-full px-4 py-2 border-2 border-[#D4AF37]/20 bg-white text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50"
+                    className="w-full px-4 py-2 border-2 border-[#E8B830]/20 bg-white text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E8B830]/50"
                     placeholder="A short summary of the article..."
                   />
                 </div>
 
                 {/* Author */}
                 <div>
-                  <label className="block text-sm font-medium text-[#5C0F22] mb-2">Author</label>
+                  <label className="block text-sm font-medium text-[#1A4FAD] mb-2">Author</label>
                   <input
                     type="text"
                     value={formData.author}
                     onChange={(e) => setFormData({ ...formData, author: e.target.value })}
-                    className="w-full px-4 py-2 border-2 border-[#D4AF37]/20 bg-white text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50"
+                    className="w-full px-4 py-2 border-2 border-[#E8B830]/20 bg-white text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E8B830]/50"
                     placeholder="Dr. Kwame Asante"
                   />
                 </div>
 
                 {/* Tags */}
                 <div>
-                  <label className="block text-sm font-medium text-[#5C0F22] mb-2">Tags</label>
+                  <label className="block text-sm font-medium text-[#1A4FAD] mb-2">Tags</label>
                   <div className="flex gap-2 mb-2">
                     <input
                       type="text"
                       value={tagInput}
                       onChange={(e) => setTagInput(e.target.value)}
                       onKeyPress={(e) => e.key === 'Enter' && addTag()}
-                      className="flex-1 px-4 py-2 border-2 border-[#D4AF37]/20 bg-white text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50"
+                      className="flex-1 px-4 py-2 border-2 border-[#E8B830]/20 bg-white text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E8B830]/50"
                       placeholder="Add a tag..."
                     />
                     <button
                       onClick={addTag}
-                      className="px-4 py-2 bg-[#5C0F22] text-white rounded-lg hover:bg-[#7a1830] transition"
+                      className="px-4 py-2 bg-[#1A4FAD] text-white rounded-lg hover:bg-[#163E8A] transition"
                     >
                       <Plus className="w-5 h-5" />
                     </button>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {formData.tags.map((tag) => (
-                      <span key={tag} className="inline-flex items-center gap-1 px-3 py-1 bg-[#D4AF37]/10 rounded-full text-sm text-[#5C0F22]">
+                      <span key={tag} className="inline-flex items-center gap-1 px-3 py-1 bg-[#E8B830]/10 rounded-full text-sm text-[#1A4FAD]">
                         {tag}
                         <button onClick={() => removeTag(tag)} className="hover:text-red-500">
                           <X className="w-3 h-3" />
@@ -310,25 +310,25 @@ export default function NewBlogPostPage() {
 
                 {/* Content Editor */}
                 <div>
-                  <label className="block text-sm font-medium text-[#5C0F22] mb-2">Content *</label>
+                  <label className="block text-sm font-medium text-[#1A4FAD] mb-2">Content *</label>
                   <RichTextEditor content={formData.content} onChange={handleContentChange} />
                 </div>
               </div>
             ) : (
               /* Preview Mode */
-              <div className="bg-white rounded-2xl p-8 border border-[#D4AF37]/20">
+              <div className="bg-white rounded-2xl p-8 border border-[#E8B830]/20">
                 {formData.featured_image && (
                   <div className="relative h-64 w-full rounded-xl overflow-hidden mb-6">
                     <img src={formData.featured_image} alt={formData.title} className="object-cover w-full h-full" />
                   </div>
                 )}
-                <h1 className="text-3xl md:text-4xl font-bold text-[#5C0F22] mb-4">{formData.title || "Untitled"}</h1>
+                <h1 className="text-3xl md:text-4xl font-bold text-[#1A4FAD] mb-4">{formData.title || "Untitled"}</h1>
                 <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
-                  <span className="text-[#5C0F22]">{formData.author || "Admin"}</span>
+                  <span className="text-[#1A4FAD]">{formData.author || "Admin"}</span>
                   <span>{formData.read_time || "2 min read"}</span>
                 </div>
                 {formData.excerpt && (
-                  <div className="text-gray-600 italic mb-6 border-l-4 border-[#D4AF37] pl-4">
+                  <div className="text-gray-600 italic mb-6 border-l-4 border-[#E8B830] pl-4">
                     {formData.excerpt}
                   </div>
                 )}

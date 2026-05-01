@@ -60,7 +60,7 @@ export function ImageGallery({ images, columns = 3 }: ImageGalleryProps) {
               className="object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <motion.div 
-              className="absolute inset-0 bg-gradient-to-t from-[#C1121F]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              className="absolute inset-0 bg-gradient-to-t from-[#00C8E8]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               initial={{ opacity: 0 }}
               whileHover={{ opacity: 1 }}
             >
@@ -86,14 +86,14 @@ export function ImageGallery({ images, columns = 3 }: ImageGalleryProps) {
             onClick={() => setSelectedImage(null)}
           >
             <button
-              className="absolute top-4 right-4 text-white hover:text-[#C1121F] transition-colors"
+              className="absolute top-4 right-4 text-white hover:text-[#00C8E8] transition-colors"
               onClick={() => setSelectedImage(null)}
             >
               <X size={32} />
             </button>
 
             <button
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-[#C1121F] transition-colors"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-[#00C8E8] transition-colors"
               onClick={(e) => {
                 e.stopPropagation();
                 handlePrevious();
@@ -103,7 +103,7 @@ export function ImageGallery({ images, columns = 3 }: ImageGalleryProps) {
             </button>
 
             <button
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-[#C1121F] transition-colors"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-[#00C8E8] transition-colors"
               onClick={(e) => {
                 e.stopPropagation();
                 handleNext();

@@ -18,7 +18,7 @@ import Link from "next/link";
 import { Clock, ChevronRight } from "lucide-react";
 
 // Rotating 3D Tooth Model
-function RotatingTooth({ color = "#C5A059", position = [0, 0, 0] as [number, number, number] }) {
+function RotatingTooth({ color = "#E8B830", position = [0, 0, 0] as [number, number, number] }) {
   const meshRef = useRef<THREE.Mesh>(null);
   
   useFrame((state) => {
@@ -79,7 +79,7 @@ function FloatingGoldParticles() {
   
   return (
     <points geometry={particles}>
-      <pointsMaterial color="#C5A059" size={0.05} transparent opacity={0.6} />
+      <pointsMaterial color="#E8B830" size={0.05} transparent opacity={0.6} />
     </points>
   );
 }
@@ -98,7 +98,7 @@ function GoldRing() {
   return (
     <mesh ref={ringRef} position={[0, 0, 0]}>
       <torusGeometry args={[1.2, 0.08, 64, 200]} />
-      <meshStandardMaterial color="#C5A059" metalness={0.9} roughness={0.1} emissive="#C5A059" emissiveIntensity={0.3} />
+      <meshStandardMaterial color="#E8B830" metalness={0.9} roughness={0.1} emissive="#E8B830" emissiveIntensity={0.3} />
     </mesh>
   );
 }
@@ -113,7 +113,7 @@ export function ServiceCard3D({ service, index }: { service: any; index: number 
   
   if (!isClient) {
     return (
-      <div className="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-[#C5A059]/20 h-full">
+      <div className="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-[#E8B830]/20 h-full">
         <div className="h-48 bg-gray-800" />
         <div className="p-6">
           <div className="h-6 bg-gray-700 rounded mb-2" />
@@ -133,9 +133,9 @@ export function ServiceCard3D({ service, index }: { service: any; index: number 
       whileHover={{ scale: 1.02, y: -10 }}
       className="relative h-full cursor-pointer"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-[#C5A059]/20 to-[#A68A46]/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#E8B830]/20 to-[#A68A46]/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
       
-      <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-[#C5A059]/30 h-full">
+      <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl border border-[#E8B830]/30 h-full">
         <div className="relative h-56 overflow-hidden">
           <motion.div
             whileHover={{ scale: 1.1 }}
@@ -161,7 +161,7 @@ export function ServiceCard3D({ service, index }: { service: any; index: number 
                 <mesh>
                   <sphereGeometry args={[0.5, 32, 32]} />
                   <MeshDistortMaterial
-                    color="#C5A059"
+                    color="#E8B830"
                     distort={0.3}
                     speed={2}
                     metalness={0.9}
@@ -183,7 +183,7 @@ export function ServiceCard3D({ service, index }: { service: any; index: number 
             </div>
             <Link
               href={`/services/${service.slug}`}
-              className="inline-flex items-center text-[#C5A059] font-semibold hover:translate-x-1 transition-transform"
+              className="inline-flex items-center text-[#E8B830] font-semibold hover:translate-x-1 transition-transform"
             >
               Learn More <ChevronRight className="w-4 h-4 ml-1" />
             </Link>
@@ -202,7 +202,7 @@ export function Hero3DScene() {
     setIsClient(true);
   }, []);
   
-  if (!isClient) return <div className="w-full h-full bg-gradient-to-br from-[#5C0F22] to-[#4A0C1A]" />;
+  if (!isClient) return <div className="w-full h-full bg-gradient-to-br from-[#1A4FAD] to-[#1A4FAD]" />;
   
   return (
     <Canvas
@@ -213,7 +213,7 @@ export function Hero3DScene() {
       <PerspectiveCamera makeDefault position={[0, 0, 8]} />
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} intensity={1} />
-      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#C5A059" />
+      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#E8B830" />
       <directionalLight position={[5, 5, 5]} intensity={0.8} />
       
       <Stars radius={100} depth={50} count={2000} factor={4} saturation={0} fade speed={1} />
@@ -224,7 +224,7 @@ export function Hero3DScene() {
       <RotatingTooth position={[-1.5, 0, 0]} />
       <RotatingTooth position={[1.5, 0.5, 0]} color="#E5C78C" />
       
-      <Sparkles count={500} scale={10} size={0.1} color="#C5A059" />
+      <Sparkles count={500} scale={10} size={0.1} color="#E8B830" />
       
       <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.5} />
     </Canvas>

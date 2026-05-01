@@ -46,18 +46,18 @@ export default function AdminBlogPage() {
     }
   };
 
-  if (isLoading) return <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 flex items-center justify-center"><div className="w-12 h-12 border-4 border-[#D4AF37] border-t-transparent rounded-full animate-spin"></div></div>;
+  if (isLoading) return <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 flex items-center justify-center"><div className="w-12 h-12 border-4 border-[#E8B830] border-t-transparent rounded-full animate-spin"></div></div>;
 
   return (
-    <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 overflow-x-hidden">
+    <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 overflow-x-hidden">
       <section className="relative w-full overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#5C0F22] via-[#4a0c1b] to-[#5C0F22]" />
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8]" />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E8B830]/30 to-transparent" />
         <div className="relative w-full px-4 sm:px-6 lg:px-12 py-10 md:py-14">
-          <Link href="/admin" className="inline-flex items-center gap-2 text-white/60 hover:text-[#D4AF37] text-sm font-medium mb-4 transition-colors"><ArrowLeft className="w-4 h-4" /> Back to Dashboard</Link>
+          <Link href="/admin" className="inline-flex items-center gap-2 text-white/60 hover:text-[#E8B830] text-sm font-medium mb-4 transition-colors"><ArrowLeft className="w-4 h-4" /> Back to Dashboard</Link>
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div><h1 className="text-3xl md:text-4xl font-bold text-white mb-1">Manage Blog Posts</h1><p className="text-white/60 text-sm">{posts.length} total posts</p></div>
-            <Link href="/admin/blog/new" className="inline-flex items-center gap-2 px-6 py-3 bg-[#D4AF37] text-[#1a0a10] text-sm font-semibold rounded-full hover:bg-[#E8C547] transition-colors shadow-lg shadow-[#D4AF37]/25"><Plus className="w-4 h-4" /> Write New Post</Link>
+            <Link href="/admin/blog/new" className="inline-flex items-center gap-2 px-6 py-3 bg-[#E8B830] text-[#1a0a10] text-sm font-semibold rounded-full hover:bg-[#E8B830] transition-colors shadow-lg shadow-[#E8B830]/25"><Plus className="w-4 h-4" /> Write New Post</Link>
           </div>
         </div>
       </section>
@@ -67,12 +67,12 @@ export default function AdminBlogPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center mb-6">
             <div className="flex flex-wrap gap-3">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#D4AF37]/50" />
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#E8B830]/50" />
                 <input type="text" placeholder="Search posts..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-9 pr-4 py-2.5 border-2 border-[#5C0F22]/15 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5C0F22]/15 focus:border-[#5C0F22]/40 text-sm w-64" />
+                  className="pl-9 pr-4 py-2.5 border-2 border-[#1A4FAD]/15 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1A4FAD]/15 focus:border-[#1A4FAD]/40 text-sm w-64" />
               </div>
               <select value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)}
-                className="px-4 py-2.5 border-2 border-[#5C0F22]/15 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5C0F22]/15 text-sm">
+                className="px-4 py-2.5 border-2 border-[#1A4FAD]/15 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1A4FAD]/15 text-sm">
                 <option value="all">All Posts</option>
                 <option value="published">Published</option>
                 <option value="draft">Drafts</option>
@@ -80,7 +80,7 @@ export default function AdminBlogPage() {
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-xl overflow-hidden border border-[#5C0F22]/10">
+          <div className="bg-gray-50 rounded-xl overflow-hidden border border-[#1A4FAD]/10">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead className="bg-white">
@@ -94,7 +94,7 @@ export default function AdminBlogPage() {
                   {filteredPosts.map((post) => (
                     <tr key={post.id} className="hover:bg-white transition">
                       <td className="px-5 py-3.5">
-                        <p className="text-sm font-medium text-[#5C0F22] line-clamp-1">{post.title}</p>
+                        <p className="text-sm font-medium text-[#1A4FAD] line-clamp-1">{post.title}</p>
                         <p className="text-xs text-gray-500 mt-0.5 line-clamp-1">{post.excerpt}</p>
                       </td>
                       <td className="px-5 py-3.5 text-sm text-gray-600">{post.author || "Admin"}</td>
@@ -107,8 +107,8 @@ export default function AdminBlogPage() {
                       </td>
                       <td className="px-5 py-3.5">
                         <div className="flex items-center gap-1">
-                          <Link href={`/blog/${post.slug}`} target="_blank" className="p-1.5 text-gray-400 hover:text-[#D4AF37] transition rounded-lg hover:bg-[#D4AF37]/5"><Eye className="w-4 h-4" /></Link>
-                          <Link href={`/admin/blog/${post.id}/edit`} className="p-1.5 text-gray-400 hover:text-[#D4AF37] transition rounded-lg hover:bg-[#D4AF37]/5"><Edit className="w-4 h-4" /></Link>
+                          <Link href={`/blog/${post.slug}`} target="_blank" className="p-1.5 text-gray-400 hover:text-[#E8B830] transition rounded-lg hover:bg-[#E8B830]/5"><Eye className="w-4 h-4" /></Link>
+                          <Link href={`/admin/blog/${post.id}/edit`} className="p-1.5 text-gray-400 hover:text-[#E8B830] transition rounded-lg hover:bg-[#E8B830]/5"><Edit className="w-4 h-4" /></Link>
                           <button onClick={() => { setPostToDelete(post); setShowDeleteModal(true); }} className="p-1.5 text-gray-400 hover:text-red-500 transition rounded-lg hover:bg-red-50"><Trash2 className="w-4 h-4" /></button>
                         </div>
                       </td>
@@ -119,9 +119,9 @@ export default function AdminBlogPage() {
             </div>
             {filteredPosts.length === 0 && (
               <div className="text-center py-12">
-                <FileText className="w-12 h-12 text-[#D4AF37]/20 mx-auto mb-3" />
+                <FileText className="w-12 h-12 text-[#E8B830]/20 mx-auto mb-3" />
                 <p className="text-gray-500">No blog posts found</p>
-                <Link href="/admin/blog/new" className="inline-flex items-center gap-2 text-[#5C0F22] mt-4 hover:text-[#D4AF37] font-medium"><Plus className="w-4 h-4" /> Create your first post</Link>
+                <Link href="/admin/blog/new" className="inline-flex items-center gap-2 text-[#1A4FAD] mt-4 hover:text-[#E8B830] font-medium"><Plus className="w-4 h-4" /> Create your first post</Link>
               </div>
             )}
           </div>
@@ -130,12 +130,12 @@ export default function AdminBlogPage() {
 
       {showDeleteModal && postToDelete && (
         <div className="fixed inset-0 bg-black/50 z-[200] flex items-center justify-center p-4" onClick={() => setShowDeleteModal(false)}>
-          <div className="bg-white rounded-2xl max-w-md w-full p-6 border border-[#5C0F22]/15 shadow-2xl" onClick={(e) => e.stopPropagation()}>
+          <div className="bg-white rounded-2xl max-w-md w-full p-6 border border-[#1A4FAD]/15 shadow-2xl" onClick={(e) => e.stopPropagation()}>
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-bold text-[#5C0F22]">Delete Post</h2>
+              <h2 className="text-xl font-bold text-[#1A4FAD]">Delete Post</h2>
               <button onClick={() => setShowDeleteModal(false)} className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200"><X className="w-4 h-4 text-gray-500" /></button>
             </div>
-            <p className="text-gray-600 mb-6">Are you sure you want to delete "<span className="font-medium text-[#5C0F22]">{postToDelete.title}</span>"? This cannot be undone.</p>
+            <p className="text-gray-600 mb-6">Are you sure you want to delete "<span className="font-medium text-[#1A4FAD]">{postToDelete.title}</span>"? This cannot be undone.</p>
             <div className="flex gap-3">
               <button onClick={() => setShowDeleteModal(false)} className="flex-1 px-4 py-3 border-2 border-gray-200 rounded-xl text-gray-700 font-medium text-sm hover:bg-gray-50 transition">Cancel</button>
               <button onClick={confirmDelete} className="flex-1 bg-red-600 text-white px-4 py-3 rounded-xl font-semibold text-sm hover:bg-red-700 transition">Delete</button>

@@ -90,20 +90,20 @@ export function GlassServiceCard({ service, index }: GlassServiceCardProps) {
           />
         </motion.div>
         {/* Gold gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#C5A059]/40 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#E8B830]/40 via-transparent to-transparent" />
       </div>
 
       <div className="p-6">
         {/* Icon with glass effect */}
         <motion.div 
-          className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#C5A059] to-[#A68A46] flex items-center justify-center mb-4 shadow-lg"
+          className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#E8B830] to-[#A68A46] flex items-center justify-center mb-4 shadow-lg"
           whileHover={{ rotate: 8, scale: 1.1 }}
           transition={{ type: "spring", stiffness: 400 }}
         >
           <IconComponent className="w-7 h-7 text-white" />
         </motion.div>
 
-        <h3 className="text-xl font-bold text-[#2D2D2D] mb-2 group-hover:text-[#C5A059] transition-colors">
+        <h3 className="text-xl font-bold text-[#2D2D2D] mb-2 group-hover:text-[#E8B830] transition-colors">
           {service.name}
         </h3>
         
@@ -113,14 +113,14 @@ export function GlassServiceCard({ service, index }: GlassServiceCardProps) {
 
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-1 text-xs text-gray-500">
-            <Clock className="w-3 h-3 text-[#C5A059]" />
+            <Clock className="w-3 h-3 text-[#E8B830]" />
             <span>{service.duration}</span>
           </div>
         </div>
 
         <Link href={`/services/${service.slug}`}>
           <motion.div 
-            className="inline-flex items-center gap-2 text-[#C5A059] font-semibold text-sm group-hover:gap-3 transition-all"
+            className="inline-flex items-center gap-2 text-[#E8B830] font-semibold text-sm group-hover:gap-3 transition-all"
             whileHover={{ x: 5 }}
           >
             Learn more <ChevronRight className="w-4 h-4" />

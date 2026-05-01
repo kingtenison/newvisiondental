@@ -24,7 +24,7 @@ export default function GalleryClient({ images, categories }: { images: GalleryI
   const filteredImages = selectedCategory === "All" ? images : images.filter((img) => img.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 overflow-x-hidden">
+    <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative w-full min-h-[25vh] md:min-h-[35vh] flex flex-col overflow-hidden">
         {/* 4x2 Image Grid */}
@@ -42,13 +42,13 @@ export default function GalleryClient({ images, categories }: { images: GalleryI
           ))}
         </div>
         
-        {/* Wine Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#3D0814]/95 via-[#5C0F22]/70 to-[#7A1A2E]/30" />
+        {/* Blue-Cyan Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1A4FAD]/95 via-[#0D2A60]/80 to-[#00C8E8]/40" />
         
         {/* Pattern Overlay */}
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #E8B830 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
         
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E8B830]/30 to-transparent" />
         
         <div className="relative w-full px-4 sm:px-6 lg:px-12 flex-1 flex items-center justify-center py-4 md:py-14">
           <div className="text-center max-w-3xl mx-auto">
@@ -67,7 +67,7 @@ export default function GalleryClient({ images, categories }: { images: GalleryI
       </section>
 
       {/* Category Filter */}
-      <section className="w-full bg-[#e7e7e7] pt-10 pb-4">
+      <section className="w-full bg-[#F2F4F8] pt-10 pb-4">
         <div className="w-full px-4 sm:px-6 lg:px-12">
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
@@ -76,8 +76,8 @@ export default function GalleryClient({ images, categories }: { images: GalleryI
                 onClick={() => setSelectedCategory(category)}
                 className={`px-5 py-2.5 rounded-full font-medium text-sm transition-all duration-300 ${
                   selectedCategory === category
-                    ? "bg-[#D4AF37] text-[#1a0a10] shadow-lg shadow-[#D4AF37]/25"
-                    : "bg-white text-[#5C0F22] border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 hover:bg-[#D4AF37]/5"
+                    ? "bg-[#E8B830] text-[#1a0a10] shadow-lg shadow-[#E8B830]/25"
+                    : "bg-white text-[#1A4FAD] border border-[#E8B830]/20 hover:border-[#E8B830]/50 hover:bg-[#E8B830]/5"
                 }`}
               >
                 {category}
@@ -92,8 +92,8 @@ export default function GalleryClient({ images, categories }: { images: GalleryI
         <div className="w-full px-4 sm:px-6 lg:px-12">
           {filteredImages.length === 0 ? (
             <div className="text-center py-20">
-              <Camera className="w-16 h-16 text-[#D4AF37]/20 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-[#5C0F22] mb-2">No Images Yet</h3>
+              <Camera className="w-16 h-16 text-[#E8B830]/20 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-[#1A4FAD] mb-2">No Images Yet</h3>
               <p className="text-gray-500">Gallery images will appear here once uploaded.</p>
             </div>
           ) : (
@@ -101,7 +101,7 @@ export default function GalleryClient({ images, categories }: { images: GalleryI
               {filteredImages.map((image, index) => (
                 <div
                   key={image.id}
-                  className={`group relative rounded-2xl overflow-hidden cursor-pointer border border-[#D4AF37]/10 hover:border-[#D4AF37]/30 hover:shadow-xl hover:shadow-[#D4AF37]/10 transition-all duration-300 animate-[fadeIn_0.5s_ease-out] ${spanClasses[index % spanClasses.length]}`}
+                  className={`group relative rounded-2xl overflow-hidden cursor-pointer border border-[#E8B830]/10 hover:border-[#E8B830]/30 hover:shadow-xl hover:shadow-[#E8B830]/10 transition-all duration-300 animate-[fadeIn_0.5s_ease-out] ${spanClasses[index % spanClasses.length]}`}
                   style={{ animationDelay: `${index * 40}ms`, animationFillMode: "both" }}
                   onClick={() => {
                     setSelectedImage(image);
@@ -119,11 +119,11 @@ export default function GalleryClient({ images, categories }: { images: GalleryI
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
                   {image.is_before_after && (
-                    <span className="absolute top-3 left-3 bg-[#D4AF37] text-[#1a0a10] text-[10px] font-bold px-2.5 py-1 rounded-full z-20 uppercase tracking-wider">
+                    <span className="absolute top-3 left-3 bg-[#E8B830] text-[#1a0a10] text-[10px] font-bold px-2.5 py-1 rounded-full z-20 uppercase tracking-wider">
                       Before & After
                     </span>
                   )}
-                  <span className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-[#5C0F22] text-[10px] font-semibold px-2.5 py-1 rounded-full z-20 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-[#1A4FAD] text-[10px] font-semibold px-2.5 py-1 rounded-full z-20 opacity-0 group-hover:opacity-100 transition-opacity">
                     {image.category}
                   </span>
                   <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-20">
@@ -146,11 +146,11 @@ export default function GalleryClient({ images, categories }: { images: GalleryI
             className="fixed inset-0 bg-black/95 z-[200] flex items-center justify-center p-4"
             onClick={() => setSelectedImage(null)}
           >
-            <button className="absolute top-4 right-4 text-white/70 hover:text-[#D4AF37] transition-colors z-10" onClick={() => setSelectedImage(null)}>
+            <button className="absolute top-4 right-4 text-white/70 hover:text-[#E8B830] transition-colors z-10" onClick={() => setSelectedImage(null)}>
               <X size={32} />
             </button>
             <button
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-[#D4AF37] transition-colors p-2"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-[#E8B830] transition-colors p-2"
               onClick={(e) => {
                 e.stopPropagation();
                 const newIndex = currentIndex === 0 ? filteredImages.length - 1 : currentIndex - 1;
@@ -161,7 +161,7 @@ export default function GalleryClient({ images, categories }: { images: GalleryI
               <ChevronLeft size={48} />
             </button>
             <button
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-[#D4AF37] transition-colors p-2"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-[#E8B830] transition-colors p-2"
               onClick={(e) => {
                 e.stopPropagation();
                 const newIndex = currentIndex === filteredImages.length - 1 ? 0 : currentIndex + 1;
@@ -174,16 +174,16 @@ export default function GalleryClient({ images, categories }: { images: GalleryI
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="max-w-4xl max-h-[80vh] w-full bg-[#1a0a10] rounded-2xl border border-[#D4AF37]/20 overflow-hidden"
+              className="max-w-4xl max-h-[80vh] w-full bg-[#1a0a10] rounded-2xl border border-[#E8B830]/20 overflow-hidden"
             >
               <div className="p-10 text-center">
-                <div className="w-24 h-24 mx-auto bg-[#D4AF37]/10 rounded-full flex items-center justify-center mb-6 border border-[#D4AF37]/20">
-                  <Camera className="w-10 h-10 text-[#D4AF37]" />
+                <div className="w-24 h-24 mx-auto bg-[#E8B830]/10 rounded-full flex items-center justify-center mb-6 border border-[#E8B830]/20">
+                  <Camera className="w-10 h-10 text-[#E8B830]" />
                 </div>
                 <h3 className="text-white text-2xl font-bold mb-2">{selectedImage.title}</h3>
-                <p className="text-[#D4AF37] text-sm font-medium mb-4">{selectedImage.category}</p>
+                <p className="text-[#E8B830] text-sm font-medium mb-4">{selectedImage.category}</p>
                 {selectedImage.is_before_after && (
-                  <span className="inline-block bg-[#D4AF37]/10 text-[#D4AF37] text-xs font-semibold px-3 py-1.5 rounded-full border border-[#D4AF37]/20">
+                  <span className="inline-block bg-[#E8B830]/10 text-[#E8B830] text-xs font-semibold px-3 py-1.5 rounded-full border border-[#E8B830]/20">
                     Before & After
                   </span>
                 )}
@@ -195,16 +195,16 @@ export default function GalleryClient({ images, categories }: { images: GalleryI
 
       {/* CTA Section */}
       <section className="relative w-full py-12 md:py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#5C0F22] via-[#4a0c1b] to-[#5C0F22]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8]" />
         {/* Pattern Overlay */}
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #E8B830 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
         <div className="relative w-full px-4 sm:px-6 lg:px-12 text-center">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-xl sm:text-3xl md:text-5xl font-bold text-white mb-3 md:mb-5">Ready to Transform Your Smile?</h2>
             <p className="text-sm md:text-lg text-white/70 mb-4 md:mb-10 leading-relaxed hidden md:block">Book a consultation today and start your journey to a beautiful smile.</p>
             <Link
               href="/book"
-              className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold btn-golden-shine shadow-lg shadow-[#D4AF37]/25 hover:shadow-xl hover:shadow-[#D4AF37]/40 transition-all duration-300 hover:scale-105 text-sm md:text-base"
+              className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold btn-golden-shine shadow-lg shadow-[#E8B830]/25 hover:shadow-xl hover:shadow-[#E8B830]/40 transition-all duration-300 hover:scale-105 text-sm md:text-base"
             >
               <span className="relative z-10 flex items-center gap-2">
                 <Calendar className="w-4 h-4 md:w-5 md:h-5" /> Book Your Consultation

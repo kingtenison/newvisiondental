@@ -103,7 +103,7 @@ export default function LuxuryHero() {
   ]
 
   return (
-    <section className="relative min-h-screen bg-[#e7e7e7] overflow-hidden">
+    <section className="relative min-h-screen bg-[#F2F4F8] overflow-hidden">
       
       {/* PREMIUM HERO SECTION */}
       <div className="relative h-screen md:h-[700px] flex items-center justify-center overflow-hidden group pt-16 sm:pt-20 md:pt-32 lg:pt-40">
@@ -125,14 +125,14 @@ export default function LuxuryHero() {
           </div>
 
           {/* WINE GRADIENT OVERLAY - PREMIUM */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#5C0F22]/85 via-[#5C0F22]/60 to-[#5C0F22]/20 pointer-events-none z-5"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1A4FAD]/85 via-[#0D2A60]/70 to-[#00C8E8]/30 pointer-events-none z-5"></div>
 
           {/* ACCENT GRADIENT OVERLAY */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#5C0F22]/20 opacity-40 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1A4FAD]/20 opacity-40 pointer-events-none"></div>
 
           {/* PREMIUM BOKEH EFFECT */}
-          <div className="absolute top-10 left-20 w-48 h-48 bg-[#E8B923]/8 rounded-full blur-3xl" style={{animationDelay: '0s'}}></div>
-          <div className="absolute bottom-20 right-32 w-64 h-64 bg-[#E8B923]/5 rounded-full blur-3xl" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-10 left-20 w-48 h-48 bg-[#E8B830]/8 rounded-full blur-3xl" style={{animationDelay: '0s'}}></div>
+          <div className="absolute bottom-20 right-32 w-64 h-64 bg-[#E8B830]/5 rounded-full blur-3xl" style={{animationDelay: '1s'}}></div>
         </div>
 
         {/* HERO CONTENT - PREMIUM */}
@@ -140,9 +140,9 @@ export default function LuxuryHero() {
           <div className="w-full lg:w-1/2 max-w-4xl">
             
             {/* PREMIUM BADGE */}
-            <div className="inline-flex items-center gap-2 mb-6 sm:mb-8 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-[#E8B923]/30 group animate-slide-down">
-              <Star className="w-4 h-4 text-[#E8B923] fill-[#E8B923] animate-spin-slow" />
-              <span className="text-[#E8B923] text-xs font-light tracking-[0.25em] uppercase">
+            <div className="inline-flex items-center gap-2 mb-6 sm:mb-8 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-[#E8B830]/30 group animate-slide-down">
+              <Star className="w-4 h-4 text-[#E8B830] fill-[#E8B830] animate-spin-slow" />
+              <span className="text-[#E8B830] text-xs font-light tracking-[0.25em] uppercase">
                 Premium Dental Excellence
               </span>
             </div>
@@ -151,7 +151,7 @@ export default function LuxuryHero() {
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-6 leading-[1] sm:leading-[0.9] animate-slide-up tracking-tight">
               <span className="text-white">Your</span>
               <br />
-              <span className="relative inline-block bg-gradient-to-r from-[#E8B923] via-[#FFD700] to-[#E8B923] bg-clip-text text-transparent animate-glow-pulse">
+              <span className="relative inline-block bg-gradient-to-r from-[#E8B830] via-[#E8B830] to-[#E8B830] bg-clip-text text-transparent animate-glow-pulse">
                 Perfect Smile
               </span>
               <br />
@@ -159,18 +159,18 @@ export default function LuxuryHero() {
             </h1>
 
             {/* PREMIUM DIVIDER */}
-            <div className="w-24 h-1 bg-gradient-to-r from-[#E8B923] to-transparent mb-6 animate-slide-right" style={{animationDelay: '0.1s'}}></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#E8B830] to-transparent mb-6 animate-slide-right" style={{animationDelay: '0.1s'}}></div>
 
             {/* COMPELLING DESCRIPTION */}
             <p className="text-lg sm:text-xl md:text-2xl font-medium text-gray-100 leading-relaxed mb-10 max-w-3xl animate-slide-up" style={{animationDelay: '0.2s'}}>
-              Experience <span className="text-[#E8B923]">world-class</span> dental care in a <span className="text-[#E8B923]">luxury environment</span>. Expert dentists, transparent pricing, and uncompromising <span className="text-[#E8B923]">comfort</span>.
+              Experience <span className="text-[#E8B830]">world-class</span> dental care in a <span className="text-[#E8B830]">luxury environment</span>. Expert dentists, transparent pricing, and uncompromising <span className="text-[#E8B830]">comfort</span>.
             </p>
 
             {/* PREMIUM CTA BUTTONS */}
             <div className="flex flex-col sm:flex-row gap-4 animate-slide-up" style={{animationDelay: '0.3s'}}>
               <Link
                 href="/book"
-                className="group/btn px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-[#E8B923] via-[#FFD700] to-[#E8B923] text-[#5C0F22] text-xs sm:text-sm font-light tracking-[0.1em] uppercase rounded-xl hover:shadow-2xl hover:shadow-[#E8B923]/50 transition-all duration-300 flex items-center justify-center gap-3 relative overflow-hidden whitespace-nowrap animate-button-glow"
+                className="group/btn px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-[#E8B830] via-[#E8B830] to-[#E8B830] text-[#1A4FAD] text-xs sm:text-sm font-light tracking-[0.1em] uppercase rounded-xl hover:shadow-2xl hover:shadow-[#E8B830]/50 transition-all duration-300 flex items-center justify-center gap-3 relative overflow-hidden whitespace-nowrap animate-button-glow"
               >
                 <span className="relative z-10 flex items-center gap-3">
                   Book Your Smile
@@ -181,7 +181,7 @@ export default function LuxuryHero() {
 
               <Link
                 href="/services"
-                className="group/btn px-8 sm:px-10 py-4 sm:py-5 border-2 border-white/40 text-white text-xs sm:text-sm font-light tracking-[0.1em] uppercase rounded-xl hover:border-[#E8B923] hover:bg-white/10 backdrop-blur-sm transition-all duration-300 whitespace-nowrap hover:scale-105 hover:shadow-lg"
+                className="group/btn px-8 sm:px-10 py-4 sm:py-5 border-2 border-white/40 text-white text-xs sm:text-sm font-light tracking-[0.1em] uppercase rounded-xl hover:border-[#E8B830] hover:bg-white/10 backdrop-blur-sm transition-all duration-300 whitespace-nowrap hover:scale-105 hover:shadow-lg"
               >
                 Explore Our Services
               </Link>
@@ -190,12 +190,12 @@ export default function LuxuryHero() {
             {/* TRUST INDICATORS */}
             <div className="flex gap-8 mt-16 animate-slide-up" style={{animationDelay: '0.4s'}}>
               <div className="group cursor-default">
-                <p className="text-3xl md:text-4xl font-light text-[#E8B923] group-hover:scale-110 transition-transform duration-300 inline-block">500+</p>
+                <p className="text-3xl md:text-4xl font-light text-[#E8B830] group-hover:scale-110 transition-transform duration-300 inline-block">500+</p>
                 <p className="text-sm text-gray-200 font-light">Happy Patients</p>
               </div>
-              <div className="w-px bg-gradient-to-b from-transparent via-[#E8B923]/30 to-transparent animate-pulse"></div>
+              <div className="w-px bg-gradient-to-b from-transparent via-[#E8B830]/30 to-transparent animate-pulse"></div>
               <div className="group cursor-default">
-                <p className="text-3xl md:text-4xl font-light text-[#E8B923] group-hover:scale-110 transition-transform duration-300 inline-block">5★</p>
+                <p className="text-3xl md:text-4xl font-light text-[#E8B830] group-hover:scale-110 transition-transform duration-300 inline-block">5★</p>
                 <p className="text-sm text-gray-200 font-light">Highly Rated</p>
               </div>
             </div>
@@ -204,7 +204,7 @@ export default function LuxuryHero() {
 
         {/* ANIMATED SCROLL INDICATOR */}
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 animate-bounce group cursor-pointer hover:opacity-60 transition-opacity">
-          <svg className="w-6 h-10 text-[#E8B923] animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-6 h-10 text-[#E8B830] animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
           <div className="absolute inset-0 w-6 h-10 animate-scroll-glow rounded"></div>
@@ -212,12 +212,12 @@ export default function LuxuryHero() {
       </div>
 
       {/* PREMIUM FEATURES SECTION */}
-      <div className="relative bg-gradient-to-b from-[#e7e7e7] via-[#dfdfdf] to-[#e7e7e7] py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8">
+      <div className="relative bg-gradient-to-b from-[#F2F4F8] via-[#dfdfdf] to-[#F2F4F8] py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto">
           
           {/* SECTION HEADER */}
           <div className="text-center mb-16 sm:mb-20 lg:mb-24">
-            <p ref={headerPRef} className="text-[#E8B923] text-xs md:text-sm uppercase tracking-[0.4em] font-light mb-6 transition-transform duration-300">
+            <p ref={headerPRef} className="text-[#E8B830] text-xs md:text-sm uppercase tracking-[0.4em] font-light mb-6 transition-transform duration-300">
               Why We're Different
             </p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-gray-900 mb-6 leading-tight">
@@ -225,14 +225,14 @@ export default function LuxuryHero() {
                 Excellence in
               </div>
               <br />
-              <div ref={detailRef} className="inline-block text-[#5C0F22] transition-transform duration-300">
+              <div ref={detailRef} className="inline-block text-[#1A4FAD] transition-transform duration-300">
                 Every Detail
               </div>
             </h2>
             <div ref={dotsRef} className="flex gap-2 justify-center mb-8 transition-transform duration-300">
-              <div className="w-4 h-1.5 bg-[#E8B923] rounded-full"></div>
-              <div className="w-4 h-1.5 bg-[#E8B923]/40 rounded-full"></div>
-              <div className="w-4 h-1.5 bg-[#E8B923]/20 rounded-full"></div>
+              <div className="w-4 h-1.5 bg-[#E8B830] rounded-full"></div>
+              <div className="w-4 h-1.5 bg-[#E8B830]/40 rounded-full"></div>
+              <div className="w-4 h-1.5 bg-[#E8B830]/20 rounded-full"></div>
             </div>
           </div>
 
@@ -257,34 +257,34 @@ export default function LuxuryHero() {
                   }}
                 >
                   {/* PREMIUM CARD GLOW BACKGROUND */}
-                  <div className="absolute -inset-1.5 bg-gradient-to-br from-[#E8B923]/50 to-[#5C0F22]/30 rounded-3xl opacity-0 group-hover:opacity-100 transition-all duration-500 blur-xl -z-10 group-hover:blur-2xl"></div>
+                  <div className="absolute -inset-1.5 bg-gradient-to-br from-[#E8B830]/50 to-[#1A4FAD]/30 rounded-3xl opacity-0 group-hover:opacity-100 transition-all duration-500 blur-xl -z-10 group-hover:blur-2xl"></div>
                   
                   {/* CARD BORDER EFFECT - ENHANCED */}
-                  <div className="absolute -inset-0.5 bg-gradient-to-br from-[#E8B923]/60 via-[#E8B923]/20 to-[#5C0F22]/30 rounded-3xl opacity-30 group-hover:opacity-100 transition-opacity duration-500 -z-5 shadow-2xl"></div>
+                  <div className="absolute -inset-0.5 bg-gradient-to-br from-[#E8B830]/60 via-[#E8B830]/20 to-[#1A4FAD]/30 rounded-3xl opacity-30 group-hover:opacity-100 transition-opacity duration-500 -z-5 shadow-2xl"></div>
                   
                   {/* CARD CONTENT - ENHANCED */}
-                  <div className="relative bg-gradient-to-br from-[#e7e7e7] via-[#e7e7e7]/95 to-[#dfdfdf]/90 backdrop-blur-xl border-2 border-gray-200/80 rounded-2xl md:rounded-3xl p-8 sm:p-10 lg:p-12 flex flex-col flex-1 transition-all duration-500 group-hover:border-[#E8B923]/70 group-hover:shadow-2xl group-hover:shadow-[#E8B923]/40 group-hover:bg-[#e7e7e7] group-hover:-translate-y-3 group-hover:to-[#dfdfdf]">
+                  <div className="relative bg-gradient-to-br from-[#F2F4F8] via-[#F2F4F8]/95 to-[#dfdfdf]/90 backdrop-blur-xl border-2 border-gray-200/80 rounded-2xl md:rounded-3xl p-8 sm:p-10 lg:p-12 flex flex-col flex-1 transition-all duration-500 group-hover:border-[#E8B830]/70 group-hover:shadow-2xl group-hover:shadow-[#E8B830]/40 group-hover:bg-[#F2F4F8] group-hover:-translate-y-3 group-hover:to-[#dfdfdf]">
                     
                     {/* STAT BADGE - ENHANCED */}
-                  <div className="absolute -top-5 right-6 px-5 py-2 bg-gradient-to-r from-[#E8B923] to-[#FFD700] text-[#5C0F22] text-xs font-bold tracking-[0.3em] uppercase rounded-full shadow-xl animate-assembly-badge hover:shadow-2xl hover:shadow-[#E8B923]/60" style={{animationDelay: `${(idx * 0.12) + 0}s`}}>
+                  <div className="absolute -top-5 right-6 px-5 py-2 bg-gradient-to-r from-[#E8B830] to-[#E8B830] text-[#1A4FAD] text-xs font-bold tracking-[0.3em] uppercase rounded-full shadow-xl animate-assembly-badge hover:shadow-2xl hover:shadow-[#E8B830]/60" style={{animationDelay: `${(idx * 0.12) + 0}s`}}>
                       {item.stat}
                     </div>
 
                     {/* ICON CONTAINER - ENHANCED */}
                     <div className="mb-10 animate-assembly-icon group/icon" style={{animationDelay: `${(idx * 0.12) + 0.12}s`}}>
-                      <div className="w-28 h-28 rounded-2xl bg-gradient-to-br from-[#E8B923]/40 to-[#5C0F22]/20 flex items-center justify-center group-hover:from-[#E8B923]/60 group-hover:to-[#5C0F22]/40 transition-all duration-500 relative overflow-hidden shadow-lg group-hover:shadow-2xl group-hover:shadow-[#E8B923]/30 group-hover:scale-110">
-                        <div className="absolute inset-0 bg-gradient-to-r from-[#E8B923]/20 via-white/40 to-[#E8B923]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
-                        <Icon className="w-14 h-14 text-[#5C0F22] group-hover:text-[#E8B923] transition-all duration-500 relative z-10 group-hover/icon:scale-125 group-hover/icon:rotate-12" />
+                      <div className="w-28 h-28 rounded-2xl bg-gradient-to-br from-[#E8B830]/40 to-[#1A4FAD]/20 flex items-center justify-center group-hover:from-[#E8B830]/60 group-hover:to-[#1A4FAD]/40 transition-all duration-500 relative overflow-hidden shadow-lg group-hover:shadow-2xl group-hover:shadow-[#E8B830]/30 group-hover:scale-110">
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#E8B830]/20 via-white/40 to-[#E8B830]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+                        <Icon className="w-14 h-14 text-[#1A4FAD] group-hover:text-[#E8B830] transition-all duration-500 relative z-10 group-hover/icon:scale-125 group-hover/icon:rotate-12" />
                       </div>
                     </div>
 
                     {/* TITLE - ENHANCED */}
-                    <h3 className="text-3xl font-bold text-gray-900 mb-5 group-hover:text-[#5C0F22] transition-all duration-300 animate-assembly-title" style={{animationDelay: `${(idx * 0.12) + 0.24}s`}}>
+                    <h3 className="text-3xl font-bold text-gray-900 mb-5 group-hover:text-[#1A4FAD] transition-all duration-300 animate-assembly-title" style={{animationDelay: `${(idx * 0.12) + 0.24}s`}}>
                       {item.title}
                     </h3>
 
                     {/* PREMIUM DIVIDER - ENHANCED */}
-                    <div className="h-1.5 bg-gradient-to-r from-[#E8B923] via-[#FFD700] to-transparent mb-6 group-hover:w-32 transition-all duration-500 animate-assembly-divider shadow-lg" style={{animationDelay: `${(idx * 0.12) + 0.36}s`}}></div>
+                    <div className="h-1.5 bg-gradient-to-r from-[#E8B830] via-[#E8B830] to-transparent mb-6 group-hover:w-32 transition-all duration-500 animate-assembly-divider shadow-lg" style={{animationDelay: `${(idx * 0.12) + 0.36}s`}}></div>
 
                     {/* DESCRIPTION - ENHANCED */}
                     <p className="text-gray-600 text-lg font-light leading-relaxed flex-1 mb-10 group-hover:text-gray-800 transition-all duration-300 animate-assembly-description" style={{animationDelay: `${(idx * 0.12) + 0.48}s`}}>
@@ -294,7 +294,7 @@ export default function LuxuryHero() {
                     {/* PREMIUM LINK - ENHANCED */}
                     <Link
                       href="/services"
-                      className="text-[#5C0F22] text-xs font-bold tracking-[0.4em] uppercase opacity-70 hover:opacity-100 transition-all duration-300 self-start group/link relative animate-assembly-link group-hover:text-[#E8B923]"
+                      className="text-[#1A4FAD] text-xs font-bold tracking-[0.4em] uppercase opacity-70 hover:opacity-100 transition-all duration-300 self-start group/link relative animate-assembly-link group-hover:text-[#E8B830]"
                       style={{animationDelay: `${(idx * 0.12) + 0.6}s`}}
                     >
                       <span className="flex items-center gap-3">
@@ -311,17 +311,17 @@ export default function LuxuryHero() {
       </div>
 
       {/* PREMIUM STATS SECTION */}
-      <div className="relative bg-gradient-to-r from-[#5C0F22] via-[#2d061a] to-[#5C0F22] py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <div className="relative bg-gradient-to-r from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8] py-20 sm:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
         
         {/* ANIMATED BACKGROUND */}
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#E8B923]/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#E8B923]/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#E8B830]/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#E8B830]/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
         </div>
 
         {/* ANIMATED PATTERN */}
         <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 2px, #E8B923 2px, #E8B923 4px)',
+          backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 2px, #E8B830 2px, #E8B830 4px)',
           backgroundSize: '60px 60px',
           animation: 'slide 10s linear infinite'
         }}></div>
@@ -329,19 +329,19 @@ export default function LuxuryHero() {
         <div className="relative z-10 container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 text-center">
             <div className="group">
-              <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-[#E8B923] mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">500+</p>
+              <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-[#E8B830] mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">500+</p>
               <p className="text-white/70 text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em] font-light">Happy Patients</p>
             </div>
             <div className="group">
-              <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-[#E8B923] mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">20+</p>
+              <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-[#E8B830] mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">20+</p>
               <p className="text-white/70 text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em] font-light">Years Excellence</p>
             </div>
             <div className="group">
-              <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-[#E8B923] mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">100%</p>
+              <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-[#E8B830] mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">100%</p>
               <p className="text-white/70 text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em] font-light">Satisfaction</p>
             </div>
             <div className="group">
-              <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-[#E8B923] mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">5★</p>
+              <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-[#E8B830] mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">5★</p>
               <p className="text-white/70 text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em] font-light">Star Rated</p>
             </div>
           </div>

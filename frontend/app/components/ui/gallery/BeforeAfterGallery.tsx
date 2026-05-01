@@ -63,7 +63,7 @@ export function BeforeAfterGallery({ pairs }: BeforeAfterGalleryProps) {
           style={{ left: `${sliderPosition}%` }}
         >
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center">
-            <ChevronLeft className="w-4 h-4 text-[#C1121F]" />
+            <ChevronLeft className="w-4 h-4 text-[#00C8E8]" />
             <ChevronRight className="w-4 h-4 text-[#2E7D32]" />
           </div>
         </div>
@@ -81,7 +81,7 @@ export function BeforeAfterGallery({ pairs }: BeforeAfterGalleryProps) {
       <div className="flex items-center justify-between">
         <motion.button
           onClick={handlePrevious}
-          className="p-3 rounded-full bg-[#C1121F] text-white hover:bg-[#B91C1C] transition-colors"
+          className="p-3 rounded-full bg-[#00C8E8] text-white hover:bg-[#00C8E8] transition-colors"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
@@ -115,7 +115,7 @@ export function BeforeAfterGallery({ pairs }: BeforeAfterGalleryProps) {
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`relative w-16 h-16 rounded-lg overflow-hidden ${
-              index === currentIndex ? 'ring-2 ring-[#C1121F]' : 'opacity-50'
+              index === currentIndex ? 'ring-2 ring-[#00C8E8]' : 'opacity-50'
             }`}
             whileHover={{ scale: 1.1 }}
           >

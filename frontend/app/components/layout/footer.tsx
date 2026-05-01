@@ -77,37 +77,40 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="relative bg-gradient-to-b from-[#0f0510] to-[#0a0308] overflow-hidden">
-      {/* Subtle Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.02]" style={{
-        backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(212,175,55,0.4) 1px, transparent 0)',
+    <footer className="relative bg-[#0A0A0A] overflow-hidden">
+      {/* Immersive Blue-Cyan Background System */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-[#0D2A60]/80 to-[#0A0A0A]" />
+      
+      {/* Dynamic Light Orbs */}
+      <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full blur-[150px] bg-[#1A4FAD]/20 pointer-events-none" />
+      <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] rounded-full blur-[150px] bg-[#00C8E8]/10 pointer-events-none" />
+
+      {/* Subtle Grid Pattern */}
+      <div className="absolute inset-0 opacity-[0.05] pointer-events-none" style={{
+        backgroundImage: 'linear-gradient(rgba(0, 200, 232, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 200, 232, 0.2) 1px, transparent 1px)',
         backgroundSize: '40px 40px'
       }} />
 
-      {/* Gold Accent Line */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
+      {/* Cyan Accent Top Line */}
+      <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#00C8E8]/40 to-transparent" />
 
       {/* Main Footer Content */}
-      <div className="relative w-full px-4 sm:px-6 lg:px-12 pt-12 md:pt-20 pb-8">
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-12 pt-12 md:pt-20 pb-8">
 
         {/* Top Section — 3x3 grid */}
         <div className="grid grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8 mb-12">
           
           {/* 1. Brand */}
           <div className="col-span-3 sm:col-span-1 lg:col-span-1">
-            <Link href="/" className="inline-flex items-center gap-2 mb-4 group">
-              <div className="relative w-8 h-8 lg:w-10 lg:h-10">
+            <Link href="/" className="block mb-8 group">
+              <div className="relative w-20 h-20 lg:w-32 lg:h-32">
                 <Image 
-                  src="/images/nv-new-logo-03.png" 
+                  src="/images/logo-dark.png" 
                   alt="New Vision Dental" 
                   fill
                   className="object-contain"
-                  sizes="40px"
+                  sizes="(max-width: 640px) 80px, 128px"
                 />
-              </div>
-              <div>
-                <span className="text-white font-bold text-sm lg:text-base block leading-tight">New Vision</span>
-                <span className="text-[#D4AF37] font-semibold text-[10px] lg:text-xs tracking-wider">DENTAL CLINIC</span>
               </div>
             </Link>
             
@@ -117,12 +120,12 @@ export function Footer() {
 
             {/* Contact Info */}
             <div className="space-y-1.5 mb-4">
-              <a href="mailto:newvisiondentalclinic@gmail.com" className="flex items-center gap-2 text-white/60 hover:text-[#D4AF37] transition-colors text-xs lg:text-sm group">
-                <Mail className="w-3 h-3 text-[#D4AF37]/60 group-hover:text-[#D4AF37] transition-colors shrink-0" />
+              <a href="mailto:newvisiondentalclinic@gmail.com" className="flex items-center gap-2 text-white/60 hover:text-[#00C8E8] transition-colors text-xs lg:text-sm group">
+                <Mail className="w-3 h-3 text-[#00C8E8]/60 group-hover:text-[#00C8E8] transition-colors shrink-0" />
                 <span className="break-all">newvisiondentalclinic@gmail.com</span>
               </a>
               <div className="flex items-center gap-2 text-white/60 text-xs lg:text-sm">
-                <Clock className="w-3 h-3 text-[#D4AF37]/60 shrink-0" />
+                <Clock className="w-3 h-3 text-[#00C8E8]/60 shrink-0" />
                 Mon - Sat: 8AM - 6PM
               </div>
             </div>
@@ -137,7 +140,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-8 h-8 lg:w-9 lg:h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-[#D4AF37] hover:border-[#D4AF37]/30 hover:bg-[#D4AF37]/10 transition-all duration-300"
+                  className="w-8 h-8 lg:w-9 lg:h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-[#00C8E8] hover:border-[#00C8E8]/30 hover:bg-[#00C8E8]/10 transition-all duration-300"
                   aria-label={social.label}
                 >
                   <social.icon className="w-3 h-3 lg:w-4 lg:h-4" />
@@ -154,9 +157,9 @@ export function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-white/50 hover:text-[#D4AF37] transition-colors text-xs lg:text-sm flex items-center gap-1.5 group"
+                    className="text-white/50 hover:text-[#00C8E8] transition-colors text-xs lg:text-sm flex items-center gap-1.5 group"
                   >
-                    <ArrowRight className="w-2 h-2 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
+                    <ArrowRight className="w-2 h-2 opacity-0 group-hover:opacity-100 text-[#00C8E8] transition-opacity shrink-0" />
                     <span className="leading-snug">{link.name}</span>
                   </Link>
                 </li>
@@ -172,9 +175,9 @@ export function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-white/50 hover:text-[#D4AF37] transition-colors text-xs lg:text-sm flex items-center gap-1.5 group"
+                    className="text-white/50 hover:text-[#00C8E8] transition-colors text-xs lg:text-sm flex items-center gap-1.5 group"
                   >
-                    <ArrowRight className="w-2 h-2 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
+                    <ArrowRight className="w-2 h-2 opacity-0 group-hover:opacity-100 text-[#00C8E8] transition-opacity shrink-0" />
                     <span className="leading-snug">{link.name}</span>
                   </Link>
                 </li>
@@ -190,9 +193,9 @@ export function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-white/50 hover:text-[#D4AF37] transition-colors text-xs lg:text-sm flex items-center gap-1.5 group"
+                    className="text-white/50 hover:text-[#00C8E8] transition-colors text-xs lg:text-sm flex items-center gap-1.5 group"
                   >
-                    <ArrowRight className="w-2 h-2 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
+                    <ArrowRight className="w-2 h-2 opacity-0 group-hover:opacity-100 text-[#00C8E8] transition-opacity shrink-0" />
                     {link.name}
                   </Link>
                 </li>
@@ -208,14 +211,14 @@ export function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-white/50 hover:text-[#D4AF37] transition-colors text-xs lg:text-sm flex items-center gap-1.5 group"
+                    className="text-white/50 hover:text-[#00C8E8] transition-colors text-xs lg:text-sm flex items-center gap-1.5 group"
                   >
-                    <MapPin className="w-3 h-3 text-[#D4AF37]/60 group-hover:text-[#D4AF37] transition-colors shrink-0" />
+                    <MapPin className="w-3 h-3 text-[#00C8E8]/60 group-hover:text-[#00C8E8] transition-colors shrink-0" />
                     <span>{link.name}</span>
                   </Link>
                   <a 
                     href={`tel:+233${link.phone}`}
-                    className="text-white/40 hover:text-[#D4AF37] transition-colors text-[10px] lg:text-xs flex items-center gap-1.5 ml-[18px]"
+                    className="text-white/40 hover:text-[#00C8E8] transition-colors text-[10px] lg:text-xs flex items-center gap-1.5 ml-[18px]"
                   >
                     <Phone className="w-2.5 h-2.5 shrink-0" />
                     {link.phone}
@@ -233,9 +236,9 @@ export function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-white/50 hover:text-[#D4AF37] transition-colors text-xs lg:text-sm flex items-center gap-1.5 group"
+                    className="text-white/50 hover:text-[#00C8E8] transition-colors text-xs lg:text-sm flex items-center gap-1.5 group"
                   >
-                    <ArrowRight className="w-2 h-2 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
+                    <ArrowRight className="w-2 h-2 opacity-0 group-hover:opacity-100 text-[#00C8E8] transition-opacity shrink-0" />
                     {link.name}
                   </Link>
                 </li>
@@ -251,9 +254,9 @@ export function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-white/50 hover:text-[#D4AF37] transition-colors text-xs lg:text-sm flex items-center gap-1.5 group"
+                    className="text-white/50 hover:text-[#00C8E8] transition-colors text-xs lg:text-sm flex items-center gap-1.5 group"
                   >
-                    <ArrowRight className="w-2 h-2 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
+                    <ArrowRight className="w-2 h-2 opacity-0 group-hover:opacity-100 text-[#00C8E8] transition-opacity shrink-0" />
                     {link.name}
                   </Link>
                 </li>
@@ -267,17 +270,16 @@ export function Footer() {
             <div className="flex flex-wrap items-center gap-2">
               <Link
                 href="/book"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 lg:px-4 lg:py-2 btn-golden-shine text-xs lg:text-sm font-semibold rounded-full hover:shadow-lg hover:shadow-[#D4AF37]/25 transition-shadow duration-300"
+                className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#E8B830] text-[#0A0A0A] text-xs lg:text-sm font-bold rounded-full hover:shadow-[0_0_20px_rgba(232,184,48,0.4)] hover:scale-105 transition-all duration-300 uppercase tracking-wide"
               >
                 <Calendar className="w-3 h-3" />
                 Book Now
-                <ArrowRight className="w-3 h-3" />
               </Link>
               <a
                 href="tel:+2330559497906"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 lg:px-4 lg:py-2 bg-white/10 text-white text-xs lg:text-sm font-semibold rounded-full border border-white/20 hover:border-[#D4AF37]/30 hover:bg-white/20 transition-all duration-300"
+                className="inline-flex items-center gap-1.5 px-4 py-2 bg-white/5 text-white text-xs lg:text-sm font-bold rounded-full border border-white/20 hover:border-[#00C8E8]/50 hover:bg-[#00C8E8]/10 hover:text-[#00C8E8] transition-all duration-300 uppercase tracking-wide group"
               >
-                <Phone className="w-3 h-3 text-[#D4AF37]" />
+                <Phone className="w-3 h-3 text-[#00C8E8] group-hover:text-[#00C8E8]" />
                 Call Now
               </a>
             </div>
@@ -293,12 +295,12 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-4 border-t border-white/5">
+        <div className="pt-4 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-2">
-            <Link href="/contact" className="text-white/30 hover:text-white/60 text-[10px] transition-colors">
+            <Link href="/contact" className="text-white/30 hover:text-[#00C8E8] text-[10px] transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/contact" className="text-white/30 hover:text-white/60 text-[10px] transition-colors">
+            <Link href="/contact" className="text-white/30 hover:text-[#00C8E8] text-[10px] transition-colors">
               Terms of Service
             </Link>
           </div>

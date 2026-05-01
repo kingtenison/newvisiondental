@@ -1,20 +1,70 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap');
+
+/* NEXA FONT DEFINITIONS */
+@font-face {
+    font-family: 'Nexa';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Nexa'), url('https://fonts.cdnfonts.com/s/16221/NexaBold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Nexa';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Nexa'), url('https://fonts.cdnfonts.com/s/16221/NexaLight.woff') format('woff');
+}
+
+/* SPECIFIC NEXA DEFINITION FOR NUMBERS ONLY (to be used in body stack) */
+@font-face {
+    font-family: 'NexaNumbers';
+    font-style: normal;
+    src: local('Nexa'), url('https://fonts.cdnfonts.com/s/16221/NexaBold.woff') format('woff');
+    unicode-range: U+0030-0039; /* Matches digits 0-9 */
+}
+
+/* CODEC WARM FONT DEFINITIONS (Excluding Italics) */
+@font-face {
+    font-family: 'Codec Warm Trial';
+    font-style: normal;
+    font-weight: 250;
+    src: local('Codec Warm Trial'), url('https://fonts.cdnfonts.com/s/14896/Codec-Warm-ExtraLight-trial.woff') format('woff');
+}
+@font-face {
+    font-family: 'Codec Warm Trial';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Codec Warm Trial'), url('https://fonts.cdnfonts.com/s/14896/Codec-Warm-Regular-trial.woff') format('woff');
+}
+@font-face {
+    font-family: 'Codec Warm Trial';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Codec Warm Trial'), url('https://fonts.cdnfonts.com/s/14896/Codec-Warm-Bold-trial.woff') format('woff');
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* GLOBAL STYLE OVERRIDES */
+* {
+  font-style: normal !important;
+  font-synthesis: none !important; /* Prevents browser from faking italics/bold */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 :root {
-  --background: #e7e7e7;
-  --foreground: #1a1a1a;
-  --gold: #D4AF37;
-  --gold-light: #E8C547;
-  --gold-dark: #B8941F;
-  --burgundy: #5C0F22;
-  --wine: #722F37;
-  --wine-rich: #5C1A24;
-  --dark-bg: #0f0510;
-  --dark-surface: #1a0a12;
+  --background: #F2F4F8;
+  --foreground: #3D3D3D;
+  --gold: #E8B830;
+  --gold-light: #E8B830;
+  --gold-dark: #B07820;
+  --primary-blue: #1A4FAD;
+  --primary-blue-dark: #163E8A;
+  --cyan: #00C8E8;
+  --dark-bg: #0A0A0A;
+  --dark-surface: #0A0A0A;
 }
 
 /* Modern Base Styles */
@@ -23,18 +73,28 @@ html, body {
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* NexaNumbers first to intercept all digits 0-9 */
+  font-family: 'NexaNumbers', 'Codec Warm Trial', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   color: var(--foreground);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nexa', 'Nunito', sans-serif;
   line-height: 1.2;
   font-weight: 700;
+}
+
+/* Global Button & UI Font Weights */
+button, 
+.btn, 
+.btn-gold, 
+.btn-golden-shine,
+[role="button"] {
+  font-family: 'NexaNumbers', 'Codec Warm Trial', 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 250 !important;
 }
 
 /* Links */
@@ -44,13 +104,13 @@ a {
 
 /* Selection */
 ::selection {
-  background: #D4AF37;
+  background: #E8B830;
   color: white;
 }
 
 /* Focus */
 *:focus-visible {
-  outline: 2px solid #D4AF37;
+  outline: 2px solid #E8B830;
   outline-offset: 2px;
 }
 
@@ -69,17 +129,17 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #D4AF37, #B8941F);
+  background: linear-gradient(180deg, #E8B830, #B07820);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #E8C547, #D4AF37);
+  background: linear-gradient(180deg, #E8B830, #E8B830);
 }
 
 /* Gold Button Styles */
 .btn-gold {
-  @apply relative overflow-hidden bg-gradient-to-r from-[#D4AF37] to-[#B8941F] text-white font-bold transition-all duration-300;
+  @apply relative overflow-hidden bg-gradient-to-r from-[#E8B830] to-[#B07820] text-white font-bold transition-all duration-300;
   background-size: 200% 200%;
   animation: gradientShift 3s ease infinite;
 }
@@ -139,7 +199,7 @@ html {
 
 /* Gradient text utility */
 .gradient-text {
-  background: linear-gradient(135deg, #D4AF37, #E8C547, #D4AF37);
+  background: linear-gradient(135deg, #E8B830, #E8B830, #E8B830);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -172,15 +232,15 @@ html {
 .text-golden-shine {
   background: linear-gradient(
     90deg,
-    #D4AF37 0%,
+    #E8B830 0%,
     #B8860B 15%,
-    #FFD700 30%,
+    #E8B830 30%,
     #FFF8DC 45%,
-    #FFD700 50%,
+    #E8B830 50%,
     #FFF8DC 55%,
-    #FFD700 70%,
+    #E8B830 70%,
     #B8860B 85%,
-    #D4AF37 100%
+    #E8B830 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -202,15 +262,15 @@ html {
 .btn-golden-shine {
   background: linear-gradient(
     90deg,
-    #D4AF37 0%,
+    #E8B830 0%,
     #B8860B 10%,
-    #FFD700 25%,
+    #E8B830 25%,
     #FFF8DC 40%,
-    #FFD700 50%,
+    #E8B830 50%,
     #FFF8DC 60%,
-    #FFD700 75%,
+    #E8B830 75%,
     #B8860B 90%,
-    #D4AF37 100%
+    #E8B830 100%
   );
   background-size: 200% auto;
   animation: button-shine 3s linear infinite;
@@ -271,7 +331,7 @@ html {
 /* Pulse glow animation */
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 0 20px rgba(26, 79, 173, 0.3);
   }
   50% {
     box-shadow: 0 0 40px rgba(212, 175, 55, 0.5);
@@ -302,8 +362,8 @@ html {
   @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
-/* Shimmering Wine Border Animation */
-@keyframes shimmerWine {
+/* Shimmering Blue Border Animation */
+@keyframes shimmerBlue {
   0% {
     background-position: 0% 50%;
   }

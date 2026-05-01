@@ -179,9 +179,9 @@ export default function AdminGalleryPage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 flex items-center justify-center">
+      <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 flex items-center justify-center">
         <div className="text-center">
-          <div className="w-12 h-12 border-4 border-[#D4AF37] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="w-12 h-12 border-4 border-[#E8B830] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-gray-600">Loading gallery...</p>
         </div>
       </div>
@@ -189,15 +189,15 @@ export default function AdminGalleryPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 overflow-x-hidden">
+    <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 overflow-x-hidden">
 
       {/* Header */}
       <section className="relative w-full overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#5C0F22] via-[#4a0c1b] to-[#5C0F22]" />
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8]" />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E8B830]/30 to-transparent" />
 
         <div className="relative w-full px-4 sm:px-6 lg:px-12 py-10 md:py-14">
-          <Link href="/admin" className="inline-flex items-center gap-2 text-white/60 hover:text-[#D4AF37] text-sm font-medium mb-4 transition-colors">
+          <Link href="/admin" className="inline-flex items-center gap-2 text-white/60 hover:text-[#E8B830] text-sm font-medium mb-4 transition-colors">
             <ArrowLeft className="w-4 h-4" />
             Back to Dashboard
           </Link>
@@ -208,7 +208,7 @@ export default function AdminGalleryPage() {
             </div>
             <button
               onClick={() => setShowUploadModal(true)}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#D4AF37] text-[#1a0a10] text-sm font-semibold rounded-full hover:bg-[#E8C547] transition-colors shadow-lg shadow-[#D4AF37]/25"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#E8B830] text-[#1a0a10] text-sm font-semibold rounded-full hover:bg-[#E8B830] transition-colors shadow-lg shadow-[#E8B830]/25"
             >
               <Plus className="w-4 h-4" />
               Upload Image
@@ -218,7 +218,7 @@ export default function AdminGalleryPage() {
       </section>
 
       {/* Category Filter */}
-      <section className="w-full bg-[#e7e7e7] py-6">
+      <section className="w-full bg-[#F2F4F8] py-6">
         <div className="w-full px-4 sm:px-6 lg:px-12">
           <div className="flex flex-wrap gap-2">
             {["All", ...categories].map((cat) => (
@@ -227,8 +227,8 @@ export default function AdminGalleryPage() {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === cat
-                    ? "bg-[#D4AF37] text-[#1a0a10] shadow-sm"
-                    : "bg-gray-50 text-gray-600 border border-[#D4AF37]/15 hover:border-[#D4AF37]/30"
+                    ? "bg-[#E8B830] text-[#1a0a10] shadow-sm"
+                    : "bg-gray-50 text-gray-600 border border-[#E8B830]/15 hover:border-[#E8B830]/30"
                 }`}
               >
                 {cat}
@@ -243,12 +243,12 @@ export default function AdminGalleryPage() {
         <div className="w-full px-4 sm:px-6 lg:px-12">
           {filteredImages.length === 0 ? (
             <div className="text-center py-20">
-              <Camera className="w-16 h-16 text-[#D4AF37]/20 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-[#5C0F22] mb-2">No Images Yet</h3>
+              <Camera className="w-16 h-16 text-[#E8B830]/20 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-[#1A4FAD] mb-2">No Images Yet</h3>
               <p className="text-gray-500 mb-6">Upload your first gallery image to get started</p>
               <button
                 onClick={() => setShowUploadModal(true)}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#5C0F22] text-white rounded-full text-sm font-semibold hover:bg-[#7a1830] transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#1A4FAD] text-white rounded-full text-sm font-semibold hover:bg-[#163E8A] transition-colors"
               >
                 <Upload className="w-4 h-4" />
                 Upload Image
@@ -262,7 +262,7 @@ export default function AdminGalleryPage() {
                   layout
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="group relative bg-white rounded-xl border border-[#D4AF37]/10 overflow-hidden hover:shadow-lg hover:border-[#D4AF37]/25 transition-all"
+                  className="group relative bg-white rounded-xl border border-[#E8B830]/10 overflow-hidden hover:shadow-lg hover:border-[#E8B830]/25 transition-all"
                 >
                   <div className="relative aspect-square overflow-hidden">
                     <Image
@@ -303,13 +303,13 @@ export default function AdminGalleryPage() {
                     </div>
                     {/* Before/After badge */}
                     {image.is_before_after && (
-                      <span className="absolute top-2 left-2 bg-[#D4AF37] text-[#1a0a10] text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
+                      <span className="absolute top-2 left-2 bg-[#E8B830] text-[#1a0a10] text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
                         B&A
                       </span>
                     )}
                   </div>
                   <div className="p-3">
-                    <h4 className="text-sm font-semibold text-[#5C0F22] truncate">{image.title}</h4>
+                    <h4 className="text-sm font-semibold text-[#1A4FAD] truncate">{image.title}</h4>
                     <p className="text-xs text-gray-500">{image.category}</p>
                   </div>
                 </motion.div>
@@ -338,7 +338,7 @@ export default function AdminGalleryPage() {
             >
               {/* Modal Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-100">
-                <h2 className="text-xl font-bold text-[#5C0F22]">Upload Image</h2>
+                <h2 className="text-xl font-bold text-[#1A4FAD]">Upload Image</h2>
                 <button
                   onClick={() => !isUploading && setShowUploadModal(false)}
                   className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
@@ -354,8 +354,8 @@ export default function AdminGalleryPage() {
                   onClick={() => !isUploading && fileInputRef.current?.click()}
                   className={`relative border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-all ${
                     uploadForm.preview 
-                      ? "border-[#D4AF37]/30 bg-[#D4AF37]/5" 
-                      : "border-gray-200 hover:border-[#D4AF37]/30 hover:bg-gray-50"
+                      ? "border-[#E8B830]/30 bg-[#E8B830]/5" 
+                      : "border-gray-200 hover:border-[#E8B830]/30 hover:bg-gray-50"
                   }`}
                 >
                   {uploadForm.preview ? (
@@ -385,7 +385,7 @@ export default function AdminGalleryPage() {
                     type="text"
                     value={uploadForm.title}
                     onChange={(e) => setUploadForm({ ...uploadForm, title: e.target.value })}
-                    className="w-full px-4 py-3 border-2 border-[#5C0F22]/15 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#5C0F22]/15 focus:border-[#5C0F22]/40 transition text-sm"
+                    className="w-full px-4 py-3 border-2 border-[#1A4FAD]/15 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1A4FAD]/15 focus:border-[#1A4FAD]/40 transition text-sm"
                     placeholder="e.g. Teeth Whitening Result"
                   />
                 </div>
@@ -396,7 +396,7 @@ export default function AdminGalleryPage() {
                   <select
                     value={uploadForm.category}
                     onChange={(e) => setUploadForm({ ...uploadForm, category: e.target.value })}
-                    className="w-full px-4 py-3 border-2 border-[#5C0F22]/15 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#5C0F22]/15 focus:border-[#5C0F22]/40 transition text-sm bg-white"
+                    className="w-full px-4 py-3 border-2 border-[#1A4FAD]/15 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#1A4FAD]/15 focus:border-[#1A4FAD]/40 transition text-sm bg-white"
                   >
                     {categories.map((cat) => (
                       <option key={cat} value={cat}>{cat}</option>
@@ -409,7 +409,7 @@ export default function AdminGalleryPage() {
                   <div
                     onClick={() => setUploadForm({ ...uploadForm, isBeforeAfter: !uploadForm.isBeforeAfter })}
                     className={`w-10 h-6 rounded-full transition-colors relative ${
-                      uploadForm.isBeforeAfter ? "bg-[#D4AF37]" : "bg-gray-200"
+                      uploadForm.isBeforeAfter ? "bg-[#E8B830]" : "bg-gray-200"
                     }`}
                   >
                     <div className={`absolute w-5 h-5 bg-white rounded-full top-0.5 transition-transform shadow ${
@@ -460,7 +460,7 @@ export default function AdminGalleryPage() {
                 <button
                   onClick={handleUpload}
                   disabled={isUploading || !uploadForm.file || !uploadForm.title}
-                  className="flex-1 px-4 py-3 bg-[#5C0F22] text-white rounded-xl font-semibold text-sm hover:bg-[#7a1830] transition-colors disabled:opacity-50 inline-flex items-center justify-center gap-2"
+                  className="flex-1 px-4 py-3 bg-[#1A4FAD] text-white rounded-xl font-semibold text-sm hover:bg-[#163E8A] transition-colors disabled:opacity-50 inline-flex items-center justify-center gap-2"
                 >
                   <Upload className="w-4 h-4" />
                   {isUploading ? "Uploading..." : "Upload"}

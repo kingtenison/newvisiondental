@@ -78,7 +78,7 @@ export default function AppointmentDetailPage({ params }: { params: { id: string
 
   if (authStatus === "loading" || isLoading) {
     return (
-      <div className="min-h-screen bg-[#e7e7e7] dark:bg-[#222222] pt-[72px] md:pt-20 flex items-center justify-center">
+      <div className="min-h-screen bg-[#F2F4F8] dark:bg-[#222222] pt-[72px] md:pt-20 flex items-center justify-center">
         <div className="text-center">
           <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-gray-600 dark:text-gray-400">Loading appointment details...</p>
@@ -89,7 +89,7 @@ export default function AppointmentDetailPage({ params }: { params: { id: string
 
   if (!user || !appointment) {
     return (
-      <div className="min-h-screen bg-[#e7e7e7] dark:bg-[#222222] pt-[72px] md:pt-20">
+      <div className="min-h-screen bg-[#F2F4F8] dark:bg-[#222222] pt-[72px] md:pt-20">
         <div className="text-center py-20">
           <AlertCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
           <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-2">Appointment Not Found</h2>
@@ -107,7 +107,7 @@ export default function AppointmentDetailPage({ params }: { params: { id: string
   const StatusIcon = statusInfo.icon;
 
   return (
-    <div className="min-h-screen bg-[#e7e7e7] dark:bg-[#222222] pt-[72px] md:pt-20 overflow-x-hidden">
+    <div className="min-h-screen bg-[#F2F4F8] dark:bg-[#222222] pt-[72px] md:pt-20 overflow-x-hidden">
       {/* Header */}
       <section className="w-full bg-gradient-to-r from-primary to-primary-dark py-8 md:py-12">
         <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12">

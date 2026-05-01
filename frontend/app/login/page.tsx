@@ -35,14 +35,14 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 overflow-x-hidden">
+    <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 overflow-x-hidden">
       {/* Hero */}
       <section className="relative w-full overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#5C0F22] via-[#4a0c1b] to-[#5C0F22]" />
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8]" />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E8B830]/30 to-transparent" />
         <div className="relative w-full px-4 sm:px-6 lg:px-12 py-10 md:py-14 text-center">
           <div className="animate-[fadeInUp_0.8s_ease-out]">
-            <span className="inline-flex items-center gap-2 text-[#D4AF37] text-xs font-semibold tracking-wide uppercase mb-3">
+            <span className="inline-flex items-center gap-2 text-[#E8B830] text-xs font-semibold tracking-wide uppercase mb-3">
               <Sparkles className="w-4 h-4" /> Patient Portal
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3">
@@ -59,7 +59,7 @@ export default function LoginPage() {
       <section className="w-full py-10 md:py-16">
         <div className="w-full px-4 sm:px-6 lg:px-12">
           <div className="max-w-md mx-auto">
-            <div className="bg-[#FFFDF5] rounded-2xl p-6 sm:p-8 border border-[#D4AF37]/20 animate-[fadeInUp_0.6s_ease-out_0.2s_both]">
+            <div className="bg-[#FFFDF5] rounded-2xl p-6 sm:p-8 border border-[#E8B830]/20 animate-[fadeInUp_0.6s_ease-out_0.2s_both]">
               <form onSubmit={handleSubmit} className="space-y-5">
                 {error && (
                   <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl text-sm">
@@ -71,12 +71,12 @@ export default function LoginPage() {
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
                   <div className="relative">
-                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#D4AF37]/60" />
+                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#E8B830]/60" />
                     <input
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 border-2 border-[#D4AF37]/20 bg-white text-gray-900 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/20 focus:border-[#D4AF37]/50 transition-all text-sm"
+                      className="w-full pl-10 pr-4 py-3 border-2 border-[#E8B830]/20 bg-white text-gray-900 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E8B830]/20 focus:border-[#E8B830]/50 transition-all text-sm"
                       placeholder="john@example.com"
                       required
                     />
@@ -87,19 +87,19 @@ export default function LoginPage() {
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Password</label>
                   <div className="relative">
-                    <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#D4AF37]/60" />
+                    <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-[#E8B830]/60" />
                     <input
                       type={showPassword ? "text" : "password"}
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      className="w-full pl-10 pr-12 py-3 border-2 border-[#D4AF37]/20 bg-white text-gray-900 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/20 focus:border-[#D4AF37]/50 transition-all text-sm"
+                      className="w-full pl-10 pr-12 py-3 border-2 border-[#E8B830]/20 bg-white text-gray-900 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#E8B830]/20 focus:border-[#E8B830]/50 transition-all text-sm"
                       placeholder="••••••••"
                       required
                     />
                     <button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-[#D4AF37] transition-colors"
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-[#E8B830] transition-colors"
                     >
                       {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                     </button>
@@ -110,7 +110,7 @@ export default function LoginPage() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-3.5 bg-[#5C0F22] text-white rounded-xl font-semibold hover:bg-[#7a1830] shadow-lg shadow-[#5C0F22]/20 hover:shadow-xl transition-all duration-300 disabled:opacity-50 flex items-center justify-center gap-2 text-sm"
+                  className="w-full py-3.5 bg-[#1A4FAD] text-white rounded-xl font-semibold hover:bg-[#163E8A] shadow-lg shadow-[#1A4FAD]/20 hover:shadow-xl transition-all duration-300 disabled:opacity-50 flex items-center justify-center gap-2 text-sm"
                 >
                   {loading ? "Signing In..." : "Sign In"}
                   {!loading && <ArrowRight className="w-4 h-4" />}
@@ -119,7 +119,7 @@ export default function LoginPage() {
 
               <p className="text-center mt-6 text-sm text-gray-500">
                 Don't have an account?{" "}
-                <Link href="/register" className="text-[#5C0F22] font-semibold hover:text-[#D4AF37] transition-colors">
+                <Link href="/register" className="text-[#1A4FAD] font-semibold hover:text-[#E8B830] transition-colors">
                   Create Account
                 </Link>
               </p>

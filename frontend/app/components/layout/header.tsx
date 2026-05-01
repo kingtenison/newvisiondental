@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X, LogOut, User, Home, Info, Stethoscope, Image as ImageIcon, BookOpen, Mail, Calendar, Phone, Copy, Check } from 'lucide-react'
@@ -82,7 +82,7 @@ export function Header() {
   const handleCallLocation = (phone: string) => {
     window.location.href = `tel:+233${phone}`
   }
-  const isWineNavPage = pathname === '/services' || pathname.startsWith('/services/') || pathname === '/gallery' || pathname === '/about' || pathname === '/blog' || pathname.startsWith('/blog/') || pathname === '/admin' || pathname.startsWith('/admin/') || pathname === '/dashboard' || pathname.startsWith('/dashboard/')
+  const isBlueNavPage = pathname === '/services' || pathname.startsWith('/services/') || pathname === '/gallery' || pathname === '/about' || pathname === '/blog' || pathname.startsWith('/blog/') || pathname === '/admin' || pathname.startsWith('/admin/') || pathname === '/dashboard' || pathname.startsWith('/dashboard/')
 
   const mainNavLinks = [
     { href: "/", label: "Home" },
@@ -175,7 +175,7 @@ export function Header() {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -100, opacity: 0 }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="hidden lg:flex fixed left-4 top-1/2 -translate-y-1/2 z-50 flex-col items-center gap-2 bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl shadow-black/10 border border-white/60 p-3"
+            className="hidden lg:flex fixed left-0 top-1/2 -translate-y-1/2 z-50 flex-col items-center gap-2 bg-white/90 backdrop-blur-xl rounded-r-2xl shadow-2xl shadow-black/10 border-y border-r border-white/60 p-3 pl-2"
           >
             {/* Nav Icons */}
             {navIcons.map((link) => {
@@ -184,12 +184,12 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="group relative p-3 text-[#5C0F22] hover:text-[#D4AF37] hover:bg-[#D4AF37]/10 rounded-xl transition-all duration-300"
+                  className="group relative p-3 text-[#1A4FAD] hover:text-[#E8B830] hover:bg-[#E8B830]/10 rounded-xl transition-all duration-300"
                   title={link.label}
                 >
                   <Icon className="w-5 h-5" />
                   {/* Tooltip */}
-                  <span className="absolute left-full ml-3 px-3 py-1.5 bg-[#5C0F22] text-white text-xs font-medium rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
+                  <span className="absolute left-full ml-3 px-3 py-1.5 bg-[#1A4FAD] text-white text-xs font-medium rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
                     {link.label}
                   </span>
                 </Link>
@@ -205,14 +205,14 @@ export function Header() {
                 <>
                   <Link
                     href={getDashboardLink()}
-                    className="p-3 text-[#5C0F22] hover:text-[#D4AF37] hover:bg-[#D4AF37]/10 rounded-xl transition-all duration-300"
+                    className="p-3 text-[#1A4FAD] hover:text-[#E8B830] hover:bg-[#E8B830]/10 rounded-xl transition-all duration-300"
                     title={userRole === 'ADMIN' ? 'Admin' : 'Dashboard'}
                   >
                     <User className="w-5 h-5" />
                   </Link>
                   <button
                     onClick={handleLogout}
-                    className="p-3 text-[#5C0F22] hover:text-red-500 hover:bg-red-50 rounded-full transition-all duration-300"
+                    className="p-3 text-[#1A4FAD] hover:text-red-500 hover:bg-red-50 rounded-full transition-all duration-300"
                     title="Logout"
                   >
                     <LogOut className="w-5 h-5" />
@@ -221,7 +221,7 @@ export function Header() {
               ) : (
                   <Link
                     href="/book"
-                    className="p-3 btn-golden-shine rounded-full shadow-lg shadow-[#D4AF37]/25 hover:shadow-xl transition-shadow duration-300"
+                    className="p-3 btn-golden-shine rounded-full shadow-lg shadow-[#E8B830]/25 hover:shadow-xl transition-shadow duration-300"
                     title="Book Now"
                   >
                   <Stethoscope className="w-5 h-5" />
@@ -238,20 +238,20 @@ export function Header() {
           <motion.header
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="w-full fixed top-0 left-0 z-50 font-['Inter'] py-2"
+            className="w-full fixed top-0 left-0 z-50 py-2"
           >
             <div className="px-4 sm:px-6 lg:px-8">
               <div className="relative px-4 sm:px-6 py-2 flex items-center justify-between">
                 {/* LEFT: Logo */}
                 <Link href="/" className="flex items-center shrink-0 group">
-                  <div className="relative w-16 h-16 sm:w-18 sm:h-18 transition-transform duration-300 group-hover:scale-105">
+                  <div className="relative w-20 h-20 sm:w-28 sm:h-28 transition-transform duration-300 group-hover:scale-105">
                     <Image 
-                      src="/images/nv-new-logo-03.png" 
+                      src="/images/logo-light.png" 
                       alt="New Vision Dental" 
                       fill
                       className="object-contain"
                       priority
-                      sizes="72px"
+                      sizes="(max-width: 640px) 80px, 112px"
                     />
                   </div>
                 </Link>
@@ -262,10 +262,10 @@ export function Header() {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className={`relative px-4 py-2 ${isWineNavPage ? 'text-[#5C0F22]' : 'text-white/90'} text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#D4AF37] group`}
+                      className={`relative px-4 py-2 ${isBlueNavPage ? 'text-[#1A4FAD]' : 'text-white/90'} text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#E8B830] group`}
                     >
                       {link.label}
-                      <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#D4AF37] to-[#B8941F] group-hover:w-3/4 transition-all duration-300 rounded-full" />
+                      <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#E8B830] to-[#B07820] group-hover:w-3/4 transition-all duration-300 rounded-full" />
                     </Link>
                   ))}
                   
@@ -276,10 +276,10 @@ export function Header() {
                     onMouseLeave={() => setDesktopContactOpen(false)}
                   >
                     <button
-                      className={`relative px-4 py-2 ${isWineNavPage ? 'text-[#5C0F22]' : 'text-white/90'} text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#D4AF37] group`}
+                      className={`relative px-4 py-2 ${isBlueNavPage ? 'text-[#1A4FAD]' : 'text-white/90'} text-sm font-medium tracking-wide transition-all duration-300 hover:text-[#E8B830] group`}
                     >
                       Contact
-                      <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#D4AF37] to-[#B8941F] group-hover:w-3/4 transition-all duration-300 rounded-full" />
+                      <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#E8B830] to-[#B07820] group-hover:w-3/4 transition-all duration-300 rounded-full" />
                     </button>
                     
                     {/* Dropdown Menu */}
@@ -297,13 +297,13 @@ export function Header() {
                             {clinicLocations.map((location) => (
                               <div key={location.name} className="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-gray-50 transition-colors">
                                 <div>
-                                  <p className="text-sm font-medium text-[#5C0F22]">{location.name}</p>
+                                  <p className="text-sm font-medium text-[#1A4FAD]">{location.name}</p>
                                   <p className="text-xs text-gray-500">+233 {location.phone}</p>
                                 </div>
                                 <div className="flex items-center gap-1">
                                   <button
                                     onClick={() => handleCallLocation(location.phone)}
-                                    className="p-2 rounded-lg hover:bg-[#D4AF37]/10 text-[#D4AF37] transition-colors"
+                                    className="p-2 rounded-lg hover:bg-[#E8B830]/10 text-[#E8B830] transition-colors"
                                     title="Call"
                                   >
                                     <Phone className="w-4 h-4" />
@@ -326,7 +326,7 @@ export function Header() {
                           <div className="border-t border-gray-100 p-3 bg-gray-50">
                             <a 
                               href="mailto:newvisiondentalclinic@gmail.com"
-                              className="flex items-center gap-2 px-3 py-2 text-sm text-[#5C0F22] hover:text-[#D4AF37] transition-colors"
+                              className="flex items-center gap-2 px-3 py-2 text-sm text-[#1A4FAD] hover:text-[#E8B830] transition-colors"
                             >
                               <Mail className="w-4 h-4" />
                               newvisiondentalclinic@gmail.com
@@ -344,17 +344,17 @@ export function Header() {
                   <div className="flex md:hidden items-center gap-2">
                     <a
                       href="tel:+2330559497906"
-                      className="flex items-center justify-center w-10 h-10 rounded-full bg-[#5C0F22]/10 hover:bg-[#5C0F22]/20 transition-all duration-300"
+                      className="flex items-center justify-center w-10 h-10 rounded-full bg-[#1A4FAD]/10 hover:bg-[#1A4FAD]/20 transition-all duration-300"
                     >
-                      <Phone className="w-5 h-5 text-[#5C0F22]" />
+                      <Phone className="w-5 h-5 text-[#1A4FAD]" />
                     </a>
                     {!isLoading && (
                       session ? (
                         <Link
                           href={getDashboardLink()}
-                          className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-[#D4AF37]/20 to-[#D4AF37]/5 border border-[#D4AF37]/20 hover:border-[#D4AF37]/40 transition-all duration-300"
+                          className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-[#E8B830]/20 to-[#E8B830]/5 border border-[#E8B830]/20 hover:border-[#E8B830]/40 transition-all duration-300"
                         >
-                          <User className="w-5 h-5 text-[#D4AF37]" />
+                          <User className="w-5 h-5 text-[#E8B830]" />
                         </Link>
                       ) : (
                         <Link
@@ -374,10 +374,10 @@ export function Header() {
                         <>
                           <Link
                             href={getDashboardLink()}
-                            className="flex items-center gap-2 px-4 py-2 text-white text-sm font-medium hover:text-[#D4AF37] transition-colors duration-300"
+                            className="flex items-center gap-2 px-4 py-2 text-white text-sm font-medium hover:text-[#E8B830] transition-colors duration-300"
                           >
-                            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#D4AF37]/20 to-[#D4AF37]/5 flex items-center justify-center border border-[#D4AF37]/20">
-                              <User className="w-4 h-4 text-[#D4AF37]" />
+                            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#E8B830]/20 to-[#E8B830]/5 flex items-center justify-center border border-[#E8B830]/20">
+                              <User className="w-4 h-4 text-[#E8B830]" />
                             </div>
                             <span>{userRole === 'ADMIN' ? 'Admin' : 'Dashboard'}</span>
                           </Link>
@@ -400,7 +400,7 @@ export function Header() {
                           {/* Book Now - Golden Shine Button */}
                           <Link
                             href="/book"
-                            className="group relative inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-semibold overflow-hidden btn-golden-shine shadow-lg shadow-[#D4AF37]/25 hover:shadow-xl hover:shadow-[#D4AF37]/30 transition-shadow duration-300 hover:scale-105"
+                            className="group relative inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-semibold overflow-hidden btn-golden-shine shadow-lg shadow-[#E8B830]/25 hover:shadow-xl hover:shadow-[#E8B830]/30 transition-shadow duration-300 hover:scale-105"
                           >
                             <span className="relative z-10">Book Now</span>
                           </Link>
@@ -431,10 +431,10 @@ export function Header() {
                   href={item.href}
                   className="flex flex-col items-center justify-center py-2 -mt-5"
                 >
-                  <div className="w-12 h-12 rounded-full btn-golden-shine flex items-center justify-center shadow-lg shadow-[#D4AF37]/30 mb-0.5">
+                  <div className="w-12 h-12 rounded-full btn-golden-shine flex items-center justify-center shadow-lg shadow-[#E8B830]/30 mb-0.5">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <span className="text-[9px] font-semibold text-[#D4AF37]">{item.label}</span>
+                  <span className="text-[9px] font-semibold text-[#E8B830]">{item.label}</span>
                 </Link>
               )
             }
@@ -443,7 +443,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="flex flex-col items-center justify-center py-2 px-2 text-gray-500 hover:text-[#D4AF37] transition-colors duration-200"
+                className="flex flex-col items-center justify-center py-2 px-2 text-gray-500 hover:text-[#E8B830] transition-colors duration-200"
               >
                 <Icon className="w-5 h-5 mb-0.5" />
                 <span className="text-[9px] font-medium">{item.label}</span>
@@ -479,13 +479,13 @@ export function Header() {
                 {/* Panel Header */}
                 <div className="flex items-center justify-between p-6 border-b border-gray-100">
                   <div className="flex items-center gap-3">
-                    <div className="relative w-12 h-12">
+                    <div className="relative w-16 h-16">
                       <Image 
-                        src="/images/nv-new-logo-03.png" 
+                        src="/images/logo-light.png" 
                         alt="New Vision Dental" 
                         fill
                         className="object-contain"
-                        sizes="48px"
+                        sizes="64px"
                       />
                     </div>
                   </div>
@@ -509,7 +509,7 @@ export function Header() {
                       >
                         <Link
                           href={link.href}
-                          className="flex items-center gap-3 text-[#5C0F22] text-base font-medium hover:text-[#D4AF37] hover:bg-[#D4AF37]/5 transition-all duration-300 py-3 px-4 rounded-full"
+                          className="flex items-center gap-3 text-[#1A4FAD] text-base font-medium hover:text-[#E8B830] hover:bg-[#E8B830]/5 transition-all duration-300 py-3 px-4 rounded-full"
                           onClick={() => setMobileOpen(false)}
                         >
                           {link.label}
@@ -524,10 +524,10 @@ export function Header() {
                   {/* Call Now - Always visible */}
                   <a
                     href={`tel:+233${MAIN_PHONE}`}
-                    className="flex items-center gap-3 text-[#5C0F22] text-base font-medium hover:text-[#D4AF37] transition-colors duration-300 py-3 px-4 rounded-full hover:bg-[#D4AF37]/5 mb-3"
+                    className="flex items-center gap-3 text-[#1A4FAD] text-base font-medium hover:text-[#E8B830] transition-colors duration-300 py-3 px-4 rounded-full hover:bg-[#E8B830]/5 mb-3"
                     onClick={() => setMobileOpen(false)}
                   >
-                    <Phone className="w-5 h-5 text-[#D4AF37]" />
+                    <Phone className="w-5 h-5 text-[#E8B830]" />
                     Call Now: {MAIN_PHONE}
                   </a>
 
@@ -536,7 +536,7 @@ export function Header() {
                       <div className="space-y-2">
                         <Link
                           href={getDashboardLink()}
-                          className="flex items-center gap-3 text-[#5C0F22] text-base font-medium hover:text-[#D4AF37] transition-colors duration-300 py-3 px-4 rounded-full hover:bg-[#D4AF37]/5"
+                          className="flex items-center gap-3 text-[#1A4FAD] text-base font-medium hover:text-[#E8B830] transition-colors duration-300 py-3 px-4 rounded-full hover:bg-[#E8B830]/5"
                           onClick={() => setMobileOpen(false)}
                         >
                           <User className="w-5 h-5" />
@@ -557,14 +557,14 @@ export function Header() {
                       <div className="space-y-3">
                         <Link
                           href="/login"
-                          className="block w-full px-6 py-3 border-2 border-[#5C0F22] text-[#5C0F22] text-base font-medium rounded-full hover:bg-[#5C0F22]/5 transition-all duration-300 text-center"
+                          className="block w-full px-6 py-3 border-2 border-[#1A4FAD] text-[#1A4FAD] text-base font-medium rounded-full hover:bg-[#1A4FAD]/5 transition-all duration-300 text-center"
                           onClick={() => setMobileOpen(false)}
                         >
                           Log in
                         </Link>
                         <Link
                           href="/book"
-                          className="block w-full px-6 py-3 btn-golden-shine rounded-full text-center shadow-lg shadow-[#D4AF37]/25"
+                          className="block w-full px-6 py-3 btn-golden-shine rounded-full text-center shadow-lg shadow-[#E8B830]/25"
                           onClick={() => setMobileOpen(false)}
                         >
                           Book Now

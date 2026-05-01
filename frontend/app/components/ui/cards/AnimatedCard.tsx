@@ -43,14 +43,14 @@ export function AnimatedCard({
   const cardVariants = {
     hover: { 
       y: -4,
-      boxShadow: "0 20px 25px -5px rgba(193, 18, 31, 0.1), 0 10px 10px -5px rgba(193, 18, 31, 0.04)",
+      boxShadow: "0 20px 25px -5px rgba(26, 79, 173, 0.1), 0 10px 10px -5px rgba(26, 79, 173, 0.04)",
       transition: { duration: 0.2 }
     },
     tap: { scale: 0.98 }
   };
 
   const titleVariants = {
-    hover: { color: "#C1121F" }
+    hover: { color: "#00C8E8" }
   };
 
   const CardContent = () => (
@@ -79,7 +79,7 @@ export function AnimatedCard({
               transition={{ delay: 0.2 }}
               className={`absolute top-4 right-4 px-3 py-1 rounded-full text-sm font-medium z-10 ${
                 badgeColor === "primary" 
-                  ? "bg-[#FEE2E2] text-[#C1121F]" 
+                  ? "bg-[#FEE2E2] text-[#00C8E8]" 
                   : "bg-[#E8F5E9] text-[#2E7D32]"
               }`}
             >
@@ -119,7 +119,7 @@ export function AnimatedCard({
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.1 }}
           >
-            <span className="w-1.5 h-1.5 bg-[#C1121F] rounded-full"></span>
+            <span className="w-1.5 h-1.5 bg-[#00C8E8] rounded-full"></span>
             {duration}
           </motion.div>
         )}

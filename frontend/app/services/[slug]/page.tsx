@@ -78,7 +78,7 @@ const services = [
   {
     name: "Teeth Whitening",
     description: "Professional whitening for a brighter, more confident smile",
-    longDescription: "Our professional and highly effective teeth whitening service can help you achieve a beautiful, radiant smile. Teeth whitening is a safe and effective way to remove stains and discoloration from your teeth, caused by factors such as aging, smoking, and drinking coffee, tea, or red wine. Our dental professionals use a specialized whitening gel that is activated with a special light to break down stains and leave your teeth looking brighter and whiter.",
+    longDescription: "Our professional and highly effective teeth whitening service can help you achieve a beautiful, radiant smile. Teeth whitening is a safe and effective way to remove stains and discoloration from your teeth, caused by factors such as aging, smoking, and drinking coffee, tea, or red blue. Our dental professionals use a specialized whitening gel that is activated with a special light to break down stains and leave your teeth looking brighter and whiter.",
     icon: Sun,
     slug: "teeth-whitening",
     duration: "60 mins",
@@ -323,7 +323,7 @@ function DentalImplantsRichContent({ service }: { service: any }) {
           </div>
 
           <div className="mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1A4FAD] mb-4">
               {rich.whatAreImplants.title}
             </h2>
             <p className="text-gray-600 mb-4">{rich.whatAreImplants.definition}</p>
@@ -331,12 +331,12 @@ function DentalImplantsRichContent({ service }: { service: any }) {
           </div>
 
           <div className="mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Key Benefits</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1A4FAD] mb-6">Key Benefits</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {rich.keyBenefits.map((benefit: string, index: number) => (
                 <div key={index} className="flex items-start gap-3">
-                  <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-4 h-4 text-green-600" />
+                  <div className="w-6 h-6 bg-[#00C8E8]/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check className="w-4 h-4 text-[#00C8E8]" />
                   </div>
                   <span className="text-gray-700 text-sm">{benefit}</span>
                 </div>
@@ -345,13 +345,13 @@ function DentalImplantsRichContent({ service }: { service: any }) {
           </div>
 
           <div className="mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">What to Expect During the Procedure</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1A4FAD] mb-6">What to Expect During the Procedure</h2>
             <p className="text-gray-600 mb-4">The dental implant process is done in stages to ensure the best results:</p>
             <div className="space-y-3">
               {rich.procedure.map((step: string, index: number) => (
                 <div key={index} className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-primary font-bold text-sm">{index + 1}</span>
+                  <div className="w-8 h-8 bg-[#1A4FAD]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-[#1A4FAD] font-bold text-sm">{index + 1}</span>
                   </div>
                   <span className="text-gray-700">{step}</span>
                 </div>
@@ -363,9 +363,9 @@ function DentalImplantsRichContent({ service }: { service: any }) {
           </div>
 
           <div className="mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Are Dental Implants Painful?</h2>
-            <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
-              <p className="text-gray-700 text-lg font-medium mb-2">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1A4FAD] mb-4">Are Dental Implants Painful?</h2>
+            <div className="bg-gradient-to-r from-[#1A4FAD]/5 to-[#00C8E8]/5 rounded-2xl p-6 border border-[#1A4FAD]/10">
+              <p className="text-[#1A4FAD] text-lg font-bold mb-2">
                 Most patients report little to no pain during the procedure.
               </p>
               <p className="text-gray-600">
@@ -375,51 +375,58 @@ function DentalImplantsRichContent({ service }: { service: any }) {
           </div>
 
           <div className="mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Before & After Results</h2>
-            <div className="bg-gray-100 rounded-2xl p-8 text-center border border-gray-200">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1A4FAD] mb-6">Before & After Results</h2>
+            <div className="bg-white rounded-3xl p-8 text-center border border-gray-100 shadow-xl shadow-black/5">
               <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
                 <div className="flex-1 text-center">
-                  <div className="w-full h-48 bg-gray-200 rounded-xl flex items-center justify-center mb-3">
-                    <span className="text-gray-400">Before Image Placeholder</span>
+                  <div className="w-full h-48 bg-gray-50 rounded-2xl flex items-center justify-center mb-3 border border-gray-100">
+                    <span className="text-gray-400">Before Image</span>
                   </div>
-                  <p className="text-sm text-gray-500">Before Treatment</p>
+                  <p className="text-sm font-bold text-[#1A4FAD]">Before Treatment</p>
                 </div>
-                <ArrowRight className="w-8 h-8 text-primary hidden md:block" />
+                <ArrowRight className="w-8 h-8 text-[#00C8E8] hidden md:block" />
                 <div className="flex-1 text-center">
-                  <div className="w-full h-48 bg-gray-200 rounded-xl flex items-center justify-center mb-3">
-                    <span className="text-gray-400">After Image Placeholder</span>
+                  <div className="w-full h-48 bg-gray-50 rounded-2xl flex items-center justify-center mb-3 border border-gray-100">
+                    <span className="text-gray-400">After Image</span>
                   </div>
-                  <p className="text-sm text-gray-500">After Treatment</p>
+                  <p className="text-sm font-bold text-[#00C8E8]">After Treatment</p>
                 </div>
               </div>
-              <p className="text-sm text-gray-500 mt-6">
+              <p className="text-xs text-gray-400 mt-6 italic">
                 Real patient transformations — results may vary. Contact us to see more before & after photos.
               </p>
             </div>
           </div>
 
           <div className="mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">What Our Patients Say</h2>
-            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-              <div className="flex mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1A4FAD] mb-6">What Our Patients Say</h2>
+            <div className="bg-white rounded-3xl p-8 border border-[#E8B830]/20 shadow-xl shadow-[#E8B830]/5 relative overflow-hidden">
+               <div className="absolute top-0 right-0 w-24 h-24 bg-[#E8B830]/5 rounded-full -mr-12 -mt-12" />
+              <div className="flex mb-4 gap-1">
                 {[1,2,3,4,5].map((i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+                  <Star key={i} className="w-4 h-4 text-[#E8B830] fill-[#E8B830]" />
                 ))}
               </div>
-              <p className="text-gray-700 italic mb-4">
+              <p className="text-gray-700 text-lg leading-relaxed mb-6 font-medium">
                 &quot;I replaced my missing tooth with an implant and the result was amazing. It feels completely natural. The team made me feel so comfortable throughout the process.&quot;
               </p>
-              <p className="text-gray-500 font-medium">— Sarah K., Ashaley Botwe</p>
+              <p className="text-[#1A4FAD] font-bold flex items-center gap-2">
+                <span className="w-8 h-px bg-[#1A4FAD]/20" />
+                Sarah K., Ashaley Botwe
+              </p>
             </div>
           </div>
 
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Frequently Asked Questions</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1A4FAD] mb-6">Frequently Asked Questions</h2>
             <div className="space-y-4">
               {rich.faqs.map((faq: any, index: number) => (
-                <div key={index} className="bg-gray-50 rounded-xl p-5 border border-gray-200">
-                  <h3 className="font-semibold text-gray-800 mb-2">{faq.q}</h3>
-                  <p className="text-gray-600 text-sm">{faq.a}</p>
+                <div key={index} className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-[#00C8E8]/30 transition-colors">
+                  <h3 className="font-bold text-gray-800 mb-2 flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#00C8E8]" />
+                    {faq.q}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
                 </div>
               ))}
             </div>
@@ -429,53 +436,59 @@ function DentalImplantsRichContent({ service }: { service: any }) {
 
       <div className="lg:col-span-1">
         <FadeIn delay={0.2}>
-          <div className="bg-gray-50 rounded-2xl p-6 sticky top-24 border border-[#5C0F22]/20 mb-6">
-            <h3 className="text-xl font-bold text-[#5C0F22] mb-4">Service Details</h3>
-            <div className="space-y-4 mb-6">
-              <div className="flex justify-between items-center pb-3 border-b border-gray-200">
-                <span className="text-gray-600">Duration</span>
-                <span className="font-semibold text-gray-800 flex items-center">
-                  <Clock className="w-4 h-4 mr-1 text-primary" />
+          <div className="bg-white rounded-3xl p-8 sticky top-24 border border-gray-100 shadow-xl shadow-black/5 mb-6">
+            <h3 className="text-xl font-bold text-[#1A4FAD] mb-6 flex items-center gap-2">
+              <div className="w-2 h-8 bg-gradient-to-b from-[#1A4FAD] to-[#00C8E8] rounded-full" />
+              Service Details
+            </h3>
+            <div className="space-y-4 mb-8">
+              <div className="flex justify-between items-center pb-4 border-b border-gray-50">
+                <span className="text-gray-500 font-medium">Duration</span>
+                <span className="font-bold text-gray-800 flex items-center gap-2">
+                  <Clock className="w-4 h-4 text-[#00C8E8]" />
                   {service.duration}
                 </span>
               </div>
-              <div className="flex justify-between items-center pb-3 border-b border-gray-200">
-                <span className="text-gray-600">Locations</span>
-                <span className="font-semibold text-gray-800">Kwabenya, Ashaley Botwe, North Legon</span>
+              <div className="flex justify-between items-center pb-4 border-b border-gray-50">
+                <span className="text-gray-500 font-medium">Locations</span>
+                <span className="font-bold text-gray-800 text-right text-xs">Accra Hubs</span>
               </div>
             </div>
-            <Link href="/book" className="w-full bg-primary text-white px-6 py-4 rounded-xl font-bold hover:bg-primary-dark transition-all inline-flex items-center justify-center gap-2 mb-3">
+            <Link href="/book" className="w-full btn-golden-shine text-[#1a0a10] px-6 py-4 rounded-2xl font-bold transition-all flex items-center justify-center gap-3 mb-4 shadow-xl shadow-[#E8B830]/20">
               <CalendarIcon className="w-5 h-5" />
-              Book Free Consultation
+              Book Consultation
             </Link>
-            <a href="tel:+233257091176" className="w-full border-2 border-primary text-primary px-6 py-4 rounded-xl font-bold hover:bg-primary hover:text-white transition-all inline-flex items-center justify-center gap-2">
+            <a href="tel:+233257091176" className="w-full border-2 border-[#1A4FAD]/20 text-[#1A4FAD] px-6 py-4 rounded-2xl font-bold hover:bg-[#1A4FAD] hover:text-white hover:border-[#1A4FAD] transition-all flex items-center justify-center gap-3">
               <Phone className="w-5 h-5" />
-              Call for Inquiry
+              Direct Inquiry
             </a>
           </div>
 
-          <div className="bg-gray-50 rounded-2xl p-6 border border-[#5C0F22]/20">
-            <h3 className="text-xl font-bold text-[#5C0F22] mb-4">Why Choose New Vision Dental Clinic?</h3>
-            <ul className="space-y-3">
+          <div className="bg-gradient-to-br from-[#1A4FAD] to-[#0D2A60] rounded-3xl p-8 text-white border border-white/10 shadow-2xl relative overflow-hidden">
+            <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#00C8E8]/10 rounded-full blur-3xl" />
+            <h3 className="text-xl font-bold mb-6">The New Vision Edge</h3>
+            <ul className="space-y-4">
               {rich.whyChooseUs.map((reason: string, index: number) => (
-                <li key={index} className="flex items-start gap-2">
-                  <Award className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-gray-600">{reason}</span>
+                <li key={index} className="flex items-start gap-3">
+                  <div className="w-5 h-5 rounded-full bg-[#00C8E8]/20 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-3 h-3 text-[#00C8E8]" />
+                  </div>
+                  <span className="text-sm text-white/80">{reason}</span>
                 </li>
               ))}
             </ul>
-            <div className="mt-6 pt-4 border-t border-gray-200">
-              <div className="flex items-center gap-2 mb-3">
-                <Users className="w-5 h-5 text-primary" />
-                <span className="text-sm text-gray-600">Trusted by 500+ patients</span>
+            <div className="mt-8 pt-6 border-t border-white/10">
+              <div className="flex items-center gap-3 mb-4">
+                <Users className="w-5 h-5 text-[#00C8E8]" />
+                <span className="text-sm font-medium">Trusted by 5,000+ patients</span>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="flex">
+              <div className="flex items-center gap-3">
+                <div className="flex gap-0.5">
                   {[1,2,3,4,5].map((i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                    <Star key={i} className="w-4 h-4 text-[#E8B830] fill-[#E8B830]" />
                   ))}
                 </div>
-                <span className="text-sm text-gray-600">4.9 (127 reviews)</span>
+                <span className="text-sm font-bold text-[#00C8E8]">4.9 Rating</span>
               </div>
             </div>
           </div>
@@ -490,70 +503,113 @@ function StandardServiceTemplate({ service }: { service: any }) {
     <div className="grid lg:grid-cols-3 gap-12">
       <div className="lg:col-span-2">
         <FadeIn>
-          <div className="relative h-80 md:h-96 w-full rounded-2xl overflow-hidden mb-8 shadow-xl">
-            <Image src={service.image} alt={service.name} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 66vw, 700px" className="object-cover" priority />
+          <div className="relative h-80 md:h-96 w-full rounded-[2.5rem] overflow-hidden mb-12 shadow-2xl group">
+            <Image src={service.image} alt={service.name} fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 66vw, 700px" className="object-cover group-hover:scale-105 transition-transform duration-700" priority />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute bottom-8 left-8 flex items-center gap-4">
+               <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/30">
+                  <service.icon className="w-6 h-6 text-white" />
+               </div>
+               <div>
+                  <p className="text-white/60 text-xs font-bold uppercase tracking-widest">Premium Service</p>
+                  <p className="text-white text-xl font-bold">{service.name}</p>
+               </div>
+            </div>
           </div>
-          <div className="prose prose-lg max-w-none">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">About This Service</h2>
-            <p className="text-gray-600 mb-6">{service.longDescription}</p>
-          </div>
-          <div className="mt-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">What to Expect</h2>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              {service.features.map((feature: string, index: number) => (
-                <li key={index} className="flex items-start gap-2">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-600">{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="mt-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Benefits</h2>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              {service.benefits.map((benefit: string, index: number) => (
-                <li key={index} className="flex items-start gap-2">
-                  <Award className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-600">{benefit}</span>
-                </li>
-              ))}
-            </ul>
+          
+          <div className="space-y-12">
+            <div className="relative p-8 md:p-12 bg-white rounded-[2rem] shadow-xl shadow-black/5 border border-gray-100 overflow-hidden">
+               <div className="absolute top-0 right-0 w-32 h-32 bg-[#00C8E8]/5 rounded-full -mr-16 -mt-16" />
+               <h2 className="text-2xl font-bold text-[#1A4FAD] mb-6 flex items-center gap-3">
+                  <div className="w-2 h-8 bg-[#00C8E8] rounded-full" />
+                  Clinical Overview
+               </h2>
+               <p className="text-gray-600 text-lg leading-relaxed">{service.longDescription}</p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white p-8 rounded-[2rem] border border-gray-100 shadow-xl shadow-black/5">
+                <h2 className="text-xl font-bold text-[#1A4FAD] mb-6 flex items-center gap-3">
+                   <div className="w-10 h-10 bg-[#00C8E8]/10 rounded-xl flex items-center justify-center">
+                      <Sparkles className="w-5 h-5 text-[#00C8E8]" />
+                   </div>
+                   Key Features
+                </h2>
+                <ul className="space-y-4">
+                  {service.features.map((feature: string, index: number) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <div className="w-6 h-6 bg-green-50 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                        <Check className="w-3.5 h-3.5 text-green-500" />
+                      </div>
+                      <span className="text-gray-700 font-medium">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-[#1A4FAD] to-[#0D2A60] p-8 rounded-[2rem] shadow-2xl text-white">
+                <h2 className="text-xl font-bold mb-6 flex items-center gap-3">
+                   <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+                      <Award className="w-5 h-5 text-[#E8B830]" />
+                   </div>
+                   Patient Benefits
+                </h2>
+                <ul className="space-y-4">
+                  {service.benefits.map((benefit: string, index: number) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
+                        <Check className="w-3.5 h-3.5 text-[#00C8E8]" />
+                      </div>
+                      <span className="text-white/80 font-medium">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </FadeIn>
       </div>
+
       <div className="lg:col-span-1">
         <FadeIn delay={0.2}>
-          <div className="bg-gray-50 rounded-2xl p-6 sticky top-24 border border-[#5C0F22]/20">
-            <h3 className="text-xl font-bold text-[#5C0F22] mb-4">Service Details</h3>
-            <div className="space-y-4 mb-6">
-              <div className="flex justify-between items-center pb-3 border-b border-gray-200">
-                <span className="text-gray-600">Duration</span>
-                <span className="font-semibold text-gray-800 flex items-center">
-                  <Clock className="w-4 h-4 mr-1 text-primary" />
+          <div className="bg-white rounded-[2rem] p-8 sticky top-24 border border-gray-100 shadow-2xl shadow-black/5">
+            <h3 className="text-xl font-bold text-[#1A4FAD] mb-8">Reservation Details</h3>
+            <div className="space-y-6 mb-8">
+              <div className="flex justify-between items-center pb-4 border-b border-gray-50">
+                <span className="text-gray-500 font-medium">Est. Duration</span>
+                <span className="font-bold text-gray-800 flex items-center gap-2">
+                  <Clock className="w-4 h-4 text-[#00C8E8]" />
                   {service.duration}
                 </span>
               </div>
+              <div className="flex justify-between items-center pb-4 border-b border-gray-50">
+                <span className="text-gray-500 font-medium">Clinic Access</span>
+                <span className="font-bold text-[#1A4FAD] text-sm">3 Locations</span>
+              </div>
             </div>
-            <Link href="/book" className="w-full bg-primary text-white px-6 py-4 rounded-xl font-bold hover:bg-primary-dark transition-all inline-flex items-center justify-center gap-2 mb-3">
+            
+            <Link href="/book" className="w-full btn-golden-shine text-[#1a0a10] px-6 py-4 rounded-2xl font-bold transition-all flex items-center justify-center gap-3 mb-4 shadow-xl shadow-[#E8B830]/20">
               <CalendarIcon className="w-5 h-5" />
-              Book This Service
+              Secure My Slot
             </Link>
-            <Link href="/contact" className="w-full border-2 border-primary text-primary px-6 py-4 rounded-xl font-bold hover:bg-primary hover:text-white transition-all inline-flex items-center justify-center gap-2">
+            
+            <Link href="/contact" className="w-full border-2 border-gray-100 text-gray-600 px-6 py-4 rounded-2xl font-bold hover:bg-gray-50 transition-all flex items-center justify-center gap-3">
               <MapPin className="w-5 h-5" />
-              Find a Location
+              Our Centers
             </Link>
-            <div className="mt-6 pt-4 border-t border-gray-200">
-              <div className="flex items-center gap-2 mb-3">
-                <Users className="w-5 h-5 text-primary" />
-                <span className="text-sm text-gray-600">Trusted by 500+ patients</span>
+
+            <div className="mt-8 pt-6 border-t border-gray-50">
+              <div className="flex items-center gap-3 mb-4">
+                <Users className="w-5 h-5 text-[#00C8E8]" />
+                <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">500+ Trusted Reviews</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="flex">
                   {[1,2,3,4,5].map((i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                    <Star key={i} className="w-3.5 h-3.5 text-[#E8B830] fill-[#E8B830]" />
                   ))}
                 </div>
-                <span className="text-sm text-gray-600">4.9 (127 reviews)</span>
+                <span className="text-sm font-bold text-gray-800">4.9 Overall</span>
               </div>
             </div>
           </div>
@@ -593,40 +649,50 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       
-      <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 overflow-x-hidden">
-        <section className="w-full bg-gradient-to-r from-primary to-primary-dark py-6 md:py-20 relative overflow-hidden">
-          {/* Pattern Overlay */}
-          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
-          <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12">
+      <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 overflow-x-hidden">
+        <section className="w-full bg-gradient-to-r from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8] py-8 md:py-24 relative overflow-hidden">
+          {/* Decorative Elements */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-32 -mt-32 blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#E8B830]/10 rounded-full -ml-32 -mb-32 blur-3xl" />
+          
+          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #E8B830 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+          
+          <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12 relative z-10">
             <FadeIn>
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 md:gap-6 mb-3 md:mb-6">
-                <div className="w-10 h-10 md:w-16 md:h-16 bg-white/20 rounded-xl md:rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                  <service.icon className="w-5 h-5 md:w-8 md:h-8 text-white" />
+              <div className="flex flex-col md:flex-row items-center md:items-end gap-6 md:gap-10">
+                <div className="w-20 h-20 md:w-32 md:h-32 bg-white/10 backdrop-blur-xl rounded-[2rem] flex items-center justify-center border border-white/20 shadow-2xl">
+                  <service.icon className="w-10 h-10 md:w-16 md:h-16 text-white" />
                 </div>
-                <div className="text-center sm:text-left">
-                  <h1 className="text-xl md:text-4xl lg:text-5xl font-bold text-white">
-                    {service.name} in <span className="text-white">Accra, Ghana</span>
+                <div className="text-center md:text-left flex-1">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#E8B830]/20 rounded-full border border-[#E8B830]/30 mb-4">
+                     <Sparkles className="w-4 h-4 text-[#E8B830]" />
+                     <span className="text-[#E8B830] text-xs font-bold uppercase tracking-widest">Premium Dental Care</span>
+                  </div>
+                  <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+                    {service.name}
                   </h1>
-                  <p className="text-sm md:text-xl text-white/90 mt-1 md:mt-4 max-w-3xl hidden sm:block">{service.description}</p>
+                  <p className="text-lg md:text-2xl text-white/70 mt-4 max-w-3xl font-medium">{service.description}</p>
                 </div>
               </div>
-              <div className="flex flex-wrap justify-center sm:justify-start gap-2 md:gap-4 mt-3 md:mt-6">
-                <Link href="/book" className="bg-white text-primary px-4 py-2 md:px-8 md:py-4 rounded-full font-bold hover:bg-gray-100 transition-all shadow-xl inline-flex items-center gap-2 text-sm md:text-base">
-                  <CalendarIcon className="w-4 h-4" />
-                  <span className="hidden sm:inline">Book Appointment</span>
-                  <span className="sm:hidden">Book</span>
+              
+              <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-10">
+                <Link href="/book" className="btn-golden-shine text-[#1a0a10] px-10 py-5 rounded-full font-bold shadow-2xl shadow-[#E8B830]/30 hover:scale-105 transition-all flex items-center gap-3 text-lg">
+                  <CalendarIcon className="w-6 h-6" />
+                  Reserve Your Visit
                 </Link>
-                <a href="tel:+233257091176" className="bg-white/10 backdrop-blur-sm border border-white text-white px-4 py-2 md:px-8 md:py-4 rounded-full font-bold hover:bg-white hover:text-primary transition-all inline-flex items-center gap-2 text-sm md:text-base">
-                  <Phone className="w-4 h-4" />
-                  <span className="hidden sm:inline">Call Us</span>
-                  <span className="sm:hidden">Call</span>
+                <a href="tel:+233257091176" className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-full font-bold hover:bg-white hover:text-[#1A4FAD] transition-all flex items-center gap-3 text-lg">
+                  <Phone className="w-6 h-6" />
+                  Call Clinic
                 </a>
               </div>
             </FadeIn>
           </div>
         </section>
 
-        <section className="w-full py-16">
+        <section className="w-full py-20 relative">
+          {/* Subtle Side Accent */}
+          <div className="absolute left-0 top-1/4 w-1 h-64 bg-gradient-to-b from-transparent via-[#00C8E8] to-transparent opacity-20" />
+          
           <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12">
             {hasRichContent && service.richContent ? (
               <DentalImplantsRichContent service={service} />
@@ -636,29 +702,36 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </div>
         </section>
 
-        <section className="w-full bg-[#e7e7e7] py-16">
+        {/* Other Services - Bento Style */}
+        <section className="w-full bg-white py-24 border-t border-gray-100">
           <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12">
             <FadeIn>
-              <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-[#5C0F22]">Other Services You Might Like</h2>
-              <p className="text-base md:text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-                Explore our other dental care options
-              </p>
+              <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
+                 <div>
+                    <h2 className="text-3xl md:text-5xl font-bold text-[#1A4FAD] mb-4">Discover More Care</h2>
+                    <p className="text-lg text-gray-500 max-w-xl">
+                      Excellence across all dental disciplines. Explore our other specialized treatments.
+                    </p>
+                 </div>
+                 <Link href="/services" className="group flex items-center gap-2 text-[#00C8E8] font-bold hover:gap-4 transition-all uppercase tracking-widest text-sm">
+                    View All Services <ArrowRight className="w-5 h-5" />
+                 </Link>
+              </div>
             </FadeIn>
-            <div className="grid md:grid-cols-3 gap-6">
+            
+            <div className="grid md:grid-cols-3 gap-8">
               {services.filter(s => s.slug !== slug).slice(0, 3).map((related, index) => (
                 <FadeIn key={index} delay={index * 0.1}>
                   <Link href={`/services/${related.slug}`}>
-                    <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all p-6 border border-[#D4AF37]/15 hover:border-[#D4AF37]/30 group">
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="w-10 h-10 bg-[#D4AF37]/10 rounded-lg flex items-center justify-center">
-                          <related.icon className="w-5 h-5 text-[#D4AF37]" />
-                        </div>
-                        <h3 className="font-bold text-[#5C0F22]">{related.name}</h3>
+                    <div className="bg-gray-50 rounded-[2rem] p-8 hover:bg-white hover:shadow-2xl hover:shadow-[#1A4FAD]/10 transition-all duration-500 border border-transparent hover:border-[#1A4FAD]/10 group h-full flex flex-col">
+                      <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-500">
+                        <related.icon className="w-7 h-7 text-[#1A4FAD]" />
                       </div>
-                      <p className="text-sm text-gray-600 mb-3">{related.description}</p>
-                      <span className="text-[#5C0F22] text-sm font-medium inline-flex items-center group-hover:gap-2 transition-all">
-                        Learn more <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-0.5 transition-transform" />
-                      </span>
+                      <h3 className="text-2xl font-bold text-[#1A4FAD] mb-4">{related.name}</h3>
+                      <p className="text-gray-500 mb-8 flex-1 leading-relaxed">{related.description}</p>
+                      <div className="flex items-center gap-2 text-[#00C8E8] font-bold text-sm">
+                        LEARN MORE <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </div>
                     </div>
                   </Link>
                 </FadeIn>
@@ -667,17 +740,34 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </div>
         </section>
 
-        <section className="w-full bg-primary py-16">
-          <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12 text-center">
+        {/* Final CTA - Premium Banner */}
+        <section className="w-full py-24 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8]" />
+          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #E8B830 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+          
+          <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12 text-center relative z-10">
             <FadeIn>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-                Book your appointment today and take the first step towards a healthier, brighter smile.
+              <h2 className="text-4xl md:text-7xl font-bold text-white mb-8 leading-tight">
+                Your New Smile <br /> Starts Here.
+              </h2>
+              <p className="text-xl md:text-2xl text-white/70 mb-12 max-w-3xl mx-auto font-medium">
+                Book your consultation today and experience world-class dentistry in the heart of Accra.
               </p>
-              <Link href="/book" className="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all shadow-xl">
-                <CalendarIcon className="w-5 h-5" />
-                Book Appointment Now
-              </Link>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <Link href="/book" className="btn-golden-shine text-[#1a0a10] px-12 py-6 rounded-full font-bold text-xl shadow-2xl shadow-black/20 hover:scale-105 transition-all">
+                  Book Appointment Now
+                </Link>
+                <div className="flex items-center gap-4 text-white/60">
+                   <div className="flex -space-x-2">
+                      {[1,2,3].map(i => (
+                         <div key={i} className="w-10 h-10 rounded-full border-2 border-white/20 bg-white/10 flex items-center justify-center backdrop-blur-sm">
+                            <Users className="w-5 h-5" />
+                         </div>
+                      ))}
+                   </div>
+                   <span className="text-sm font-bold uppercase tracking-widest">Join 5K+ Happy Patients</span>
+                </div>
+              </div>
             </FadeIn>
           </div>
         </section>

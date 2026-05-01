@@ -76,7 +76,7 @@ const stats = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 overflow-x-hidden">
+    <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 overflow-x-hidden">
 
       {/* Hero Section — simplified */}
       <section className="relative w-full min-h-[25vh] md:min-h-[35vh] flex flex-col overflow-hidden">
@@ -95,13 +95,13 @@ export default function AboutPage() {
           ))}
         </div>
         
-        {/* Wine Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#3D0814]/95 via-[#5C0F22]/70 to-[#7A1A2E]/30" />
+        {/* Blue-Cyan Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1A4FAD]/95 via-[#0D2A60]/80 to-[#00C8E8]/40" />
         
         {/* Pattern Overlay */}
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #E8B830 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
         
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E8B830]/30 to-transparent" />
         
         <div className="relative w-full px-4 sm:px-6 lg:px-12 flex-1 flex items-center justify-center py-4 md:py-14">
           <div className="text-center max-w-3xl mx-auto">
@@ -124,7 +124,7 @@ export default function AboutPage() {
             <div className="flex flex-wrap justify-center gap-4 md:gap-12 mt-3 pt-3 border-t border-white/15">
               {stats.map((stat, i) => (
                 <div key={i} className="text-center">
-                  <p className="text-xl sm:text-3xl font-bold text-white">{stat.value}</p>
+                  <p className="text-xl sm:text-3xl font-bold text-white font-heading">{stat.value}</p>
                   <p className="text-xs text-white/50 mt-0.5">{stat.label}</p>
                 </div>
               ))}
@@ -134,7 +134,7 @@ export default function AboutPage() {
       </section>
 
       {/* 1. About New Vision */}
-      <section className="w-full pt-14 pb-16 bg-[#e7e7e7]">
+      <section className="w-full pt-14 pb-16 bg-[#F2F4F8]">
         <div className="w-full px-4 sm:px-6 lg:px-12">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -143,11 +143,11 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <span className="inline-flex items-center gap-2 text-[#D4AF37] text-xs font-semibold tracking-wide uppercase mb-3">
+              <span className="inline-flex items-center gap-2 text-[#E8B830] text-xs font-semibold tracking-wide uppercase mb-3">
                 <Sparkles className="w-3.5 h-3.5" />
                 Who We Are
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#5C0F22] mb-5">About New Vision</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1A4FAD] mb-5">About New Vision</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
                 New Vision Dental Clinic is a premier dental care provider in Accra, Ghana, 
                 offering comprehensive dental services across three convenient locations. 
@@ -161,8 +161,8 @@ export default function AboutPage() {
               </p>
               <div className="flex flex-wrap gap-3">
                 {["Modern Equipment", "Sterile Environment", "Patient Comfort", "Affordable Care"].map((item, i) => (
-                  <span key={i} className="inline-flex items-center gap-1.5 text-sm text-gray-600 bg-[#D4AF37]/5 border border-[#D4AF37]/15 px-3 py-1.5 rounded-full">
-                    <Check className="w-3.5 h-3.5 text-[#D4AF37]" />
+                  <span key={i} className="inline-flex items-center gap-1.5 text-sm text-gray-600 bg-[#E8B830]/5 border border-[#E8B830]/15 px-3 py-1.5 rounded-full">
+                    <Check className="w-3.5 h-3.5 text-[#E8B830]" />
                     {item}
                   </span>
                 ))}
@@ -189,7 +189,7 @@ export default function AboutPage() {
       </section>
 
       {/* 2. Meet Our Team */}
-      <section className="w-full py-16 bg-[#e7e7e7]">
+      <section className="w-full py-16 bg-[#F2F4F8]">
         <div className="w-full px-4 sm:px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -198,11 +198,11 @@ export default function AboutPage() {
             transition={{ duration: 0.7 }}
             className="text-center mb-14"
           >
-            <span className="inline-flex items-center gap-2 text-[#D4AF37] text-xs font-semibold tracking-wide uppercase mb-3">
+            <span className="inline-flex items-center gap-2 text-[#E8B830] text-xs font-semibold tracking-wide uppercase mb-3">
               <Users className="w-3.5 h-3.5" />
               Our Team
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#5C0F22] mb-3">Meet Our Expert Team</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1A4FAD] mb-3">Meet Our Expert Team</h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">Experienced professionals dedicated to your smile</p>
           </motion.div>
 
@@ -214,10 +214,10 @@ export default function AboutPage() {
             transition={{ duration: 0.7 }}
             className="mb-12"
           >
-            <div className="relative bg-gradient-to-br from-[#5C0F22] via-[#4a0c1b] to-[#5C0F22] rounded-3xl overflow-hidden border border-[#D4AF37]/20 shadow-2xl shadow-black/10">
+            <div className="relative bg-gradient-to-br from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8] rounded-3xl overflow-hidden border border-[#E8B830]/20 shadow-2xl shadow-black/10">
               {/* Gold blurs */}
-              <div className="absolute top-0 right-0 w-96 h-96 bg-[#D4AF37]/6 rounded-full blur-[120px]" />
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#D4AF37]/4 rounded-full blur-[100px]" />
+              <div className="absolute top-0 right-0 w-96 h-96 bg-[#E8B830]/6 rounded-full blur-[120px]" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#E8B830]/4 rounded-full blur-[100px]" />
 
               <div className="relative grid md:grid-cols-2 gap-0 items-stretch">
                 {/* Photo */}
@@ -230,37 +230,37 @@ export default function AboutPage() {
                     className="object-cover object-top"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#5C0F22]/80 hidden md:block" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#5C0F22] to-transparent md:hidden" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#1A4FAD]/80 hidden md:block" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1A4FAD] to-transparent md:hidden" />
                 </div>
 
                 {/* Content */}
                 <div className="p-8 md:p-12 flex flex-col justify-center">
-                  <span className="inline-flex items-center gap-1.5 text-[#D4AF37] text-xs font-semibold tracking-wide uppercase mb-3">
+                  <span className="inline-flex items-center gap-1.5 text-[#E8B830] text-xs font-semibold tracking-wide uppercase mb-3">
                     <Award className="w-3.5 h-3.5" />
                     Founder & CEO
                   </span>
                   <h3 className="text-5xl sm:text-6xl md:text-7xl font-bold text-golden-shine mb-3">{featuredDoctor.name}</h3>
-                  <p className="text-[#D4AF37] font-semibold mb-4">{featuredDoctor.qualifications}</p>
+                  <p className="text-[#E8B830] font-semibold mb-4">{featuredDoctor.qualifications}</p>
                   <p className="text-white/70 leading-relaxed mb-4">{featuredDoctor.bio}</p>
                   <p className="text-white/50 leading-relaxed mb-6 text-sm">{featuredDoctor.extendedBio}</p>
 
                   {/* Philosophy quote */}
                   <div className="bg-white/5 border border-white/10 rounded-xl p-4 mb-6">
-                    <p className="text-white/80 italic text-sm leading-relaxed">
+                    <p className="text-white/80 text-sm leading-relaxed">
                       &ldquo;{featuredDoctor.philosophy}&rdquo;
                     </p>
-                    <p className="text-[#D4AF37] text-xs font-semibold mt-2">— Dr. Felix Govina</p>
+                    <p className="text-[#E8B830] text-xs font-semibold mt-2">— Dr. Felix Govina</p>
                   </div>
 
                   {/* Specialty & Experience */}
                   <div className="grid grid-cols-2 gap-3 mb-6">
                     <div className="flex items-center gap-2.5 bg-white/5 rounded-lg px-3 py-2.5 border border-white/5">
-                      <Target className="w-4 h-4 text-[#D4AF37] shrink-0" />
+                      <Target className="w-4 h-4 text-[#E8B830] shrink-0" />
                       <span className="text-white/80 text-xs">{featuredDoctor.speciality}</span>
                     </div>
                     <div className="flex items-center gap-2.5 bg-white/5 rounded-lg px-3 py-2.5 border border-white/5">
-                      <Award className="w-4 h-4 text-[#D4AF37] shrink-0" />
+                      <Award className="w-4 h-4 text-[#E8B830] shrink-0" />
                       <span className="text-white/80 text-xs">{featuredDoctor.experience}</span>
                     </div>
                   </div>
@@ -270,7 +270,7 @@ export default function AboutPage() {
                     <p className="text-white/50 text-xs uppercase tracking-wider mb-2">Certifications</p>
                     <div className="flex flex-wrap gap-2">
                       {featuredDoctor.certifications.map((cert, i) => (
-                        <span key={i} className="text-[10px] text-[#D4AF37] bg-[#D4AF37]/10 border border-[#D4AF37]/15 px-2.5 py-1 rounded-full">
+                        <span key={i} className="text-[10px] text-[#E8B830] bg-[#E8B830]/10 border border-[#E8B830]/15 px-2.5 py-1 rounded-full">
                           {cert}
                         </span>
                       ))}
@@ -283,7 +283,7 @@ export default function AboutPage() {
                     <ul className="space-y-1.5">
                       {featuredDoctor.education.map((edu, i) => (
                         <li key={i} className="flex items-center gap-2 text-white/70 text-xs">
-                          <Check className="w-3 h-3 text-[#D4AF37] shrink-0" />
+                          <Check className="w-3 h-3 text-[#E8B830] shrink-0" />
                           {edu}
                         </li>
                       ))}
@@ -296,7 +296,7 @@ export default function AboutPage() {
                     <ul className="space-y-1.5">
                       {featuredDoctor.achievements.map((achievement, i) => (
                         <li key={i} className="flex items-start gap-2 text-white/70 text-xs">
-                          <Star className="w-3 h-3 text-[#D4AF37] shrink-0 mt-0.5" />
+                          <Star className="w-3 h-3 text-[#E8B830] shrink-0 mt-0.5" />
                           <span>{achievement}</span>
                         </li>
                       ))}
@@ -306,7 +306,7 @@ export default function AboutPage() {
               </div>
 
               {/* Gold accent line at bottom */}
-              <div className="h-0.5 bg-gradient-to-r from-[#D4AF37] via-[#B8941F] to-[#D4AF37]" />
+              <div className="h-0.5 bg-gradient-to-r from-[#E8B830] via-[#B07820] to-[#E8B830]" />
             </div>
           </motion.div>
 
@@ -334,14 +334,14 @@ export default function AboutPage() {
                 </div>
 
                 {/* Content Card */}
-                <div className="bg-white rounded-2xl border border-[#D4AF37]/15 p-5 hover:shadow-lg hover:shadow-[#D4AF37]/5 hover:border-[#D4AF37]/30 transition-all duration-300">
-                  <h3 className="text-lg font-bold text-[#5C0F22]">{member.name}</h3>
-                  <p className="text-[#D4AF37] text-sm font-semibold">{member.title}</p>
+                <div className="bg-white rounded-2xl border border-[#E8B830]/15 p-5 hover:shadow-lg hover:shadow-[#E8B830]/5 hover:border-[#E8B830]/30 transition-all duration-300">
+                  <h3 className="text-lg font-bold text-[#1A4FAD]">{member.name}</h3>
+                  <p className="text-[#E8B830] text-sm font-semibold">{member.title}</p>
                   <p className="text-gray-500 text-xs mt-1 mb-3">{member.qualifications} — {member.experience}</p>
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">{member.bio}</p>
                   <div className="pt-3 border-t border-gray-100">
                     <p className="text-xs text-gray-500">
-                      <span className="font-semibold text-[#5C0F22]">Specialty:</span> {member.speciality}
+                      <span className="font-semibold text-[#1A4FAD]">Specialty:</span> {member.speciality}
                     </p>
                   </div>
                 </div>
@@ -352,7 +352,7 @@ export default function AboutPage() {
       </section>
 
       {/* 3. Our Story */}
-      <section className="w-full py-16 bg-[#e7e7e7]">
+      <section className="w-full py-16 bg-[#F2F4F8]">
         <div className="w-full px-4 sm:px-6 lg:px-12">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -360,10 +360,10 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="relative h-[350px] md:h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-[#5C0F22]/5 via-[#D4AF37]/5 to-[#5C0F22]/5 border border-[#D4AF37]/10 flex items-center justify-center order-2 md:order-1"
+              className="relative h-[350px] md:h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-[#1A4FAD]/5 via-[#E8B830]/5 to-[#1A4FAD]/5 border border-[#E8B830]/10 flex items-center justify-center order-2 md:order-1"
             >
               <div className="text-center">
-                <Heart className="w-16 h-16 text-[#D4AF37]/30 mx-auto mb-3" />
+                <Heart className="w-16 h-16 text-[#E8B830]/30 mx-auto mb-3" />
                 <p className="text-gray-400 text-sm">Our Journey</p>
               </div>
             </motion.div>
@@ -375,11 +375,11 @@ export default function AboutPage() {
               transition={{ duration: 0.7 }}
               className="order-1 md:order-2"
             >
-              <span className="inline-flex items-center gap-2 text-[#D4AF37] text-xs font-semibold tracking-wide uppercase mb-3">
+              <span className="inline-flex items-center gap-2 text-[#E8B830] text-xs font-semibold tracking-wide uppercase mb-3">
                 <Heart className="w-3.5 h-3.5" />
                 Our Story
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#5C0F22] mb-5">Our Story</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1A4FAD] mb-5">Our Story</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
                   New Vision Dental Clinic was founded with a simple mission: to provide 
@@ -403,7 +403,7 @@ export default function AboutPage() {
       </section>
 
       {/* 4. Mission & Vision */}
-      <section className="w-full py-16 bg-[#e7e7e7]">
+      <section className="w-full py-16 bg-[#F2F4F8]">
         <div className="w-full px-4 sm:px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -412,11 +412,11 @@ export default function AboutPage() {
             transition={{ duration: 0.7 }}
             className="text-center mb-12"
           >
-            <span className="inline-flex items-center gap-2 text-[#D4AF37] text-xs font-semibold tracking-wide uppercase mb-3">
+            <span className="inline-flex items-center gap-2 text-[#E8B830] text-xs font-semibold tracking-wide uppercase mb-3">
               <Target className="w-3.5 h-3.5" />
               Our Purpose
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#5C0F22]">Mission & Vision</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1A4FAD]">Mission & Vision</h2>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -425,12 +425,12 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white rounded-2xl border border-[#D4AF37]/15 p-8 hover:shadow-lg hover:shadow-[#D4AF37]/5 hover:border-[#D4AF37]/30 transition-all duration-300"
+              className="bg-white rounded-2xl border border-[#E8B830]/15 p-8 hover:shadow-lg hover:shadow-[#E8B830]/5 hover:border-[#E8B830]/30 transition-all duration-300"
             >
-              <div className="w-14 h-14 bg-[#D4AF37]/10 rounded-xl flex items-center justify-center mb-5">
-                <Target className="w-7 h-7 text-[#D4AF37]" />
+              <div className="w-14 h-14 bg-[#E8B830]/10 rounded-xl flex items-center justify-center mb-5">
+                <Target className="w-7 h-7 text-[#E8B830]" />
               </div>
-              <h3 className="text-xl font-bold text-[#5C0F22] mb-3">Our Mission</h3>
+              <h3 className="text-xl font-bold text-[#1A4FAD] mb-3">Our Mission</h3>
               <p className="text-gray-600 leading-relaxed">
                 To provide accessible, high-quality dental care that transforms lives 
                 and creates confident smiles for every Ghanaian.
@@ -442,12 +442,12 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="bg-white rounded-2xl border border-[#D4AF37]/15 p-8 hover:shadow-lg hover:shadow-[#D4AF37]/5 hover:border-[#D4AF37]/30 transition-all duration-300"
+              className="bg-white rounded-2xl border border-[#E8B830]/15 p-8 hover:shadow-lg hover:shadow-[#E8B830]/5 hover:border-[#E8B830]/30 transition-all duration-300"
             >
-              <div className="w-14 h-14 bg-[#D4AF37]/10 rounded-xl flex items-center justify-center mb-5">
-                <Eye className="w-7 h-7 text-[#D4AF37]" />
+              <div className="w-14 h-14 bg-[#E8B830]/10 rounded-xl flex items-center justify-center mb-5">
+                <Eye className="w-7 h-7 text-[#E8B830]" />
               </div>
-              <h3 className="text-xl font-bold text-[#5C0F22] mb-3">Our Vision</h3>
+              <h3 className="text-xl font-bold text-[#1A4FAD] mb-3">Our Vision</h3>
               <p className="text-gray-600 leading-relaxed">
                 To be the most trusted and preferred dental care provider in Ghana, 
                 setting the standard for excellence in oral healthcare.
@@ -458,7 +458,7 @@ export default function AboutPage() {
       </section>
 
       {/* 5. Core Values */}
-      <section className="w-full py-16 bg-[#e7e7e7]">
+      <section className="w-full py-16 bg-[#F2F4F8]">
         <div className="w-full px-4 sm:px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -467,11 +467,11 @@ export default function AboutPage() {
             transition={{ duration: 0.7 }}
             className="text-center mb-12"
           >
-            <span className="inline-flex items-center gap-2 text-[#D4AF37] text-xs font-semibold tracking-wide uppercase mb-3">
+            <span className="inline-flex items-center gap-2 text-[#E8B830] text-xs font-semibold tracking-wide uppercase mb-3">
               <Star className="w-3.5 h-3.5" />
               What Drives Us
             </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#5C0F22] mb-3">Our Core Values</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1A4FAD] mb-3">Our Core Values</h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">The principles that guide everything we do</p>
           </motion.div>
 
@@ -483,12 +483,12 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-2xl border border-[#D4AF37]/15 p-6 text-center hover:shadow-lg hover:shadow-[#D4AF37]/5 hover:border-[#D4AF37]/30 hover:-translate-y-1 transition-all duration-300"
+                className="bg-white rounded-2xl border border-[#E8B830]/15 p-6 text-center hover:shadow-lg hover:shadow-[#E8B830]/5 hover:border-[#E8B830]/30 hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="w-14 h-14 bg-[#D4AF37]/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="w-7 h-7 text-[#D4AF37]" />
+                <div className="w-14 h-14 bg-[#E8B830]/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <value.icon className="w-7 h-7 text-[#E8B830]" />
                 </div>
-                <h3 className="font-bold text-[#5C0F22] mb-2">{value.title}</h3>
+                <h3 className="font-bold text-[#1A4FAD] mb-2">{value.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{value.desc}</p>
               </motion.div>
             ))}
@@ -498,12 +498,12 @@ export default function AboutPage() {
 
       {/* CTA Section */}
       <section className="relative w-full py-12 md:py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#5C0F22] via-[#4a0c1b] to-[#5C0F22]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8]" />
         {/* Pattern Overlay */}
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #D4AF37 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
-        <div className="absolute top-10 left-[20%] w-48 h-48 bg-[#D4AF37]/8 rounded-full blur-[100px]" />
-        <div className="absolute bottom-10 right-[25%] w-64 h-64 bg-[#D4AF37]/6 rounded-full blur-[120px]" />
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle, #E8B830 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E8B830]/30 to-transparent" />
+        <div className="absolute top-10 left-[20%] w-48 h-48 bg-[#E8B830]/8 rounded-full blur-[100px]" />
+        <div className="absolute bottom-10 right-[25%] w-64 h-64 bg-[#E8B830]/6 rounded-full blur-[120px]" />
 
         <div className="relative w-full px-4 sm:px-6 lg:px-12 text-center">
           <motion.div
@@ -522,7 +522,7 @@ export default function AboutPage() {
             <div className="flex flex-row items-center justify-center gap-2 md:gap-4">
               <Link
                 href="/book"
-                className="inline-flex items-center gap-2 px-4 py-2 md:px-8 md:py-4 rounded-full font-semibold btn-golden-shine shadow-lg shadow-[#D4AF37]/25 hover:shadow-xl hover:shadow-[#D4AF37]/40 transition-all duration-300 hover:scale-105 text-sm md:text-base"
+                className="inline-flex items-center gap-2 px-4 py-2 md:px-8 md:py-4 rounded-full font-semibold btn-golden-shine shadow-lg shadow-[#E8B830]/25 hover:shadow-xl hover:shadow-[#E8B830]/40 transition-all duration-300 hover:scale-105 text-sm md:text-base"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   <Calendar className="w-4 h-4 md:w-5 md:h-5" />

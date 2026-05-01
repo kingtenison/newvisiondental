@@ -46,14 +46,14 @@ const LocationCard = ({ location, index }: { location: typeof branches[0]; index
           boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
         }}
       >
-        {/* Shiny Wine Border */}
+        {/* Shiny Blue Border */}
         <div 
           className="absolute inset-0 rounded-xl pointer-events-none z-10 opacity-60 group-hover:opacity-100 transition-opacity duration-500"
           style={{
             padding: '2px',
-            background: 'linear-gradient(135deg, #722F37 0%, #D4AF37 25%, #722F37 50%, #D4AF37 75%, #722F37 100%)',
+            background: 'linear-gradient(135deg, #1A4FAD 0%, #E8B830 25%, #1A4FAD 50%, #E8B830 75%, #1A4FAD 100%)',
             backgroundSize: '300% 300%',
-            animation: 'shimmerWine 4s ease infinite',
+            animation: 'shimmerBlue 4s ease infinite',
             WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
             WebkitMaskComposite: 'xor',
             maskComposite: 'exclude',
@@ -93,8 +93,8 @@ const LocationCard = ({ location, index }: { location: typeof branches[0]; index
                 border: '1px solid rgba(212,175,55,0.25)',
               }}
             >
-              <MapPin className="w-3 h-3 text-[#D4AF37]" />
-              <span className="text-[#D4AF37] text-[10px] sm:text-[11px] font-semibold tracking-[0.15em] uppercase">
+              <MapPin className="w-3 h-3 text-[#E8B830]" />
+              <span className="text-[#E8B830] text-[10px] sm:text-[11px] font-semibold tracking-[0.15em] uppercase">
                 Clinic
               </span>
             </div>
@@ -106,7 +106,7 @@ const LocationCard = ({ location, index }: { location: typeof branches[0]; index
 
             {/* Address */}
             <p className="text-gray-700 text-sm mb-1.5 flex items-center gap-2">
-              <span className="w-1 h-1 bg-[#D4AF37] flex-shrink-0" />
+              <span className="w-1 h-1 bg-[#E8B830] flex-shrink-0" />
               {location.address}
             </p>
 
@@ -117,9 +117,9 @@ const LocationCard = ({ location, index }: { location: typeof branches[0]; index
                 e.stopPropagation()
                 window.location.href = `tel:+233${location.phone}`
               }}
-              className="inline-flex items-center gap-2 text-gray-700 hover:text-[#D4AF37] text-sm mb-4 transition-colors duration-300 cursor-pointer"
+              className="inline-flex items-center gap-2 text-gray-700 hover:text-[#E8B830] text-sm mb-4 transition-colors duration-300 cursor-pointer"
             >
-              <Phone className="w-3.5 h-3.5 text-[#D4AF37]/60" />
+              <Phone className="w-3.5 h-3.5 text-[#E8B830]/60" />
               {location.phone}
             </span>
 
@@ -132,7 +132,7 @@ const LocationCard = ({ location, index }: { location: typeof branches[0]; index
               whileHover={{ x: 4 }}
               transition={{ type: "spring", stiffness: 400 }}
             >
-              <span className="text-[#D4AF37] font-semibold text-sm tracking-wide">
+              <span className="text-[#E8B830] font-semibold text-sm tracking-wide">
                 View Details
               </span>
               <div 
@@ -144,7 +144,7 @@ const LocationCard = ({ location, index }: { location: typeof branches[0]; index
                   border: '1px solid rgba(212,175,55,0.25)',
                 }}
               >
-                <ArrowRight className="w-4 h-4 text-[#D4AF37]" />
+                <ArrowRight className="w-4 h-4 text-[#E8B830]" />
               </div>
             </motion.div>
           </div>
@@ -158,7 +158,7 @@ export default function OurLocations() {
   return (
     <section 
       className="relative w-full py-16 sm:py-20 md:py-24 lg:py-32"
-      style={{ background: 'linear-gradient(180deg, #e7e7e7 0%, #e4e2de 50%, #e7e7e7 100%)' }}
+      style={{ background: 'linear-gradient(180deg, #F2F4F8 0%, #e4e2de 50%, #F2F4F8 100%)' }}
     >
       {/* Subtle gold texture */}
       <div className="absolute inset-0 opacity-[0.02]" style={{
@@ -167,9 +167,9 @@ export default function OurLocations() {
       }} />
 
       {/* Top accent */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E8B830]/30 to-transparent" />
       {/* Bottom accent */}
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E8B830]/30 to-transparent" />
 
       <div className="relative w-full px-4 sm:px-6 lg:px-12">
         {/* Section Header */}
@@ -185,7 +185,7 @@ export default function OurLocations() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1, duration: 0.5 }}
-            className="inline-flex items-center gap-2 text-[#D4AF37] text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase mb-4"
+            className="inline-flex items-center gap-2 text-[#E8B830] text-xs sm:text-sm font-semibold tracking-[0.2em] uppercase mb-4"
           >
             <Sparkles className="w-3.5 h-3.5" />
             Our Network
@@ -250,7 +250,7 @@ export default function OurLocations() {
               boxShadow: '0 2px 12px rgba(0,0,0,0.04)',
             }}
           >
-            <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37]" />
+            <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-[#E8B830]" />
             <span className="text-gray-500 text-xs sm:text-sm">
               Open <span className="text-gray-700 font-medium">Monday - Saturday</span>, 8:00AM - 6:00PM
             </span>
@@ -267,7 +267,7 @@ export default function OurLocations() {
         >
           <Link
             href="/book"
-            className="group relative inline-flex items-center justify-center px-8 sm:px-10 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold overflow-hidden btn-golden-shine shadow-xl shadow-[#D4AF37]/25 hover:shadow-2xl hover:shadow-[#D4AF37]/40 transition-shadow duration-300 hover:scale-105"
+            className="group relative inline-flex items-center justify-center px-8 sm:px-10 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold overflow-hidden btn-golden-shine shadow-xl shadow-[#E8B830]/25 hover:shadow-2xl hover:shadow-[#E8B830]/40 transition-shadow duration-300 hover:scale-105"
           >
             <span className="relative z-10 flex items-center gap-2 sm:gap-3">
               <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />

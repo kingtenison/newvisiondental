@@ -87,12 +87,12 @@ const servicesData = [
 ]
 
 const gradients = [
-  "bg-gradient-to-br from-[#FFFDF5] via-[#FFF8E1] to-[#FFFDF5]",
-  "bg-gradient-to-br from-[#5C0F22] via-[#4A0B1A] to-[#5C0F22]",
-  "bg-gradient-to-br from-[#FFF8E7] via-[#FFFAF0] to-[#FFF8E7]",
-  "bg-gradient-to-br from-[#4A0B1A] via-[#5C0F22] to-[#4A0B1A]",
-  "bg-gradient-to-br from-[#FFFDF5] via-[#FFF3D6] to-[#FFFDF5]",
-  "bg-gradient-to-br from-[#5C0F22] via-[#3D0A17] to-[#5C0F22]",
+  "bg-white",
+  "bg-gradient-to-br from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8]",
+  "bg-white",
+  "bg-gradient-to-br from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8]",
+  "bg-white",
+  "bg-gradient-to-br from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8]",
 ]
 
 function ServiceRow({ service, index, imageRight }: { service: (typeof servicesData)[0]; index: number; imageRight: boolean }) {
@@ -103,104 +103,101 @@ function ServiceRow({ service, index, imageRight }: { service: (typeof servicesD
   const textColor = isLight ? "text-gray-600" : "text-white/75"
   const statColor = isLight ? "text-gray-500" : "text-white/60"
   const accentLine = isLight
-    ? "bg-gradient-to-r from-[#D4AF37] to-[#B8941F]"
-    : "bg-gradient-to-r from-[#D4AF37] to-[#E8C547]"
+    ? "bg-gradient-to-r from-[#1A4FAD] to-[#00C8E8]"
+    : "bg-gradient-to-r from-[#E8B830] to-[#E8B830]"
 
   const imageBlock = (
-    <motion.div
-      whileHover={{ scale: 1.02 }}
-      transition={{ type: "spring", stiffness: 300 }}
-      className="relative w-full md:w-[45%] aspect-[4/3] rounded-2xl overflow-hidden group shadow-lg"
-    >
+    <div className="relative w-full md:w-1/2 h-64 md:h-auto group overflow-hidden">
       <Image
         src={service.image}
         alt={service.name}
         fill
-        className="object-cover transition-transform duration-700 group-hover:scale-110"
-        sizes="(max-width: 768px) 100vw, 25vw"
+        className="object-cover transition-transform duration-700 group-hover:scale-105"
+        sizes="(max-width: 768px) 100vw, 50vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
-      <div className="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 bg-white/95 backdrop-blur-sm rounded-full shadow-md">
-        <Star className="w-3.5 h-3.5 text-[#D4AF37] fill-[#D4AF37]" />
-        <span className="text-xs font-bold text-gray-900">{service.rating}</span>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+      <div className="absolute top-4 left-4 flex items-center gap-1.5 px-3 py-1.5 bg-white/95 backdrop-blur-md rounded-full shadow-sm z-10">
+        <Star className="w-3.5 h-3.5 text-[#E8B830] fill-[#E8B830]" />
+        <span className="text-xs font-bold text-gray-900 font-heading">{service.rating}</span>
       </div>
-      <span className="absolute bottom-3 left-3 text-[#D4AF37] text-xs font-bold tracking-widest">{num}</span>
-    </motion.div>
+      <span className="absolute bottom-4 left-4 text-[#E8B830]/80 text-4xl font-black tracking-widest z-10 font-heading">{num}</span>
+    </div>
   )
 
   const textBlock = (
-    <motion.div
-      initial={{ opacity: 0, x: imageRight ? 30 : -30 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: 0.15 }}
-      className="w-full md:w-[55%] flex items-center"
-    >
-      <div className={`w-full ${imageRight ? "md:pr-6 lg:pr-8" : "md:pl-6 lg:pl-8"}`}>
-        <h3 className={`text-xl sm:text-2xl lg:text-3xl font-bold ${titleColor} mb-3 ${imageRight ? "md:text-right" : ""}`}>
+    <div className="w-full md:w-1/2 p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
+        <h3 className={`text-2xl sm:text-3xl font-bold ${titleColor} mb-4 tracking-tight`}>
           {service.name}
         </h3>
-        <div className={`h-0.5 w-10 ${accentLine} rounded-full mb-4 ${imageRight ? "md:ml-auto" : ""}`} />
+        <div className={`h-1 w-12 ${accentLine} rounded-full mb-6`} />
 
-        <ul className={`space-y-2 mb-5 ${imageRight ? "md:text-right" : ""}`}>
+        <ul className="space-y-3.5 mb-8">
           {service.bullets.map((b, i) => (
-            <li key={i} className={`flex items-start gap-2 ${textColor} text-sm leading-relaxed ${imageRight ? "md:flex-row-reverse" : ""}`}>
-              <Check className="w-4 h-4 text-[#D4AF37] mt-0.5 shrink-0" />
+            <li key={i} className={`flex items-start gap-3 ${textColor} text-sm sm:text-base leading-relaxed font-medium`}>
+              <div className={`mt-1 w-5 h-5 rounded-full flex items-center justify-center shrink-0 ${isLight ? 'bg-[#1A4FAD]' : 'bg-[#E8B830]'}`}>
+                <Check className={`w-3 h-3 ${isLight ? 'text-white' : 'text-[#1a0a10]'}`} strokeWidth={3} />
+              </div>
               <span>{b}</span>
             </li>
           ))}
         </ul>
 
-        <div className={`flex items-center gap-4 mb-5 ${imageRight ? "md:justify-end" : ""}`}>
-          <span className={`flex items-center gap-1.5 text-xs ${statColor}`}>
-            <Clock className="w-3.5 h-3.5 text-[#D4AF37]" />
+        <div className="flex flex-wrap items-center gap-5 mb-8">
+          <span className={`flex items-center gap-2 text-sm font-medium ${statColor}`}>
+            <Clock className={`w-4 h-4 ${isLight ? 'text-[#1A4FAD]' : 'text-[#E8B830]'}`} />
             {service.duration}
           </span>
-          <span className={`flex items-center gap-1.5 text-xs ${statColor}`}>
-            <Users className="w-3.5 h-3.5 text-[#D4AF37]" />
+          <span className={`flex items-center gap-2 text-sm font-medium ${statColor}`}>
+            <Users className={`w-4 h-4 ${isLight ? 'text-[#1A4FAD]' : 'text-[#E8B830]'}`} />
             {service.patients} patients
           </span>
         </div>
 
-        <div className={`flex items-center gap-2.5 ${imageRight ? "md:justify-end" : ""}`}>
+        <div className="flex items-center gap-3 mt-auto">
           <Link
             href="/book"
-            className={`inline-flex items-center justify-center px-5 py-2 text-xs font-semibold rounded-full transition-all duration-300 hover:-translate-y-0.5 ${
+            className={`flex-1 sm:flex-none inline-flex items-center justify-center px-6 py-3 text-sm font-bold rounded-full transition-all duration-300 hover:-translate-y-0.5 ${
               isLight
-                ? "bg-[#5C0F22] text-white hover:bg-[#7a1830] shadow-md shadow-[#5C0F22]/20 hover:shadow-lg"
-                : "bg-[#D4AF37] text-[#1a0a10] hover:bg-[#E8C547] shadow-md shadow-[#D4AF37]/30 hover:shadow-lg"
+                ? "bg-[#1A4FAD] text-white hover:bg-[#163E8A] shadow-md hover:shadow-xl"
+                : "bg-[#E8B830] text-[#1a0a10] hover:bg-[#F0C545] shadow-md hover:shadow-xl"
             }`}
           >
             Book Now
           </Link>
           <Link
             href={`/services/${service.slug}`}
-            className={`inline-flex items-center justify-center gap-1 px-5 py-2 text-xs font-semibold rounded-full border-2 transition-all duration-300 hover:-translate-y-0.5 ${
+            className={`flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold rounded-full border-2 transition-all duration-300 hover:-translate-y-0.5 ${
               isLight
-                ? "border-[#5C0F22]/20 text-[#5C0F22] hover:bg-[#5C0F22] hover:text-white hover:border-[#5C0F22]"
-                : "border-[#D4AF37]/40 text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#1a0a10] hover:border-[#D4AF37]"
+                ? "border-[#1A4FAD] text-[#1A4FAD] bg-transparent hover:bg-[#1A4FAD] hover:text-white"
+                : "border-[#00C8E8]/70 text-[#00C8E8] bg-transparent hover:bg-[#00C8E8] hover:text-[#0D2A60]"
             }`}
           >
             Learn More
-            <ArrowRight className="w-3.5 h-3.5" />
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
-      </div>
-    </motion.div>
+    </div>
   )
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.7 }}
-      className={`relative rounded-2xl overflow-hidden ${gradients[index]} py-8 px-5 sm:py-10 sm:px-6 lg:py-12 lg:px-8`}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.6 }}
+      className={`relative rounded-[2rem] overflow-hidden ${gradients[index]} flex flex-col md:flex-row h-full shadow-lg hover:shadow-xl transition-shadow duration-500 border border-white/5`}
     >
-      <div className={`flex flex-col ${imageRight ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-5 md:gap-4 lg:gap-6`}>
-        {imageBlock}
-        {textBlock}
-      </div>
+      {imageRight ? (
+        <>
+          {textBlock}
+          {imageBlock}
+        </>
+      ) : (
+        <>
+          {imageBlock}
+          {textBlock}
+        </>
+      )}
     </motion.div>
   )
 }
@@ -209,9 +206,9 @@ export default function ServicesPreview() {
   return (
     <section className="relative w-full py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#e7e7e7] via-[#FFFDF5] via-30% to-[#5C0F22]" />
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#F2F4F8] via-[#FFFDF5] via-30% to-[#1A4FAD]" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E8B830]/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E8B830]/20 to-transparent" />
 
       <div className="relative w-full px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
         {/* Header */}
@@ -227,7 +224,7 @@ export default function ServicesPreview() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 text-[#D4AF37] text-xs sm:text-sm font-semibold tracking-wide uppercase mb-3"
+            className="inline-flex items-center gap-2 text-[#E8B830] text-xs sm:text-sm font-semibold tracking-wide uppercase mb-3"
           >
             <Sparkles className="w-4 h-4" />
             What We Offer
@@ -237,11 +234,11 @@ export default function ServicesPreview() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4 tracking-tight"
           >
             Our Premium
             <motion.span
-              className="block bg-gradient-to-r from-[#D4AF37] to-[#B8941F] bg-clip-text text-transparent mt-2"
+              className="block bg-gradient-to-r from-[#E8B830] to-[#B07820] bg-clip-text text-transparent mt-2"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -250,28 +247,18 @@ export default function ServicesPreview() {
               Services
             </motion.span>
           </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto"
-          >
-            Comprehensive dental care services designed to keep your smile healthy and beautiful.
-          </motion.p>
         </motion.div>
       </div>
 
-        {/* Zig-Zag Services Grid — full width */}
-        <div className="w-full px-3 sm:px-4 lg:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-            {servicesData.map((service, i) => {
-              const rowIndex = Math.floor(i / 2)
-              const imageRight = rowIndex % 2 === 1
-              return <ServiceRow key={service.slug} service={service} index={i} imageRight={imageRight} />
-            })}
-          </div>
+      {/* Grid — Split Layout */}
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 lg:gap-8 max-w-[1600px] mx-auto">
+          {servicesData.map((service, i) => {
+            const imageRight = i % 2 !== 0
+            return <ServiceRow key={service.slug} service={service} index={i} imageRight={imageRight} />
+          })}
         </div>
+      </div>
 
       <div className="relative w-full px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
         {/* Bottom CTA Area */}
@@ -283,14 +270,14 @@ export default function ServicesPreview() {
           className="mt-20 md:mt-24 lg:mt-28 text-center"
         >
           <div className="relative inline-flex flex-col items-center">
-            <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-px h-8 bg-gradient-to-b from-transparent to-[#D4AF37]/40" />
+            <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-px h-8 bg-gradient-to-b from-transparent to-[#E8B830]/40" />
             <p className="text-gray-500 text-sm tracking-wide uppercase mb-6">And more to discover</p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4">
               {/* Primary CTA - Book Consultation */}
               <Link
                 href="/book"
-                className="group relative inline-flex items-center justify-center px-8 sm:px-10 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold overflow-hidden btn-golden-shine shadow-xl shadow-[#D4AF37]/25 hover:shadow-2xl hover:shadow-[#D4AF37]/40 transition-shadow duration-300 hover:scale-105"
+                className="group relative inline-flex items-center justify-center px-8 sm:px-10 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold overflow-hidden btn-golden-shine shadow-xl shadow-[#E8B830]/25 hover:shadow-2xl hover:shadow-[#E8B830]/40 transition-shadow duration-300 hover:scale-105"
               >
                 <span className="relative z-10 flex items-center gap-2 sm:gap-3">
                   <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -302,7 +289,7 @@ export default function ServicesPreview() {
               {/* Secondary CTA - Explore Services */}
               <Link
                 href="/services"
-                className="group inline-flex items-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-semibold bg-white text-[#5C0F22] border border-[#5C0F22]/20 hover:bg-[#5C0F22] hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 text-sm sm:text-base"
+                className="group inline-flex items-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-semibold bg-white text-[#1A4FAD] border border-[#1A4FAD]/20 hover:bg-[#1A4FAD] hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 text-sm sm:text-base"
               >
                 Explore All 12 Services
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

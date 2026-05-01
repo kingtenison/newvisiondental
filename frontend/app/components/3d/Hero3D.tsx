@@ -28,12 +28,12 @@ function AnimatedSphere() {
       <mesh ref={meshRef}>
         <sphereGeometry args={[1.2, 128, 128]} />
         <MeshDistortMaterial
-          color="#C5A059"
+          color="#E8B830"
           distort={0.5}
           speed={2}
           metalness={0.9}
           roughness={0.1}
-          emissive="#C5A059"
+          emissive="#E8B830"
           emissiveIntensity={0.3}
         />
       </mesh>
@@ -56,7 +56,7 @@ function FloatingRings() {
     <>
       <mesh ref={ring1Ref} position={[0, 0, 0]}>
         <torusGeometry args={[1.8, 0.05, 64, 200]} />
-        <meshStandardMaterial color="#C5A059" metalness={0.8} roughness={0.2} emissive="#C5A059" emissiveIntensity={0.2} />
+        <meshStandardMaterial color="#E8B830" metalness={0.8} roughness={0.2} emissive="#E8B830" emissiveIntensity={0.2} />
       </mesh>
       <mesh ref={ring2Ref} position={[0, 0, 0]}>
         <torusGeometry args={[2.2, 0.05, 64, 200]} />
@@ -77,14 +77,14 @@ export function Hero3D() {
     setIsClient(true);
   }, []);
   
-  if (!isClient) return <div className="w-full h-full bg-gradient-to-br from-[#5C0F22] to-[#4A0C1A]" />;
+  if (!isClient) return <div className="w-full h-full bg-gradient-to-br from-[#1A4FAD] to-[#1A4FAD]" />;
   
   return (
     <Canvas camera={{ position: [0, 0, 8], fov: 45 }} className="w-full h-full">
       <PerspectiveCamera makeDefault position={[0, 0, 8]} />
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} intensity={1} />
-      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#C5A059" />
+      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#E8B830" />
       <directionalLight position={[5, 5, 5]} intensity={0.8} />
       
       <Stars radius={100} depth={50} count={2000} factor={4} saturation={0} fade speed={1} />
@@ -93,7 +93,7 @@ export function Hero3D() {
       <FloatingRings />
       <AnimatedSphere />
       
-      <Sparkles count={800} scale={15} size={0.1} color="#C5A059" opacity={0.6} />
+      <Sparkles count={800} scale={15} size={0.1} color="#E8B830" opacity={0.6} />
       
       <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.8} />
     </Canvas>

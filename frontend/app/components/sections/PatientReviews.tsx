@@ -6,12 +6,12 @@ import { Star, ArrowRight, Calendar } from "lucide-react"
 
 export default function PatientReviews() {
   return (
-    <section className="relative w-full py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden bg-[#e7e7e7]">
+    <section className="relative w-full py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden bg-[#F2F4F8]">
       {/* Subtle Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#e7e7e7] via-gray-200/30 to-[#e7e7e7]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#F2F4F8] via-gray-200/30 to-[#F2F4F8]" />
       
       {/* Gold Accent */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E8B830]/30 to-transparent" />
       
       <div className="w-full px-4 sm:px-6 lg:px-12 relative">
         {/* Section Header */}
@@ -27,11 +27,11 @@ export default function PatientReviews() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 text-[#D4AF37] text-xs sm:text-sm font-semibold tracking-wide uppercase mb-3 sm:mb-4"
+            className="inline-flex items-center gap-2 text-[#E8B830] text-xs sm:text-sm font-semibold tracking-wide uppercase mb-3 sm:mb-4"
           >
-            <Star className="w-3 h-3 sm:w-4 sm:h-4 fill-[#D4AF37] animate-pulse" />
+            <Star className="w-3 h-3 sm:w-4 sm:h-4 fill-[#E8B830] animate-pulse" />
             Verified Feedback
-            <Star className="w-3 h-3 sm:w-4 sm:h-4 fill-[#D4AF37] animate-pulse" />
+            <Star className="w-3 h-3 sm:w-4 sm:h-4 fill-[#E8B830] animate-pulse" />
           </motion.span>
           
           <motion.h2 
@@ -86,7 +86,7 @@ export default function PatientReviews() {
         >
           <Link
             href="/book"
-            className="group relative inline-flex items-center justify-center px-8 sm:px-10 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold overflow-hidden btn-golden-shine shadow-xl shadow-[#D4AF37]/25 hover:shadow-2xl hover:shadow-[#D4AF37]/40 transition-shadow duration-300 hover:scale-105"
+            className="group relative inline-flex items-center justify-center px-8 sm:px-10 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold overflow-hidden btn-golden-shine shadow-xl shadow-[#E8B830]/25 hover:shadow-2xl hover:shadow-[#E8B830]/40 transition-shadow duration-300 hover:scale-105"
           >
             <span className="relative z-10 flex items-center gap-2 sm:gap-3">
               <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />

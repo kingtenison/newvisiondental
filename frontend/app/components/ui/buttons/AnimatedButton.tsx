@@ -36,10 +36,10 @@ export function AnimatedButton({
 
   // Updated variant classes with new colors
   const variantClasses = {
-    primary: "bg-[#5C0F22] text-white hover:bg-[#7A1A2E] shadow-md hover:shadow-lg",
-    secondary: "border-2 border-[#C5A059] text-[#C5A059] hover:bg-[#C5A059] hover:text-[#5C0F22] hover:shadow-[0_0_12px_rgba(197,160,89,0.4)]",
+    primary: "bg-[#1A4FAD] text-white hover:bg-[#1A4FAD] shadow-md hover:shadow-lg",
+    secondary: "border-2 border-[#E8B830] text-[#E8B830] hover:bg-[#E8B830] hover:text-[#1A4FAD] hover:shadow-[0_0_12px_rgba(197,160,89,0.4)]",
     green: "bg-[#2E7D32] text-white hover:bg-[#166534] shadow-md hover:shadow-lg",
-    outline: "border border-gray-300 hover:border-[#C5A059] hover:text-[#C5A059]"
+    outline: "border border-gray-300 hover:border-[#E8B830] hover:text-[#E8B830]"
   };
 
   const buttonVariants = {

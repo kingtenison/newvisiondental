@@ -78,18 +78,18 @@ export default function AdminAppointmentsPage() {
   });
 
   if (isLoading) return (
-    <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 flex items-center justify-center">
-      <div className="w-12 h-12 border-4 border-[#D4AF37] border-t-transparent rounded-full animate-spin"></div>
+    <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 flex items-center justify-center">
+      <div className="w-12 h-12 border-4 border-[#E8B830] border-t-transparent rounded-full animate-spin"></div>
     </div>
   );
 
   return (
-    <div className="min-h-screen bg-[#e7e7e7] pt-[72px] md:pt-20 overflow-x-hidden">
+    <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 overflow-x-hidden">
       <section className="relative w-full overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#5C0F22] via-[#4a0c1b] to-[#5C0F22]" />
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8]" />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#E8B830]/30 to-transparent" />
         <div className="relative w-full px-4 sm:px-6 lg:px-12 py-10 md:py-14">
-          <Link href="/admin" className="inline-flex items-center gap-2 text-white/60 hover:text-[#D4AF37] text-sm font-medium mb-4 transition-colors">
+          <Link href="/admin" className="inline-flex items-center gap-2 text-white/60 hover:text-[#E8B830] text-sm font-medium mb-4 transition-colors">
             <ArrowLeft className="w-4 h-4" /> Back to Dashboard
           </Link>
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-1">Manage Appointments</h1>
@@ -102,12 +102,12 @@ export default function AdminAppointmentsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center mb-6">
             <div className="flex flex-wrap gap-3">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#D4AF37]/50" />
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#E8B830]/50" />
                 <input type="text" placeholder="Search..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-9 pr-4 py-2.5 border-2 border-[#5C0F22]/15 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5C0F22]/15 focus:border-[#5C0F22]/40 text-sm w-64" />
+                  className="pl-9 pr-4 py-2.5 border-2 border-[#1A4FAD]/15 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1A4FAD]/15 focus:border-[#1A4FAD]/40 text-sm w-64" />
               </div>
               <select value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)}
-                className="px-4 py-2.5 border-2 border-[#5C0F22]/15 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#5C0F22]/15 text-sm">
+                className="px-4 py-2.5 border-2 border-[#1A4FAD]/15 bg-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1A4FAD]/15 text-sm">
                 <option value="all">All Status</option>
                 <option value="pending">Pending</option>
                 <option value="confirmed">Confirmed</option>
@@ -117,7 +117,7 @@ export default function AdminAppointmentsPage() {
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-xl overflow-hidden border border-[#5C0F22]/10">
+          <div className="bg-gray-50 rounded-xl overflow-hidden border border-[#1A4FAD]/10">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead className="bg-white">
@@ -131,7 +131,7 @@ export default function AdminAppointmentsPage() {
                   {filteredAppointments.map((apt) => (
                     <tr key={apt.id} className="hover:bg-white transition">
                       <td className="px-5 py-3.5">
-                        <p className="text-sm font-medium text-[#5C0F22]">{apt.patient_name}</p>
+                        <p className="text-sm font-medium text-[#1A4FAD]">{apt.patient_name}</p>
                         <p className="text-xs text-gray-500">{apt.patient_email || apt.patient_phone}</p>
                       </td>
                       <td className="px-5 py-3.5 text-sm text-gray-600">{apt.service}</td>
@@ -155,7 +155,7 @@ export default function AdminAppointmentsPage() {
                         )}
                       </td>
                       <td className="px-5 py-3.5">
-                        <button onClick={() => { setEditingId(apt.id); setEditStatus(apt.status); }} className="p-1.5 text-gray-400 hover:text-[#D4AF37] transition rounded-lg hover:bg-[#D4AF37]/5">
+                        <button onClick={() => { setEditingId(apt.id); setEditStatus(apt.status); }} className="p-1.5 text-gray-400 hover:text-[#E8B830] transition rounded-lg hover:bg-[#E8B830]/5">
                           <Edit className="w-4 h-4" />
                         </button>
                       </td>
@@ -166,7 +166,7 @@ export default function AdminAppointmentsPage() {
             </div>
             {filteredAppointments.length === 0 && (
               <div className="text-center py-12">
-                <Calendar className="w-12 h-12 text-[#D4AF37]/20 mx-auto mb-3" />
+                <Calendar className="w-12 h-12 text-[#E8B830]/20 mx-auto mb-3" />
                 <p className="text-gray-500">No appointments found</p>
               </div>
             )}

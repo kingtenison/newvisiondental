@@ -198,7 +198,7 @@ export default function EditBlogPostPage({ params }: { params: { id: string } })
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-[#e7e7e7] dark:bg-[#222222] pt-[72px] md:pt-20 flex items-center justify-center">
+      <div className="min-h-screen bg-[#F2F4F8] dark:bg-[#222222] pt-[72px] md:pt-20 flex items-center justify-center">
         <div className="text-center">
           <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-gray-600 dark:text-gray-400">Loading blog post...</p>
@@ -208,7 +208,7 @@ export default function EditBlogPostPage({ params }: { params: { id: string } })
   }
 
   return (
-    <div className="min-h-screen bg-[#e7e7e7] dark:bg-[#222222] pt-[72px] md:pt-20 overflow-x-hidden">
+    <div className="min-h-screen bg-[#F2F4F8] dark:bg-[#222222] pt-[72px] md:pt-20 overflow-x-hidden">
       {/* Header */}
       <section className="w-full bg-gradient-to-r from-primary to-primary-dark py-6 md:py-8">
         <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12">

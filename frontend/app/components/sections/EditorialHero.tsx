@@ -70,7 +70,7 @@ export default function EditorialHero() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30" />
         {/* Bottom fade to blend into next section */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#0f0510] to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#0A0A0A] to-transparent" />
       </div>
 
       {/* Main Content - Left Aligned */}
@@ -112,7 +112,7 @@ export default function EditorialHero() {
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ delay: 1.4, duration: 0.8 }}
-              className="w-16 sm:w-20 md:w-24 lg:w-32 h-1 bg-gradient-to-r from-[#D4AF37] via-[#E8C547] to-[#D4AF37] rounded-full"
+              className="w-16 sm:w-20 md:w-24 lg:w-32 h-1 bg-gradient-to-r from-[#E8B830] via-[#E8B830] to-[#E8B830] rounded-full"
             />
           </motion.div>
 
@@ -138,7 +138,7 @@ export default function EditorialHero() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
               <Link
                 href="/book"
-                className="group relative inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold overflow-hidden btn-golden-shine shadow-2xl shadow-[#D4AF37]/30 hover:shadow-[#D4AF37]/50 transition-shadow duration-300"
+                className="group relative inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold overflow-hidden btn-golden-shine shadow-2xl shadow-[#E8B830]/30 hover:shadow-[#E8B830]/50 transition-shadow duration-300"
               >
                 <span className="relative z-10 flex items-center gap-2 sm:gap-3">
                   Book Your Visit
@@ -151,9 +151,9 @@ export default function EditorialHero() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
               <Link
                 href="/services"
-                className="group inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white/10 text-white font-medium rounded-full border border-white/20 hover:border-[#D4AF37]/30 hover:bg-white/20 transition-all duration-300 backdrop-blur-sm text-sm sm:text-base"
+                className="group inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white/10 text-white font-medium rounded-full border border-white/20 hover:border-[#E8B830]/30 hover:bg-white/20 transition-all duration-300 backdrop-blur-sm text-sm sm:text-base"
               >
-                <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 text-[#D4AF37]" />
+                <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 text-[#E8B830]" />
                 <span>Explore Services</span>
               </Link>
             </motion.div>
@@ -176,9 +176,9 @@ export default function EditorialHero() {
                 className="flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl px-3 sm:px-5 py-2 sm:py-3 border border-white/10"
                 whileHover={{ scale: 1.05, borderColor: "rgba(212,175,55,0.3)" }}
               >
-                <p className="text-lg sm:text-xl md:text-2xl font-bold text-white">
+                <p className="text-lg sm:text-xl md:text-2xl font-bold text-white font-heading">
                   {stat.value}
-                  {stat.showStar && <Star className="inline w-3 h-3 sm:w-4 sm:h-4 text-[#D4AF37] fill-[#D4AF37] ml-1" />}
+                  {stat.showStar && <Star className="inline w-3 h-3 sm:w-4 sm:h-4 text-[#E8B830] fill-[#E8B830] ml-1" />}
                 </p>
                 <p className="text-xs sm:text-sm text-white/60">{stat.label}</p>
               </motion.div>

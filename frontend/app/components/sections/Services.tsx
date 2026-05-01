@@ -13,7 +13,7 @@ export default function Services() {
   return (
     <section className="py-20 bg-black">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-[#D4AF37] mb-12 text-center">Our Specialized Services</h2>
+        <h2 className="text-3xl font-bold text-[#E8B830] mb-12 text-center">Our Specialized Services</h2>
         <div className="grid md:grid-cols-4 gap-6">
           {services.map((s, i) => (
             <motion.div key={i} whileHover={{ y: -5 }} className="bg-neutral-900 rounded-xl overflow-hidden border border-white/5">

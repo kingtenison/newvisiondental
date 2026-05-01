@@ -36,23 +36,23 @@ export default function ProfilePage() {
     getProfile()
   }, [router])
 
-  if (loading) return <div className="min-h-screen bg-black flex items-center justify-center text-[#D4AF37]">LOADING...</div>
+  if (loading) return <div className="min-h-screen bg-black flex items-center justify-center text-[#E8B830]">LOADING...</div>
 
   return (
     <div className="min-h-screen bg-black pt-32 pb-20 px-6">
-      <div className="max-auto max-w-3xl bg-[#5C0F22]/20 border border-[#D4AF37]/30 p-12 rounded-sm shadow-2xl">
-        <h1 className="text-3xl font-black tracking-[0.3em] text-white uppercase mb-8 border-b border-[#D4AF37]/20 pb-4">
-          Patient <span className="text-[#D4AF37]">Profile</span>
+      <div className="max-auto max-w-3xl bg-[#1A4FAD]/20 border border-[#E8B830]/30 p-12 rounded-sm shadow-2xl">
+        <h1 className="text-3xl font-black tracking-[0.3em] text-white uppercase mb-8 border-b border-[#E8B830]/20 pb-4">
+          Patient <span className="text-[#E8B830]">Profile</span>
         </h1>
 
         <div className="space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <p className="text-[10px] font-black tracking-widest text-[#D4AF37] uppercase mb-1">Full Name</p>
+              <p className="text-[10px] font-black tracking-widest text-[#E8B830] uppercase mb-1">Full Name</p>
               <p className="text-xl text-white font-bold uppercase">{profile?.full_name || 'Not Set'}</p>
             </div>
             <div>
-              <p className="text-[10px] font-black tracking-widest text-[#D4AF37] uppercase mb-1">Role</p>
+              <p className="text-[10px] font-black tracking-widest text-[#E8B830] uppercase mb-1">Role</p>
               <p className="text-xl text-white font-bold uppercase">{profile?.role}</p>
             </div>
           </div>
@@ -60,7 +60,7 @@ export default function ProfilePage() {
           <div className="pt-8 border-t border-white/5">
              <Link 
               href="/dashboard"
-              className="inline-block px-10 py-4 bg-[#D4AF37] text-black text-[10px] font-black tracking-[0.3em] uppercase hover:bg-[#FBF5B7] transition-all"
+              className="inline-block px-10 py-4 bg-[#E8B830] text-black text-[10px] font-black tracking-[0.3em] uppercase hover:bg-[#FBF5B7] transition-all"
             >
               Back to Dashboard
             </Link>
