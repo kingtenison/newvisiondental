@@ -143,7 +143,9 @@ export function Footer() {
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center gap-2">
+            <div className="mb-4">
+              <h4 className="text-white font-bold text-xs sm:text-sm tracking-wider uppercase mb-3">Our Socials</h4>
+              <div className="flex items-center gap-2">
               {socialLinks.map((social) => (
                 <motion.a
                   key={social.label}
