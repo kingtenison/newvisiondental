@@ -241,13 +241,13 @@ export function Header() {
             className="w-full fixed top-0 left-0 z-50 py-2"
           >
             <div className="px-4 sm:px-6 lg:px-8">
-              <div className="relative px-4 sm:px-6 py-2 flex items-center justify-between">
+              <div className="relative px-4 sm:px-6 py-1 flex items-center justify-between">
                 {/* LEFT: Logo */}
-                <Link href="/" className="flex items-center shrink-0 group">
-                  <div className="relative w-20 h-20 sm:w-28 sm:h-28 transition-transform duration-300 group-hover:scale-105">
-                    <Image 
-                      src="/images/logo-light.png" 
-                      alt="New Vision Dental" 
+                 <Link href="/" className="flex items-center shrink-0 group">
+                   <div className="relative w-24 sm:w-32 aspect-[3.59] transition-transform duration-300 group-hover:scale-105">
+                    <Image
+                      src="/images/NV-LOGO-GRADIANTS-OFFICIAL.png"
+                      alt="New Vision Dental"
                       fill
                       className="object-contain"
                       priority
@@ -478,16 +478,16 @@ export function Header() {
               <div className="flex flex-col h-full">
                 {/* Panel Header */}
                 <div className="flex items-center justify-between p-6 border-b border-gray-100">
-                  <div className="flex items-center gap-3">
-                    <div className="relative w-16 h-16">
-                      <Image 
-                        src="/images/logo-light.png" 
-                        alt="New Vision Dental" 
-                        fill
-                        className="object-contain"
-                        sizes="64px"
-                      />
-                    </div>
+                   <div className="flex items-center gap-3">
+                      <div className="relative w-20 aspect-[3.59]">
+                        <Image
+                          src="/images/NV-LOGO-GRADIANTS-OFFICIAL.png"
+                          alt="New Vision Dental"
+                          fill
+                          className="object-contain"
+                          sizes="80px"
+                        />
+                      </div>
                   </div>
                   <button
                     onClick={() => setMobileOpen(false)}

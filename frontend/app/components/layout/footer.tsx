@@ -3,17 +3,23 @@
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  Facebook, 
-  Instagram, 
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Facebook,
+  Instagram,
   ArrowRight,
-  Music,
   Calendar
 } from "lucide-react"
+
+// Custom TikTok Icon component with official brand design
+const TikTokIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+  </svg>
+)
 
 const footerLinks = {
   services: [
@@ -58,20 +64,26 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { 
-    icon: Facebook, 
-    href: "https://www.facebook.com/share/1UQaw9ZCGK/?mibextid=wwXIfr", 
-    label: "Facebook" 
+  {
+    icon: Facebook,
+    href: "https://www.facebook.com/share/1UQaw9ZCGK/?mibextid=wwXIfr",
+    label: "Facebook",
+    color: "#1877F2",
+    hoverColor: "#1877F2"
   },
-  { 
-    icon: Instagram, 
-    href: "https://www.instagram.com/newvisiondental.clinic?igsh=eHkydWlrcWdlOGNk", 
-    label: "Instagram" 
+  {
+    icon: Instagram,
+    href: "https://www.instagram.com/newvisiondental.clinic?igsh=eHkydWlrcWdlOGNk",
+    label: "Instagram",
+    color: "#E4405F",
+    hoverColor: "#E4405F"
   },
-  { 
-    icon: Music, 
-    href: "https://www.tiktok.com/@newvisiondental.clinic?_r=1&_t=ZS-94lpwWWNsCC", 
-    label: "TikTok" 
+  {
+    icon: TikTokIcon,
+    href: "https://www.tiktok.com/@newvisiondental.clinic?_r=1&_t=ZS-94lpwWWNsCC",
+    label: "TikTok",
+    color: "#000000",
+    hoverColor: "#FE2C55"
   },
 ]
 
@@ -94,8 +106,8 @@ export function Footer() {
       {/* Cyan Accent Top Line */}
       <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#00C8E8]/40 to-transparent" />
 
-      {/* Main Footer Content */}
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-12 pt-12 md:pt-20 pb-8">
+       {/* Main Footer Content */}
+       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-12 pt-12 md:pt-20 pb-8 lg:ml-10">
 
         {/* Top Section — 3x3 grid */}
         <div className="grid grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8 mb-12">
@@ -103,13 +115,13 @@ export function Footer() {
           {/* 1. Brand */}
           <div className="col-span-3 sm:col-span-1 lg:col-span-1">
             <Link href="/" className="block mb-8 group">
-              <div className="relative w-20 h-20 lg:w-32 lg:h-32">
-                <Image 
-                  src="/images/logo-dark.png" 
-                  alt="New Vision Dental" 
+              <div className="relative w-28 lg:w-40 aspect-[3.59]">
+                <Image
+                  src="/images/NV-LOGO-GRADIANTS-OFFICIAL-GOLD.png"
+                  alt="New Vision Dental"
                   fill
                   className="object-contain"
-                  sizes="(max-width: 640px) 80px, 128px"
+                  sizes="(max-width: 640px) 112px, 160px"
                 />
               </div>
             </Link>
@@ -140,7 +152,22 @@ export function Footer() {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-8 h-8 lg:w-9 lg:h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-[#00C8E8] hover:border-[#00C8E8]/30 hover:bg-[#00C8E8]/10 transition-all duration-300"
+                  className="w-8 h-8 lg:w-9 lg:h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300"
+                  style={{
+                    color: social.color,
+                    borderColor: `${social.color}20`,
+                    backgroundColor: `${social.color}08`,
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = social.hoverColor
+                    e.currentTarget.style.borderColor = `${social.hoverColor}30`
+                    e.currentTarget.style.backgroundColor = `${social.hoverColor}15`
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = social.color
+                    e.currentTarget.style.borderColor = `${social.color}20`
+                    e.currentTarget.style.backgroundColor = `${social.color}08`
+                  }}
                   aria-label={social.label}
                 >
                   <social.icon className="w-3 h-3 lg:w-4 lg:h-4" />

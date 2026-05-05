@@ -211,16 +211,15 @@ export default function WhatsAppChat() {
             <div className="bg-gradient-to-r from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8] p-6 text-white">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <div className="relative">
-                    <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center">
-                      <Image 
-                        src="/images/nv-new-logo-03.png" 
-                        alt="NV" 
-                        width={32} 
-                        height={32} 
-                        className="brightness-200"
-                      />
-                    </div>
+                   <div className="relative">
+                     <div className="relative w-36 aspect-[3.59] rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center">
+                       <Image
+                         src="/images/NV-LOGO-GRADIANTS-OFFICIAL.png"
+                         alt="NV"
+                         fill
+                         className="brightness-200 object-contain"
+                       />
+                     </div>
                     <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 border-2 border-[#1A4FAD] rounded-full" />
                   </div>
                   <div>

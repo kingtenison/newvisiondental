@@ -11,7 +11,8 @@ const partners = [
   { name: "GAB", img: "/images/insurance/gab.jpg" },
   { name: "Glico", img: "/images/insurance/glico.jpg" },
   { name: "Metropolitan", img: "/images/insurance/metropolitan.jpg" },
-  { name: "Nationwide", img: "/images/insurance/nationwide.jpeg" }
+  { name: "Nationwide", img: "/images/insurance/nationwide.jpeg" },
+  { name: "Nexus", img: "/images/insurance/logo.webp" }
 ]
 
 export default function InsurancePartners() {
