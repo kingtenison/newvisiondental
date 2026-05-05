@@ -175,6 +175,7 @@ export function Footer() {
                   <social.icon className="w-3 h-3 lg:w-4 lg:h-4" />
                 </motion.a>
               ))}
+              </div>
             </div>
           </div>
 
