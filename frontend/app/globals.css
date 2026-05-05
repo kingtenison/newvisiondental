@@ -394,5 +394,18 @@ iframe[src*="elfsight"],
 div[class*="elfsight"] {
   border: none !important;
   outline: none !important;
-  box-shadow: none !important;
+   box-shadow: none !important;
 }
+
+/* Nexa font for @ symbols globally */
+.at-symbol {
+  font-family: 'Nexa', sans-serif !important;
+  font-weight: 700;
+}
+
+/* Auto-apply to @ symbols in text content via CSS */
+[data-at-symbol] {
+  font-family: 'Nexa', sans-serif;
+  font-weight: 700;
+}
+
