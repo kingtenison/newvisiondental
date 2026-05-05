@@ -82,7 +82,7 @@ const socialLinks = [
     icon: TikTokIcon,
     href: "https://www.tiktok.com/@newvisiondental.clinic?_r=1&_t=ZS-94lpwWWNsCC",
     label: "TikTok",
-    color: "#000000",
+    color: "#FFFFFF",
     hoverColor: "#FE2C55"
   },
 ]
