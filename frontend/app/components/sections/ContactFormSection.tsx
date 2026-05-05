@@ -213,7 +213,7 @@ export default function ContactFormSection() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-4 py-3 sm:py-4 rounded-lg border border-gray-200 bg-gray-50 text-gray-900 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#E8B830]/30 focus:border-[#E8B830] transition-all"
-                       placeholder="john<span className=\"at-symbol\">@</span>example.com"
+                       placeholder="john@example.com"
                     />
                   </div>
                 </div>
