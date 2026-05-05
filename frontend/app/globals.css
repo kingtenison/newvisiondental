@@ -46,12 +46,18 @@
 @tailwind components;
 @tailwind utilities;
 
-/* GLOBAL STYLE OVERRIDES */
+/* Global Style Overrides */
 * {
   font-style: normal !important;
   font-synthesis: none !important; /* Prevents browser from faking italics/bold */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Nexa font for @ symbols */
+.at-symbol {
+  font-family: 'Nexa', sans-serif;
+  font-weight: 700;
 }
 
 :root {
@@ -394,18 +400,5 @@ iframe[src*="elfsight"],
 div[class*="elfsight"] {
   border: none !important;
   outline: none !important;
-   box-shadow: none !important;
+  box-shadow: none !important;
 }
-
-/* Nexa font for @ symbols globally */
-.at-symbol {
-  font-family: 'Nexa', sans-serif !important;
-  font-weight: 700;
-}
-
-/* Auto-apply to @ symbols in text content via CSS */
-[data-at-symbol] {
-  font-family: 'Nexa', sans-serif;
-  font-weight: 700;
-}
-

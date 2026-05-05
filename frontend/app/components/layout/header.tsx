@@ -325,12 +325,12 @@ export function Header() {
                           </div>
                           <div className="border-t border-gray-100 p-3 bg-gray-50">
                             <a 
-                              href="mailto:newvisiondentalclinic@gmail.com"
-                              className="flex items-center gap-2 px-3 py-2 text-sm text-[#1A4FAD] hover:text-[#E8B830] transition-colors"
-                            >
-                              <Mail className="w-4 h-4" />
-                              newvisiondentalclinic@gmail.com
-                            </a>
+                               href="mailto:newvisiondentalclinic@gmail.com"
+                               className="flex items-center gap-2 px-3 py-2 text-sm text-[#1A4FAD] hover:text-[#E8B830] transition-colors"
+                             >
+                               <Mail className="w-4 h-4" />
+                               newvisiondentalclinic<span className="at-symbol">@</span>gmail.com
+                             </a>
                           </div>
                         </motion.div>
                       )}

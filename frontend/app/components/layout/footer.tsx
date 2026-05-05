@@ -132,10 +132,10 @@ export function Footer() {
 
             {/* Contact Info */}
             <div className="space-y-1.5 mb-4">
-              <a href="mailto:newvisiondentalclinic@gmail.com" className="flex items-center gap-2 text-white/60 hover:text-[#00C8E8] transition-colors text-xs lg:text-sm group">
-                <Mail className="w-3 h-3 text-[#00C8E8]/60 group-hover:text-[#00C8E8] transition-colors shrink-0" />
-                <span className="break-all">newvisiondentalclinic@gmail.com</span>
-              </a>
+               <a href="mailto:newvisiondentalclinic@gmail.com" className="flex items-center gap-2 text-white/60 hover:text-[#00C8E8] transition-colors text-xs lg:text-sm group">
+                 <Mail className="w-3 h-3 text-[#00C8E8]/60 group-hover:text-[#00C8E8] transition-colors shrink-0" />
+                 <span className="break-all">newvisiondentalclinic<span className="at-symbol">@</span>gmail.com</span>
+               </a>
               <div className="flex items-center gap-2 text-white/60 text-xs lg:text-sm">
                 <Clock className="w-3 h-3 text-[#00C8E8]/60 shrink-0" />
                 Mon - Sat: 8AM - 6PM
