@@ -8,22 +8,30 @@ import { Users, Award, Heart, Target, Eye, Star, Phone, Calendar, MapPin, Sparkl
 const featuredDoctor = {
   name: "Dr. Felix Govina",
   title: "Founder & CEO",
-  qualifications: "BDS, MSc (Orthodontics), FICD",
-  experience: "15+ years",
-  speciality: "Orthodontics & Dental Implants",
-  bio: "Dr. Felix Govina is the visionary founder of New Vision Dental Clinic. With over 15 years of experience and specialized training across multiple continents, he has built a practice that sets the standard for dental excellence in Ghana. His passion for transforming smiles and his commitment to patient care have earned him recognition as one of the leading dental professionals in West Africa.",
-  extendedBio: "After completing his Bachelor of Dental Surgery at the University of Ghana, Dr. Govina pursued advanced training in Orthodontics at the University of Lisbon, Portugal. He further honed his skills through a prestigious fellowship at the International College of Dentists and completed additional implant training at the Misch International Implant Institute in the USA. He returned to Ghana with a mission to bring world-class dental standards to his home country.",
-  philosophy: "Every smile tells a story. My role is to help each patient write a confident chapter in theirs.",
+  qualifications: "BDS, MPH, MSc (Occupational Health & Environmental Management)",
+  experience: "29+ years",
+  speciality: "Dental Surgery, Public Health & Professional Mentorship",
+  bio: "Dr. Felix Govina is a seasoned and highly experienced dental surgeon with over 29 years of professional practice in dentistry. He is a multifaceted professional with diverse skills and qualifications. In addition to his dental training, he holds a Master of Public Health and a Master of Occupational Health and Environmental Management.",
+  extendedBio: "Dr. Govina served as a military officer with the Ghana Armed Forces for 15 years before voluntarily retiring in 2014. Following his retirement, he worked with the United Nations as a professional dentist for seven years. He is the Founder and Chief Executive Officer of New Vision Dental Clinic, one of the leading state-of-the-art registered oral healthcare providers in Accra. As CEO, he plays a pivotal role in shaping the clinic's vision, strategic direction, and standards of clinical excellence across all branches of New Vision Dental Clinic. With a strong clinical background in dentistry, Dr. Govina has also served as a mentor to young doctors and dental professionals, guiding peers in clinical growth, leadership development, and private practice establishment. His commitment to continuous improvement extends beyond dentistry, combining clinical expertise with public health and occupational safety knowledge through his advanced academic training. Dr. Govina is passionate about mentoring and supporting young and upcoming dentists in developing their professional skills and building successful private practices. He is recognized as a leader, mentor, and advocate for excellence in oral healthcare delivery. Outside his professional life, he enjoys spending time with his contemporaries, engaging in meaningful conversations, and discussing topical and societal issues.",
+  philosophy: "I am passionate about mentoring and supporting young and upcoming dentists in developing their professional skills and building successful private practices.",
   image: "/images/team/CEO.jpg",
-  education: ["BDS - University of Ghana", "MSc Orthodontics - University of Lisbon", "Fellowship - International College of Dentists", "Advanced Implant Training - Misch International Implant Institute, USA"],
-  achievements: [
-    "Founded New Vision Dental Clinic in 2011, now serving 5,000+ patients across 3 locations",
-    "Fellow of the International College of Dentists (FICD)",
-    "Recognized as one of Ghana's Top Dental Professionals",
-    "Pioneered digital dental implant placement in Accra",
-    "Trained over 20 dental professionals across West Africa"
+  education: [
+    "Bachelor of Dental Surgery",
+    "Master of Public Health",
+    "Master of Occupational Health and Environmental Management"
   ],
-  certifications: ["Board Certified Orthodontist", "Certified Implantologist", "Invisalign Certified Provider", "Digital Smile Design Certified"]
+  achievements: [
+    "Over 29 years of professional practice in dentistry",
+    "Served 15 years as a military officer with the Ghana Armed Forces (voluntarily retired 2014)",
+    "Worked with the United Nations as a professional dentist for seven years",
+    "Founder and CEO of New Vision Dental Clinic, a leading state-of-the-art oral healthcare provider in Accra",
+    "Mentor and advocate guiding young dentists in clinical growth, leadership, and private practice establishment"
+  ],
+  certifications: [
+    "Dental Surgeon",
+    "Public Health Specialist",
+    "Occupational Health & Environmental Management Professional"
+  ]
 };
 
 const team = [
@@ -230,8 +238,6 @@ export default function AboutPage() {
                     className="object-cover object-top"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#1A4FAD]/80 hidden md:block" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1A4FAD] to-transparent md:hidden" />
                 </div>
 
                 {/* Content */}
@@ -360,12 +366,15 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="relative h-[350px] md:h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-[#1A4FAD]/5 via-[#E8B830]/5 to-[#1A4FAD]/5 border border-[#E8B830]/10 flex items-center justify-center order-2 md:order-1"
+              className="relative h-[350px] md:h-[400px] rounded-2xl overflow-hidden bg-gradient-to-br from-[#1A4FAD]/5 via-[#E8B830]/5 to-[#1A4FAD]/5 border border-[#E8B830]/10 order-2 md:order-1"
             >
-              <div className="text-center">
-                <Heart className="w-16 h-16 text-[#E8B830]/30 mx-auto mb-3" />
-                <p className="text-gray-400 text-sm">Our Journey</p>
-              </div>
+              <Image
+                src="/images/NV-LOGO-GRADIANTS-OFFICIAL.png"
+                alt="New Vision Dental Clinic - Our Story"
+                fill
+                className="object-contain p-8 md:p-12"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </motion.div>
 
             <motion.div
