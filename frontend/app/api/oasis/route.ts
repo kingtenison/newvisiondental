@@ -6,7 +6,7 @@ const validStatuses = ["pending", "confirmed", "completed", "cancelled"];
 function corsHeaders() {
   return {
     "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Methods": "GET, PATCH, PUT, OPTIONS",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
     "Access-Control-Allow-Headers": "Authorization, Content-Type",
   };
 }
@@ -98,7 +98,7 @@ export async function PUT(request: Request) {
     }
 
     const body = await request.json();
-    const { appointmentId, synced } = body;
+    const { appointmentId, status, synced } = body;
 
     if (!appointmentId) {
       return NextResponse.json({ error: "Missing appointment ID" }, { status: 400, headers: corsHeaders() });
@@ -107,7 +107,10 @@ export async function PUT(request: Request) {
     const supabase = getServerSupabase();
 
     const updateData: { status?: string; synced_at?: string } = {};
-    if (synced) {
+    if (status && validStatuses.includes(status)) {
+      updateData.status = status;
+      updateData.synced_at = new Date().toISOString();
+    } else if (synced) {
       updateData.status = "confirmed";
       updateData.synced_at = new Date().toISOString();
     }
@@ -125,7 +128,7 @@ export async function PUT(request: Request) {
 
     return NextResponse.json({ success: true, appointment: data }, { headers: corsHeaders() });
   } catch (error) {
-    console.error("Oasis sync error:", error);
+    console.error("Oasis PUT error:", error);
     return NextResponse.json({ error: "Failed to update appointment" }, { status: 500, headers: corsHeaders() });
   }
 }
