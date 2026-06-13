@@ -64,3 +64,6 @@ export async function middleware(req: NextRequest) {
 export const config = {
   matcher: ['/dashboard/:path*', '/admin/:path*']
 };
+
+// Note: /api routes are handled by Next.js route handlers, not middleware.
+// If auth header stripping occurs, check Vercel/server env var config.

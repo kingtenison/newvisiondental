@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { sendToOasis } from "@/app/lib/oasis";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
 const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
@@ -35,6 +36,19 @@ export async function POST(request: Request) {
       console.error("Supabase error:", error);
       return NextResponse.json({ error: error.message || "Failed to book appointment" }, { status: 500 });
     }
+
+    // Sync to Oasis HMS (fire and forget - don't block user response)
+    sendToOasis({
+      patientName: name,
+      patientPhone: phone,
+      patientEmail: email,
+      service,
+      location,
+      appointmentDate: date.split('T')[0],
+      appointmentTime: time,
+      notes,
+      source: "website"
+    }).catch(err => console.error("Oasis sync background error:", err));
     
     return NextResponse.json({
       success: true,
@@ -42,7 +56,7 @@ export async function POST(request: Request) {
       message: "Appointment booked successfully!"
     });
     
-  } catch (error) {
+  } catch (error: unknown) {
     console.error("Booking error:", error);
     return NextResponse.json({ error: "Failed to book appointment" }, { status: 500 });
   }
@@ -69,9 +83,10 @@ export async function GET(request: Request) {
     if (error) {
       return NextResponse.json({ error: "Failed to fetch appointments" }, { status: 500 });
     }
-    
+
     return NextResponse.json(data);
-  } catch (error) {
+  } catch (error: unknown) {
+    console.error("Failed to fetch appointments:", error)
     return NextResponse.json({ error: "Failed to fetch appointments" }, { status: 500 });
   }
 }
