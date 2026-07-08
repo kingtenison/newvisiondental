@@ -154,7 +154,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-8 h-8 lg:w-9 lg:h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300"
+                  className="w-11 h-11 lg:w-12 lg:h-12 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300"
                   style={{
                     color: social.color,
                     borderColor: `${social.color}20`,
@@ -172,7 +172,7 @@ export function Footer() {
                   }}
                   aria-label={social.label}
                 >
-                  <social.icon className="w-3 h-3 lg:w-4 lg:h-4" />
+                  <social.icon className="w-4 h-4 lg:w-5 lg:h-5" />
                 </motion.a>
               ))}
               </div>
@@ -184,7 +184,7 @@ export function Footer() {
             <h4 className="text-white font-semibold text-xs lg:text-sm tracking-wider uppercase mb-3">Services</h4>
             <ul className="space-y-1 lg:space-y-1.5">
               {footerLinks.services.slice(0, 8).map((link) => (
-                <li key={link.name}>
+                <li key={link.name} className="py-1">
                   <Link 
                     href={link.href}
                     className="text-white/50 hover:text-[#00C8E8] transition-colors text-xs lg:text-sm flex items-center gap-1.5 group"
@@ -202,7 +202,7 @@ export function Footer() {
             <h4 className="text-white font-semibold text-xs lg:text-sm tracking-wider uppercase mb-3 hidden sm:block">&nbsp;</h4>
             <ul className="space-y-1 lg:space-y-1.5">
               {footerLinks.services.slice(8).map((link) => (
-                <li key={link.name}>
+                <li key={link.name} className="py-1">
                   <Link 
                     href={link.href}
                     className="text-white/50 hover:text-[#00C8E8] transition-colors text-xs lg:text-sm flex items-center gap-1.5 group"
@@ -220,7 +220,7 @@ export function Footer() {
             <h4 className="text-white font-semibold text-xs lg:text-sm tracking-wider uppercase mb-3">Company</h4>
             <ul className="space-y-1 lg:space-y-1.5">
               {footerLinks.company.map((link) => (
-                <li key={link.name}>
+                <li key={link.name} className="py-1">
                   <Link 
                     href={link.href}
                     className="text-white/50 hover:text-[#00C8E8] transition-colors text-xs lg:text-sm flex items-center gap-1.5 group"
@@ -238,7 +238,7 @@ export function Footer() {
             <h4 className="text-white font-semibold text-xs lg:text-sm tracking-wider uppercase mb-3">Locations</h4>
             <ul className="space-y-1 lg:space-y-1.5">
               {footerLinks.locations.map((link) => (
-                <li key={link.name}>
+                <li key={link.name} className="py-1">
                   <Link 
                     href={link.href}
                     className="text-white/50 hover:text-[#00C8E8] transition-colors text-xs lg:text-sm flex items-center gap-1.5 group"
@@ -248,7 +248,7 @@ export function Footer() {
                   </Link>
                   <a 
                     href={`tel:+233${link.phone}`}
-                    className="text-white/40 hover:text-[#00C8E8] transition-colors text-[10px] lg:text-xs flex items-center gap-1.5 ml-[18px]"
+                    className="text-white/40 hover:text-[#00C8E8] transition-colors text-xs flex items-center gap-1.5 ml-[18px] py-2"
                   >
                     <Phone className="w-2.5 h-2.5 shrink-0" />
                     {link.phone}
@@ -263,7 +263,7 @@ export function Footer() {
             <h4 className="text-white font-semibold text-xs lg:text-sm tracking-wider uppercase mb-3">Sitemap</h4>
             <ul className="space-y-1 lg:space-y-1.5">
               {footerLinks.sitemap.slice(0, 6).map((link) => (
-                <li key={link.name}>
+                <li key={link.name} className="py-1">
                   <Link 
                     href={link.href}
                     className="text-white/50 hover:text-[#00C8E8] transition-colors text-xs lg:text-sm flex items-center gap-1.5 group"
@@ -281,7 +281,7 @@ export function Footer() {
             <h4 className="text-white font-semibold text-xs lg:text-sm tracking-wider uppercase mb-3 hidden sm:block">&nbsp;</h4>
             <ul className="space-y-1 lg:space-y-1.5">
               {footerLinks.sitemap.slice(6).map((link) => (
-                <li key={link.name}>
+                <li key={link.name} className="py-1">
                   <Link 
                     href={link.href}
                     className="text-white/50 hover:text-[#00C8E8] transition-colors text-xs lg:text-sm flex items-center gap-1.5 group"
@@ -300,14 +300,14 @@ export function Footer() {
             <div className="flex flex-wrap items-center gap-2">
               <Link
                 href="/book"
-                className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#E8B830] text-[#0A0A0A] text-xs lg:text-sm font-bold rounded-full hover:shadow-[0_0_20px_rgba(232,184,48,0.4)] hover:scale-105 transition-all duration-300 uppercase tracking-wide"
+                className="inline-flex items-center gap-1.5 px-4 py-3 bg-[#E8B830] text-[#0A0A0A] text-xs lg:text-sm font-bold rounded-full hover:shadow-[0_0_20px_rgba(232,184,48,0.4)] hover:scale-105 transition-all duration-300 uppercase tracking-wide"
               >
                 <Calendar className="w-3 h-3" />
                 Book Now
               </Link>
               <a
                 href="tel:+2330559497906"
-                className="inline-flex items-center gap-1.5 px-4 py-2 bg-white/5 text-white text-xs lg:text-sm font-bold rounded-full border border-white/20 hover:border-[#00C8E8]/50 hover:bg-[#00C8E8]/10 hover:text-[#00C8E8] transition-all duration-300 uppercase tracking-wide group"
+                className="inline-flex items-center gap-1.5 px-4 py-3 bg-white/5 text-white text-xs lg:text-sm font-bold rounded-full border border-white/20 hover:border-[#00C8E8]/50 hover:bg-[#00C8E8]/10 hover:text-[#00C8E8] transition-all duration-300 uppercase tracking-wide group"
               >
                 <Phone className="w-3 h-3 text-[#00C8E8] group-hover:text-[#00C8E8]" />
                 Call Now
@@ -318,7 +318,7 @@ export function Footer() {
           {/* 9. Copyright */}
           <div className="col-span-3 sm:col-span-1 lg:col-span-3">
             <h4 className="text-white font-semibold text-xs lg:text-sm tracking-wider uppercase mb-3 hidden sm:block">&nbsp;</h4>
-            <p className="text-white/30 text-[10px] lg:text-xs">
+            <p className="text-white/30 text-xs">
               &copy; 2026 New Vision Dental Clinic. All rights reserved.
             </p>
           </div>
@@ -327,10 +327,10 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-4 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-2">
-            <Link href="/contact" className="text-white/30 hover:text-[#00C8E8] text-[10px] transition-colors">
+            <Link href="/contact" className="text-white/30 hover:text-[#00C8E8] text-xs transition-colors py-2">
               Privacy Policy
             </Link>
-            <Link href="/contact" className="text-white/30 hover:text-[#00C8E8] text-[10px] transition-colors">
+            <Link href="/contact" className="text-white/30 hover:text-[#00C8E8] text-xs transition-colors py-2">
               Terms of Service
             </Link>
           </div>

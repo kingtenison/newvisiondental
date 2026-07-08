@@ -5,20 +5,22 @@ export const timeSlots = [
   "03:00 PM", "03:30 PM", "04:00 PM", "04:30 PM"
 ];
 
-// Service options matching the 12 services from the website
+// Service options matching the 14 services from the website
 export const services = [
-  { id: 1, name: "Consultation", duration: "30 mins", icon: "🔍" },
+  { id: 1, name: "Dental Consultation", duration: "30 mins", icon: "🔍" },
   { id: 2, name: "Dental X-Ray", duration: "15 mins", icon: "📸" },
-  { id: 3, name: "Scaling & Polishing", duration: "45 mins", icon: "✨" },
+  { id: 3, name: "Teeth Cleaning / Scaling & Polishing", duration: "45 mins", icon: "✨" },
   { id: 4, name: "Teeth Whitening", duration: "60 mins", icon: "🦷" },
-  { id: 5, name: "Dental Implants", duration: "2-3 Visits", icon: "🔧" },
+  { id: 5, name: "Dental Implants", duration: "3-9 Months", icon: "🔧" },
   { id: 6, name: "Composite Restoration", duration: "1 Visit", icon: "💎" },
   { id: 7, name: "Root Canal Treatment", duration: "1-2 Visits", icon: "❤️" },
   { id: 8, name: "Crown & Bridge", duration: "1 Visit", icon: "👑" },
-  { id: 9, name: "Tooth Extraction", duration: "30 mins", icon: "🦷" },
+  { id: 9, name: "Root Extraction", duration: "30 mins", icon: "🦷" },
   { id: 10, name: "Dental Veneers", duration: "2 Visits", icon: "😁" },
   { id: 11, name: "Fluoride Therapy", duration: "20 mins", icon: "💧" },
-  { id: 12, name: "Fissure Sealing", duration: "20 mins", icon: "🛡️" }
+  { id: 12, name: "Fissure Sealing", duration: "20 mins", icon: "🛡️" },
+  { id: 13, name: "Emergency Dentistry", duration: "Same-Day", icon: "🚨" },
+  { id: 14, name: "Minor Oral Surgery", duration: "Varies", icon: "🔪" }
 ];
 
 // Helper to generate available dates (next 30 days)
@@ -51,12 +53,8 @@ export const formatDateForAPI = (date: Date) => {
   return date.toISOString().split('T')[0];
 };
 
-// Check if time slot is available (simulated)
-export const isTimeSlotAvailable = (date: Date, time: string) => {
-  const hour = parseInt(time.split(':')[0]);
-  const period = time.split(' ')[1];
-  const randomFactor = (date.getDate() + hour) % 3;
-  return randomFactor !== 0;
+export const isTimeSlotAvailable = (_date: Date, _time: string) => {
+  return true;
 };
 
 // Get available slots for a date

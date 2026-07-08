@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Save, X, Image as ImageIcon, Plus, Trash2, Eye, EyeOff } from "lucide-react";
+import { sanitizeHtml } from "@/app/lib/sanitize";
 import { FadeIn } from "@/app/components/animations/FadeIn";
 import { RichTextEditor } from "@/app/components/blog/RichTextEditor";
 import { supabase } from "@/app/lib/supabase";
@@ -399,7 +400,7 @@ export default function EditBlogPostPage({ params }: { params: { id: string } })
                 )}
                 <div 
                   className="prose prose-lg dark:prose-invert max-w-none"
-                  dangerouslySetInnerHTML={{ __html: formData.content || "<p>No content yet...</p>" }}
+                  dangerouslySetInnerHTML={{ __html: sanitizeHtml(formData.content || "<p>No content yet...</p>") }}
                 />
               </div>
             )}

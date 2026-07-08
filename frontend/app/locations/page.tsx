@@ -43,7 +43,7 @@ export default function LocationsPage() {
         <div className="absolute inset-0 grid grid-cols-4 grid-rows-2">
           {[...Array(8)].map((_, i) => (
             <div key={i} className="relative h-full w-full">
-              <Image src="/images/gallery/dental bacccccc.png" alt="Dental background" fill className="object-cover" priority />
+              <Image src="/images/gallery/dental bacccccc.png" alt="Dental background" fill className="object-cover" priority={i === 0} />
             </div>
           ))}
         </div>

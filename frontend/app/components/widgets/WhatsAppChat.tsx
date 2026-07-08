@@ -2,7 +2,8 @@
 
 import { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { MessageCircle, X, Send, Sparkles, User, ArrowRight, Phone, Calendar, Clock, MapPin, ShieldCheck, Star } from "lucide-react"
+import Image from "next/image"
+import { MessageCircle, X, Sparkles, ArrowRight, Phone, Calendar, Clock, MapPin, ShieldCheck, Star } from "lucide-react"
 
 interface Message {
   id: string
@@ -232,7 +233,7 @@ export default function WhatsAppChat() {
                 </div>
                 <button 
                   onClick={() => setIsOpen(false)}
-                  className="p-2 hover:bg-white/10 rounded-full transition-colors"
+                  className="p-3 hover:bg-white/10 rounded-full transition-colors"
                 >
                   <X className="w-5 h-5 text-white/50" />
                 </button>
@@ -280,7 +281,7 @@ export default function WhatsAppChat() {
                             <button
                               key={idx}
                               onClick={() => handleSuggestionClick(suggestion)}
-                              className="px-3 py-1.5 bg-white border border-gray-100 rounded-full text-[11px] font-bold text-[#1A4FAD] hover:bg-[#1A4FAD] hover:text-white hover:border-[#1A4FAD] transition-all duration-300 shadow-sm"
+                              className="px-3 py-2 bg-white border border-gray-100 rounded-full text-xs font-bold text-[#1A4FAD] hover:bg-[#1A4FAD] hover:text-white hover:border-[#1A4FAD] transition-all duration-300 shadow-sm"
                             >
                               {suggestion}
                             </button>
@@ -328,7 +329,7 @@ export default function WhatsAppChat() {
                 />
                 <button
                   type="submit"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-xl bg-[#1A4FAD] text-white flex items-center justify-center hover:bg-[#0D2A60] transition-all"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 w-11 h-11 rounded-xl bg-[#1A4FAD] text-white flex items-center justify-center hover:bg-[#0D2A60] transition-all"
                 >
                   <ArrowRight className="w-5 h-5" />
                 </button>
@@ -341,4 +342,4 @@ export default function WhatsAppChat() {
   )
 }
 
-import Image from "next/image"
+

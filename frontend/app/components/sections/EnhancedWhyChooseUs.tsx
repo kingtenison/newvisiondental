@@ -9,36 +9,36 @@ const features = [
   {
     icon: Award,
     number: "01",
-    title: "Elite Clinical Excellence",
-    description: "Board-certified specialists delivering world-class dental care with 20+ years of proven expertise.",
+    title: "Advanced Technology",
+    description: "We invest in the latest diagnostic and treatment technology to deliver precise, effective, and comfortable dental care.",
   },
   {
     icon: Shield,
     number: "02",
-    title: "Advanced Bio-Safety",
-    description: "Hospital-grade sterilization and cutting-edge diagnostics for your complete peace of mind.",
-  },
-  {
-    icon: Clock,
-    number: "03",
-    title: "On-Demand Concierge",
-    description: "Same-day emergency slots, evening hours, and 24/7 online booking at 3 convenient locations.",
+    title: "Experienced Professionals",
+    description: "Our skilled team brings years of expertise across every dental specialty, ensuring you receive world-class treatment.",
   },
   {
     icon: Heart,
+    number: "03",
+    title: "Personalized Care",
+    description: "Every treatment plan is tailored to your unique needs, goals, and comfort level — because your smile is one of a kind.",
+  },
+  {
+    icon: Clock,
     number: "04",
-    title: "Luxury Comfort Care",
-    description: "A spa-like sanctuary with sedation options and premium amenities for a stress-free experience.",
+    title: "Comfortable Environment",
+    description: "From our welcoming facility to gentle techniques, we create a stress-free experience for patients of all ages.",
   },
 ];
 
 const perks = [
-  "No Hidden Fees",
-  "Insurance Accepted",
-  "Weekend Availability",
-  "Flexible Payments",
+  "Advanced Technology",
+  "Expert Team",
   "Personalized Plans",
-  "Pain-Free Techniques",
+  "Comfortable Clinic",
+  "Family-Friendly",
+  "Gentle Care",
 ];
 
 export default function EnhancedWhyChooseUs() {
@@ -87,13 +87,13 @@ export default function EnhancedWhyChooseUs() {
           viewport={{ once: true }}
           className="text-white/30 text-xs font-medium tracking-widest uppercase hidden sm:block"
         >
-          The Gold Standard in Dental Care
+          Advanced Technology · Expert Team · Whole Family Care
         </motion.span>
       </div>
 
       {/* ── Main Editorial Body ── */}
       <div className="relative z-10 w-full px-6 sm:px-12 md:px-16 lg:px-20">
-        <div className="grid lg:grid-cols-[1fr_1.4fr] gap-0 min-h-[80vh] items-stretch">
+        <div className="grid lg:grid-cols-[1fr_1.4fr] gap-0 lg:min-h-[80vh] items-stretch">
 
           {/* Left Column — Headline & Perks */}
           <div className="flex flex-col justify-between py-10 sm:py-16 lg:py-24 lg:pr-20 border-b lg:border-b-0 lg:border-r border-white/10">
@@ -105,10 +105,10 @@ export default function EnhancedWhyChooseUs() {
                 transition={{ duration: 0.8 }}
                 className="text-4xl sm:text-6xl xl:text-7xl 2xl:text-8xl font-black text-white leading-[0.9] tracking-tighter mb-8 sm:mb-10"
               >
-                Excellence <br />
-                Redefined <br />
-                <span className="text-[#00C8E8]">in Every</span> <br />
-                <span className="text-[#00C8E8]">Detail.</span>
+                Exceptional <br />
+                Dental Care <br />
+                <span className="text-[#00C8E8]">for Your</span> <br />
+                <span className="text-[#00C8E8]">Whole Family.</span>
               </motion.h2>
 
               <motion.p
@@ -118,7 +118,7 @@ export default function EnhancedWhyChooseUs() {
                 transition={{ delay: 0.3 }}
                 className="text-white/60 text-sm sm:text-lg lg:text-xl leading-relaxed max-w-md mb-8 sm:mb-12"
               >
-                At New Vision Dental, every appointment is crafted to deliver a premium, stress-free experience that sets a new benchmark for dental care.
+                At New Vision Dental Clinic, we combine advanced technology, experienced professionals, personalized care, and a comfortable environment to provide exceptional dental services for the whole family.
               </motion.p>
 
               {/* Perks Pill Grid */}
@@ -135,7 +135,7 @@ export default function EnhancedWhyChooseUs() {
                     className="flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-white/5 border border-white/10 rounded-full"
                   >
                     <CheckCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#E8B830] flex-shrink-0" />
-                    <span className="text-white/80 text-[10px] sm:text-sm font-medium whitespace-nowrap">{perk}</span>
+                    <span className="text-white/80 text-xs sm:text-sm font-medium whitespace-nowrap">{perk}</span>
                   </div>
                 ))}
               </motion.div>
@@ -182,10 +182,10 @@ export default function EnhancedWhyChooseUs() {
                 
                 {/* Content */}
                 <div className="relative z-10 flex-1">
-                  <h4 className="text-[11px] sm:text-xl lg:text-2xl font-bold text-white mb-1.5 sm:mb-3 group-hover:text-[#00C8E8] transition-colors duration-300 leading-tight">
+                  <h4 className="text-xs sm:text-xl lg:text-2xl font-bold text-white mb-1.5 sm:mb-3 group-hover:text-[#00C8E8] transition-colors duration-300 leading-tight">
                     {feature.title}
                   </h4>
-                  <p className="text-white/50 text-[9px] sm:text-sm lg:text-base leading-tight sm:leading-relaxed group-hover:text-white/70 transition-colors duration-300 line-clamp-4">
+                  <p className="text-white/50 text-xs sm:text-sm lg:text-base leading-tight sm:leading-relaxed group-hover:text-white/70 transition-colors duration-300 line-clamp-4">
                     {feature.description}
                   </p>
                 </div>

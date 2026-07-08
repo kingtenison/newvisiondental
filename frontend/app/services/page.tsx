@@ -5,129 +5,150 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { 
   Stethoscope, ScanLine, Sparkles, Sun, Shield, PenTool, Heart, Crown, 
-  MinusCircle, Smile, Droplets, ShieldCheck, Clock, ArrowRight, Star, Check
+  MinusCircle, Smile, Droplets, ShieldCheck, Clock, ArrowRight, Star, Check,
+  AlertTriangle, Scissors
 } from "lucide-react";
 
 const services = [
   {
-    name: "Consultation",
-    description: "Comprehensive examination of your mouth, teeth, and gums with personalized treatment advice from our experienced dentists.",
+    name: "Dental Consultation",
+    description: "Personalized, high-quality consultation for routine checkups, cavity treatment, or advanced care tailored to your needs.",
     icon: Stethoscope,
     slug: "consultation",
     duration: "30 mins",
     image: "/images/services/consultation.jpg",
     rating: "4.9",
-    features: ["Oral examination", "Treatment planning", "Expert advice"]
+    features: ["Personalized care", "Modern technology", "Expert advice"]
   },
   {
     name: "Dental X-Ray",
-    description: "Digital X-ray imaging to detect decay, gum disease, infections, and other dental issues with minimal radiation exposure.",
+    description: "Diagnostic imaging to examine teeth, roots, jawbone, and surrounding structures not visible during a regular exam.",
     icon: ScanLine,
     slug: "dental-x-ray-periapical",
     duration: "15 mins",
-    image: "/images/services/dental-xray.jpg",
+    image: "/images/services/dental-x-ray.jpg",
     rating: "4.8",
-    features: ["Digital technology", "Low radiation", "Instant results"]
+    features: ["Early detection", "Precise diagnostics", "Minimal discomfort"]
   },
   {
-    name: "Scaling & Polishing",
-    description: "Professional cleaning to remove plaque and tartar buildup, leaving your teeth smooth, clean, and healthy.",
+    name: "Teeth Cleaning / Scaling & Polishing",
+    description: "Professional cleaning to remove plaque, tartar, and surface stains that regular brushing and flossing cannot eliminate.",
     icon: Sparkles,
     slug: "scaling-polishing",
     duration: "45 mins",
-    image: "/images/services/dental-cleaning.jpg",
+    image: "/images/services/teeth-cleaning-scaling-polishing.jpg",
     rating: "4.9",
-    features: ["Plaque removal", "Gum protection", "Fresh breath"]
+    features: ["Prevents gum disease", "Cavity protection", "Brighter smile"]
   },
   {
     name: "Teeth Whitening",
-    description: "Professional whitening using a specialized gel activated with light to break down stains for a brighter, whiter smile.",
+    description: "Professional whitening tailored to your needs — faster, safer, and more noticeable results than over-the-counter products.",
     icon: Sun,
     slug: "teeth-whitening",
     duration: "60 mins",
     image: "/images/services/teeth-whitening.jpg",
     rating: "4.9",
-    features: ["Instant results", "Safe procedure", "Long-lasting"]
+    features: ["Zero sensitivity", "Quick results", "Long-lasting"]
   },
   {
     name: "Dental Implants",
-    description: "Titanium posts placed in your jaw to act as natural tooth roots, supporting crowns that look and feel like real teeth.",
+    description: "Permanent solution for missing teeth — titanium posts fused to the jawbone with custom crowns that look and feel natural.",
     icon: Shield,
     slug: "dental-implants",
-    duration: "2-3 Visits",
+    duration: "3-9 Months",
     image: "/images/services/dental-implants.jpg",
     rating: "5.0",
-    features: ["Permanent solution", "Natural look", "Bone preservation"]
+    features: ["Preserves jawbone", "Natural look", "Permanent solution"]
   },
   {
     name: "Composite Restoration",
-    description: "Repair damaged, decayed, or chipped teeth and restore them to their natural shape, function, and appearance.",
+    description: "Tooth-colored resin fillings to repair decay, fractures, chips, or wear in a single visit.",
     icon: PenTool,
     slug: "composite-restoration",
     duration: "1 Visit",
     image: "/images/services/composite-restoration.jpg",
     rating: "4.8",
-    features: ["Same-day treatment", "Natural finish", "Painless"]
+    features: ["Natural-looking", "Bonds to tooth", "Minimal removal"]
   },
   {
     name: "Root Canal Treatment",
-    description: "Treat infections or damage to the pulp of your tooth, eliminating pain and preventing the spread of infection.",
+    description: "Remove infected pulp, clean the root canals, and seal the tooth to prevent further infection and save your natural tooth.",
     icon: Heart,
     slug: "root-canal-treatment",
     duration: "1-2 Visits",
-    image: "/images/services/root-canal.jpg",
+    image: "/images/services/root-canal-treatment.jpg",
     rating: "4.8",
-    features: ["Pain relief", "Saves teeth", "Modern technique"]
+    features: ["Pain relief", "Saves natural tooth", "Long-term results"]
   },
   {
     name: "Crown & Bridge",
-    description: "Restore your loose or dislodged crown or bridge to its original function and appearance with secure recementation.",
+    description: "Custom-made caps over damaged teeth and artificial teeth anchored to neighbours to restore shape, strength, and appearance.",
     icon: Crown,
     slug: "crown-bridge-recementation",
     duration: "1 Visit",
-    image: "/images/services/crown-bridge.jpg",
+    image: "/images/services/crown-and-bridge.jpg",
     rating: "4.9",
-    features: ["Secure fit", "Full function", "Quick fix"]
+    features: ["Restores strength", "Improves chewing", "Enhances smile"]
   },
   {
-    name: "Tooth Extraction",
-    description: "Safe, comfortable tooth extraction to alleviate pain, prevent infection, and preserve your surrounding teeth.",
+    name: "Root Extraction",
+    description: "Removal of a tooth root that remains after a tooth has broken, decayed, or been partially lost.",
     icon: MinusCircle,
     slug: "tooth-extraction",
     duration: "30 mins",
     image: "/images/services/tooth-extraction.jpg",
     rating: "4.8",
-    features: ["Gentle removal", "Local anesthesia", "Quick recovery"]
+    features: ["Prevents infection", "Promotes healing", "Protects bone"]
   },
   {
     name: "Dental Veneers",
-    description: "Thin, custom-made shells that cover the front surface of your teeth to correct chips, cracks, gaps, and discoloration.",
+    description: "Thin, custom-made shells bonded to the front of teeth to correct discoloration, chips, gaps, and minor alignment issues.",
     icon: Smile,
     slug: "dental-veneers",
     duration: "2 Visits",
     image: "/images/services/dental-veneers.jpg",
     rating: "4.9",
-    features: ["Custom fit", "Stain resistant", "Natural look"]
+    features: ["Stain-resistant", "Natural appearance", "Long-lasting"]
   },
   {
     name: "Fluoride Therapy",
-    description: "Strengthen your child's teeth and promote optimal oral health with professional fluoride application.",
+    description: "Professional application of concentrated fluoride to strengthen enamel, reduce sensitivity, and prevent tooth decay.",
     icon: Droplets,
     slug: "fluoride-therapy-children",
     duration: "20 mins",
-    image: "/images/services/children-dentistry.jpg",
+    image: "/images/services/fluoride-therapy.jpg",
     rating: "5.0",
-    features: ["Strengthens enamel", "Prevents decay", "Child-friendly"]
+    features: ["Strengthens enamel", "Reduces cavities", "Reduces sensitivity"]
   },
   {
     name: "Fissure Sealing",
-    description: "Protective coating applied to the deep grooves of your child's molars to prevent tooth decay.",
+    description: "Protective resin coating applied to the grooves of molars to prevent food and bacteria from causing decay.",
     icon: ShieldCheck,
     slug: "fissure-sealing-children",
     duration: "20 mins",
-    image: "/images/services/children-dentistry.jpg",
+    image: "/images/services/fissure-sealing.jpg",
     rating: "5.0",
-    features: ["Decay prevention", "Painless", "Long-lasting"]
+    features: ["Prevents cavities", "Painless", "Long-term protection"]
+  },
+  {
+    name: "Emergency Dentistry",
+    description: "Immediate treatment for severe toothaches, knocked-out teeth, broken restorations, and other urgent dental issues.",
+    icon: AlertTriangle,
+    slug: "emergency-dentistry",
+    duration: "Same-Day",
+    image: "/images/services/emergency-dentistry.jpg",
+    rating: "4.9",
+    features: ["Same-day care", "Pain relief", "Compassionate team"]
+  },
+  {
+    name: "Minor Oral Surgery",
+    description: "Expert surgical services including tooth extractions, wisdom tooth removal, abscess treatment, and gum surgery.",
+    icon: Scissors,
+    slug: "minor-oral-surgery",
+    duration: "Varies",
+    image: "/images/services/minor-oral-surgery.jpg",
+    rating: "4.9",
+    features: ["Local anaesthesia", "Sterile environment", "Aftercare support"]
   },
 ];
 
@@ -156,7 +177,7 @@ export default function ServicesPage() {
                   alt="Dental background"
                   fill
                   className="object-cover"
-                  priority
+                  priority={i === 0}
                 />
               </div>
             ))}
@@ -196,7 +217,7 @@ export default function ServicesPage() {
               {/* Stats bar */}
               <div className="flex flex-wrap justify-center gap-6 md:gap-12 mt-4 pt-4 border-t border-white/15">
                 {[
-                  { value: "12", label: "Services" },
+                  { value: "14", label: "Services" },
                   { value: "4.9", label: "Rating", showStar: true },
                   { value: "2.5K+", label: "Patients" },
                   { value: "15+", label: "Years" },

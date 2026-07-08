@@ -27,12 +27,12 @@ export default function BlogClient({ posts }: { posts: any[] }) {
           {[...Array(8)].map((_, i) => (
             <div key={i} className="relative h-full w-full">
               <Image
-                src="/images/gallery/dental bacccccc.png"
-                alt="Dental background"
-                fill
-                className="object-cover"
-                priority
-              />
+                  src="/images/gallery/dental bacccccc.png"
+                  alt="Dental background"
+                  fill
+                  className="object-cover"
+                  priority={i === 0}
+                />
             </div>
           ))}
         </div>

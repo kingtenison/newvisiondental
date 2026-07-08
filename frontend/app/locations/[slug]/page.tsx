@@ -46,6 +46,23 @@ const locations = [
   },
 ];
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const location = locations.find(l => l.slug === slug);
+  if (!location) return { title: "Location Not Found" };
+  return {
+    title: `${location.name} Dental Clinic`,
+    description: `Visit New Vision Dental Clinic at ${location.name}, ${location.address}. Book your appointment for expert dental care.`,
+    openGraph: {
+      title: `${location.name} Dental Clinic | New Vision Dental Clinic`,
+      description: `Visit us at ${location.address}. Expert dental care in ${location.name}.`,
+    },
+    alternates: {
+      canonical: `https://newvisiondental.com/locations/${slug}`,
+    },
+  };
+}
+
 export default async function LocationPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const location = locations.find(l => l.slug === slug);
@@ -89,7 +106,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                   alt="Dental background"
                   fill
                   className="object-cover"
-                  priority
+                  priority={i === 0}
                 />
               </div>
             ))}
@@ -139,7 +156,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               <div className="lg:col-span-2 space-y-8">
                 {/* Image matched to sidebar height */}
                 <FadeIn>
-                  <div className="relative w-full h-[500px] lg:h-auto lg:min-h-[600px] rounded-2xl overflow-hidden border border-[#E8B830]/10">
+                  <div className="relative w-full h-[300px] md:h-[500px] lg:h-auto lg:min-h-[600px] rounded-2xl overflow-hidden border border-[#E8B830]/10">
                     <Image
                       src={location.image}
                       alt={`New Vision Dental Clinic ${location.name}`}

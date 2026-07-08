@@ -75,42 +75,17 @@ export default function ContactFormSection() {
       
       {/* Background Images - 2x2 grid - subtle */}
       <div className="absolute inset-0 grid grid-cols-2 grid-rows-2">
-        <div className="relative h-full w-full">
-          <Image
-            src="/images/gallery/dental bacccccc.png"
-            alt="Dental background"
-            fill
-            className="object-cover opacity-20"
-            priority
-          />
-        </div>
-        <div className="relative h-full w-full">
-          <Image
-            src="/images/gallery/dental bacccccc.png"
-            alt="Dental background"
-            fill
-            className="object-cover opacity-20"
-            priority
-          />
-        </div>
-        <div className="relative h-full w-full">
-          <Image
-            src="/images/gallery/dental bacccccc.png"
-            alt="Dental background"
-            fill
-            className="object-cover opacity-20"
-            priority
-          />
-        </div>
-        <div className="relative h-full w-full">
-          <Image
-            src="/images/gallery/dental bacccccc.png"
-            alt="Dental background"
-            fill
-            className="object-cover opacity-20"
-            priority
-          />
-        </div>
+        {[...Array(4)].map((_, i) => (
+          <div key={i} className="relative h-full w-full">
+            <Image
+              src="/images/gallery/dental bacccccc.png"
+              alt="Dental background"
+              fill
+              className="object-cover opacity-20"
+              priority={i === 0}
+            />
+          </div>
+        ))}
       </div>
       
       {/* Overlay - helps blend from rich blue at top to white at bottom */}

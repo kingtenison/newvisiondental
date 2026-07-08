@@ -3,26 +3,26 @@ import { notFound } from "next/navigation";
 import { 
   Sparkles, Shield, Heart, Sun, Stethoscope, ScanLine, PenTool, Crown, MinusCircle, Smile, Droplets, ShieldCheck, Baby, CheckCircle,
   Clock, ChevronRight, Star, Phone, Calendar as CalendarIcon,
-  Check, Award, Users, MapPin, ArrowRight
+  Check, Award, Users, MapPin, ArrowRight, AlertTriangle, Scissors
 } from "lucide-react";
 import { FadeIn } from "@/app/components/animations/FadeIn";
 import Image from "next/image";
 
 const services = [
   {
-    name: "Consultation",
-    description: "Comprehensive consultation to examine your mouth, teeth, and gums",
-    longDescription: "At our dental clinics, we understand the importance of a comprehensive consultation when it comes to your oral health. During your consultation, one of our experienced dentists will take the time to listen to your concerns and conduct a thorough examination of your mouth, teeth, and gums. We will discuss any issues we find and explain the various treatment options available to you.",
+    name: "Dental Consultation",
+    description: "Personalized, high-quality consultation tailored to your unique needs",
+    longDescription: "At New Vision Dental Clinic, we believe that excellent oral health starts with personalized, high-quality consultation. Whether you need a routine cleaning, cavity treatment, or advanced care, our experienced team are here to provide comprehensive care tailored to your unique needs. As your trusted dental clinic, we are committed to helping you maintain a healthy, confident smile for life.",
     icon: Stethoscope,
     slug: "consultation",
     duration: "30 mins",
     price: "From GHS 100",
     image: "/images/services/consultation.jpg",
     features: [
-      "Thorough oral examination",
-      "Personalized treatment discussion",
-      "Expert dental advice",
-      "Comfortable, welcoming environment"
+      "Personalized Care — We take the time to understand your needs",
+      "Modern Technology — State-of-the-art equipment",
+      "Comprehensive Services — From cleanings to advanced care",
+      "Trusted Expertise — Led by Dr Govina and his team"
     ],
     benefits: [
       "Early detection of dental issues",
@@ -33,282 +33,342 @@ const services = [
   },
   {
     name: "Dental X-Ray",
-    description: "Digital X-ray imaging to detect decay, infections, and dental issues",
-    longDescription: "We use comprehensive imagery of your entire tooth, from the crown to the root tip to help detect decay, gum disease, infections, and dental issues. We use state-of-the-art digital X-ray technology, which produces high-quality images with minimal radiation exposure.",
+    description: "Diagnostic imaging to examine teeth, roots, jawbone, and surrounding structures",
+    longDescription: "A dental X-ray is a diagnostic imaging procedure that allows dentists to examine teeth, roots, jawbone, and surrounding structures that are not visible during a regular clinical oral examination. Our state-of-the-art Panoramic X-ray equipment (OPG) at our branches ensures precise diagnostics and effective treatments.",
     icon: ScanLine,
     slug: "dental-x-ray-periapical",
     duration: "15 mins",
     price: "From GHS 150",
-    image: "/images/services/dental-xray.jpg",
+    image: "/images/services/dental-x-ray.jpg",
     features: [
-      "Digital X-ray technology",
-      "Minimal radiation exposure",
-      "High-quality imaging",
-      "Comprehensive tooth analysis"
+      "Digital OPG (Panoramic X-ray) technology",
+      "Detects cavities and tooth decay early",
+      "Identifies infections, abscesses, and bone loss",
+      "Assists in implant and orthodontic planning"
     ],
     benefits: [
-      "Early problem detection",
-      "Accurate diagnosis",
-      "Safe and painless procedure",
+      "Early detection of dental issues",
+      "Accurate diagnosis with minimal discomfort",
+      "Safe — minimal radiation exposure",
       "Guides effective treatment planning"
     ]
   },
   {
-    name: "Scaling & Polishing",
-    description: "Professional cleaning to remove buildup and prevent gum disease",
-    longDescription: "This highly effective procedure is designed to remove harmful buildup from your teeth, leaving them feeling smooth, clean, and healthy. Regular scaling and polishing is an essential part of preventive dental care, as it helps to reduce your risk of developing tooth decay and gum disease.",
+    name: "Teeth Cleaning / Scaling & Polishing",
+    description: "Professional cleaning to remove plaque, tartar, and surface stains",
+    longDescription: "Professional teeth cleaning, also known as dental prophylaxis, is a preventive dental procedure designed to remove plaque, tartar (calculus), and surface stains that regular brushing and flossing cannot eliminate. This treatment helps maintain healthy teeth and gums while reducing the risk of cavities, gum disease, and bad breath. During the procedure, our dental professionals carefully examine your oral health before using specialized instruments to remove hardened deposits from the teeth and along the gum line. The teeth are then polished to remove stains and create a smooth surface that makes it more difficult for plaque to accumulate. Regular professional cleanings enhance the appearance of your smile and play a crucial role in maintaining long-term oral health.",
     icon: Sparkles,
     slug: "scaling-polishing",
     duration: "45 mins",
     price: "From GHS 300",
-    image: "/images/services/dental-cleaning.jpg",
+    image: "/images/services/teeth-cleaning-scaling-polishing.jpg",
     features: [
-      "Removes plaque and tartar",
-      "Prevents gum disease",
-      "Freshens breath",
-      "Polishes teeth"
+      "Prevents gum disease — removes bacteria before it causes damage",
+      "Cavity protection — eliminates tartar your toothbrush can't reach",
+      "Brighter appearance — polishes away coffee, tea, and food stains",
+      "Fresh breath — removes bacteria and food debris thoroughly"
     ],
     benefits: [
-      "Prevents cavities",
-      "Early problem detection",
+      "Prevents gum disease and cavities",
       "Brighter, healthier smile",
-      "Reduces risk of gum disease"
+      "Supports overall health — linked to heart disease and diabetes prevention",
+      "Early detection of oral health issues"
     ]
   },
   {
     name: "Teeth Whitening",
     description: "Professional whitening for a brighter, more confident smile",
-    longDescription: "Our professional and highly effective teeth whitening service can help you achieve a beautiful, radiant smile. Teeth whitening is a safe and effective way to remove stains and discoloration from your teeth, caused by factors such as aging, smoking, and drinking coffee, tea, or red blue. Our dental professionals use a specialized whitening gel that is activated with a special light to break down stains and leave your teeth looking brighter and whiter.",
+    longDescription: "At New Vision Dental Clinic, our professional teeth whitening procedures are tailored to your individual needs, delivering faster, safer, and more noticeable results than over-the-counter whitening products. The treatment is non-invasive, comfortable, and can significantly enhance your confidence by giving you a brighter, healthier-looking smile. Our European approved BlancOne whitening products protect your enamel while delivering stunning results with zero or negligible sensitivity.",
     icon: Sun,
     slug: "teeth-whitening",
     duration: "60 mins",
     price: "From GHS 500",
     image: "/images/services/teeth-whitening.jpg",
     features: [
-      "Professional grade whitening",
-      "Safe and painless procedure",
-      "Results in just one session",
-      "Long-lasting effects"
+      "Customized treatment plans tailored to you",
+      "Safe and effective — European approved BlancOne products",
+      "Zero or negligible sensitivity",
+      "Noticeable results in as little as one session"
     ],
     benefits: [
-      "Brighter, more confident smile",
-      "Removes years of stains",
-      "Quick procedure",
-      "Safe and effective"
+      "Dramatic results — brighten teeth by several shades",
+      "Long-lasting effects compared to over-the-counter options",
+      "Safe for enamel with minimal sensitivity",
+      "Boosts confidence in personal and professional settings"
     ]
   },
   {
     name: "Dental Implants",
-    description: "Permanent titanium implants to replace missing teeth",
-    longDescription: "Replace missing teeth with durable, natural-looking dental implants. Permanent solution that lasts a lifetime.",
+    description: "Permanent solution for replacing missing teeth",
+    longDescription: "Dental implants are a modern and long-lasting solution for replacing missing teeth. The procedure involves placing a small titanium metal screw-post into the jawbone, which acts as an artificial tooth root. Once healed, a custom-made crown is attached to restore the appearance, function, and strength of your natural tooth. The dental implant process is a step-by-step procedure that typically spans 3\u20139 months, though this can extend to a year if preparatory procedures are required. The timeline is largely dictated by your body's healing process and the quality of your jawbone. At New Vision Dental Clinic, we specialize in dental implants, the gold standard for replacing missing teeth.",
     icon: Shield,
     slug: "dental-implants",
-    duration: "2-3 visits",
+    duration: "3-9 Months",
     price: "From GHS 2,500",
     image: "/images/services/dental-implants.jpg",
     features: [
-      "Natural look and feel",
-      "Permanent solution",
-      "Prevents bone loss",
-      "High success rate",
-      "No damage to adjacent teeth"
+      "Permanent solution for missing teeth",
+      "Restores chewing and speaking ability",
+      "Preserves jawbone structure and facial appearance",
+      "Does not affect adjacent healthy teeth"
     ],
     benefits: [
-      "Restores full chewing function",
-      "Preserves facial structure",
-      "Long-lasting solution",
-      "Improves speech"
+      "Looks and functions like natural teeth",
+      "Long-lasting with proper care",
+      "Preserves jawbone health",
+      "Restores confidence in your smile"
     ],
     richContent: {
       whatAreImplants: {
         title: "What Are Dental Implants?",
-        definition: "Dental implants are a long lasting solution for replacing missing teeth. They are small, strong titanium posts placed in your jaw to act like natural tooth roots, supporting a crown that looks and feels just like a real tooth. They also prevent bone loss, enhance chewing capability, and improve speech.",
-        intro: "If you have lost one or more teeth, dental implants are the best option for tooth replacement. At New Vision Dental Clinic, we provide high-quality dental implants in Kwabenya, Ashaley Botwe & North Legon, helping patients across Accra restore both function and confidence. Since dental implants are made to mimic natural teeth, this procedure allows you to enjoy new, functional teeth without interfering with your existing teeth."
+        definition: "Dental implants are a modern and long-lasting solution for replacing missing teeth. The procedure involves placing a small titanium metal screw-post into the jawbone, which acts as an artificial tooth root. Once healed, a custom-made crown is attached to restore the appearance, function, and strength of your natural tooth.",
+        intro: "Dental implants help preserve jawbone health, improve chewing ability, enhance speech, and restore confidence in your smile. With proper care and regular dental check-ups, implants can provide a durable and natural-looking solution for many years. At New Vision Dental Clinic, we specialize in dental implants, whether you have one missing tooth, multiple missing teeth, or need full-mouth restoration."
       },
       keyBenefits: [
         "Permanent Solution: Dental implants can last a lifetime with proper care",
         "Natural Look and Feel: Implants look, feel, and function like natural teeth",
-        "Bone Preservation: Helps prevent jawbone deterioration",
+        "Bone Preservation: Helps prevent jawbone deterioration and preserves facial structure",
         "No Impact on Adjacent Teeth: Unlike bridges, implants stand alone and do not require shaping or shaving surrounding teeth",
-        "Improved Confidence: Enjoy renewed self-esteem and never worry about your teeth",
-        "Convenience: No more embarrassment or inconvenience of removing dentures"
+        "Improved Confidence: Enjoy renewed self-esteem with a complete smile"
       ],
       procedure: [
-        "Consultation & Assessment - We examine your teeth and create a treatment plan",
-        "Implant Placement - The implant is gently placed into your jaw",
-        "Healing Period - Your jaw bonds with the implant over a few months",
-        "Crown Placement - A natural-looking tooth is attached"
+        "Consultation & Assessment — We examine your teeth and create a treatment plan",
+        "Implant Placement — The titanium post is gently placed into your jawbone",
+        "Healing Period — Your jaw bonds with the implant over a few months (osseointegration)",
+        "Crown Placement — A custom-made, natural-looking crown is attached"
       ],
       whyChooseUs: [
-        "Experienced and caring dental professionals",
-        "Modern equipment and advanced techniques",
-        "Comfortable, patient-focused environment",
+        "Specialized expertise in dental implantology",
+        "Advanced technology for precise diagnostics and placement",
+        "Durable, natural-looking, and long-lasting results",
         "Convenient locations in Kwabenya, North Legon and Ashaley Botwe",
         "Trusted by families all across Accra"
       ],
       faqs: [
         { q: "How long do dental implants last?", a: "With proper care, dental implants can last for 50 years, often a lifetime." },
-        { q: "How long does the procedure take?", a: "The full process takes a few months, but each visit is usually short and comfortable." },
-        { q: "Can anyone get dental implants?", a: "Most adults with healthy gums and sufficient bone can get implants. We will assess you to make sure you are fit for implants during your consultation." },
+        { q: "How long does the procedure take?", a: "The full process typically spans 3-9 months, but each visit is usually short and comfortable. The timeline depends on your body's healing process." },
+        { q: "Can anyone get dental implants?", a: "Most adults with healthy gums and sufficient bone can get implants. We will assess you during your consultation to confirm suitability." },
         { q: "How much do dental implants cost in Accra?", a: "Costs vary depending on your needs. We provide clear pricing during your consultation." },
-        { q: "Are dental implants painful?", a: "Most patients report little to no pain during the procedure. We use modern techniques, gentle care, and offer sedation options to make your experience as comfortable and stress-free as possible. After the procedure, any mild discomfort is temporary and manageable." }
+        { q: "Are dental implants painful?", a: "Most patients report little to no pain during the procedure. We use modern techniques and gentle care to make your experience comfortable. Any mild discomfort afterward is temporary and manageable." }
       ]
     }
   },
   {
     name: "Composite Restoration",
-    description: "Repair damaged, decayed, or chipped teeth in one visit",
-    longDescription: "This procedure is designed to repair damaged, decayed, or chipped teeth, and restore them to their natural shape, function, and appearance. One of the major benefits of composite restoration is that it can be completed in just one visit, making it a convenient and time-saving option. It is also a relatively painless procedure, and can be performed with minimal or no anesthesia.",
+    description: "Tooth-colored fillings to repair decay, fractures, chips, and wear",
+    longDescription: "Composite restoration is a cosmetic and restorative procedure that uses tooth-colored resin material to repair teeth affected by decay, fractures, chips, or wear. A tooth filling is a simple and effective treatment used to repair teeth damaged by cavities, minor fractures, or wear. During the procedure, the affected portion of the tooth is carefully removed and replaced with a durable filling material to restore its strength, function, and appearance. The procedure is quick, comfortable, and can often be completed in a single visit.",
     icon: PenTool,
     slug: "composite-restoration",
     duration: "1 visit",
     price: "From GHS 400",
     image: "/images/services/composite-restoration.jpg",
     features: [
-      "Completed in one visit",
-      "Painless procedure",
-      "Natural-looking results",
-      "Minimal anesthesia needed"
+      "Natural-looking tooth-colored resin",
+      "Bonds directly to the tooth structure",
+      "Minimal removal of healthy tooth tissue",
+      "Completed in a single visit"
     ],
     benefits: [
-      "Restores natural tooth shape",
-      "Improves appearance",
+      "Restores tooth function and strength",
+      "Natural-looking appearance",
       "Prevents further decay",
       "Quick and convenient"
     ]
   },
   {
     name: "Root Canal Treatment",
-    description: "Painless treatment to save infected teeth and eliminate pain",
-    longDescription: "Save your natural teeth from infection with our expert root canal therapy. Root Canal Treatment treats infections or damage to the pulp of your tooth to get rid of tooth pain, prevent the spread of infection, and save your natural teeth. Our specialists use advanced rotary instruments and digital imaging for thorough, efficient treatment.",
+    description: "Save infected teeth and eliminate pain",
+    longDescription: "Root canal treatment is a procedure used to remove infected or damaged pulp from inside a tooth, clean and disinfect the root canals, and seal the tooth to prevent further infection. The pulp contains nerves and blood vessels that can become infected due to deep decay, trauma, or cracks. During the procedure, the infected tissue is removed, the tooth is cleaned and sealed, and a custom crown may be placed to restore strength and function.",
     icon: Heart,
     slug: "root-canal-treatment",
     duration: "1-2 visits",
     price: "From GHS 800",
-    image: "/images/services/root-canal.jpg",
+    image: "/images/services/root-canal-treatment.jpg",
     features: [
-      "Pain-free procedure",
-      "Saves natural teeth",
-      "Modern technology",
-      "Quick recovery"
+      "Gentle, patient-centred care with modern techniques",
+      "Advanced technology for precision and efficiency",
+      "Preserves your natural tooth — avoids extraction",
+      "Trusted expertise for high-quality care"
     ],
     benefits: [
-      "Eliminates tooth pain",
-      "Prevents spread of infection",
-      "Maintains natural smile",
-      "Long-lasting results"
+      "Pain relief — eliminates discomfort from infection",
+      "Prevents tooth loss — saves your natural tooth",
+      "Long-term results — a treated tooth can last a lifetime",
+      "Improved oral health — prevents infection from spreading"
     ]
   },
   {
     name: "Crown & Bridge",
-    description: "Restore loose or dislodged crowns and bridges to full function",
-    longDescription: "At our Dental Clinics, we offer crown and bridge recementation services to restore your loose or dislodged Crown or Bridge to its original function and appearance. Our experienced dental professionals will carefully clean and prepare the affected area, and then reattach the crown or bridge using dental cement with the latest techniques and technologies.",
+    description: "Restore damaged or missing teeth with custom-made caps",
+    longDescription: "Crowns are custom-made caps placed over damaged teeth to restore their shape, strength, and appearance. Bridges replace one or more missing teeth by anchoring artificial teeth to neighbouring teeth or implants.",
     icon: Crown,
     slug: "crown-bridge-recementation",
     duration: "1 visit",
     price: "From GHS 600",
-    image: "/images/services/crown-bridge.jpg",
+    image: "/images/services/crown-and-bridge.jpg",
     features: [
-      "Secure recementation",
-      "Restores full function",
-      "Uses latest techniques",
-      "Protects surrounding teeth"
+      "Custom-made for your teeth",
+      "Restores damaged or weakened teeth",
+      "Replaces missing teeth effectively",
+      "Provides long-lasting durability"
     ],
     benefits: [
-      "Restores chewing ability",
-      "Improves appearance",
+      "Restores chewing and speaking ability",
+      "Enhances smile aesthetics",
       "Prevents further damage",
-      "Cost-effective solution"
+      "Long-lasting solution"
     ]
   },
   {
-    name: "Tooth Extraction",
-    description: "Safe, comfortable tooth extraction to preserve your oral health",
-    longDescription: "We offer tooth extraction services to help alleviate pain and discomfort, prevent infection, and preserve the health and function of your surrounding teeth and gums. Our experienced dental professionals will carefully assess your individual needs and use local anesthesia to ensure you are comfortable throughout the procedure.",
+    name: "Root Extraction",
+    description: "Removal of retained tooth roots to prevent infection",
+    longDescription: "Root extraction is the removal of a tooth root that remains in the jaw after a tooth has broken, decayed, or been partially lost. The procedure helps prevent infection and promotes proper healing.",
     icon: MinusCircle,
     slug: "tooth-extraction",
     duration: "30 mins",
     price: "From GHS 200",
     image: "/images/services/tooth-extraction.jpg",
     features: [
-      "Local anesthesia for comfort",
-      "Gentle, precise removal",
-      "Minimizes trauma",
-      "Quick recovery"
+      "Removes infected or damaged root fragments",
+      "Prevents pain and future complications",
+      "Promotes healthy healing of surrounding tissues",
+      "Protects neighbouring teeth and bone"
     ],
     benefits: [
-      "Alleviates pain and discomfort",
       "Prevents infection spread",
-      "Preserves surrounding teeth",
-      "Expert aftercare support"
+      "Alleviates pain and discomfort",
+      "Creates a healthy foundation for future restorations",
+      "Expert aftercare support for quick healing"
     ]
   },
   {
     name: "Dental Veneers",
-    description: "Composite and ceramic veneers for a beautiful, natural smile",
-    longDescription: "Our Composite and Ceramic dental veneers services help improve the appearance of your teeth and create a beautiful, natural-looking smile. Dental veneers are thin, custom-made shells or composite resins that cover the front surface of your teeth. They can be used to correct chips, cracks, gaps, and discoloration.",
+    description: "Thin, custom-made shells for a brighter, more attractive smile",
+    longDescription: "Dental veneers are thin, custom-made shells bonded to the front surface of teeth to improve their appearance by correcting discolouration, chips, gaps, and minor alignment issues.",
     icon: Smile,
     slug: "dental-veneers",
     duration: "2 visits",
     price: "From GHS 1,500",
     image: "/images/services/dental-veneers.jpg",
     features: [
-      "Composite and ceramic options",
-      "Custom-made for you",
-      "Natural-looking results",
-      "Corrects multiple issues"
+      "Corrects cosmetic imperfections",
+      "Stain-resistant options available",
+      "Provides a natural tooth appearance",
+      "Long-lasting aesthetic results"
     ],
     benefits: [
-      "Beautiful, confident smile",
+      "Creates a brighter, more attractive smile",
       "Long-lasting results",
-      "Stain resistant",
-      "Improves tooth shape and color"
+      "Custom-made for a perfect fit",
+      "Improves tooth shape and colour"
     ]
   },
   {
     name: "Fluoride Therapy",
-    description: "Strengthen your child's teeth and prevent tooth decay",
-    longDescription: "Fluoride therapy prevents tooth decay and strengthens your child's teeth to promote optimal oral health. During a fluoride treatment, our experienced dental professionals will apply a fluoride gel or varnish to your child's teeth. This helps to remineralize the tooth enamel and strengthen the teeth from the inside out.",
+    description: "Professional fluoride application to strengthen enamel",
+    longDescription: "Fluoride therapy involves the professional application of concentrated fluoride to teeth to strengthen enamel, reduce sensitivity, and help prevent tooth decay.",
     icon: Droplets,
     slug: "fluoride-therapy-children",
     duration: "20 mins",
     price: "From GHS 150",
-    image: "/images/services/children-dentistry.jpg",
+    image: "/images/services/fluoride-therapy.jpg",
     features: [
-      "Child-friendly procedure",
       "Strengthens tooth enamel",
-      "Prevents cavities",
-      "Quick and painless"
+      "Helps reverse early signs of decay",
+      "Decreases tooth sensitivity",
+      "Suitable for both children and adults"
     ],
     benefits: [
-      "Stronger teeth for your child",
-      "Reduced risk of decay",
-      "Promotes oral health habits",
+      "Reduces the risk of cavities",
+      "Stronger, healthier teeth",
+      "Quick and painless procedure",
       "Safe and effective"
     ]
   },
   {
     name: "Fissure Sealing",
-    description: "Protective coating for your child's molars to prevent decay",
-    longDescription: "Dental fissure sealing is a preventive dental treatment that can help protect your child's teeth from tooth decay. It involves applying a thin, protective coating to the deep grooves and pits of your child's molars and premolars, which are the teeth at the back of the mouth that are most prone to decay.",
+    description: "Protective resin coating for molars to prevent decay",
+    longDescription: "Fissure sealing is a preventive treatment in which a protective resin coating is applied to the grooves of molars and premolars to prevent food and bacteria from causing decay.",
     icon: ShieldCheck,
     slug: "fissure-sealing-children",
     duration: "20 mins",
     price: "From GHS 200",
-    image: "/images/services/children-dentistry.jpg",
+    image: "/images/services/fissure-sealing.jpg",
     features: [
-      "Protective coating application",
-      "Targets decay-prone areas",
-      "Painless procedure",
-      "Long-lasting protection"
+      "Protects vulnerable chewing surfaces",
+      "Quick and painless procedure",
+      "Long-term protection against decay",
+      "Ideal for children and teenagers"
     ],
     benefits: [
-      "Prevents tooth decay",
-      "Keeps teeth strong and healthy",
-      "Reduces future dental costs",
+      "Prevents cavities in molars",
+      "Reduces future dental treatment needs",
+      "Painless application",
       "Peace of mind for parents"
     ]
+  },
+  {
+    name: "Emergency Dentistry",
+    description: "Immediate care for dental emergencies — pain relief and urgent treatment",
+    longDescription: "No one wants to have a dental emergency. But they can happen to any of us. Emergency dentistry focuses on treating dental problems that require immediate attention to relieve pain, prevent further damage, or address serious oral health concerns. Whether you are dealing with a severe toothache, a knocked-out tooth, or a broken restoration, our team is equipped to provide the care you need right away. Often, time is of the essence and the first several hours after the incident can determine the prognosis of the affected tooth. Our entire staff will treat your dental emergency the way we would want our own treated \u2014 promptly and with compassion.",
+    icon: AlertTriangle,
+    slug: "emergency-dentistry",
+    duration: "Same-Day",
+    price: "From GHS 200",
+    image: "/images/services/emergency-dentistry.jpg",
+    features: [
+      "Same-Day Appointments — including Saturday and some Sunday slots",
+      "Comprehensive Services — from pain relief to restorative solutions",
+      "Compassionate Care — calming environment during stressful situations",
+      "Trusted Expertise — advanced skills with modern technology"
+    ],
+    benefits: [
+      "Fast, effective pain relief",
+      "Saves teeth when time is critical",
+      "Prevents further damage and complications",
+      "Caring team that treats you like family"
+    ]
+  },
+  {
+    name: "Minor Oral Surgery",
+    description: "Expert surgical services in a safe, comfortable environment",
+    longDescription: "At New Vision Dental Clinic, we provide expert minor oral surgery services in a safe, modern, and comfortable environment. Whether you need a problematic tooth removed or treatment for an oral condition, our experienced dental professionals are committed to making your procedure as painless and stress-free as possible. Every procedure is performed using effective local anaesthesia, modern surgical techniques, and strict infection prevention protocols to ensure your safety and comfort. We also provide comprehensive aftercare instructions and follow-up support to promote quick healing. At New Vision Dental Clinic, we always strive to save your natural teeth whenever possible. However, when a tooth is severely decayed, damaged, infected, loose due to gum disease, or causing overcrowding, tooth extraction may be the best treatment option.",
+    icon: Scissors,
+    slug: "minor-oral-surgery",
+    duration: "Varies",
+    price: "From GHS 300",
+    image: "/images/services/minor-oral-surgery.jpg",
+    features: [
+      "Tooth extractions (simple and surgical)",
+      "Surgical extraction of wisdom teeth",
+      "Removal of retained roots",
+      "Treatment of dental abscesses and gum surgery"
+    ],
+    benefits: [
+      "Safe procedure with local anaesthesia",
+      "Strict infection prevention protocols",
+      "Comprehensive aftercare instructions",
+      "Compassionate care tailored to your needs"
+    ]
   }
+];
+
+const faqData = [
+  { q: "How often should I visit the dentist?", a: "We recommend visiting the dentist every six months for a routine check-up and professional cleaning. Regular visits help detect and prevent dental problems early." },
+  { q: "What should I do if I have a toothache?", a: "A toothache may indicate decay, infection, or other dental issues. Contact our clinic as soon as possible for an examination and appropriate treatment." },
+  { q: "Do you accept walk-in patients?", a: "Yes, we welcome walk-in patients. However, scheduling an appointment is recommended to minimize waiting time and ensure prompt service." },
+  { q: "What services do you offer?", a: "We provide comprehensive dental care including: dental check-ups and cleanings, teeth whitening, fillings and restorations, root canal treatment, crowns and bridges, dental implants, orthodontics (braces), tooth extractions, and cosmetic dentistry." },
+  { q: "Is teeth whitening safe?", a: "Yes. Professional teeth whitening performed by a qualified dental professional is safe and effective when carried out according to recommended guidelines." },
+  { q: "How long does teeth whitening procedure take?", a: "Most in-office whitening treatments can be completed within 60\u201390 minutes, depending on the desired level of whitening." },
+  { q: "What are dental implants?", a: "Dental implants are permanent replacements for missing teeth. They consist of a titanium post placed in the jawbone and a custom-made crown that looks and functions like a natural tooth." },
+  { q: "Are dental procedures painful?", a: "We prioritize patient comfort and use modern techniques and anaesthesia to ensure treatments are as comfortable and pain-free as possible." },
+  { q: "At what age should my child first visit the dentist?", a: "Children should have their first dental visit by their first birthday or within six months after their first tooth appears." },
+  { q: "Do you offer braces and orthodontic treatment?", a: "Yes, we offer orthodontic consultations and treatment options, including braces, to help correct misaligned teeth and improve smiles." },
+  { q: "What payment options do you accept?", a: "We accept cash, mobile money, major debit/credit cards, and selected insurance plans. Please contact us for specific insurance inquiries." },
+  { q: "How can I book an appointment?", a: "You can schedule an appointment by calling our clinic, sending us a WhatsApp message, visiting our reception desk, or using our online booking system." },
+  { q: "What should I do in a dental emergency?", a: "If you experience severe pain, swelling, trauma, or a knocked-out tooth, contact our clinic immediately for urgent dental care." },
+  { q: "How can I maintain good oral health at home?", a: "Maintain a healthy smile by brushing twice daily with fluoride toothpaste, flossing daily, limiting sugary foods and drinks, drinking plenty of water, and visiting the dentist regularly." },
+  { q: "Why choose New Vision Dental Clinic?", a: "At New Vision Dental Clinic, we combine advanced technology, experienced professionals, personalized care, and a comfortable environment to provide exceptional dental services for the whole family." }
 ];
 
 function DentalImplantsRichContent({ service }: { service: any }) {
@@ -619,6 +679,23 @@ function StandardServiceTemplate({ service }: { service: any }) {
   );
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const service = services.find(s => s.slug === slug);
+  if (!service) return { title: "Service Not Found" };
+  return {
+    title: service.name,
+    description: service.description,
+    openGraph: {
+      title: `${service.name} | New Vision Dental Clinic`,
+      description: service.description,
+    },
+    alternates: {
+      canonical: `https://newvisiondental.com/services/${slug}`,
+    },
+  };
+}
+
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const service = services.find(s => s.slug === slug);
@@ -643,11 +720,42 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     }
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://newvisiondental.com" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://newvisiondental.com/services" },
+      { "@type": "ListItem", "position": 3, "name": service.name, "item": `https://newvisiondental.com/services/${slug}` }
+    ]
+  };
+
   const hasRichContent = slug === "dental-implants";
+  const showFaq = !hasRichContent;
+
+  const faqSchema = hasRichContent && service.richContent?.faqs ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": service.richContent.faqs.map((f: { q: string; a: string }) => ({
+      "@type": "Question",
+      "name": f.q,
+      "acceptedAnswer": { "@type": "Answer", "text": f.a }
+    }))
+  } : {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.map((f) => ({
+      "@type": "Question",
+      "name": f.q,
+      "acceptedAnswer": { "@type": "Answer", "text": f.a }
+    }))
+  };
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       
       <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 overflow-x-hidden">
         <section className="w-full bg-gradient-to-r from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8] py-8 md:py-24 relative overflow-hidden">
@@ -701,6 +809,37 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             )}
           </div>
         </section>
+
+        {/* FAQ Section */}
+        {showFaq && (
+          <section className="w-full bg-white py-24 border-t border-gray-100">
+            <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12">
+              <FadeIn>
+                <div className="max-w-4xl mx-auto">
+                  <div className="text-center mb-16">
+                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#1A4FAD]/5 rounded-full border border-[#1A4FAD]/10 mb-4">
+                      <span className="text-[#1A4FAD] text-xs font-bold uppercase tracking-widest">Got Questions?</span>
+                    </span>
+                    <h2 className="text-3xl md:text-5xl font-bold text-[#1A4FAD]">
+                      Frequently Asked Questions
+                    </h2>
+                  </div>
+                  <div className="space-y-4">
+                    {faqData.map((faq, index) => (
+                      <div key={index} className="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:border-[#00C8E8]/30 transition-colors">
+                        <h3 className="font-bold text-gray-800 mb-2 flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 rounded-full bg-[#E8B830]" />
+                          {faq.q}
+                        </h3>
+                        <p className="text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </FadeIn>
+            </div>
+          </section>
+        )}
 
         {/* Other Services - Bento Style */}
         <section className="w-full bg-white py-24 border-t border-gray-100">

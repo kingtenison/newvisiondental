@@ -97,7 +97,7 @@ export default function AboutPage() {
                 alt="Dental background"
                 fill
                 className="object-cover"
-                priority
+                priority={i === 0}
               />
             </div>
           ))}
@@ -230,14 +230,13 @@ export default function AboutPage() {
               <div className="relative grid md:grid-cols-2 gap-0 items-stretch">
                 {/* Photo */}
                 <div className="relative h-[350px] md:h-auto md:min-h-[450px]">
-                  <Image
-                    src={featuredDoctor.image}
-                    alt={featuredDoctor.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover object-top"
-                    priority
-                  />
+                    <Image
+                      src={featuredDoctor.image}
+                      alt={featuredDoctor.name}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover object-top"
+                    />
                 </div>
 
                 {/* Content */}

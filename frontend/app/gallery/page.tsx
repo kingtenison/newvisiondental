@@ -1,7 +1,20 @@
+import type { Metadata } from "next";
 import { getServerSupabase } from "@/app/lib/supabase-server";
 import GalleryClient from "@/app/components/GalleryClient";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Smile Gallery",
+  description: "See real patient transformations at New Vision Dental Clinic. Browse before and after photos of teeth whitening, implants, veneers, and more.",
+  openGraph: {
+    title: "Smile Gallery | New Vision Dental Clinic",
+    description: "Real patient transformations — browse before and after photos.",
+  },
+  alternates: {
+    canonical: "https://newvisiondental.com/gallery",
+  },
+};
 
 interface GalleryImage {
   id: string;

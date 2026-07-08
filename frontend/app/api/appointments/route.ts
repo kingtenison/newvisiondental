@@ -2,10 +2,16 @@ import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { sendToOasis } from "@/app/lib/oasis";
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 const validStatuses = ["pending", "confirmed", "completed", "cancelled"];
+
+function validateEnv() {
+  if (!supabaseUrl || !supabaseServiceKey) {
+    throw new Error("Missing Supabase environment variables");
+  }
+}
 
 function corsHeaders() {
   return {
@@ -21,6 +27,8 @@ export async function OPTIONS() {
 
 export async function POST(request: Request) {
   try {
+    validateEnv();
+
     const body = await request.json();
     const { name, phone, email, service, location, date, time, notes } = body;
     
@@ -28,7 +36,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400, headers: corsHeaders() });
     }
 
-    const supabase = createClient(supabaseUrl, supabaseServiceKey);
+    const supabase = createClient(supabaseUrl!, supabaseServiceKey!);
     
     const { data, error } = await supabase
       .from('appointments')
@@ -78,11 +86,13 @@ export async function POST(request: Request) {
 
 export async function GET(request: Request) {
   try {
+    validateEnv();
+
     const { searchParams } = new URL(request.url);
     const status = searchParams.get('status');
     const date = searchParams.get('date');
 
-    const supabase = createClient(supabaseUrl, supabaseServiceKey);
+    const supabase = createClient(supabaseUrl!, supabaseServiceKey!);
     
     let query = supabase
       .from('appointments')
@@ -114,7 +124,8 @@ export async function PUT(request: Request) {
       return NextResponse.json({ error: "Missing appointment ID" }, { status: 400, headers: corsHeaders() });
     }
 
-    const supabase = createClient(supabaseUrl, supabaseServiceKey);
+    validateEnv();
+    const supabase = createClient(supabaseUrl!, supabaseServiceKey!);
     const updateData: { status?: string; notes?: string; synced_at?: string } = {};
 
     if (status && validStatuses.includes(status)) {

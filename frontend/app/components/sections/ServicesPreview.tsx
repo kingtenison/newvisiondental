@@ -7,7 +7,7 @@ import { Sparkles, ArrowRight, Star, Clock, Users, Check, Calendar } from "lucid
 
 const servicesData = [
   {
-    name: "Scaling & Polishing",
+    name: "Teeth Cleaning / Scaling & Polishing",
     slug: "scaling-polishing",
     bullets: [
       "Removes plaque and tartar buildup",
@@ -17,7 +17,7 @@ const servicesData = [
     rating: "4.9",
     patients: "900+",
     duration: "45 Mins",
-    image: "/images/services/dental-cleaning.jpg",
+    image: "/images/services/teeth-cleaning-scaling-polishing.jpg",
   },
   {
     name: "Teeth Whitening",
@@ -56,7 +56,7 @@ const servicesData = [
     rating: "4.8",
     patients: "600+",
     duration: "1-2 Visits",
-    image: "/images/services/root-canal.jpg",
+    image: "/images/services/root-canal-treatment.jpg",
   },
   {
     name: "Dental Veneers",
@@ -82,7 +82,7 @@ const servicesData = [
     rating: "5.0",
     patients: "500+",
     duration: "20 Mins",
-    image: "/images/services/children-dentistry.jpg",
+    image: "/images/services/fluoride-therapy.jpg",
   },
 ]
 
@@ -291,7 +291,7 @@ export default function ServicesPreview() {
                 href="/services"
                 className="group inline-flex items-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 rounded-full font-semibold bg-white text-[#1A4FAD] border border-[#1A4FAD]/20 hover:bg-[#1A4FAD] hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 text-sm sm:text-base"
               >
-                Explore All 12 Services
+                Explore All 14 Services
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>

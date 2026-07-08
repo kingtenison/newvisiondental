@@ -3,10 +3,10 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 
 const services = [
-  { title: "Dental Cleaning", img: "/images/services/dental-cleaning.jpg" },
+  { title: "Dental Cleaning", img: "/images/services/teeth-cleaning-scaling-polishing.jpg" },
   { title: "Braces", img: "/images/services/braces.jpg" },
   { title: "Implants", img: "/images/services/dental-implants.jpg" },
-  { title: "Children Dentistry", img: "/images/services/children-dentistry.jpg" }
+  { title: "Children Dentistry", img: "/images/services/childrens-dentistry.jpg" }
 ]
 
 export default function Services() {

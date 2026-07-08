@@ -95,15 +95,15 @@ export default function ReadyToBook() {
               >
                 <Link
                   href="/book"
-                  className="group relative flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 sm:gap-3 px-4 py-3 sm:px-10 sm:py-5 bg-[#E8B830] text-[#0A0A0A] font-extrabold rounded-full overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(232,184,48,0.5)] hover:scale-105 active:scale-95 text-[10px] xs:text-xs sm:text-base whitespace-nowrap"
+                  className="group relative flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 sm:gap-3 px-4 py-3 sm:px-10 sm:py-5 bg-[#E8B830] text-[#0A0A0A] font-extrabold rounded-full overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(232,184,48,0.5)] hover:scale-105 active:scale-95 text-xs sm:text-base whitespace-nowrap"
                 >
                   <span className="relative z-10">Book Now</span>
                   <ArrowRight className="w-3 h-3 sm:w-6 sm:h-6 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
                 
                 <Link
-                  href="tel:+1234567890"
-                  className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 sm:gap-3 px-4 py-3 sm:px-10 sm:py-5 bg-white/10 text-white font-bold rounded-full border border-white/20 backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:scale-105 active:scale-95 text-[10px] xs:text-xs sm:text-base whitespace-nowrap"
+                  href="tel:+233257091176"
+                  className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 sm:gap-3 px-4 py-3 sm:px-10 sm:py-5 bg-white/10 text-white font-bold rounded-full border border-white/20 backdrop-blur-md transition-all duration-300 hover:bg-white/20 hover:scale-105 active:scale-95 text-xs sm:text-base whitespace-nowrap"
                 >
                   <Phone className="w-3 h-3 sm:w-6 sm:h-6 text-[#00C8E8]" />
                   <span>Call Us</span>

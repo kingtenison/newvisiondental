@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { motion } from "framer-motion";
 import { Calendar, User, Clock, ArrowLeft, ArrowRight, Eye, BookOpen, Sparkles, Heart, Share2 } from "lucide-react";
+import { sanitizeHtml } from "@/app/lib/sanitize";
 
 // Fetch blog post by slug
 async function getBlogPost(slug: string) {
@@ -41,6 +42,26 @@ async function incrementViewCount(id: string) {
       views: 0
     })
   });
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = await getBlogPost(slug);
+  if (!post) return { title: "Post Not Found" };
+  return {
+    title: post.title,
+    description: post.excerpt || `Read about ${post.title} at New Vision Dental Clinic.`,
+    openGraph: {
+      title: `${post.title} | New Vision Dental Clinic`,
+      description: post.excerpt || `Read about ${post.title}.`,
+      type: "article",
+      publishedTime: post.published_at,
+      images: post.image_url ? [{ url: post.image_url }] : [],
+    },
+    alternates: {
+      canonical: `https://newvisiondental.com/blog/${slug}`,
+    },
+  };
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -140,7 +161,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <div className="lg:col-span-3">
               <div 
                 className="prose prose-lg max-w-none prose-headings:text-[#1A4FAD] prose-a:text-[#1A4FAD] prose-a:no-underline hover:prose-a:text-[#E8B830] prose-strong:text-[#1A4FAD] prose-img:rounded-xl prose-img:shadow-lg"
-                dangerouslySetInnerHTML={{ __html: post.content }}
+                dangerouslySetInnerHTML={{ __html: sanitizeHtml(post.content) }}
               />
 
               {/* Share Section */}
@@ -151,7 +172,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://newvisiondental.com/blog/${post.slug}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-[#E8B830]/15 text-[#1A4FAD] rounded-full text-sm font-medium hover:bg-[#E8B830]/10 hover:border-[#E8B830]/30 transition-all"
+                    className="inline-flex items-center gap-2 px-5 py-3 bg-white border border-[#E8B830]/15 text-[#1A4FAD] rounded-full text-sm font-medium hover:bg-[#E8B830]/10 hover:border-[#E8B830]/30 transition-all"
                   >
                     <Share2 className="w-4 h-4" />
                     Twitter
@@ -160,7 +181,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://newvisiondental.com/blog/${post.slug}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-[#E8B830]/15 text-[#1A4FAD] rounded-full text-sm font-medium hover:bg-[#E8B830]/10 hover:border-[#E8B830]/30 transition-all"
+                    className="inline-flex items-center gap-2 px-5 py-3 bg-white border border-[#E8B830]/15 text-[#1A4FAD] rounded-full text-sm font-medium hover:bg-[#E8B830]/10 hover:border-[#E8B830]/30 transition-all"
                   >
                     <Share2 className="w-4 h-4" />
                     Facebook
@@ -169,7 +190,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(`https://newvisiondental.com/blog/${post.slug}`)}&title=${encodeURIComponent(post.title)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-[#E8B830]/15 text-[#1A4FAD] rounded-full text-sm font-medium hover:bg-[#E8B830]/10 hover:border-[#E8B830]/30 transition-all"
+                    className="inline-flex items-center gap-2 px-5 py-3 bg-white border border-[#E8B830]/15 text-[#1A4FAD] rounded-full text-sm font-medium hover:bg-[#E8B830]/10 hover:border-[#E8B830]/30 transition-all"
                   >
                     <Share2 className="w-4 h-4" />
                     LinkedIn
@@ -207,7 +228,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   <Sparkles className="w-8 h-8 text-[#E8B830] mb-3" />
                   <h3 className="text-white font-bold mb-2">Need Dental Advice?</h3>
                   <p className="text-white/60 text-sm mb-4">Book a consultation with our expert dentists today.</p>
-                  <Link href="/book" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#E8B830] text-[#1a0a10] rounded-full text-sm font-semibold hover:bg-[#E8B830] transition-colors">
+                  <Link href="/book" className="inline-flex items-center gap-2 px-5 py-3 bg-[#E8B830] text-[#1a0a10] rounded-full text-sm font-semibold hover:bg-[#E8B830] transition-colors">
                     Book Now
                     <ArrowRight className="w-4 h-4" />
                   </Link>

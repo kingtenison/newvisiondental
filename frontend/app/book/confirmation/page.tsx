@@ -1,5 +1,12 @@
-﻿import Link from "next/link";
+﻿import type { Metadata } from "next";
+import Link from "next/link";
 import { CheckCircle, Calendar, Clock, User, Phone, Mail, ArrowLeft } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Appointment Confirmed",
+  description: "Your dental appointment at New Vision Dental Clinic has been booked successfully. We look forward to seeing you.",
+  robots: { index: false, follow: false },
+};
 
 interface ConfirmationPageProps {
   searchParams: {
