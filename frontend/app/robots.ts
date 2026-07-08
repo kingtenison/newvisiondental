@@ -1,31 +1,27 @@
-export default function robots() {
-  return new Response(
-    `User-agent: *
-Allow: /
-Disallow: /admin/
-Disallow: /dashboard/
-Disallow: /api/
-Disallow: /login
-Disallow: /register
+import type { MetadataRoute } from 'next';
 
-User-agent: GPTBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-Sitemap: https://newvisiondental.com/sitemap.xml
-`,
-    {
-      headers: {
-        'Content-Type': 'text/plain',
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/admin', '/dashboard', '/api'],
       },
-    }
-  );
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+        disallow: ['/admin', '/dashboard', '/api'],
+      },
+      {
+        userAgent: 'GPTBot',
+        disallow: '/',
+      },
+      {
+        userAgent: 'CCBot',
+        disallow: '/',
+      },
+    ],
+    sitemap: 'https://newvisiondental.com/sitemap.xml',
+  };
 }
