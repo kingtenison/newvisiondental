@@ -1,5 +1,3 @@
-export const runtime = 'edge';
-
 export default function robots() {
   return new Response(
     `User-agent: *

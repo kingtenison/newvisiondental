@@ -1,6 +1,4 @@
-export const runtime = 'edge';
-
-export default async function sitemap() {
+export async function GET() {
   const baseUrl = 'https://newvisiondental.com';
 
   const routes = [
@@ -48,11 +46,7 @@ export default async function sitemap() {
     changefreq: 'monthly' as const,
   }));
 
-  const allRoutes = [
-    ...routes,
-    ...serviceRoutes,
-    ...locationRoutes,
-  ];
+  const allRoutes = [...routes, ...serviceRoutes, ...locationRoutes];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
