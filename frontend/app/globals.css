@@ -60,6 +60,27 @@
   font-weight: 700;
 }
 
+/* Force all gray text to pure black site-wide */
+[class*="text-gray-"],
+[class*="text-slate-"],
+[class*="text-zinc-"],
+[class*="text-neutral-"],
+[class*="text-stone-"] {
+  color: #000000 !important;
+}
+
+/* Force all off-white text to pure white site-wide (readable opacities only) */
+[class*="text-white/30"],
+[class*="text-white/40"],
+[class*="text-white/50"],
+[class*="text-white/60"],
+[class*="text-white/70"],
+[class*="text-white/75"],
+[class*="text-white/80"],
+[class*="text-white/90"] {
+  color: #ffffff !important;
+}
+
 :root {
   --background: #F2F4F8;
   --foreground: #3D3D3D;
@@ -143,49 +164,69 @@ html {
   background: linear-gradient(180deg, #E8B830, #E8B830);
 }
 
-/* Gold Button Styles */
+/* Gold Button Styles - Pure Metallic Gold */
 .btn-gold {
-  @apply relative overflow-hidden bg-gradient-to-r from-[#E8B830] to-[#B07820] text-white font-bold transition-all duration-300;
-  background-size: 200% 200%;
-  animation: gradientShift 3s ease infinite;
+  @apply relative overflow-hidden text-white font-bold transition-all duration-300;
+  background: linear-gradient(
+    160deg,
+    #8B6914 0%,
+    #B8860B 12%,
+    #E8B830 25%,
+    #FFD700 38%,
+    #FFF8DC 48%,
+    #FFD700 55%,
+    #D4AF37 68%,
+    #B8860B 82%,
+    #8B6914 100%
+  );
+  box-shadow:
+    0 4px 20px rgba(139, 105, 20, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(90, 60, 5, 0.4);
 }
 
 .btn-gold::before {
   content: '';
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
+  top: -80%;
+  left: -80%;
+  width: 260%;
+  height: 260%;
   background: linear-gradient(
     to bottom right,
-    rgba(255,255,255,0) 0%,
-    rgba(255,255,255,0.3) 50%,
-    rgba(255,255,255,0) 100%
+    rgba(255,255,255,0) 35%,
+    rgba(255,255,248,0.35) 45%,
+    rgba(255,255,248,0.1) 48%,
+    rgba(255,255,255,0) 55%
   );
-  transform: rotate(30deg);
-  transition: transform 0.6s ease;
+  transform: rotate(20deg);
+  pointer-events: none;
 }
 
-.btn-gold:hover::before {
-  transform: rotate(30deg) translate(50%, 50%);
+.btn-gold::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    160deg,
+    rgba(255,255,255,0.3) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(0,0,0,0.15) 100%
+  );
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Hover lift effect */
 .btn-gold:hover {
-  @apply -translate-y-1 shadow-[0_10px_20px_rgba(212,175,55,0.3)];
+  @apply -translate-y-1;
+  box-shadow:
+    0 12px 32px rgba(139, 105, 20, 0.5),
+    inset 0 2px 0 rgba(255, 255, 255, 0.55),
+    inset 0 -1px 0 rgba(90, 60, 5, 0.4);
 }
 
 /* Glassmorphism utility */
@@ -255,51 +296,69 @@ html {
   animation: golden-shine 4s linear infinite;
 }
 
-/* Golden Button Shine */
-@keyframes button-shine {
-  0% {
-    background-position: -200% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
-}
-
+/* Golden Button Shine - Pure Metallic Gold */
 .btn-golden-shine {
-  background: linear-gradient(
-    90deg,
-    #E8B830 0%,
-    #B8860B 10%,
-    #E8B830 25%,
-    #FFF8DC 40%,
-    #E8B830 50%,
-    #FFF8DC 60%,
-    #E8B830 75%,
-    #B8860B 90%,
-    #E8B830 100%
-  );
-  background-size: 200% auto;
-  animation: button-shine 3s linear infinite;
-  color: #1a0a10;
+  color: #1a0a00;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   position: relative;
   overflow: hidden;
+  transition: all 0.3s ease;
+  background: linear-gradient(
+    155deg,
+    #6B4F00 0%,
+    #8B6914 10%,
+    #B8860B 20%,
+    #D4AF37 30%,
+    #FFD700 42%,
+    #FFF8DC 50%,
+    #FFD700 58%,
+    #D4AF37 68%,
+    #B8860B 80%,
+    #8B6914 90%,
+    #6B4F00 100%
+  );
+  box-shadow:
+    0 4px 20px rgba(107, 79, 0, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(60, 40, 0, 0.4);
+}
+
+.btn-golden-shine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 55%;
+  background: linear-gradient(180deg, rgba(255, 255, 248, 0.25) 0%, transparent 100%);
+  pointer-events: none;
 }
 
 .btn-golden-shine::after {
   content: '';
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
+  top: -70%;
+  left: -70%;
+  width: 240%;
+  height: 240%;
   background: linear-gradient(
     to bottom right,
-    rgba(255,255,255,0) 0%,
-    rgba(255,255,255,0.2) 50%,
-    rgba(255,255,255,0) 100%
+    rgba(255,255,248,0) 35%,
+    rgba(255,255,248,0.2) 44%,
+    rgba(255,255,248,0.05) 48%,
+    rgba(255,255,248,0) 55%
   );
-  transform: rotate(30deg);
-  animation: shimmer 2.5s ease-in-out infinite;
+  transform: rotate(18deg);
+  pointer-events: none;
+}
+
+.btn-golden-shine:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 30px rgba(107, 79, 0, 0.5),
+    inset 0 2px 0 rgba(255, 255, 255, 0.55),
+    inset 0 -1px 0 rgba(60, 40, 0, 0.4);
 }
 
 /* Flowing Golden Border Animation */

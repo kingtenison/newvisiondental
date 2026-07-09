@@ -170,13 +170,28 @@ export default function LuxuryHero() {
             <div className="flex flex-col sm:flex-row gap-4 animate-slide-up" style={{animationDelay: '0.3s'}}>
               <Link
                 href="/book"
-                className="group/btn px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-[#E8B830] via-[#E8B830] to-[#E8B830] text-[#1A4FAD] text-xs sm:text-sm font-light tracking-[0.1em] uppercase rounded-xl hover:shadow-2xl hover:shadow-[#E8B830]/50 transition-all duration-300 flex items-center justify-center gap-3 relative overflow-hidden whitespace-nowrap animate-button-glow"
+                className="group/btn px-8 sm:px-10 py-4 sm:py-5 text-[#1A4FAD] text-xs sm:text-sm font-semibold tracking-[0.1em] uppercase rounded-xl transition-all duration-300 flex items-center justify-center gap-3 relative overflow-hidden whitespace-nowrap"
+                style={{
+                  background: 'linear-gradient(155deg, #6B4F00 0%, #8B6914 10%, #B8860B 20%, #D4AF37 30%, #FFD700 42%, #FFF8DC 50%, #FFD700 58%, #D4AF37 68%, #B8860B 80%, #8B6914 90%, #6B4F00 100%)',
+                  boxShadow: '0 4px 20px rgba(107, 79, 0, 0.4), inset 0 2px 0 rgba(255,255,255,0.5), inset 0 -1px 0 rgba(60,40,0,0.4)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 10px 32px rgba(107, 79, 0, 0.5), inset 0 2px 0 rgba(255,255,255,0.55), inset 0 -1px 0 rgba(60,40,0,0.4)';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 4px 20px rgba(107, 79, 0, 0.4), inset 0 2px 0 rgba(255,255,255,0.5), inset 0 -1px 0 rgba(60,40,0,0.4)';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
               >
+                <span className="absolute inset-0" style={{
+                  background: 'linear-gradient(180deg, rgba(255,255,248,0.25) 0%, transparent 55%)',
+                  pointerEvents: 'none'
+                }}></span>
                 <span className="relative z-10 flex items-center gap-3">
                   Book Your Smile
-                  <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300 animate-bounce-right" />
+                  <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
               </Link>
 
               <Link
