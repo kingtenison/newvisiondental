@@ -59,7 +59,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       images: post.image_url ? [{ url: post.image_url }] : [],
     },
     alternates: {
-      canonical: `https://newvisiondental.com/blog/${slug}`,
+      canonical: `https://newvisiondentalclinic.com/blog/${slug}`,
     },
   };
 }
@@ -169,7 +169,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <h3 className="text-lg font-bold text-[#1A4FAD] mb-4">Share this article</h3>
                 <div className="flex flex-wrap gap-3">
                   <a
-                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://newvisiondental.com/blog/${post.slug}`)}`}
+                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://newvisiondentalclinic.com/blog/${post.slug}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-5 py-3 bg-white border border-[#E8B830]/15 text-[#1A4FAD] rounded-full text-sm font-medium hover:bg-[#E8B830]/10 hover:border-[#E8B830]/30 transition-all"
@@ -178,7 +178,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     Twitter
                   </a>
                   <a
-                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://newvisiondental.com/blog/${post.slug}`)}`}
+                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://newvisiondentalclinic.com/blog/${post.slug}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-5 py-3 bg-white border border-[#E8B830]/15 text-[#1A4FAD] rounded-full text-sm font-medium hover:bg-[#E8B830]/10 hover:border-[#E8B830]/30 transition-all"
@@ -187,7 +187,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     Facebook
                   </a>
                   <a
-                    href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(`https://newvisiondental.com/blog/${post.slug}`)}&title=${encodeURIComponent(post.title)}`}
+                    href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(`https://newvisiondentalclinic.com/blog/${post.slug}`)}&title=${encodeURIComponent(post.title)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-5 py-3 bg-white border border-[#E8B830]/15 text-[#1A4FAD] rounded-full text-sm font-medium hover:bg-[#E8B830]/10 hover:border-[#E8B830]/30 transition-all"

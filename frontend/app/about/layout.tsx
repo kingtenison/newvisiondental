@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     description: "Learn about our mission to provide exceptional dental care across Accra.",
   },
   alternates: {
-    canonical: "https://newvisiondental.com/about",
+    canonical: "https://newvisiondentalclinic.com/about",
   },
 };
 

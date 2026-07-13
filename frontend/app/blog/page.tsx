@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: "Expert dental health tips, guides, and insights from New Vision Dental Clinic.",
   },
   alternates: {
-    canonical: "https://newvisiondental.com/blog",
+    canonical: "https://newvisiondentalclinic.com/blog",
   },
 };
 

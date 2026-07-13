@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: `Visit us at ${location.address}. Expert dental care in ${location.name}.`,
     },
     alternates: {
-      canonical: `https://newvisiondental.com/locations/${slug}`,
+      canonical: `https://newvisiondentalclinic.com/locations/${slug}`,
     },
   };
 }

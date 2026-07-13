@@ -5,7 +5,7 @@ import { Header } from './components/layout/header';
 import { Footer } from './components/layout/footer';
 import OrganizationSchema from './components/seo/OrganizationSchema';
 
-const siteUrl = 'https://newvisiondental.com';
+const siteUrl = 'https://newvisiondentalclinic.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     description: "Schedule your visit — choose from 14 services across 3 Accra locations.",
   },
   alternates: {
-    canonical: "https://newvisiondental.com/book",
+    canonical: "https://newvisiondentalclinic.com/book",
   },
 };
 

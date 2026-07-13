@@ -22,6 +22,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: '/',
       },
     ],
-    sitemap: 'https://newvisiondental.com/sitemap.xml',
+    sitemap: 'https://newvisiondentalclinic.com/sitemap.xml',
   };
 }

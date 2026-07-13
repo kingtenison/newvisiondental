@@ -729,7 +729,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: service.description,
     },
     alternates: {
-      canonical: `https://newvisiondental.com/services/${slug}`,
+      canonical: `https://newvisiondentalclinic.com/services/${slug}`,
     },
   };
 }
@@ -762,9 +762,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://newvisiondental.com" },
-      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://newvisiondental.com/services" },
-      { "@type": "ListItem", "position": 3, "name": service.name, "item": `https://newvisiondental.com/services/${slug}` }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://newvisiondentalclinic.com" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://newvisiondentalclinic.com/services" },
+      { "@type": "ListItem", "position": 3, "name": service.name, "item": `https://newvisiondentalclinic.com/services/${slug}` }
     ]
   };
 

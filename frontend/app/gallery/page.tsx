@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: "Real patient transformations — browse before and after photos.",
   },
   alternates: {
-    canonical: "https://newvisiondental.com/gallery",
+    canonical: "https://newvisiondentalclinic.com/gallery",
   },
 };
 

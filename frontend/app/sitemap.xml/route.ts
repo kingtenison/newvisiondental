@@ -1,5 +1,5 @@
 export async function GET() {
-  const baseUrl = 'https://newvisiondental.com';
+  const baseUrl = 'https://newvisiondentalclinic.com';
 
   const routes = [
     { path: '', priority: '1.0', changefreq: 'weekly' },

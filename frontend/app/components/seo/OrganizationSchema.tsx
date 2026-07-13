@@ -3,8 +3,8 @@ export default function OrganizationSchema() {
     "@context": "https://schema.org",
     "@type": ["Organization", "DentalClinic"],
     "name": "New Vision Dental Clinic",
-    "url": "https://newvisiondental.com",
-    "logo": "https://newvisiondental.com/images/nv-new-logo-03.png",
+    "url": "https://newvisiondentalclinic.com",
+    "logo": "https://newvisiondentalclinic.com/images/nv-new-logo-03.png",
     "description": "Premium dental care across Accra, Ghana. Specialists in implants, whitening, root canals, and emergency dentistry.",
     "foundingDate": "2010",
     "founder": {

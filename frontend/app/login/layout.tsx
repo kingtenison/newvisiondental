@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: "Sign in to your New Vision Dental Clinic account to manage your appointments and preferences.",
   robots: { index: false, follow: false },
   alternates: {
-    canonical: "https://newvisiondental.com/login",
+    canonical: "https://newvisiondentalclinic.com/login",
   },
 };
 
