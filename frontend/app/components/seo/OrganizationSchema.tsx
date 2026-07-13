@@ -42,7 +42,7 @@ export default function OrganizationSchema() {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
       "bestRating": "5",
-      "ratingCount": "5000+"
+      "ratingCount": 5000
     },
     "priceRange": "GHS 150 - GHS 2,500",
     "medicalSpecialty": ["Dentistry", "CosmeticDentistry", "OralSurgery", "Orthodontics", "Periodontics", "Endodontics"],
