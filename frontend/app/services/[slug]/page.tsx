@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { FadeIn } from "@/app/components/animations/FadeIn";
 import Image from "next/image";
+import { ReadMoreList } from "@/app/components/ui/ReadMoreList";
 
 const services = [
   {
@@ -19,10 +20,10 @@ const services = [
     price: "From GHS 100",
     image: "/images/services/consultation.jpg",
     features: [
-      "Personalized Care — We take the time to understand your needs",
-      "Modern Technology — State-of-the-art equipment",
-      "Comprehensive Services — From cleanings to advanced care",
-      "Trusted Expertise — Led by Dr Govina and his team"
+      "Personalized Care: We take the time to understand your oral health needs and develop a treatment plan that works for you.",
+      "Modern Technology: Our state-of-the-art equipment ensures precise diagnostics and effective treatments.",
+      "Comprehensive Services: From cleanings and fillings to crowns and gum disease treatment, we offer a full range of care in three convenient locations.",
+      "Trusted Expertise: Known as one of the best dentists, Dr Govina (CEO and owner) and his team combine leadership, skill and compassion to provide exceptional care."
     ],
     benefits: [
       "Early detection of dental issues",
@@ -41,10 +42,11 @@ const services = [
     price: "From GHS 150",
     image: "/images/services/dental-x-ray.jpg",
     features: [
-      "Digital OPG (Panoramic X-ray) technology",
       "Detects cavities and tooth decay early",
       "Identifies infections, abscesses, and bone loss",
-      "Assists in implant and orthodontic planning"
+      "Assists in treatment planning for implants, orthodontics, and extractions",
+      "Helps monitor oral health over time",
+      "Enables accurate diagnosis with minimal discomfort"
     ],
     benefits: [
       "Early detection of dental issues",
@@ -56,17 +58,25 @@ const services = [
   {
     name: "Teeth Cleaning / Scaling & Polishing",
     description: "Professional cleaning to remove plaque, tartar, and surface stains",
-    longDescription: "Professional teeth cleaning, also known as dental prophylaxis, is a preventive dental procedure designed to remove plaque, tartar (calculus), and surface stains that regular brushing and flossing cannot eliminate. This treatment helps maintain healthy teeth and gums while reducing the risk of cavities, gum disease, and bad breath. During the procedure, our dental professionals carefully examine your oral health before using specialized instruments to remove hardened deposits from the teeth and along the gum line. The teeth are then polished to remove stains and create a smooth surface that makes it more difficult for plaque to accumulate. Regular professional cleanings enhance the appearance of your smile and play a crucial role in maintaining long-term oral health.",
+    longDescription: "Professional teeth cleaning, also known as dental prophylaxis, is a preventive dental procedure designed to remove plaque, tartar (calculus), and surface stains that regular brushing and flossing cannot eliminate. This treatment helps maintain healthy teeth and gums while reducing the risk of cavities, gum disease, and bad breath. During the procedure, our dental professionals carefully examine your oral health before using specialized instruments to remove hardened deposits from the teeth and along the gum line. The teeth are then polished to remove stains and create a smooth surface that makes it more difficult for plaque to accumulate. In some cases, fluoride treatment may be recommended to strengthen the teeth and provide additional protection against decay. Regular professional cleanings not only enhance the appearance of your smile but also play a crucial role in maintaining long-term oral health. We recommend scheduling a dental cleaning every six months, or as advised by your dentist, to keep your teeth and gums in optimal condition.",
     icon: Sparkles,
     slug: "scaling-polishing",
     duration: "45 mins",
     price: "From GHS 300",
     image: "/images/services/teeth-cleaning-scaling-polishing.jpg",
     features: [
-      "Prevents gum disease — removes bacteria before it causes damage",
-      "Cavity protection — eliminates tartar your toothbrush can't reach",
-      "Brighter appearance — polishes away coffee, tea, and food stains",
-      "Fresh breath — removes bacteria and food debris thoroughly"
+      "Prevents gum disease — removes bacterial plaque that leads to gingivitis and periodontitis before it causes damage.",
+      "Cavity protection — eliminates tartar and plaque your toothbrush can't reach, reducing cavity risk significantly.",
+      "Brighter appearance — surface stains from coffee, tea, and food are polished away, revealing a cleaner, whiter smile.",
+      "Supports overall health — poor oral health is linked to heart disease and diabetes; regular cleanings reduce systemic risk.",
+      "Early detection — problems like early-stage decay or oral cancer are far easier and less costly to treat when caught early.",
+      "Fresh breath — bacteria and food debris that cause persistent bad breath are thoroughly removed during each visit.",
+      "Avoid eating or drinking for 30 minutes after fluoride treatment.",
+      "Rinse with warm water if gums feel sensitive.",
+      "Resume your normal brushing and flossing routine the same day.",
+      "Use a soft-bristle toothbrush for 24 hours if gums are tender.",
+      "Sensitivity to hot or cold may occur briefly — this is normal.",
+      "Book your next appointment before leaving for continuity of care."
     ],
     benefits: [
       "Prevents gum disease and cavities",
@@ -78,23 +88,30 @@ const services = [
   {
     name: "Teeth Whitening",
     description: "Professional whitening for a brighter, more confident smile",
-    longDescription: "At New Vision Dental Clinic, our professional teeth whitening procedures are tailored to your individual needs, delivering faster, safer, and more noticeable results than over-the-counter whitening products. The treatment is non-invasive, comfortable, and can significantly enhance your confidence by giving you a brighter, healthier-looking smile. Our European approved BlancOne whitening products protect your enamel while delivering stunning results with zero or negligible sensitivity.",
+    longDescription: "At New Vision Dental Clinic, our professional teeth whitening procedures are tailored to your individual needs, delivering faster, safer, and more noticeable results than over-the-counter whitening products. The treatment is non-invasive, comfortable, and can significantly enhance your confidence by giving you a brighter, healthier-looking smile.\n\nWhether you are preparing for a special occasion or simply want to refresh your appearance, professional teeth whitening is a quick and effective way to achieve a more dazzling smile. Schedule a consultation today to discover the best whitening option for you.\n\nWhy Professional Teeth Whitening?\n\nOver time, teeth can become stained or discolored due to a variety of factors, including dietary habits (coffee, tea, red wine, and berries), tobacco use, aging (enamel wears away revealing the yellowish dentin beneath), and certain medications such as tetracycline. While over-the-counter whitening products promise results, they often fall short in delivering noticeable or long-lasting improvements. Professional teeth whitening offers a more effective and reliable solution.\n\nReady to achieve a brighter and more confident smile? Wondering what type of whitening is best for you? Call our office on 0257091176 / 0246850455 and let us help you transform your smile and boost your confidence with our expert whitening solutions!",
     icon: Sun,
     slug: "teeth-whitening",
     duration: "60 mins",
     price: "From GHS 500",
     image: "/images/services/teeth-whitening.jpg",
     features: [
-      "Customized treatment plans tailored to you",
-      "Safe and effective — European approved BlancOne products",
-      "Zero or negligible sensitivity",
-      "Noticeable results in as little as one session"
+      "Customized Treatment Plans: Our dentists assess your teeth and decide on a whitening plan tailored to your needs and goals.",
+      "Safe and Effective: Our European approved BlancOne whitening products protect your enamel while delivering stunning results.",
+      "BlancOne Treatments: Tailored to your individual needs, whether a quick refresh after cleaning or a more intensive treatment for deeper stains, with zero or negligible sensitivity.",
+      "Quick Results: Achieve a noticeably brighter smile in as little as one session.",
+      "In-Office Whitening: Our BlancOne whitening gel is applied to your teeth and activated with a special light. The process is quick, often completed in about 30 minutes, and produces dramatic results.",
+      "Home Whitening: Custom-made trays (gum shield) and professional-grade BlancOne gel let you achieve gradual, equally stunning results on your own schedule.",
+      "Ultimate Whitening Package: A combination of in-office and home whitening for the best, most lasting results — dramatically and quickly whitening your teeth while maintaining them.",
+      "Avoid Stain-Causing Foods and Drinks: Limit coffee, tea, red wine, and other staining agents.",
+      "Practice Good Oral Hygiene: Brush and floss regularly to remove plaque and prevent discoloration.",
+      "Use Whitening Toothpaste: A whitening toothpaste helps maintain your bright smile between treatments.",
+      "Schedule Regular Cleanings: Professional cleanings at our clinic remove surface stains and keep your teeth looking their best."
     ],
     benefits: [
-      "Dramatic results — brighten teeth by several shades",
-      "Long-lasting effects compared to over-the-counter options",
-      "Safe for enamel with minimal sensitivity",
-      "Boosts confidence in personal and professional settings"
+      "Dramatic Results: Professional whitening can brighten your teeth by several shades in a short amount of time.",
+      "Long-Lasting Effects: Our treatments provide longer-lasting results compared to over-the-counter options.",
+      "Safe for Enamel: Professional whitening is carefully controlled to minimize sensitivity and protect your teeth.",
+      "Boosts Confidence: A brighter smile can enhance your self-esteem in both personal and professional settings."
     ]
   },
   {
@@ -169,10 +186,11 @@ const services = [
       "Completed in a single visit"
     ],
     benefits: [
-      "Restores tooth function and strength",
       "Natural-looking appearance",
-      "Prevents further decay",
-      "Quick and convenient"
+      "Restores tooth function and strength",
+      "Bonds directly to the tooth structure",
+      "Requires minimal removal of healthy tooth tissue",
+      "Can repair chipped, cracked, or decayed teeth"
     ]
   },
   {
@@ -185,16 +203,25 @@ const services = [
     price: "From GHS 800",
     image: "/images/services/root-canal-treatment.jpg",
     features: [
-      "Gentle, patient-centred care with modern techniques",
-      "Advanced technology for precision and efficiency",
-      "Preserves your natural tooth — avoids extraction",
-      "Trusted expertise for high-quality care"
+      "Gentle, Patient-Centred Care: We prioritize your comfort throughout the procedure, using modern techniques to minimize discomfort.",
+      "Advanced Technology: Our state-of-the-art equipment ensures precision and efficiency during every step of your root canal.",
+      "Preserve Your Natural Smile: Root canal therapy helps you avoid extractions, maintaining the integrity and aesthetics of your smile.",
+      "Trusted Expertise: We deliver high-quality care tailored to your unique needs.",
+      "Persistent or severe tooth pain.",
+      "Sensitivity to hot or cold temperatures.",
+      "Swelling or tenderness in the gums near the affected tooth.",
+      "A darkened or discoloured tooth.",
+      "A small pimple-like bump on the gums.",
+      "Diagnosis and Preparation: We use advanced imaging to assess the affected tooth and plan the procedure.",
+      "Numbing and Cleaning: The area is numbed for comfort, and the infected pulp is carefully removed.",
+      "Filling and Sealing: The tooth is cleaned, filled with a biocompatible material, and sealed to prevent reinfection.",
+      "Restoration: In many cases, a crown is placed to restore the tooth's strength and appearance."
     ],
     benefits: [
-      "Pain relief — eliminates discomfort from infection",
-      "Prevents tooth loss — saves your natural tooth",
-      "Long-term results — a treated tooth can last a lifetime",
-      "Improved oral health — prevents infection from spreading"
+      "Pain Relief: Eliminate the discomfort caused by infection or decay.",
+      "Prevent Tooth Loss: Save your natural tooth and avoid extraction.",
+      "Long-Term Results: A properly treated tooth can last a lifetime with good oral care.",
+      "Improved Oral Health: Treating infection prevents it from spreading to other teeth or areas of the mouth."
     ]
   },
   {
@@ -213,10 +240,11 @@ const services = [
       "Provides long-lasting durability"
     ],
     benefits: [
-      "Restores chewing and speaking ability",
+      "Restores damaged or weakened teeth",
+      "Replaces missing teeth effectively",
+      "Improves chewing and speech",
       "Enhances smile aesthetics",
-      "Prevents further damage",
-      "Long-lasting solution"
+      "Provides long-lasting durability"
     ]
   },
   {
@@ -235,10 +263,11 @@ const services = [
       "Protects neighbouring teeth and bone"
     ],
     benefits: [
-      "Prevents infection spread",
-      "Alleviates pain and discomfort",
-      "Creates a healthy foundation for future restorations",
-      "Expert aftercare support for quick healing"
+      "Removes infected or damaged root fragments",
+      "Prevents pain and future complications",
+      "Promotes healthy healing of surrounding tissues",
+      "Protects neighboring teeth and bone",
+      "Creates a healthy foundation for future restorations"
     ]
   },
   {
@@ -258,9 +287,10 @@ const services = [
     ],
     benefits: [
       "Creates a brighter, more attractive smile",
-      "Long-lasting results",
-      "Custom-made for a perfect fit",
-      "Improves tooth shape and colour"
+      "Corrects cosmetic imperfections",
+      "Provides a natural tooth appearance",
+      "Stain-resistant options available",
+      "Long-lasting aesthetic results"
     ]
   },
   {
@@ -274,6 +304,7 @@ const services = [
     image: "/images/services/fluoride-therapy.jpg",
     features: [
       "Strengthens tooth enamel",
+      "Reduces the risk of cavities",
       "Helps reverse early signs of decay",
       "Decreases tooth sensitivity",
       "Suitable for both children and adults"
@@ -310,17 +341,26 @@ const services = [
   {
     name: "Emergency Dentistry",
     description: "Immediate care for dental emergencies — pain relief and urgent treatment",
-    longDescription: "No one wants to have a dental emergency. But they can happen to any of us. Emergency dentistry focuses on treating dental problems that require immediate attention to relieve pain, prevent further damage, or address serious oral health concerns. Whether you are dealing with a severe toothache, a knocked-out tooth, or a broken restoration, our team is equipped to provide the care you need right away. Often, time is of the essence and the first several hours after the incident can determine the prognosis of the affected tooth. Our entire staff will treat your dental emergency the way we would want our own treated \u2014 promptly and with compassion.",
+    longDescription: "No one wants to have a dental emergency. But they can happen to any of us. One minute you are biting into a sandwich and the next thing you know, half of your tooth is in your hand. One minute a pain that was nagging but dull is suddenly keeping you up at night.\n\nWhat Is Emergency Dentistry?\n\nEmergency dentistry focuses on treating dental problems that require immediate attention to relieve pain, prevent further damage, or address serious oral health concerns. Whether you are dealing with a severe toothache, a knocked-out tooth, or a broken restoration, our team is equipped to provide the care you need right away. Even if you are not in pain, such as when a tooth is broken or lost, it is still extremely important to be evaluated as soon as possible. Often, time is of the essence and the first several hours after the incident or accident can determine the prognosis of the affected tooth.\n\nPrompt, Reliable Dental Care When You Need It Most\n\nDental emergencies can happen unexpectedly, but knowing where to turn can make all the difference. We provide fast, effective emergency dental care to help alleviate pain and restore your smile. As a trusted Dental Clinic near you, our experienced team is here to address urgent dental issues with expertise and compassion.\n\nExperience Trusted Emergency Dental Care\n\nOur team understands the urgency and stress that come with dental emergencies. That is why we are committed to providing fast, reliable care tailored to your needs. With our advanced technology and compassionate approach, we ensure you receive the best possible treatment during unexpected situations.",
     icon: AlertTriangle,
     slug: "emergency-dentistry",
     duration: "Same-Day",
     price: "From GHS 200",
     image: "/images/services/emergency-dentistry.jpg",
     features: [
-      "Same-Day Appointments — including Saturday and some Sunday slots",
-      "Comprehensive Services — from pain relief to restorative solutions",
-      "Compassionate Care — calming environment during stressful situations",
-      "Trusted Expertise — advanced skills with modern technology"
+      "Same-Day Appointments: We prioritize dental emergencies and strive to see you as quickly as possible, often on the same day. We offer extended hours, including Saturday appointments and in some cases, Sunday appointments.",
+      "Comprehensive Services: From pain relief to restorative solutions, we address a wide range of dental emergencies efficiently.",
+      "Compassionate Care: Dr Govina and his team create a calming environment to ensure your comfort during stressful situations.",
+      "Trusted Expertise: The dental team at New Vision Dental Clinic combines advanced skills with modern technology to deliver exceptional results.",
+      "Severe Toothaches: Addressing the cause of pain, such as cavities, infections, or abscesses.",
+      "Knocked-Out Teeth: Providing immediate care to preserve and reattach the tooth when possible.",
+      "Chipped or Broken Teeth: Restoring damaged teeth with bonding, crowns, or other solutions.",
+      "Lost Fillings or Crowns: Repairing or replacing restorations to protect your teeth.",
+      "Gum Swelling or Infections: Diagnosing and treating the source of swelling to prevent complications.",
+      "Injuries to the Lips, Gums, or Tongue: Managing oral injuries caused by accidents or trauma.",
+      "Call Us Immediately: Contact us on 0257091176 / 0246850455 to describe your situation and receive guidance.",
+      "Protect the Tooth: For a knocked-out tooth, handle it carefully by the crown and try to place it back in the socket. If this is not possible, keep it in a container of milk or saliva.",
+      "Manage Pain: Use over-the-counter pain relievers and apply a cold compress to reduce swelling until your appointment."
     ],
     benefits: [
       "Fast, effective pain relief",
@@ -332,7 +372,7 @@ const services = [
   {
     name: "Minor Oral Surgery",
     description: "Expert surgical services in a safe, comfortable environment",
-    longDescription: "At New Vision Dental Clinic, we provide expert minor oral surgery services in a safe, modern, and comfortable environment. Whether you need a problematic tooth removed or treatment for an oral condition, our experienced dental professionals are committed to making your procedure as painless and stress-free as possible. Every procedure is performed using effective local anaesthesia, modern surgical techniques, and strict infection prevention protocols to ensure your safety and comfort. We also provide comprehensive aftercare instructions and follow-up support to promote quick healing. At New Vision Dental Clinic, we always strive to save your natural teeth whenever possible. However, when a tooth is severely decayed, damaged, infected, loose due to gum disease, or causing overcrowding, tooth extraction may be the best treatment option.",
+    longDescription: "At New Vision Dental Clinic, we provide expert minor oral surgery services in a safe, modern, and comfortable environment. Whether you need a problematic tooth removed or treatment for an oral condition, our experienced dental professionals are committed to making your procedure as painless and stress-free as possible. Every procedure is performed using effective local anaesthesia, modern surgical techniques, and strict infection prevention protocols to ensure your safety and comfort. We also provide comprehensive aftercare instructions and follow-up support to promote quick healing. At New Vision Dental Clinic, we always strive to save your natural teeth whenever possible. However, when a tooth is severely decayed, damaged, infected, loose due to gum disease, or causing overcrowding, tooth extraction may be the best treatment option. If you have persistent tooth pain, swelling, an impacted tooth, or have been referred for oral surgery, trust New Vision Dental Clinic to provide compassionate, high-quality care tailored to your needs. Your comfort, safety, and healthy smile are our priority. Book an appointment today and let us help you regain your oral health with confidence.",
     icon: Scissors,
     slug: "minor-oral-surgery",
     duration: "Varies",
@@ -584,7 +624,9 @@ function StandardServiceTemplate({ service }: { service: any }) {
                   <div className="w-2 h-8 bg-[#00C8E8] rounded-full" />
                   Clinical Overview
                </h2>
-               <p className="text-gray-600 text-lg leading-relaxed">{service.longDescription}</p>
+                {service.longDescription.split('\n\n').map((para: string, i: number) => (
+                  <p key={i} className="text-gray-600 text-lg leading-relaxed mb-4 last:mb-0">{para}</p>
+                ))}
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -595,16 +637,14 @@ function StandardServiceTemplate({ service }: { service: any }) {
                    </div>
                    Key Features
                 </h2>
-                <ul className="space-y-4">
-                  {service.features.map((feature: string, index: number) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <div className="w-6 h-6 bg-green-50 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-                        <Check className="w-3.5 h-3.5 text-green-500" />
-                      </div>
-                      <span className="text-gray-700 font-medium">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                 <ReadMoreList
+                   items={service.features}
+                   limit={4}
+                   badgeClassName="bg-green-50"
+                   checkClassName="text-green-500"
+                   textClassName="text-gray-700"
+                   buttonClassName="text-[#1A4FAD] hover:text-[#0D2A60]"
+                 />
               </div>
 
               <div className="bg-gradient-to-br from-[#1A4FAD] to-[#0D2A60] p-8 rounded-[2rem] shadow-2xl text-white">
@@ -614,16 +654,14 @@ function StandardServiceTemplate({ service }: { service: any }) {
                    </div>
                    Patient Benefits
                 </h2>
-                <ul className="space-y-4">
-                  {service.benefits.map((benefit: string, index: number) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
-                        <Check className="w-3.5 h-3.5 text-[#00C8E8]" />
-                      </div>
-                      <span className="text-white/80 font-medium">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
+                 <ReadMoreList
+                   items={service.benefits}
+                   limit={4}
+                   badgeClassName="bg-white/10"
+                   checkClassName="text-[#00C8E8]"
+                   textClassName="text-white/80"
+                   buttonClassName="text-[#00C8E8] hover:text-white"
+                 />
               </div>
             </div>
           </div>
