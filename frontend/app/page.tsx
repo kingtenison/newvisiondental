@@ -10,7 +10,7 @@ import InsurancePartners from './components/sections/InsurancePartners'
 import WhatsAppChat from './components/widgets/WhatsAppChat'
 
 export const metadata = {
-  title: 'Home',
+  title: 'Premium Dental Care in Accra, Ghana',
   description: 'New Vision Dental Clinic — premium dental care across Accra, Ghana. Book your appointment for implants, whitening, root canals, and more.',
   openGraph: {
     title: 'New Vision Dental Clinic - Premium Dental Care in Accra, Ghana',
