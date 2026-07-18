@@ -1,9 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Users, Award, Heart, Target, Eye, Star, Phone, Calendar, MapPin, Sparkles, Check } from "lucide-react";
+import { Users, Award, Heart, Target, Eye, Star, Phone, Calendar, MapPin, Sparkles, Check, ChevronDown } from "lucide-react";
 
 const featuredDoctor = {
   name: "Dr. Felix Govina",
@@ -36,36 +37,108 @@ const featuredDoctor = {
 
 const team = [
   {
-    name: "Dr. Abena Serwaa",
-    title: "Senior Dentist",
-    qualifications: "BDS, MSc (Endodontics)",
-    experience: "12+ years",
-    speciality: "Root Canal Treatment & Cosmetic Dentistry",
-    bio: "Dr. Abena Serwaa is a highly skilled endodontist with a special interest in pain-free root canal treatments. She trained in Germany and South Africa.",
-    image: "/images/team/dr 2.jpg",
-    education: ["BDS - KNUST", "MSc Endodontics - Charité Berlin", "Advanced Cosmetic Dentistry - Cape Town"]
+    name: "Dr. Akosua Oforiwa Haizel-Aryeetey",
+    title: "Dental Surgeon & Orthodontist",
+    qualifications: "BDS",
+    experience: "23+ years",
+    speciality: "Orthodontics & Dento-facial Orthopaedics",
+    bio: "I am Dr Akosua Oforiwa Haizel-Aryeetey, a dental surgeon with specialty in Orthodontics and Dento-facial Orthopaedics. I had my BDS degree from UNIVERSITY OF GHANA DENTAL SCHOOL. I have been practicing for the past twenty-three years and I have a lot of clinical and community experience. I have worked in both the public and private institutions and have a lot of experience in my chosen field. I give off my best in the dispensation of my duties. My approach to work is client centered. My motto is hard work always pays.",
+    image: "/images/team/dr-akosua.jpg",
+    education: ["BDS - University of Ghana Dental School"]
   },
   {
-    name: "Dr. John Mensah",
-    title: "Pediatric Dentist",
-    qualifications: "BDS, MSc (Pediatric Dentistry)",
-    experience: "10+ years",
-    speciality: "Children's Dentistry & Preventive Care",
-    bio: "Dr. John Mensah specializes in making dental visits fun and educational for children. He trained in pediatric dentistry in the USA.",
-    image: "/images/team/dr 3.jpg",
-    education: ["BDS - University of Ghana", "MSc Pediatric Dentistry - Boston University", "Child Psychology Certificate - Harvard"]
+    name: "Dr. Fatima Mustapha",
+    title: "Medical Officer",
+    qualifications: "BDS, BSc (Human Biology)",
+    experience: "5+ years",
+    speciality: "General Dentistry & Preventive Oral Health",
+    bio: "Dr. Fatima Mustapha is a Ghanaian dental surgeon with experience in both hospital-based and private dental practice. She currently serves as a Medical Officer at New Vision Dental Clinic in Accra, where she provides comprehensive dental care and promotes preventive oral health education. Her professional experience includes serving as a Senior House Officer at the University Hospital, University of Ghana, and completing her Junior Housemanship at Komfo Anokye Teaching Hospital, where she gained extensive experience in patient assessment, diagnosis, treatment planning, restorative dentistry, endodontics, and minor oral surgery. Dr. Mustapha holds a Bachelor of Dental Surgery (BDS) and a Bachelor of Science in Human Biology from the Kwame Nkrumah University of Science and Technology (KNUST). She is passionate about delivering patient-centered care, promoting oral health awareness, and contributing to improved health outcomes through clinical excellence and continuous professional development.",
+    image: "/images/team/dr-fatima.jpg",
+    education: ["BDS - KNUST", "BSc Human Biology - KNUST"]
   },
   {
-    name: "Dr. Esi Mawusi",
-    title: "Cosmetic Dentist",
-    qualifications: "BDS, MSc (Cosmetic Dentistry)",
-    experience: "8+ years",
-    speciality: "Teeth Whitening, Veneers & Smile Makeovers",
-    bio: "Dr. Esi Mawusi has a passion for creating beautiful, natural-looking smiles. Trained in the latest cosmetic techniques in Spain and South Africa.",
-    image: "/images/team/dr4.jpg",
-    education: ["BDS - University of Ghana", "MSc Cosmetic Dentistry - Madrid", "Advanced Veneer Certification - Cape Town"]
+    name: "Dr. Dennis Osae",
+    title: "General Dentist",
+    qualifications: "BSc, BDS",
+    experience: "9+ years",
+    speciality: "General, Restorative & Cosmetic Dentistry",
+    bio: "Dr. Dennis Osae is an experienced General Dentist dedicated to delivering comprehensive, patient-centered oral healthcare. He earned his Bachelor of Science (BSc) and Bachelor of Dental Surgery (BDS) from KNUST School of Medicine and Dentistry in 2017. With nearly a decade of clinical experience, Dr. Osae has built a reputation for his gentle demeanor, precision, and ability to make even the most anxious patients feel completely at ease in the dental chair. For Dr. Osae, successful dental care goes beyond technical excellence, it is about building trust. He takes a personalized approach to every treatment plan, ensuring: Open Communication — every procedure is explained clearly so you can make informed decisions about your oral health; Comfort-First Care — utilizing modern techniques to ensure procedures are as smooth, efficient, and pain-free as possible; Tailored Results — whether it is a routine checkup or a complex restorative procedure, treatments are customized to fit your lifestyle and long-term health goals. Dr. Osae provides a wide range of general dental services for families and individuals, including: Preventive & Routine Care, Restorative Dentistry, Cosmetic Treatments, and Oral Surgery.",
+    image: "/images/team/dr-dennis.jpg",
+    education: ["BSc - KNUST", "BDS - KNUST School of Medicine and Dentistry"]
+  },
+  {
+    name: "Dr. Keith Kwesi Wiredu Sagoe",
+    title: "Dental Surgeon",
+    qualifications: "BDS",
+    experience: "5+ years",
+    speciality: "Preventive, Restorative & Emergency Dentistry",
+    bio: "Dr. Keith Kwesi Wiredu Sagoe is a dedicated Dental Surgeon with a passion for delivering high-quality, patient-centered oral healthcare. He is committed to helping patients achieve and maintain healthy smiles through preventive care, education, and evidence-based dental treatment. Dr. Sagoe obtained his dental training in China, where he developed a strong foundation in modern dental science and clinical practice. His international education provided him with exposure to diverse healthcare systems and advanced dental techniques, equipping him with the skills to manage a wide range of oral health conditions. Over the years, Dr. Sagoe has gained valuable experience in both public and private dental practice, providing comprehensive dental care to patients of all ages. His areas of expertise include preventive dentistry, restorative dentistry, endodontics (root canal treatment), oral surgery, pediatric dentistry, and emergency dental care. He is particularly passionate about patient education and believes that empowering people with accurate oral health information is key to preventing disease and improving overall health outcomes. In addition to his clinical work, Dr. Sagoe is actively involved in oral health promotion and community education. Known for his calm demeanor, gentle approach, and attention to detail, Dr. Sagoe is dedicated to building lasting relationships with his patients based on trust, professionalism, and compassion.",
+    image: "/images/team/dr-keith.jpg",
+    education: ["BDS - Dental Training in China"]
   }
 ];
+
+function TeamCard({ member, index }: { member: typeof team[0]; index: number }) {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="group"
+    >
+      {/* Photo */}
+      <div className="relative rounded-t-2xl overflow-hidden bg-gradient-to-b from-white/10 to-transparent">
+        <Image
+          src={member.image}
+          alt={member.name}
+          width={400}
+          height={500}
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          className="w-full h-auto object-cover object-top"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="relative p-5 rounded-b-2xl border border-t-0 border-[#E8B830]/20 bg-gradient-to-br from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8] shadow-lg">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-[#E8B830]/5 rounded-full blur-[60px]" />
+        <div className="relative">
+          <h3 className="text-lg font-bold text-white mb-1">{member.name}</h3>
+          <p className="text-[#E8B830] text-sm font-semibold mb-2">{member.title}</p>
+          <div className="flex items-center gap-2 mb-3">
+            <span className="text-[10px] text-white/60 bg-white/10 px-2 py-0.5 rounded-full">{member.qualifications}</span>
+            <span className="text-[10px] text-[#E8B830] bg-[#E8B830]/10 px-2 py-0.5 rounded-full">{member.experience}</span>
+          </div>
+          
+          {/* Bio with expand/collapse */}
+          <div className="mb-4">
+            <p className={`text-white/70 text-sm leading-relaxed ${!expanded ? 'line-clamp-3' : ''}`}>
+              {member.bio}
+            </p>
+            <button
+              onClick={() => setExpanded(!expanded)}
+              className="inline-flex items-center gap-1 text-[#E8B830] text-xs font-semibold mt-2 hover:text-[#E8B830]/80 transition-colors"
+            >
+              {expanded ? 'Show Less' : 'Read More'}
+              <ChevronDown className={`w-3 h-3 transition-transform ${expanded ? 'rotate-180' : ''}`} />
+            </button>
+          </div>
+
+          <div className="pt-3 border-t border-white/10">
+            <p className="text-xs text-white/50">
+              <span className="font-semibold text-[#E8B830]">Specialty:</span> {member.speciality}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Gold accent line at bottom */}
+      <div className="h-0.5 bg-gradient-to-r from-[#E8B830] via-[#B07820] to-[#E8B830] rounded-b-2xl" />
+    </motion.div>
+  );
+}
 
 const values = [
   { title: "Excellence", desc: "We strive for excellence in everything we do, from consultation to treatment.", icon: Award },
@@ -222,25 +295,26 @@ export default function AboutPage() {
             transition={{ duration: 0.7 }}
             className="mb-12"
           >
-            <div className="relative bg-gradient-to-br from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8] rounded-3xl overflow-hidden border border-[#E8B830]/20 shadow-2xl shadow-black/10">
-              {/* Gold blurs */}
-              <div className="absolute top-0 right-0 w-96 h-96 bg-[#E8B830]/6 rounded-full blur-[120px]" />
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#E8B830]/4 rounded-full blur-[100px]" />
+            <div className="relative rounded-3xl overflow-hidden border border-[#E8B830]/20 shadow-2xl shadow-black/10">
+              {/* Photo */}
+              <div className="relative bg-gradient-to-b from-white/10 to-transparent">
+                <Image
+                  src={featuredDoctor.image}
+                  alt={featuredDoctor.name}
+                  width={1200}
+                  height={800}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="w-full h-auto object-cover object-top"
+                />
+              </div>
 
-              <div className="relative grid md:grid-cols-2 gap-0 items-stretch">
-                {/* Photo */}
-                <div className="relative h-[350px] md:h-auto md:min-h-[450px]">
-                    <Image
-                      src={featuredDoctor.image}
-                      alt={featuredDoctor.name}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover object-top"
-                    />
-                </div>
-
-                {/* Content */}
-                <div className="p-8 md:p-12 flex flex-col justify-center">
+              {/* Content */}
+              <div className="relative p-8 md:p-12 bg-gradient-to-br from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8]">
+                {/* Gold blurs */}
+                <div className="absolute top-0 right-0 w-96 h-96 bg-[#E8B830]/6 rounded-full blur-[120px]" />
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#E8B830]/4 rounded-full blur-[100px]" />
+                
+                <div className="relative">
                   <span className="inline-flex items-center gap-1.5 text-[#E8B830] text-xs font-semibold tracking-wide uppercase mb-3">
                     <Award className="w-3.5 h-3.5" />
                     Founder & CEO
@@ -316,41 +390,9 @@ export default function AboutPage() {
           </motion.div>
 
           {/* Remaining Team Members */}
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {team.map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="space-y-4"
-              >
-                {/* Photo Card */}
-                <div className="relative h-64 md:h-80 lg:h-96 w-full rounded-2xl overflow-hidden">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                </div>
-
-                {/* Content Card */}
-                <div className="bg-white rounded-2xl border border-[#E8B830]/15 p-5 hover:shadow-lg hover:shadow-[#E8B830]/5 hover:border-[#E8B830]/30 transition-all duration-300">
-                  <h3 className="text-lg font-bold text-[#1A4FAD]">{member.name}</h3>
-                  <p className="text-[#E8B830] text-sm font-semibold">{member.title}</p>
-                  <p className="text-gray-500 text-xs mt-1 mb-3">{member.qualifications} — {member.experience}</p>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">{member.bio}</p>
-                  <div className="pt-3 border-t border-gray-100">
-                    <p className="text-xs text-gray-500">
-                      <span className="font-semibold text-[#1A4FAD]">Specialty:</span> {member.speciality}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
+              <TeamCard key={index} member={member} index={index} />
             ))}
           </div>
         </div>

@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { 
   Sparkles, Shield, Heart, Sun, Stethoscope, ScanLine, PenTool, Crown, MinusCircle, Smile, Droplets, ShieldCheck, Baby, CheckCircle,
   Clock, ChevronRight, Star, Phone, Calendar as CalendarIcon,
-  Check, Award, Users, MapPin, ArrowRight, AlertTriangle, Scissors
+  Check, Award, Users, MapPin, ArrowRight, AlertTriangle, Scissors, Utensils, Pill
 } from "lucide-react";
 import { FadeIn } from "@/app/components/animations/FadeIn";
 import Image from "next/image";
@@ -88,7 +88,7 @@ const services = [
   {
     name: "Teeth Whitening",
     description: "Professional whitening for a brighter, more confident smile",
-    longDescription: "At New Vision Dental Clinic, our professional teeth whitening procedures are tailored to your individual needs, delivering faster, safer, and more noticeable results than over-the-counter whitening products. The treatment is non-invasive, comfortable, and can significantly enhance your confidence by giving you a brighter, healthier-looking smile.\n\nWhether you are preparing for a special occasion or simply want to refresh your appearance, professional teeth whitening is a quick and effective way to achieve a more dazzling smile. Schedule a consultation today to discover the best whitening option for you.\n\nWhy Professional Teeth Whitening?\n\nOver time, teeth can become stained or discolored due to a variety of factors, including dietary habits (coffee, tea, red wine, and berries), tobacco use, aging (enamel wears away revealing the yellowish dentin beneath), and certain medications such as tetracycline. While over-the-counter whitening products promise results, they often fall short in delivering noticeable or long-lasting improvements. Professional teeth whitening offers a more effective and reliable solution.\n\nReady to achieve a brighter and more confident smile? Wondering what type of whitening is best for you? Call our office on 0257091176 / 0246850455 and let us help you transform your smile and boost your confidence with our expert whitening solutions!",
+    longDescription: "At New Vision Dental Clinic, our professional teeth whitening procedures are tailored to your individual needs, delivering faster, safer, and more noticeable results than over-the-counter whitening products. The treatment is non-invasive, comfortable, and can significantly enhance your confidence by giving you a brighter, healthier-looking smile.\n\nWhether you're preparing for a special occasion or simply want to refresh your appearance, professional teeth whitening is a quick and effective way to achieve a more dazzling smile. Schedule a consultation today to discover the best whitening option for you.\n\nWhy Professional Teeth Whitening?\n\nOver time, teeth can become stained or discolored due to a variety of factors, including:\n• Dietary Habits: Foods and beverages like coffee, tea, red wine, and berries can leave stains on your enamel.\n• Tobacco Use: Smoking or chewing tobacco can cause yellowing or darkening of your teeth.\n• Aging: As we age, enamel wears away, revealing the yellowish dentin beneath.\n• Medications: Certain medications, such as tetracycline, can cause tooth discoloration.\n\nWhile over-the-counter whitening products promise results, they often fall short in delivering noticeable or long-lasting improvements. Professional teeth whitening, on the other hand, offers a more effective and reliable solution.\n\nWhy Choose New Vision Dental Clinic for Teeth Whitening?\n• Customized Treatment Plans: Our dentists will assess your teeth and decide on a whitening plan tailored to your needs and goals.\n• Safe and Effective: Our European approved BlancOne whitening products protect your enamel while delivering stunning results.\n• Our BlancOne® treatments are tailored to your individual needs, whether you want a quick refresh after your dental cleaning or a more intensive whitening treatment for deeper stains. The innovative technology is designed to achieve zero or negligible sensitivity during our teeth whitening procedure while providing noticeable results in a short time.\n• Quick Results: Achieve a noticeably brighter smile in as little as one session.\n\nTypes of Professional Teeth Whitening\n\nAt New Vision Dental Clinic, we offer three types of teeth whitening treatments:\n• In-Office Whitening: This procedure involves applying our BlancOne whitening gel to your teeth and activating it with a special light. The process is quick, often completed in about 30 minutes, and produces dramatic results.\n• Home Whitening: For patients who prefer the convenience of whitening at home, we provide custom-made trays (gum shield) and professional-grade BlancOne gel. This option allows you to achieve gradual, yet equally stunning, results on your own schedule.\n• A combination of In-Office Whitening & Home Whitening: Because both in-office whitening and take-home whitening offer certain benefits that the other does not, using the two together is what we recommend for best results. This is what we call New Vision Dental Clinic Ultimate Whitening Package.\n\nWe want you to have the best results and the benefits of both whitening options. Our Ultimate Whitening Package provides you with best results and the benefits of both whitening options to dramatically and quickly whiten your teeth as well as maintain those beautiful pearly whites!\n\nBenefits of Professional Teeth Whitening\n• Dramatic Results: Professional whitening can brighten your teeth by several shades in a short amount of time.\n• Long-Lasting Effects: Our treatments provide longer-lasting results compared to over-the-counter options.\n• Safe for Enamel: Professional whitening is carefully controlled to minimize sensitivity and protect your teeth.\n• Boosts Confidence: A brighter smile can enhance your self-esteem in both personal and professional settings.\n\nMaintaining Your Whitened Smile\n\nAfter your whitening treatment, maintaining your results is key to keeping your smile bright. Here are some tips to help prolong your whitening effects:\n• Avoid Stain-Causing Foods and Drinks: Limit your consumption of coffee, tea, red wine, and other staining agents.\n• Practice Good Oral Hygiene: Brush and floss regularly to remove plaque and prevent discoloration.\n• Use Whitening Toothpaste: A whitening toothpaste can help maintain your bright smile between treatments.\n• Schedule Regular Cleanings: Professional dental cleanings at our clinic to remove surface stains and keep your teeth looking their best.\n\nReady to achieve a brighter and more confident smile? Wondering more what type of whitening is best for you? Call our office on 0257091176/0246850455 and let us help you transform your smile and boost your confidence with our expert whitening solutions!\n\nSchedule Your Teeth Whitening Appointment Today",
     icon: Sun,
     slug: "teeth-whitening",
     duration: "60 mins",
@@ -598,6 +598,686 @@ function DentalImplantsRichContent({ service }: { service: any }) {
   );
 }
 
+function TeethWhiteningContent({ service }: { service: any }) {
+  const sections = service.longDescription.split('\n\n');
+  
+  return (
+    <div className="w-full">
+      <FadeIn>
+        <div className="relative h-80 md:h-[28rem] w-full rounded-[2.5rem] overflow-hidden mb-12 shadow-2xl group">
+          <Image src={service.image} alt={service.name} fill sizes="100vw" className="object-cover group-hover:scale-105 transition-transform duration-700" priority />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+          <div className="absolute bottom-8 left-8 right-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#E8B830]/20 backdrop-blur-md rounded-full border border-[#E8B830]/30 mb-4">
+              <Sun className="w-4 h-4 text-[#E8B830]" />
+              <span className="text-[#E8B830] text-xs font-bold uppercase tracking-widest">Premium Service</span>
+            </div>
+            <p className="text-white text-3xl md:text-5xl font-bold">{service.name}</p>
+          </div>
+        </div>
+
+        {/* Hero Summary */}
+        <div className="bg-gradient-to-r from-[#1A4FAD] to-[#0D2A60] rounded-[2rem] p-8 md:p-10 mb-10 text-white">
+          <div className="flex items-start gap-4">
+            <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center shrink-0 border border-white/20">
+              <Sun className="w-7 h-7 text-[#E8B830]" />
+            </div>
+            <div>
+              <p className="text-lg md:text-xl leading-relaxed text-white/90">{sections[0]}</p>
+              {sections[1] && <p className="text-lg md:text-xl leading-relaxed text-white/90 mt-4">{sections[1]}</p>}
+            </div>
+          </div>
+        </div>
+
+        {/* Why Professional Whitening */}
+        <div className="bg-white rounded-[2rem] p-8 md:p-10 mb-8 border border-gray-100 shadow-xl shadow-black/5">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-[#00C8E8]/10 rounded-xl flex items-center justify-center">
+              <Sparkles className="w-5 h-5 text-[#00C8E8]" />
+            </div>
+            <h2 className="text-2xl font-bold text-[#1A4FAD]">Why Professional Teeth Whitening?</h2>
+          </div>
+          <p className="text-gray-600 mb-5">Over time, teeth can become stained or discolored due to a variety of factors:</p>
+          <div className="grid md:grid-cols-2 gap-4 mb-6">
+            {[
+              { icon: <Utensils className="w-5 h-5" />, title: 'Dietary Habits', desc: 'Coffee, tea, red wine, and berries can leave stains on your enamel.' },
+              { icon: <AlertTriangle className="w-5 h-5" />, title: 'Tobacco Use', desc: 'Smoking or chewing tobacco can cause yellowing or darkening of your teeth.' },
+              { icon: <Clock className="w-5 h-5" />, title: 'Aging', desc: 'As we age, enamel wears away, revealing the yellowish dentin beneath.' },
+              { icon: <Pill className="w-5 h-5" />, title: 'Medications', desc: 'Certain medications, such as tetracycline, can cause tooth discoloration.' }
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                <div className="w-10 h-10 bg-[#00C8E8]/10 rounded-xl flex items-center justify-center shrink-0 text-[#00C8E8]">
+                  {item.icon}
+                </div>
+                <div>
+                  <p className="font-bold text-gray-800">{item.title}</p>
+                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-gray-600">While over-the-counter whitening products promise results, they often fall short in delivering noticeable or long-lasting improvements. Professional teeth whitening offers a more effective and reliable solution.</p>
+        </div>
+
+        {/* Why Choose Us */}
+        <div className="bg-gradient-to-br from-[#1A4FAD] to-[#0D2A60] rounded-[2rem] p-8 md:p-10 mb-8 text-white">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+              <Shield className="w-5 h-5 text-[#E8B830]" />
+            </div>
+            <h2 className="text-2xl font-bold">Why Choose New Vision Dental Clinic?</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-5">
+            {[
+              { title: 'Customized Treatment Plans', desc: 'Our dentists will assess your teeth and decide on a whitening plan tailored to your needs and goals.' },
+              { title: 'Safe and Effective', desc: 'Our European approved BlancOne whitening products protect your enamel while delivering stunning results.' },
+              { title: 'Zero Sensitivity Technology', desc: 'Our BlancOne® treatments achieve zero or negligible sensitivity while providing noticeable results in a short time.' },
+              { title: 'Quick Results', desc: 'Achieve a noticeably brighter smile in as little as one session.' }
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-3 bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/10">
+                <Check className="w-5 h-5 text-[#E8B830] shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-bold text-white">{item.title}</p>
+                  <p className="text-white/70 text-sm mt-1">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Types of Whitening */}
+        <div className="bg-white rounded-[2rem] p-8 md:p-10 mb-8 border border-gray-100 shadow-xl shadow-black/5">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-[#00C8E8]/10 rounded-xl flex items-center justify-center">
+              <Stethoscope className="w-5 h-5 text-[#00C8E8]" />
+            </div>
+            <h2 className="text-2xl font-bold text-[#1A4FAD]">Types of Professional Teeth Whitening</h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { title: 'In-Office Whitening', desc: 'BlancOne whitening gel is applied to your teeth and activated with a special light. The process is quick, often completed in about 30 minutes, and produces dramatic results.', color: 'from-[#1A4FAD] to-[#0D2A60]' },
+              { title: 'Home Whitening', desc: 'Custom-made trays (gum shield) and professional-grade BlancOne gel let you achieve gradual, equally stunning results on your own schedule.', color: 'from-[#00C8E8] to-[#1A4FAD]' },
+              { title: 'Ultimate Package', desc: 'A combination of in-office and home whitening for the best, most lasting results — dramatically and quickly whitening your teeth while maintaining them.', color: 'from-[#E8B830] to-[#D4A017]' }
+            ].map((item, i) => (
+              <div key={i} className={`bg-gradient-to-br ${item.color} rounded-2xl p-6 text-white`}>
+                <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+                  <span className="text-white font-bold text-lg">{i + 1}</span>
+                </div>
+                <h3 className="font-bold text-lg mb-3">{item.title}</h3>
+                <p className="text-white/80 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6 p-5 bg-[#E8B830]/10 rounded-xl border border-[#E8B830]/20">
+            <p className="text-gray-700 font-medium">
+              <span className="font-bold text-[#1A4FAD]">Our Ultimate Whitening Package</span> provides you with the best results and the benefits of both whitening options to dramatically and quickly whiten your teeth as well as maintain those beautiful pearly whites!
+            </p>
+          </div>
+        </div>
+
+        {/* Benefits */}
+        <div className="bg-white rounded-[2rem] p-8 md:p-10 mb-8 border border-gray-100 shadow-xl shadow-black/5">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-[#E8B830]/10 rounded-xl flex items-center justify-center">
+              <Award className="w-5 h-5 text-[#E8B830]" />
+            </div>
+            <h2 className="text-2xl font-bold text-[#1A4FAD]">Benefits of Professional Teeth Whitening</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-5">
+            {[
+              { title: 'Dramatic Results', desc: 'Professional whitening can brighten your teeth by several shades in a short amount of time.', icon: <Sparkles className="w-5 h-5" /> },
+              { title: 'Long-Lasting Effects', desc: 'Our treatments provide longer-lasting results compared to over-the-counter options.', icon: <Clock className="w-5 h-5" /> },
+              { title: 'Safe for Enamel', desc: 'Professional whitening is carefully controlled to minimize sensitivity and protect your teeth.', icon: <Shield className="w-5 h-5" /> },
+              { title: 'Boosts Confidence', desc: 'A brighter smile can enhance your self-esteem in both personal and professional settings.', icon: <Heart className="w-5 h-5" /> }
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-4 p-5 bg-gray-50 rounded-xl">
+                <div className="w-10 h-10 bg-[#00C8E8]/10 rounded-xl flex items-center justify-center shrink-0 text-[#00C8E8]">
+                  {item.icon}
+                </div>
+                <div>
+                  <p className="font-bold text-gray-800">{item.title}</p>
+                  <p className="text-gray-600 text-sm mt-1">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Maintaining Your Smile */}
+        <div className="bg-gradient-to-r from-[#00C8E8]/10 to-[#1A4FAD]/10 rounded-[2rem] p-8 md:p-10 mb-8 border border-[#00C8E8]/20">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-[#1A4FAD]/10 rounded-xl flex items-center justify-center">
+              <Heart className="w-5 h-5 text-[#1A4FAD]" />
+            </div>
+            <h2 className="text-2xl font-bold text-[#1A4FAD]">Maintaining Your Whitened Smile</h2>
+          </div>
+          <p className="text-gray-600 mb-5">After your whitening treatment, maintaining your results is key to keeping your smile bright. Here are some tips to help prolong your whitening effects:</p>
+          <div className="grid md:grid-cols-2 gap-4">
+            {[
+              { title: 'Avoid Stain-Causing Foods and Drinks', desc: 'Limit your consumption of coffee, tea, red wine, and other staining agents.' },
+              { title: 'Practice Good Oral Hygiene', desc: 'Brush and floss regularly to remove plaque and prevent discoloration.' },
+              { title: 'Use Whitening Toothpaste', desc: 'A whitening toothpaste can help maintain your bright smile between treatments.' },
+              { title: 'Schedule Regular Cleanings', desc: 'Professional dental cleanings at our clinic remove surface stains and keep your teeth looking their best.' }
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-3 bg-white rounded-xl p-4">
+                <Check className="w-5 h-5 text-[#00C8E8] shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-bold text-gray-800 text-sm">{item.title}</p>
+                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Professional Whitening Image */}
+        <div className="relative w-full rounded-[2rem] overflow-hidden mb-10 shadow-2xl">
+          <Image
+            src="/images/services/professional-whitening.jpg"
+            alt="Professional Teeth Whitening at New Vision Dental Clinic"
+            width={1774}
+            height={887}
+            unoptimized
+            className="w-full h-auto object-cover"
+          />
+        </div>
+
+        {/* CTA */}
+        <div className="bg-gradient-to-r from-[#1A4FAD] to-[#0D2A60] rounded-[2rem] p-8 md:p-10 text-center text-white">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Achieve a Brighter Smile?</h2>
+          <p className="text-white/80 mb-8 max-w-2xl mx-auto">Wondering what type of whitening is best for you? Call our office and let us help you transform your smile and boost your confidence with our expert whitening solutions!</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/book" className="btn-golden-shine text-[#1a0a10] px-8 py-4 rounded-full font-bold shadow-xl shadow-[#E8B830]/30 hover:scale-105 transition-all flex items-center justify-center gap-3">
+              <CalendarIcon className="w-5 h-5" />
+              Schedule Appointment
+            </Link>
+            <a href="tel:+233257091176" className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-[#1A4FAD] transition-all flex items-center justify-center gap-3">
+              <Phone className="w-5 h-5" />
+              Call: 0257 091 176
+            </a>
+            <a href="tel:+233246850455" className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-[#1A4FAD] transition-all flex items-center justify-center gap-3">
+              <Phone className="w-5 h-5" />
+              Call: 0246 850 455
+            </a>
+          </div>
+        </div>
+      </FadeIn>
+    </div>
+  );
+}
+
+function EmergencyDentistryContent({ service }: { service: any }) {
+  return (
+    <div className="w-full">
+      <FadeIn>
+        {/* Hero Image */}
+        <div className="relative h-80 md:h-[28rem] w-full rounded-[2.5rem] overflow-hidden mb-12 shadow-2xl group">
+          <Image src={service.image} alt={service.name} fill sizes="100vw" className="object-cover group-hover:scale-105 transition-transform duration-700" priority />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+          <div className="absolute bottom-8 left-8 right-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#E8B830]/20 backdrop-blur-md rounded-full border border-[#E8B830]/30 mb-4">
+              <AlertTriangle className="w-4 h-4 text-[#E8B830]" />
+              <span className="text-[#E8B830] text-xs font-bold uppercase tracking-widest">Emergency Care</span>
+            </div>
+            <p className="text-white text-3xl md:text-5xl font-bold">{service.name}</p>
+          </div>
+        </div>
+
+        {/* Hero Summary */}
+        <div className="bg-gradient-to-r from-[#1A4FAD] to-[#0D2A60] rounded-[2rem] p-8 md:p-10 mb-10 text-white">
+          <div className="flex items-start gap-4">
+            <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center shrink-0 border border-white/20">
+              <AlertTriangle className="w-7 h-7 text-[#E8B830]" />
+            </div>
+            <div>
+              <p className="text-lg md:text-xl leading-relaxed text-white/90">No one wants to have a dental emergency. But they can happen to any of us. One minute you are biting into a sandwich and the next thing you know, half of your tooth is in your hand.</p>
+              <p className="text-lg md:text-xl leading-relaxed text-white/90 mt-4">One minute a pain that was nagging but dull is suddenly keeping you up at night.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* What Is Emergency Dentistry */}
+        <div className="bg-white rounded-[2rem] p-8 md:p-10 mb-8 border border-gray-100 shadow-xl shadow-black/5">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-[#00C8E8]/10 rounded-xl flex items-center justify-center">
+              <Stethoscope className="w-5 h-5 text-[#00C8E8]" />
+            </div>
+            <h2 className="text-2xl font-bold text-[#1A4FAD]">What Is Emergency Dentistry?</h2>
+          </div>
+          <p className="text-gray-600 mb-4">Emergency dentistry focuses on treating dental problems that require immediate attention to relieve pain, prevent further damage, or address serious oral health concerns. Whether you&apos;re dealing with a severe toothache, a knocked-out tooth, or a broken restoration, our team is equipped to provide the care you need right away.</p>
+          <p className="text-gray-600 mb-4">Even if you are not in pain, such as when a tooth is broken or lost, it is still extremely important to be evaluated as soon as possible. Often, time is of the essence and the first several hours after the incident or accident can determine the prognosis of the affected tooth.</p>
+          <div className="bg-[#E8B830]/10 rounded-xl p-5 border border-[#E8B830]/20">
+            <p className="text-[#0D2A60] font-medium flex items-center gap-2">
+              <Heart className="w-5 h-5 text-[#E8B830]" />
+              Our entire staff will treat your dental emergency the way we would want our own treated, promptly and with compassion.
+            </p>
+          </div>
+        </div>
+
+        {/* Prompt Care */}
+        <div className="bg-white rounded-[2rem] p-8 md:p-10 mb-8 border border-gray-100 shadow-xl shadow-black/5">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-[#00C8E8]/10 rounded-xl flex items-center justify-center">
+              <Clock className="w-5 h-5 text-[#00C8E8]" />
+            </div>
+            <h2 className="text-2xl font-bold text-[#1A4FAD]">Prompt, Reliable Dental Care When You Need It Most</h2>
+          </div>
+          <p className="text-gray-600">Dental emergencies can happen unexpectedly, but knowing where to turn can make all the difference. We provide fast, effective emergency dental care to help alleviate pain and restore your smile. As a trusted Dental Clinic near you, our experienced team is here to address urgent dental issues with expertise and compassion.</p>
+        </div>
+
+        {/* Why Choose Us */}
+        <div className="bg-gradient-to-br from-[#1A4FAD] to-[#0D2A60] rounded-[2rem] p-8 md:p-10 mb-8 text-white">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+              <Shield className="w-5 h-5 text-[#E8B830]" />
+            </div>
+            <h2 className="text-2xl font-bold">Why Choose New Vision Dental Clinic for Emergency Care?</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-5">
+            {[
+              { title: 'Same-Day Appointments', desc: 'We prioritize dental emergencies and strive to see you as quickly as possible, often on the same day. We offer extended hours, including Saturday appointments and in some cases, Sunday appointments.', icon: <Clock className="w-5 h-5" /> },
+              { title: 'Comprehensive Services', desc: 'From pain relief to restorative solutions, we address a wide range of dental emergencies efficiently.', icon: <CheckCircle className="w-5 h-5" /> },
+              { title: 'Compassionate Care', desc: 'Dr Govina and his team create a calming environment to ensure your comfort during stressful situations.', icon: <Heart className="w-5 h-5" /> },
+              { title: 'Trusted Expertise', desc: 'The dental team at New Vision Dental Clinic combines advanced skills with modern technology to deliver exceptional results.', icon: <Award className="w-5 h-5" /> }
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-3 bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/10">
+                <div className="text-[#E8B830] shrink-0 mt-0.5">{item.icon}</div>
+                <div>
+                  <p className="font-bold text-white">{item.title}</p>
+                  <p className="text-white/70 text-sm mt-1">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Common Emergencies */}
+        <div className="bg-white rounded-[2rem] p-8 md:p-10 mb-8 border border-gray-100 shadow-xl shadow-black/5">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-[#E8B830]/10 rounded-xl flex items-center justify-center">
+              <AlertTriangle className="w-5 h-5 text-[#E8B830]" />
+            </div>
+            <h2 className="text-2xl font-bold text-[#1A4FAD]">Common Dental Emergencies We Treat</h2>
+          </div>
+          <p className="text-gray-600 mb-5">We handle a variety of urgent dental issues, including:</p>
+          <div className="grid md:grid-cols-2 gap-4">
+            {[
+              { title: 'Severe Toothaches', desc: 'Addressing the cause of pain, such as cavities, infections, or abscesses.', icon: <AlertTriangle className="w-5 h-5" /> },
+              { title: 'Knocked-Out Teeth', desc: 'Providing immediate care to preserve and reattach the tooth when possible.', icon: <MinusCircle className="w-5 h-5" /> },
+              { title: 'Chipped or Broken Teeth', desc: 'Restoring damaged teeth with bonding, crowns, or other solutions.', icon: <Scissors className="w-5 h-5" /> },
+              { title: 'Lost Fillings or Crowns', desc: 'Repairing or replacing restorations to protect your teeth.', icon: <Shield className="w-5 h-5" /> },
+              { title: 'Gum Swelling or Infections', desc: 'Diagnosing and treating the source of swelling to prevent complications.', icon: <Heart className="w-5 h-5" /> },
+              { title: 'Injuries to Lips, Gums, or Tongue', desc: 'Managing oral injuries caused by accidents or trauma.', icon: <CheckCircle className="w-5 h-5" /> }
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                <div className="w-10 h-10 bg-[#1A4FAD]/10 rounded-xl flex items-center justify-center shrink-0 text-[#1A4FAD]">
+                  {item.icon}
+                </div>
+                <div>
+                  <p className="font-bold text-gray-800">{item.title}</p>
+                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* What to Do */}
+        <div className="bg-gradient-to-r from-[#1A4FAD] to-[#0D2A60] rounded-[2rem] p-8 md:p-10 mb-8 text-white">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+              <CheckCircle className="w-5 h-5 text-[#E8B830]" />
+            </div>
+            <h2 className="text-2xl font-bold">What to Do in a Dental Emergency</h2>
+          </div>
+          <p className="text-white/80 mb-6">If you&apos;re experiencing a dental emergency, it&apos;s important to act quickly:</p>
+          <div className="space-y-5">
+            {[
+              { step: '1', title: 'Call Us Immediately', desc: 'Contact us on 0257091176/0246850455 to describe your situation and receive guidance.', icon: <Phone className="w-5 h-5" /> },
+              { step: '2', title: 'Protect the Tooth', desc: 'For a knocked-out tooth, handle it carefully by the crown and try to place it back in the socket. If this isn\'t possible, keep it in a container of milk or saliva.', icon: <Shield className="w-5 h-5" /> },
+              { step: '3', title: 'Manage Pain', desc: 'Use over-the-counter pain relievers and apply a cold compress to reduce swelling until your appointment.', icon: <Heart className="w-5 h-5" /> }
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-4 bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/10">
+                <div className="w-10 h-10 bg-[#E8B830] rounded-xl flex items-center justify-center shrink-0">
+                  <span className="text-[#1a0a10] font-bold">{item.step}</span>
+                </div>
+                <div>
+                  <p className="font-bold text-white flex items-center gap-2">{item.title}</p>
+                  <p className="text-white/70 text-sm mt-1">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-white/70 mt-6 text-sm">As your local trusted dental professionals, we will provide detailed instructions to help you take the right steps before your visit.</p>
+        </div>
+
+        {/* Experience Section */}
+        <div className="bg-white rounded-[2rem] p-8 md:p-10 mb-8 border border-gray-100 shadow-xl shadow-black/5">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-[#00C8E8]/10 rounded-xl flex items-center justify-center">
+              <Sparkles className="w-5 h-5 text-[#00C8E8]" />
+            </div>
+            <h2 className="text-2xl font-bold text-[#1A4FAD]">Experience Trusted Emergency Dental Care</h2>
+          </div>
+          <p className="text-gray-600">Our team understands the urgency and stress that come with dental emergencies. That&apos;s why we&apos;re committed to providing fast, reliable care tailored to your needs. With our advanced technology and compassionate approach, we ensure you receive the best possible treatment during unexpected situations.</p>
+        </div>
+
+        {/* CTA */}
+        <div className="bg-gradient-to-r from-[#1A4FAD] to-[#0D2A60] rounded-[2rem] p-8 md:p-10 text-center text-white">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Dental Emergency? Call Now!</h2>
+          <p className="text-white/80 mb-8 max-w-2xl mx-auto">Don&apos;t wait — contact us immediately for fast, compassionate emergency dental care. We&apos;re here to help when you need it most.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/book" className="btn-golden-shine text-[#1a0a10] px-8 py-4 rounded-full font-bold shadow-xl shadow-[#E8B830]/30 hover:scale-105 transition-all flex items-center justify-center gap-3">
+              <CalendarIcon className="w-5 h-5" />
+              Book Emergency Visit
+            </Link>
+            <a href="tel:+233257091176" className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-[#1A4FAD] transition-all flex items-center justify-center gap-3">
+              <Phone className="w-5 h-5" />
+              Call: 0257 091 176
+            </a>
+            <a href="tel:+233246850455" className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-[#1A4FAD] transition-all flex items-center justify-center gap-3">
+              <Phone className="w-5 h-5" />
+              Call: 0246 850 455
+            </a>
+          </div>
+        </div>
+      </FadeIn>
+    </div>
+  );
+}
+
+function ScalingPolishingContent({ service }: { service: any }) {
+  return (
+    <div className="w-full">
+      <FadeIn>
+        {/* Hero Image */}
+        <div className="relative h-80 md:h-[28rem] w-full rounded-[2.5rem] overflow-hidden mb-12 shadow-2xl group">
+          <Image src={service.image} alt={service.name} fill sizes="100vw" className="object-cover group-hover:scale-105 transition-transform duration-700" priority />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+          <div className="absolute bottom-8 left-8 right-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00C8E8]/20 backdrop-blur-md rounded-full border border-[#00C8E8]/30 mb-4">
+              <Sparkles className="w-4 h-4 text-[#00C8E8]" />
+              <span className="text-[#00C8E8] text-xs font-bold uppercase tracking-widest">Preventive Care</span>
+            </div>
+            <p className="text-white text-3xl md:text-5xl font-bold">{service.name}</p>
+          </div>
+        </div>
+
+        {/* Hero Summary */}
+        <div className="bg-gradient-to-r from-[#1A4FAD] to-[#0D2A60] rounded-[2rem] p-8 md:p-10 mb-10 text-white">
+          <div className="flex items-start gap-4">
+            <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center shrink-0 border border-white/20">
+              <Sparkles className="w-7 h-7 text-[#00C8E8]" />
+            </div>
+            <div>
+              <p className="text-lg md:text-xl leading-relaxed text-white/90">Professional teeth cleaning, also known as dental prophylaxis, is a preventive dental procedure designed to remove plaque, tartar (calculus), and surface stains that regular brushing and flossing cannot eliminate.</p>
+              <p className="text-lg md:text-xl leading-relaxed text-white/90 mt-4">This treatment helps maintain healthy teeth and gums while reducing the risk of cavities, gum disease, and bad breath.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* During the Procedure */}
+        <div className="bg-white rounded-[2rem] p-8 md:p-10 mb-8 border border-gray-100 shadow-xl shadow-black/5">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-[#00C8E8]/10 rounded-xl flex items-center justify-center">
+              <Stethoscope className="w-5 h-5 text-[#00C8E8]" />
+            </div>
+            <h2 className="text-2xl font-bold text-[#1A4FAD]">During the Procedure</h2>
+          </div>
+          <p className="text-gray-600 mb-4">During the procedure, our dental professionals carefully examine your oral health before using specialized instruments to remove hardened deposits from the teeth and along the gum line. The teeth are then polished to remove stains and create a smooth surface that makes it more difficult for plaque to accumulate.</p>
+          <p className="text-gray-600">In some cases, fluoride treatment may be recommended to strengthen the teeth and provide additional protection against decay.</p>
+        </div>
+
+        {/* Regular Cleanings */}
+        <div className="bg-gradient-to-r from-[#00C8E8]/10 to-[#1A4FAD]/10 rounded-[2rem] p-8 md:p-10 mb-8 border border-[#00C8E8]/20">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-[#1A4FAD]/10 rounded-xl flex items-center justify-center">
+              <Heart className="w-5 h-5 text-[#1A4FAD]" />
+            </div>
+            <h2 className="text-2xl font-bold text-[#1A4FAD]">Why Regular Cleanings Matter</h2>
+          </div>
+          <p className="text-gray-600">Regular professional cleanings not only enhance the appearance of your smile but also play a crucial role in maintaining long-term oral health. We recommend scheduling a dental cleaning every six months, or as advised by your dentist, to keep your teeth and gums in optimal condition.</p>
+        </div>
+
+        {/* Importance of Cleaning */}
+        <div className="bg-white rounded-[2rem] p-8 md:p-10 mb-8 border border-gray-100 shadow-xl shadow-black/5">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-[#E8B830]/10 rounded-xl flex items-center justify-center">
+              <Award className="w-5 h-5 text-[#E8B830]" />
+            </div>
+            <h2 className="text-2xl font-bold text-[#1A4FAD]">Importance of Cleaning</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-5">
+            {[
+              { title: 'Prevents Gum Disease', desc: 'Removes bacterial plaque that leads to gingivitis and periodontitis before it causes damage.', icon: <Shield className="w-5 h-5" /> },
+              { title: 'Cavity Protection', desc: 'Eliminates tartar and plaque that your toothbrush can\'t reach, reducing cavity risk significantly.', icon: <CheckCircle className="w-5 h-5" /> },
+              { title: 'Brighter Appearance', desc: 'Surface stains from coffee, tea, and food are polished away, revealing a cleaner, whiter smile.', icon: <Sparkles className="w-5 h-5" /> },
+              { title: 'Supports Overall Health', desc: 'Poor oral health is linked to heart disease and diabetes — regular cleanings reduce systemic risk.', icon: <Heart className="w-5 h-5" /> },
+              { title: 'Early Detection', desc: 'Problems like early-stage decay or oral cancer are far easier — and less costly — to treat when caught early.', icon: <AlertTriangle className="w-5 h-5" /> },
+              { title: 'Fresh Breath', desc: 'Bacteria and food debris that cause persistent bad breath are thoroughly removed during each visit.', icon: <Stethoscope className="w-5 h-5" /> }
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-4 p-5 bg-gray-50 rounded-xl">
+                <div className="w-10 h-10 bg-[#00C8E8]/10 rounded-xl flex items-center justify-center shrink-0 text-[#00C8E8]">
+                  {item.icon}
+                </div>
+                <div>
+                  <p className="font-bold text-gray-800">{item.title}</p>
+                  <p className="text-gray-600 text-sm mt-1">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* After Your Cleaning */}
+        <div className="bg-gradient-to-br from-[#1A4FAD] to-[#0D2A60] rounded-[2rem] p-8 md:p-10 mb-8 text-white">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+              <CheckCircle className="w-5 h-5 text-[#E8B830]" />
+            </div>
+            <h2 className="text-2xl font-bold">After Your Cleaning — What to Do</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-4">
+            {[
+              'Avoid eating or drinking for 30 minutes after fluoride treatment',
+              'Rinse with warm water if gums feel sensitive',
+              'Resume your normal brushing and flossing routine the same day',
+              'Use a soft-bristle toothbrush for 24 hours if gums are tender',
+              'Sensitivity to hot or cold may occur briefly — this is normal',
+              'Book your next appointment before leaving for continuity of care'
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-3 bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/10">
+                <Check className="w-5 h-5 text-[#E8B830] shrink-0 mt-0.5" />
+                <span className="text-white/90 text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="bg-gradient-to-r from-[#1A4FAD] to-[#0D2A60] rounded-[2rem] p-8 md:p-10 text-center text-white">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready for a Brighter, Healthier Smile?</h2>
+          <p className="text-white/80 mb-8 max-w-2xl mx-auto">Schedule your professional cleaning today and keep your teeth and gums in optimal condition.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/book" className="btn-golden-shine text-[#1a0a10] px-8 py-4 rounded-full font-bold shadow-xl shadow-[#E8B830]/30 hover:scale-105 transition-all flex items-center justify-center gap-3">
+              <CalendarIcon className="w-5 h-5" />
+              Book Cleaning
+            </Link>
+            <a href="tel:+233257091176" className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-[#1A4FAD] transition-all flex items-center justify-center gap-3">
+              <Phone className="w-5 h-5" />
+              Call: 0257 091 176
+            </a>
+            <a href="tel:+233246850455" className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-[#1A4FAD] transition-all flex items-center justify-center gap-3">
+              <Phone className="w-5 h-5" />
+              Call: 0246 850 455
+            </a>
+          </div>
+        </div>
+      </FadeIn>
+    </div>
+  );
+}
+
+function RootCanalContent({ service }: { service: any }) {
+  return (
+    <div className="w-full">
+      <FadeIn>
+        {/* Hero Image */}
+        <div className="relative h-80 md:h-[28rem] w-full rounded-[2.5rem] overflow-hidden mb-12 shadow-2xl group">
+          <Image src={service.image} alt={service.name} fill sizes="100vw" className="object-cover group-hover:scale-105 transition-transform duration-700" priority />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+          <div className="absolute bottom-8 left-8 right-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#E8B830]/20 backdrop-blur-md rounded-full border border-[#E8B830]/30 mb-4">
+              <Heart className="w-4 h-4 text-[#E8B830]" />
+              <span className="text-[#E8B830] text-xs font-bold uppercase tracking-widest">Endodontic Care</span>
+            </div>
+            <p className="text-white text-3xl md:text-5xl font-bold">{service.name}</p>
+          </div>
+        </div>
+
+        {/* Hero Summary */}
+        <div className="bg-gradient-to-r from-[#1A4FAD] to-[#0D2A60] rounded-[2rem] p-8 md:p-10 mb-10 text-white">
+          <div className="flex items-start gap-4">
+            <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center shrink-0 border border-white/20">
+              <Heart className="w-7 h-7 text-[#E8B830]" />
+            </div>
+            <div>
+              <p className="text-lg md:text-xl leading-relaxed text-white/90">Root canal treatment is a procedure used to remove infected or damaged pulp from inside a tooth, clean and disinfect the root canals, and seal the tooth to prevent further infection.</p>
+              <p className="text-lg md:text-xl leading-relaxed text-white/90 mt-4">The pulp contains nerves and blood vessels that can become infected due to deep decay, trauma, or cracks. During the procedure, the infected tissue is removed, the tooth is cleaned and sealed, and a custom crown may be placed to restore strength and function.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Why Choose Us */}
+        <div className="bg-gradient-to-br from-[#1A4FAD] to-[#0D2A60] rounded-[2rem] p-8 md:p-10 mb-8 text-white">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+              <Shield className="w-5 h-5 text-[#E8B830]" />
+            </div>
+            <h2 className="text-2xl font-bold">Why Choose New Vision Dental for Root Canals?</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-5">
+            {[
+              { title: 'Gentle, Patient-Centred Care', desc: 'We prioritize your comfort throughout the procedure, using modern techniques to minimize discomfort.', icon: <Heart className="w-5 h-5" /> },
+              { title: 'Advanced Technology', desc: 'Our state-of-the-art equipment ensures precision and efficiency during every step of your root canal.', icon: <Stethoscope className="w-5 h-5" /> },
+              { title: 'Preserve Your Natural Smile', desc: 'Root canal therapy helps you avoid extractions, maintaining the integrity and aesthetics of your smile.', icon: <Sparkles className="w-5 h-5" /> },
+              { title: 'Trusted Expertise', desc: 'We deliver high-quality care tailored to your unique needs.', icon: <Award className="w-5 h-5" /> }
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-3 bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/10">
+                <div className="text-[#E8B830] shrink-0 mt-0.5">{item.icon}</div>
+                <div>
+                  <p className="font-bold text-white">{item.title}</p>
+                  <p className="text-white/70 text-sm mt-1">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Signs You May Need a Root Canal */}
+        <div className="bg-white rounded-[2rem] p-8 md:p-10 mb-8 border border-gray-100 shadow-xl shadow-black/5">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-[#E8B830]/10 rounded-xl flex items-center justify-center">
+              <AlertTriangle className="w-5 h-5 text-[#E8B830]" />
+            </div>
+            <h2 className="text-2xl font-bold text-[#1A4FAD]">Signs You May Need a Root Canal</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-4">
+            {[
+              'Persistent or severe tooth pain',
+              'Sensitivity to hot or cold temperatures',
+              'Swelling or tenderness in the gums near the affected tooth',
+              'A darkened or discoloured tooth',
+              'A small pimple-like bump on the gums'
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-3 p-4 bg-[#E8B830]/10 rounded-xl border border-[#E8B830]/20">
+                <AlertTriangle className="w-5 h-5 text-[#E8B830] shrink-0 mt-0.5" />
+                <span className="text-gray-700">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* The Root Canal Procedure */}
+        <div className="bg-gradient-to-r from-[#00C8E8]/10 to-[#1A4FAD]/10 rounded-[2rem] p-8 md:p-10 mb-8 border border-[#00C8E8]/20">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-[#1A4FAD]/10 rounded-xl flex items-center justify-center">
+              <Stethoscope className="w-5 h-5 text-[#1A4FAD]" />
+            </div>
+            <h2 className="text-2xl font-bold text-[#1A4FAD]">The Root Canal Procedure</h2>
+          </div>
+          <div className="space-y-5">
+            {[
+              { step: '1', title: 'Diagnosis and Preparation', desc: 'We use advanced imaging to assess the affected tooth and plan the procedure.' },
+              { step: '2', title: 'Numbing and Cleaning', desc: 'The area is numbed for comfort, and the infected pulp is carefully removed.' },
+              { step: '3', title: 'Filling and Sealing', desc: 'The tooth is cleaned, filled with a biocompatible material, and sealed to prevent reinfection.' },
+              { step: '4', title: 'Restoration', desc: 'In many cases, a crown is placed to restore the tooth\'s strength and appearance.' }
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-4 bg-white rounded-xl p-5 shadow-lg shadow-black/5">
+                <div className="w-10 h-10 bg-[#1A4FAD] rounded-xl flex items-center justify-center shrink-0">
+                  <span className="text-white font-bold">{item.step}</span>
+                </div>
+                <div>
+                  <p className="font-bold text-gray-800">{item.title}</p>
+                  <p className="text-gray-600 text-sm mt-1">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Benefits */}
+        <div className="bg-white rounded-[2rem] p-8 md:p-10 mb-8 border border-gray-100 shadow-xl shadow-black/5">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-[#00C8E8]/10 rounded-xl flex items-center justify-center">
+              <Award className="w-5 h-5 text-[#00C8E8]" />
+            </div>
+            <h2 className="text-2xl font-bold text-[#1A4FAD]">Benefits of Root Canal Therapy</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-5">
+            {[
+              { title: 'Pain Relief', desc: 'Eliminate the discomfort caused by infection or decay.', icon: <Heart className="w-5 h-5" /> },
+              { title: 'Prevent Tooth Loss', desc: 'Save your natural tooth and avoid extraction.', icon: <Shield className="w-5 h-5" /> },
+              { title: 'Long-Term Results', desc: 'A properly treated tooth can last a lifetime with good oral care.', icon: <CheckCircle className="w-5 h-5" /> },
+              { title: 'Improved Oral Health', desc: 'Treating infection prevents it from spreading to other teeth or areas of the mouth.', icon: <Stethoscope className="w-5 h-5" /> }
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-4 p-5 bg-gray-50 rounded-xl">
+                <div className="w-10 h-10 bg-[#00C8E8]/10 rounded-xl flex items-center justify-center shrink-0 text-[#00C8E8]">
+                  {item.icon}
+                </div>
+                <div>
+                  <p className="font-bold text-gray-800">{item.title}</p>
+                  <p className="text-gray-600 text-sm mt-1">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="bg-gradient-to-r from-[#1A4FAD] to-[#0D2A60] rounded-[2rem] p-8 md:p-10 text-center text-white">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Don&apos;t Wait — Save Your Tooth!</h2>
+          <p className="text-white/80 mb-8 max-w-2xl mx-auto">If you&apos;re experiencing signs of infection, contact us today for gentle, expert root canal treatment.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/book" className="btn-golden-shine text-[#1a0a10] px-8 py-4 rounded-full font-bold shadow-xl shadow-[#E8B830]/30 hover:scale-105 transition-all flex items-center justify-center gap-3">
+              <CalendarIcon className="w-5 h-5" />
+              Book Consultation
+            </Link>
+            <a href="tel:+233257091176" className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-[#1A4FAD] transition-all flex items-center justify-center gap-3">
+              <Phone className="w-5 h-5" />
+              Call: 0257 091 176
+            </a>
+            <a href="tel:+233246850455" className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-[#1A4FAD] transition-all flex items-center justify-center gap-3">
+              <Phone className="w-5 h-5" />
+              Call: 0246 850 455
+            </a>
+          </div>
+        </div>
+      </FadeIn>
+    </div>
+  );
+}
+
 function StandardServiceTemplate({ service }: { service: any }) {
   return (
     <div className="grid lg:grid-cols-3 gap-12">
@@ -624,9 +1304,39 @@ function StandardServiceTemplate({ service }: { service: any }) {
                   <div className="w-2 h-8 bg-[#00C8E8] rounded-full" />
                   Clinical Overview
                </h2>
-                {service.longDescription.split('\n\n').map((para: string, i: number) => (
-                  <p key={i} className="text-gray-600 text-lg leading-relaxed mb-4 last:mb-0">{para}</p>
-                ))}
+                {service.longDescription.split('\n\n').map((block: string, i: number) => {
+                  const lines = block.split('\n');
+                  const hasBullets = lines.some(l => l.trim().startsWith('•'));
+                  if (hasBullets) {
+                    return (
+                      <ul key={i} className="space-y-3 mb-4">
+                        {lines.map((line: string, j: number) => {
+                          const text = line.replace(/^•\s*/, '');
+                          const colonIdx = text.indexOf(':');
+                          if (colonIdx > -1 && colonIdx < 40) {
+                            const label = text.slice(0, colonIdx).trim();
+                            const rest = text.slice(colonIdx + 1).trim();
+                            return (
+                              <li key={j} className="flex items-start gap-3">
+                                <span className="w-2 h-2 bg-[#00C8E8] rounded-full mt-2.5 shrink-0" />
+                                <span className="text-gray-600 text-base leading-relaxed">
+                                  <span className="font-semibold text-gray-800">{label}:</span> {rest}
+                                </span>
+                              </li>
+                            );
+                          }
+                          return (
+                            <li key={j} className="flex items-start gap-3">
+                              <span className="w-2 h-2 bg-[#00C8E8] rounded-full mt-2.5 shrink-0" />
+                              <span className="text-gray-600 text-base leading-relaxed">{text}</span>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    );
+                  }
+                  return <p key={i} className="text-gray-600 text-lg leading-relaxed mb-4 last:mb-0">{block}</p>;
+                })}
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -769,7 +1479,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   };
 
   const hasRichContent = slug === "dental-implants";
-  const showFaq = !hasRichContent;
+  const isTeethWhitening = slug === "teeth-whitening";
+  const isEmergencyDentistry = slug === "emergency-dentistry";
+  const isScalingPolishing = slug === "scaling-polishing";
+  const isRootCanal = slug === "root-canal-treatment";
+  const showFaq = !hasRichContent && !isTeethWhitening && !isEmergencyDentistry && !isScalingPolishing && !isRootCanal;
 
   const faqSchema = hasRichContent && service.richContent?.faqs ? {
     "@context": "https://schema.org",
@@ -842,6 +1556,14 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div className="w-full px-4 md:px-6 lg:px-8 xl:px-12">
             {hasRichContent && service.richContent ? (
               <DentalImplantsRichContent service={service} />
+            ) : isTeethWhitening ? (
+              <TeethWhiteningContent service={service} />
+            ) : isEmergencyDentistry ? (
+              <EmergencyDentistryContent service={service} />
+            ) : isScalingPolishing ? (
+              <ScalingPolishingContent service={service} />
+            ) : isRootCanal ? (
+              <RootCanalContent service={service} />
             ) : (
               <StandardServiceTemplate service={service} />
             )}

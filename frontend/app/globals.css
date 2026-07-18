@@ -100,8 +100,8 @@ html, body {
 }
 
 body {
-  /* NexaNumbers first to intercept all digits 0-9 */
-  font-family: 'NexaNumbers', 'Codec Warm Trial', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  /* Nexa for all text, NexaNumbers to intercept digits 0-9 */
+  font-family: 'Nexa', 'NexaNumbers', 'Codec Warm Trial', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   color: var(--foreground);
