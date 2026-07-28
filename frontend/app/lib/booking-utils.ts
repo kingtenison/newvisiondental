@@ -9,18 +9,18 @@ export const timeSlots = [
 export const services = [
   { id: 1, name: "Dental Consultation", duration: "30 mins", icon: "🔍" },
   { id: 2, name: "Dental X-Ray", duration: "15 mins", icon: "📸" },
-  { id: 3, name: "Teeth Cleaning / Scaling & Polishing", duration: "45 mins", icon: "✨" },
-  { id: 4, name: "Teeth Whitening", duration: "60 mins", icon: "🦷" },
-  { id: 5, name: "Dental Implants", duration: "3-9 Months", icon: "🔧" },
-  { id: 6, name: "Composite Restoration", duration: "1 Visit", icon: "💎" },
+  { id: 3, name: "Emergency Dentistry", duration: "Same-Day", icon: "🚨" },
+  { id: 4, name: "Minor Oral Surgery", duration: "Varies", icon: "🔪" },
+  { id: 5, name: "Composite Restoration", duration: "1 Visit", icon: "💎" },
+  { id: 6, name: "Tooth Extraction", duration: "30 mins", icon: "🦷" },
   { id: 7, name: "Root Canal Treatment", duration: "1-2 Visits", icon: "❤️" },
   { id: 8, name: "Crown & Bridge", duration: "1 Visit", icon: "👑" },
-  { id: 9, name: "Root Extraction", duration: "30 mins", icon: "🦷" },
-  { id: 10, name: "Dental Veneers", duration: "2 Visits", icon: "😁" },
-  { id: 11, name: "Fluoride Therapy", duration: "20 mins", icon: "💧" },
-  { id: 12, name: "Fissure Sealing", duration: "20 mins", icon: "🛡️" },
-  { id: 13, name: "Emergency Dentistry", duration: "Same-Day", icon: "🚨" },
-  { id: 14, name: "Minor Oral Surgery", duration: "Varies", icon: "🔪" }
+  { id: 9, name: "Dental Veneers", duration: "2 Visits", icon: "😁" },
+  { id: 10, name: "Teeth Whitening", duration: "60 mins", icon: "🦷" },
+  { id: 11, name: "Dental Implants", duration: "3-9 Months", icon: "🔧" },
+  { id: 12, name: "Scaling & Polishing", duration: "45 mins", icon: "✨" },
+  { id: 13, name: "Fluoride Therapy", duration: "20 mins", icon: "💧" },
+  { id: 14, name: "Fissure Sealing", duration: "20 mins", icon: "🛡️" },
 ];
 
 // Helper to generate available dates (next 30 days)

@@ -4,9 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { 
-  Stethoscope, ScanLine, Sparkles, Sun, Shield, PenTool, Heart, Crown, 
-  MinusCircle, Smile, Droplets, ShieldCheck, Clock, ArrowRight, Star, Check,
-  AlertTriangle, Scissors
+  Stethoscope, ScanLine, Sparkles, Sun, Shield, PenTool, Heart, 
+  MinusCircle, Smile, AlertTriangle, Scissors, ArrowRight, Star, Check,
+  Crown, Droplets, ShieldCheck
 } from "lucide-react";
 
 const services = [
@@ -15,7 +15,6 @@ const services = [
     description: "Personalized, high-quality consultation for routine checkups, cavity treatment, or advanced care tailored to your needs.",
     icon: Stethoscope,
     slug: "consultation",
-    duration: "30 mins",
     image: "/images/services/consultation.jpg",
     rating: "4.9",
     features: ["Personalized care", "Modern technology", "Expert advice"]
@@ -25,117 +24,15 @@ const services = [
     description: "Diagnostic imaging to examine teeth, roots, jawbone, and surrounding structures not visible during a regular exam.",
     icon: ScanLine,
     slug: "dental-x-ray-periapical",
-    duration: "15 mins",
-    image: "/images/services/dental-x-ray.jpg",
+    image: "/images/services/dental-x-ray.png",
     rating: "4.8",
     features: ["Early detection", "Precise diagnostics", "Minimal discomfort"]
-  },
-  {
-    name: "Teeth Cleaning / Scaling & Polishing",
-    description: "Professional cleaning to remove plaque, tartar, and surface stains that regular brushing and flossing cannot eliminate.",
-    icon: Sparkles,
-    slug: "scaling-polishing",
-    duration: "45 mins",
-    image: "/images/services/teeth-cleaning-scaling-polishing.jpg",
-    rating: "4.9",
-    features: ["Prevents gum disease", "Cavity protection", "Brighter smile"]
-  },
-  {
-    name: "Teeth Whitening",
-    description: "Professional whitening tailored to your needs — faster, safer, and more noticeable results than over-the-counter products.",
-    icon: Sun,
-    slug: "teeth-whitening",
-    duration: "60 mins",
-    image: "/images/services/teeth-whitening.jpg",
-    rating: "4.9",
-    features: ["Zero sensitivity", "Quick results", "Long-lasting"]
-  },
-  {
-    name: "Dental Implants",
-    description: "Permanent solution for missing teeth — titanium posts fused to the jawbone with custom crowns that look and feel natural.",
-    icon: Shield,
-    slug: "dental-implants",
-    duration: "3-9 Months",
-    image: "/images/services/dental-implants.jpg",
-    rating: "5.0",
-    features: ["Preserves jawbone", "Natural look", "Permanent solution"]
-  },
-  {
-    name: "Composite Restoration",
-    description: "Tooth-colored resin fillings to repair decay, fractures, chips, or wear in a single visit.",
-    icon: PenTool,
-    slug: "composite-restoration",
-    duration: "1 Visit",
-    image: "/images/services/composite-restoration.jpg",
-    rating: "4.8",
-    features: ["Natural-looking", "Bonds to tooth", "Minimal removal"]
-  },
-  {
-    name: "Root Canal Treatment",
-    description: "Remove infected pulp, clean the root canals, and seal the tooth to prevent further infection and save your natural tooth.",
-    icon: Heart,
-    slug: "root-canal-treatment",
-    duration: "1-2 Visits",
-    image: "/images/services/root-canal-treatment.jpg",
-    rating: "4.8",
-    features: ["Pain relief", "Saves natural tooth", "Long-term results"]
-  },
-  {
-    name: "Crown & Bridge",
-    description: "Custom-made caps over damaged teeth and artificial teeth anchored to neighbours to restore shape, strength, and appearance.",
-    icon: Crown,
-    slug: "crown-bridge-recementation",
-    duration: "1 Visit",
-    image: "/images/services/crown-and-bridge.jpg",
-    rating: "4.9",
-    features: ["Restores strength", "Improves chewing", "Enhances smile"]
-  },
-  {
-    name: "Root Extraction",
-    description: "Removal of a tooth root that remains after a tooth has broken, decayed, or been partially lost.",
-    icon: MinusCircle,
-    slug: "tooth-extraction",
-    duration: "30 mins",
-    image: "/images/services/tooth-extraction.jpg",
-    rating: "4.8",
-    features: ["Prevents infection", "Promotes healing", "Protects bone"]
-  },
-  {
-    name: "Dental Veneers",
-    description: "Thin, custom-made shells bonded to the front of teeth to correct discoloration, chips, gaps, and minor alignment issues.",
-    icon: Smile,
-    slug: "dental-veneers",
-    duration: "2 Visits",
-    image: "/images/services/dental-veneers.jpg",
-    rating: "4.9",
-    features: ["Stain-resistant", "Natural appearance", "Long-lasting"]
-  },
-  {
-    name: "Fluoride Therapy",
-    description: "Professional application of concentrated fluoride to strengthen enamel, reduce sensitivity, and prevent tooth decay.",
-    icon: Droplets,
-    slug: "fluoride-therapy-children",
-    duration: "20 mins",
-    image: "/images/services/fluoride-therapy.jpg",
-    rating: "5.0",
-    features: ["Strengthens enamel", "Reduces cavities", "Reduces sensitivity"]
-  },
-  {
-    name: "Fissure Sealing",
-    description: "Protective resin coating applied to the grooves of molars to prevent food and bacteria from causing decay.",
-    icon: ShieldCheck,
-    slug: "fissure-sealing-children",
-    duration: "20 mins",
-    image: "/images/services/fissure-sealing.jpg",
-    rating: "5.0",
-    features: ["Prevents cavities", "Painless", "Long-term protection"]
   },
   {
     name: "Emergency Dentistry",
     description: "Immediate treatment for severe toothaches, knocked-out teeth, broken restorations, and other urgent dental issues.",
     icon: AlertTriangle,
     slug: "emergency-dentistry",
-    duration: "Same-Day",
     image: "/images/services/emergency-dentistry.jpg",
     rating: "4.9",
     features: ["Same-day care", "Pain relief", "Compassionate team"]
@@ -145,10 +42,99 @@ const services = [
     description: "Expert surgical services including tooth extractions, wisdom tooth removal, abscess treatment, and gum surgery.",
     icon: Scissors,
     slug: "minor-oral-surgery",
-    duration: "Varies",
     image: "/images/services/minor-oral-surgery.jpg",
     rating: "4.9",
     features: ["Local anaesthesia", "Sterile environment", "Aftercare support"]
+  },
+  {
+    name: "Composite Restoration",
+    description: "Tooth-colored resin fillings to repair decay, fractures, chips, or wear in a single visit.",
+    icon: PenTool,
+    slug: "composite-restoration",
+    image: "/images/services/composite-restoration.jpg",
+    rating: "4.8",
+    features: ["Natural-looking", "Bonds to tooth", "Minimal removal"]
+  },
+  {
+    name: "Tooth Extraction",
+    description: "Safe removal of damaged, decayed, or impacted teeth to relieve pain and prevent further oral health issues.",
+    icon: MinusCircle,
+    slug: "tooth-extraction",
+    image: "/images/services/tooth-extraction.jpg",
+    rating: "4.8",
+    features: ["Prevents infection", "Promotes healing", "Protects bone"]
+  },
+  {
+    name: "Root Canal Treatment",
+    description: "Remove infected pulp, clean the root canals, and seal the tooth to prevent further infection and save your natural tooth.",
+    icon: Heart,
+    slug: "root-canal-treatment",
+    image: "/images/services/root-canal-treatment.jpg",
+    rating: "4.8",
+    features: ["Pain relief", "Saves natural tooth", "Long-term results"]
+  },
+  {
+    name: "Crown & Bridge",
+    description: "Custom-made caps over damaged teeth and artificial teeth anchored to neighbours to restore shape, strength, and appearance.",
+    icon: Crown,
+    slug: "crown-bridge-recementation",
+    image: "/images/services/crown-and-bridge.jpg",
+    rating: "4.9",
+    features: ["Restores strength", "Improves chewing", "Enhances smile"]
+  },
+  {
+    name: "Dental Veneers",
+    description: "Thin, custom-made shells bonded to the front of teeth to correct discoloration, chips, gaps, and minor alignment issues.",
+    icon: Smile,
+    slug: "dental-veneers",
+    image: "/images/services/dental-veneers.jpeg",
+    rating: "4.9",
+    features: ["Stain-resistant", "Natural appearance", "Long-lasting"]
+  },
+  {
+    name: "Teeth Whitening",
+    description: "Professional whitening tailored to your needs — faster, safer, and more noticeable results than over-the-counter products.",
+    icon: Sun,
+    slug: "teeth-whitening",
+    image: "/images/services/teeth-whitening.jpg",
+    rating: "4.9",
+    features: ["Zero sensitivity", "Quick results", "Long-lasting"]
+  },
+  {
+    name: "Dental Implants",
+    description: "Permanent solution for missing teeth — titanium posts fused to the jawbone with custom crowns that look and feel natural.",
+    icon: Shield,
+    slug: "dental-implants",
+    image: "/images/services/dental-implants.jpg",
+    rating: "5.0",
+    features: ["Preserves jawbone", "Natural look", "Permanent solution"]
+  },
+  {
+    name: "Teeth Cleaning / Scaling & Polishing",
+    description: "Professional cleaning to remove plaque, tartar, and surface stains that regular brushing and flossing cannot eliminate.",
+    icon: Sparkles,
+    slug: "scaling-polishing",
+    image: "/images/services/teeth-cleaning-scaling-polishing.jpg",
+    rating: "4.9",
+    features: ["Prevents gum disease", "Cavity protection", "Brighter smile"]
+  },
+  {
+    name: "Fluoride Therapy",
+    description: "Professional application of concentrated fluoride to strengthen enamel, reduce sensitivity, and prevent tooth decay.",
+    icon: Droplets,
+    slug: "fluoride-therapy-children",
+    image: "/images/services/fluoride-therapy.jpg",
+    rating: "5.0",
+    features: ["Strengthens enamel", "Reduces cavities", "Reduces sensitivity"]
+  },
+  {
+    name: "Fissure Sealing",
+    description: "Protective resin coating applied to the grooves of molars to prevent food and bacteria from causing decay.",
+    icon: ShieldCheck,
+    slug: "fissure-sealing-children",
+    image: "/images/services/fissure-sealing.jpg",
+    rating: "5.0",
+    features: ["Prevents cavities", "Painless", "Long-term protection"]
   },
 ];
 
@@ -156,7 +142,7 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
   "name": "Dental Services in Accra - New Vision Dental Clinic",
-  "description": "Comprehensive dental services including consultation, X-ray, scaling, whitening, implants, restoration, root canal, crowns, extractions, veneers, and children's dentistry in Accra, Ghana."
+  "description": "Comprehensive dental services including consultation, X-ray, emergency dentistry, oral surgery, composite restoration, extraction, root canal, veneers, whitening, and implants in Accra, Ghana."
 };
 
 export default function ServicesPage() {
@@ -219,7 +205,7 @@ export default function ServicesPage() {
                 {[
                   { value: "14", label: "Services" },
                   { value: "4.9", label: "Rating", showStar: true },
-                  { value: "2.5K+", label: "Patients" },
+                  { value: "10,000+", label: "Patients" },
                   { value: "15+", label: "Years" },
                 ].map((stat, i) => (
                   <div key={i} className="text-center">
@@ -238,7 +224,7 @@ export default function ServicesPage() {
         {/* Services Grid */}
         <section className="w-full pt-8 md:pt-12 pb-16 md:pb-20">
           <div className="w-full px-4 sm:px-6 lg:px-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
               {services.map((service) => (
                 <Link 
                   key={service.slug} 
@@ -289,11 +275,7 @@ export default function ServicesPage() {
                       </div>
 
                       {/* Footer */}
-                      <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                        <span className="flex items-center text-sm text-gray-500">
-                          <Clock className="w-4 h-4 mr-1.5 text-[#E8B830]/60" />
-                          {service.duration}
-                        </span>
+                      <div className="flex items-center justify-end pt-4 border-t border-gray-100">
                         <span className="inline-flex items-center gap-1 text-sm font-semibold text-[#1A4FAD] group-hover:gap-2 transition-all">
                           Learn more
                           <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />

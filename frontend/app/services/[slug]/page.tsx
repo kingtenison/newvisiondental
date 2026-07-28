@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { 
-  Sparkles, Shield, Heart, Sun, Stethoscope, ScanLine, PenTool, Crown, MinusCircle, Smile, Droplets, ShieldCheck, Baby, CheckCircle,
-  Clock, ChevronRight, Star, Phone, Calendar as CalendarIcon,
-  Check, Award, Users, MapPin, ArrowRight, AlertTriangle, Scissors, Utensils, Pill
+  Sparkles, Shield, Heart, Sun, Stethoscope, ScanLine, PenTool, MinusCircle, Smile, CheckCircle,
+  ChevronRight, Star, Phone, Calendar as CalendarIcon,
+  Check, Award, Users, MapPin, ArrowRight, AlertTriangle, Scissors, Utensils, Pill,
+  Crown, Droplets, ShieldCheck
 } from "lucide-react";
 import { FadeIn } from "@/app/components/animations/FadeIn";
 import Image from "next/image";
@@ -53,36 +54,6 @@ const services = [
       "Accurate diagnosis with minimal discomfort",
       "Safe — minimal radiation exposure",
       "Guides effective treatment planning"
-    ]
-  },
-  {
-    name: "Teeth Cleaning / Scaling & Polishing",
-    description: "Professional cleaning to remove plaque, tartar, and surface stains",
-    longDescription: "Professional teeth cleaning, also known as dental prophylaxis, is a preventive dental procedure designed to remove plaque, tartar (calculus), and surface stains that regular brushing and flossing cannot eliminate. This treatment helps maintain healthy teeth and gums while reducing the risk of cavities, gum disease, and bad breath. During the procedure, our dental professionals carefully examine your oral health before using specialized instruments to remove hardened deposits from the teeth and along the gum line. The teeth are then polished to remove stains and create a smooth surface that makes it more difficult for plaque to accumulate. In some cases, fluoride treatment may be recommended to strengthen the teeth and provide additional protection against decay. Regular professional cleanings not only enhance the appearance of your smile but also play a crucial role in maintaining long-term oral health. We recommend scheduling a dental cleaning every six months, or as advised by your dentist, to keep your teeth and gums in optimal condition.",
-    icon: Sparkles,
-    slug: "scaling-polishing",
-    duration: "45 mins",
-    price: "From GHS 300",
-    image: "/images/services/teeth-cleaning-scaling-polishing.jpg",
-    features: [
-      "Prevents gum disease — removes bacterial plaque that leads to gingivitis and periodontitis before it causes damage.",
-      "Cavity protection — eliminates tartar and plaque your toothbrush can't reach, reducing cavity risk significantly.",
-      "Brighter appearance — surface stains from coffee, tea, and food are polished away, revealing a cleaner, whiter smile.",
-      "Supports overall health — poor oral health is linked to heart disease and diabetes; regular cleanings reduce systemic risk.",
-      "Early detection — problems like early-stage decay or oral cancer are far easier and less costly to treat when caught early.",
-      "Fresh breath — bacteria and food debris that cause persistent bad breath are thoroughly removed during each visit.",
-      "Avoid eating or drinking for 30 minutes after fluoride treatment.",
-      "Rinse with warm water if gums feel sensitive.",
-      "Resume your normal brushing and flossing routine the same day.",
-      "Use a soft-bristle toothbrush for 24 hours if gums are tender.",
-      "Sensitivity to hot or cold may occur briefly — this is normal.",
-      "Book your next appointment before leaving for continuity of care."
-    ],
-    benefits: [
-      "Prevents gum disease and cavities",
-      "Brighter, healthier smile",
-      "Supports overall health — linked to heart disease and diabetes prevention",
-      "Early detection of oral health issues"
     ]
   },
   {
@@ -225,29 +196,6 @@ const services = [
     ]
   },
   {
-    name: "Crown & Bridge",
-    description: "Restore damaged or missing teeth with custom-made caps",
-    longDescription: "Crowns are custom-made caps placed over damaged teeth to restore their shape, strength, and appearance. Bridges replace one or more missing teeth by anchoring artificial teeth to neighbouring teeth or implants.",
-    icon: Crown,
-    slug: "crown-bridge-recementation",
-    duration: "1 visit",
-    price: "From GHS 600",
-    image: "/images/services/crown-and-bridge.jpg",
-    features: [
-      "Custom-made for your teeth",
-      "Restores damaged or weakened teeth",
-      "Replaces missing teeth effectively",
-      "Provides long-lasting durability"
-    ],
-    benefits: [
-      "Restores damaged or weakened teeth",
-      "Replaces missing teeth effectively",
-      "Improves chewing and speech",
-      "Enhances smile aesthetics",
-      "Provides long-lasting durability"
-    ]
-  },
-  {
     name: "Root Extraction",
     description: "Removal of retained tooth roots to prevent infection",
     longDescription: "Root extraction is the removal of a tooth root that remains in the jaw after a tooth has broken, decayed, or been partially lost. The procedure helps prevent infection and promotes proper healing.",
@@ -291,51 +239,6 @@ const services = [
       "Provides a natural tooth appearance",
       "Stain-resistant options available",
       "Long-lasting aesthetic results"
-    ]
-  },
-  {
-    name: "Fluoride Therapy",
-    description: "Professional fluoride application to strengthen enamel",
-    longDescription: "Fluoride therapy involves the professional application of concentrated fluoride to teeth to strengthen enamel, reduce sensitivity, and help prevent tooth decay.",
-    icon: Droplets,
-    slug: "fluoride-therapy-children",
-    duration: "20 mins",
-    price: "From GHS 150",
-    image: "/images/services/fluoride-therapy.jpg",
-    features: [
-      "Strengthens tooth enamel",
-      "Reduces the risk of cavities",
-      "Helps reverse early signs of decay",
-      "Decreases tooth sensitivity",
-      "Suitable for both children and adults"
-    ],
-    benefits: [
-      "Reduces the risk of cavities",
-      "Stronger, healthier teeth",
-      "Quick and painless procedure",
-      "Safe and effective"
-    ]
-  },
-  {
-    name: "Fissure Sealing",
-    description: "Protective resin coating for molars to prevent decay",
-    longDescription: "Fissure sealing is a preventive treatment in which a protective resin coating is applied to the grooves of molars and premolars to prevent food and bacteria from causing decay.",
-    icon: ShieldCheck,
-    slug: "fissure-sealing-children",
-    duration: "20 mins",
-    price: "From GHS 200",
-    image: "/images/services/fissure-sealing.jpg",
-    features: [
-      "Protects vulnerable chewing surfaces",
-      "Quick and painless procedure",
-      "Long-term protection against decay",
-      "Ideal for children and teenagers"
-    ],
-    benefits: [
-      "Prevents cavities in molars",
-      "Reduces future dental treatment needs",
-      "Painless application",
-      "Peace of mind for parents"
     ]
   },
   {
@@ -389,6 +292,94 @@ const services = [
       "Strict infection prevention protocols",
       "Comprehensive aftercare instructions",
       "Compassionate care tailored to your needs"
+    ]
+  },
+  {
+    name: "Teeth Cleaning / Scaling & Polishing",
+    description: "Professional cleaning to remove plaque, tartar, and surface stains",
+    longDescription: "Professional cleaning to remove plaque, tartar, and surface stains that regular brushing and flossing cannot eliminate. Our comprehensive cleaning service helps prevent gum disease, cavities, and keeps your smile bright and healthy.",
+    icon: Sparkles,
+    slug: "scaling-polishing",
+    duration: "45 mins",
+    price: "From GHS 200",
+    image: "/images/services/teeth-cleaning-scaling-polishing.jpg",
+    features: [
+      "Removes plaque and tartar buildup",
+      "Polishes teeth for a smooth finish",
+      "Prevents gum disease and decay",
+      "Freshens breath and brightens smile"
+    ],
+    benefits: [
+      "Prevents gum disease and cavities",
+      "Removes stubborn stains",
+      "Freshens breath",
+      "Maintains overall oral health"
+    ]
+  },
+  {
+    name: "Crown & Bridge",
+    description: "Custom-made caps and artificial teeth to restore shape, strength, and appearance",
+    longDescription: "Custom-made caps over damaged teeth and artificial teeth anchored to neighbouring teeth to restore shape, strength, and appearance. Crowns and bridges are essential restorative treatments that help you chew, speak, and smile with confidence.",
+    icon: Crown,
+    slug: "crown-bridge-recementation",
+    duration: "1 Visit",
+    price: "From GHS 800",
+    image: "/images/services/crown-and-bridge.jpg",
+    features: [
+      "Restores strength and functionality",
+      "Improves chewing ability",
+      "Enhances smile appearance",
+      "Custom-made for natural look"
+    ],
+    benefits: [
+      "Restores tooth strength",
+      "Improves chewing and speaking",
+      "Natural-looking results",
+      "Long-lasting durability"
+    ]
+  },
+  {
+    name: "Fluoride Therapy",
+    description: "Professional application of concentrated fluoride to strengthen enamel and prevent decay",
+    longDescription: "Professional application of concentrated fluoride to strengthen enamel, reduce sensitivity, and prevent tooth decay. Fluoride therapy is a quick, painless treatment that helps protect your teeth from cavities and strengthens weak spots.",
+    icon: Droplets,
+    slug: "fluoride-therapy-children",
+    duration: "20 mins",
+    price: "From GHS 100",
+    image: "/images/services/fluoride-therapy.jpg",
+    features: [
+      "Strengthens tooth enamel",
+      "Reduces sensitivity",
+      "Prevents cavities",
+      "Quick and painless application"
+    ],
+    benefits: [
+      "Strengthens enamel against decay",
+      "Reduces tooth sensitivity",
+      "Prevents cavity formation",
+      "Suitable for all ages"
+    ]
+  },
+  {
+    name: "Fissure Sealing",
+    description: "Protective resin coating applied to molar grooves to prevent decay",
+    longDescription: "Protective resin coating applied to the grooves of molars to prevent food and bacteria from causing decay. Fissure sealing is a painless, preventive treatment that creates a barrier against cavities in the deep grooves of your back teeth.",
+    icon: ShieldCheck,
+    slug: "fissure-sealing-children",
+    duration: "20 mins",
+    price: "From GHS 100",
+    image: "/images/services/fissure-sealing.jpg",
+    features: [
+      "Prevents cavities in molar grooves",
+      "Painless and non-invasive",
+      "Long-lasting protection",
+      "Quick application process"
+    ],
+    benefits: [
+      "Prevents food trapping in grooves",
+      "Long-term cavity protection",
+      "No drilling required",
+      "Ideal for children and adults"
     ]
   }
 ];
@@ -544,8 +535,7 @@ function DentalImplantsRichContent({ service }: { service: any }) {
             <div className="space-y-4 mb-8">
               <div className="flex justify-between items-center pb-4 border-b border-gray-50">
                 <span className="text-gray-500 font-medium">Duration</span>
-                <span className="font-bold text-gray-800 flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-[#00C8E8]" />
+                <span className="font-bold text-gray-800">
                   {service.duration}
                 </span>
               </div>
@@ -642,7 +632,7 @@ function TeethWhiteningContent({ service }: { service: any }) {
             {[
               { icon: <Utensils className="w-5 h-5" />, title: 'Dietary Habits', desc: 'Coffee, tea, red wine, and berries can leave stains on your enamel.' },
               { icon: <AlertTriangle className="w-5 h-5" />, title: 'Tobacco Use', desc: 'Smoking or chewing tobacco can cause yellowing or darkening of your teeth.' },
-              { icon: <Clock className="w-5 h-5" />, title: 'Aging', desc: 'As we age, enamel wears away, revealing the yellowish dentin beneath.' },
+              { icon: <Stethoscope className="w-5 h-5" />, title: 'Aging', desc: 'As we age, enamel wears away, revealing the yellowish dentin beneath.' },
               { icon: <Pill className="w-5 h-5" />, title: 'Medications', desc: 'Certain medications, such as tetracycline, can cause tooth discoloration.' }
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
@@ -726,7 +716,7 @@ function TeethWhiteningContent({ service }: { service: any }) {
           <div className="grid md:grid-cols-2 gap-5">
             {[
               { title: 'Dramatic Results', desc: 'Professional whitening can brighten your teeth by several shades in a short amount of time.', icon: <Sparkles className="w-5 h-5" /> },
-              { title: 'Long-Lasting Effects', desc: 'Our treatments provide longer-lasting results compared to over-the-counter options.', icon: <Clock className="w-5 h-5" /> },
+              { title: 'Long-Lasting Effects', desc: 'Our treatments provide longer-lasting results compared to over-the-counter options.', icon: <CheckCircle className="w-5 h-5" /> },
               { title: 'Safe for Enamel', desc: 'Professional whitening is carefully controlled to minimize sensitivity and protect your teeth.', icon: <Shield className="w-5 h-5" /> },
               { title: 'Boosts Confidence', desc: 'A brighter smile can enhance your self-esteem in both personal and professional settings.', icon: <Heart className="w-5 h-5" /> }
             ].map((item, i) => (
@@ -858,7 +848,7 @@ function EmergencyDentistryContent({ service }: { service: any }) {
         <div className="bg-white rounded-[2rem] p-8 md:p-10 mb-8 border border-gray-100 shadow-xl shadow-black/5">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 bg-[#00C8E8]/10 rounded-xl flex items-center justify-center">
-              <Clock className="w-5 h-5 text-[#00C8E8]" />
+              <AlertTriangle className="w-5 h-5 text-[#00C8E8]" />
             </div>
             <h2 className="text-2xl font-bold text-[#1A4FAD]">Prompt, Reliable Dental Care When You Need It Most</h2>
           </div>
@@ -875,7 +865,7 @@ function EmergencyDentistryContent({ service }: { service: any }) {
           </div>
           <div className="grid md:grid-cols-2 gap-5">
             {[
-              { title: 'Same-Day Appointments', desc: 'We prioritize dental emergencies and strive to see you as quickly as possible, often on the same day. We offer extended hours, including Saturday appointments and in some cases, Sunday appointments.', icon: <Clock className="w-5 h-5" /> },
+              { title: 'Same-Day Appointments', desc: 'We prioritize dental emergencies and strive to see you as quickly as possible, often on the same day. We offer extended hours, including Saturday appointments and in some cases, Sunday appointments.', icon: <CheckCircle className="w-5 h-5" /> },
               { title: 'Comprehensive Services', desc: 'From pain relief to restorative solutions, we address a wide range of dental emergencies efficiently.', icon: <CheckCircle className="w-5 h-5" /> },
               { title: 'Compassionate Care', desc: 'Dr Govina and his team create a calming environment to ensure your comfort during stressful situations.', icon: <Heart className="w-5 h-5" /> },
               { title: 'Trusted Expertise', desc: 'The dental team at New Vision Dental Clinic combines advanced skills with modern technology to deliver exceptional results.', icon: <Award className="w-5 h-5" /> }
@@ -970,138 +960,6 @@ function EmergencyDentistryContent({ service }: { service: any }) {
             <Link href="/book" className="btn-golden-shine text-[#1a0a10] px-8 py-4 rounded-full font-bold shadow-xl shadow-[#E8B830]/30 hover:scale-105 transition-all flex items-center justify-center gap-3">
               <CalendarIcon className="w-5 h-5" />
               Book Emergency Visit
-            </Link>
-            <a href="tel:+233257091176" className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-[#1A4FAD] transition-all flex items-center justify-center gap-3">
-              <Phone className="w-5 h-5" />
-              Call: 0257 091 176
-            </a>
-            <a href="tel:+233246850455" className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-[#1A4FAD] transition-all flex items-center justify-center gap-3">
-              <Phone className="w-5 h-5" />
-              Call: 0246 850 455
-            </a>
-          </div>
-        </div>
-      </FadeIn>
-    </div>
-  );
-}
-
-function ScalingPolishingContent({ service }: { service: any }) {
-  return (
-    <div className="w-full">
-      <FadeIn>
-        {/* Hero Image */}
-        <div className="relative h-80 md:h-[28rem] w-full rounded-[2.5rem] overflow-hidden mb-12 shadow-2xl group">
-          <Image src={service.image} alt={service.name} fill sizes="100vw" className="object-cover group-hover:scale-105 transition-transform duration-700" priority />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-          <div className="absolute bottom-8 left-8 right-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00C8E8]/20 backdrop-blur-md rounded-full border border-[#00C8E8]/30 mb-4">
-              <Sparkles className="w-4 h-4 text-[#00C8E8]" />
-              <span className="text-[#00C8E8] text-xs font-bold uppercase tracking-widest">Preventive Care</span>
-            </div>
-            <p className="text-white text-3xl md:text-5xl font-bold">{service.name}</p>
-          </div>
-        </div>
-
-        {/* Hero Summary */}
-        <div className="bg-gradient-to-r from-[#1A4FAD] to-[#0D2A60] rounded-[2rem] p-8 md:p-10 mb-10 text-white">
-          <div className="flex items-start gap-4">
-            <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center shrink-0 border border-white/20">
-              <Sparkles className="w-7 h-7 text-[#00C8E8]" />
-            </div>
-            <div>
-              <p className="text-lg md:text-xl leading-relaxed text-white/90">Professional teeth cleaning, also known as dental prophylaxis, is a preventive dental procedure designed to remove plaque, tartar (calculus), and surface stains that regular brushing and flossing cannot eliminate.</p>
-              <p className="text-lg md:text-xl leading-relaxed text-white/90 mt-4">This treatment helps maintain healthy teeth and gums while reducing the risk of cavities, gum disease, and bad breath.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* During the Procedure */}
-        <div className="bg-white rounded-[2rem] p-8 md:p-10 mb-8 border border-gray-100 shadow-xl shadow-black/5">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 bg-[#00C8E8]/10 rounded-xl flex items-center justify-center">
-              <Stethoscope className="w-5 h-5 text-[#00C8E8]" />
-            </div>
-            <h2 className="text-2xl font-bold text-[#1A4FAD]">During the Procedure</h2>
-          </div>
-          <p className="text-gray-600 mb-4">During the procedure, our dental professionals carefully examine your oral health before using specialized instruments to remove hardened deposits from the teeth and along the gum line. The teeth are then polished to remove stains and create a smooth surface that makes it more difficult for plaque to accumulate.</p>
-          <p className="text-gray-600">In some cases, fluoride treatment may be recommended to strengthen the teeth and provide additional protection against decay.</p>
-        </div>
-
-        {/* Regular Cleanings */}
-        <div className="bg-gradient-to-r from-[#00C8E8]/10 to-[#1A4FAD]/10 rounded-[2rem] p-8 md:p-10 mb-8 border border-[#00C8E8]/20">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 bg-[#1A4FAD]/10 rounded-xl flex items-center justify-center">
-              <Heart className="w-5 h-5 text-[#1A4FAD]" />
-            </div>
-            <h2 className="text-2xl font-bold text-[#1A4FAD]">Why Regular Cleanings Matter</h2>
-          </div>
-          <p className="text-gray-600">Regular professional cleanings not only enhance the appearance of your smile but also play a crucial role in maintaining long-term oral health. We recommend scheduling a dental cleaning every six months, or as advised by your dentist, to keep your teeth and gums in optimal condition.</p>
-        </div>
-
-        {/* Importance of Cleaning */}
-        <div className="bg-white rounded-[2rem] p-8 md:p-10 mb-8 border border-gray-100 shadow-xl shadow-black/5">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 bg-[#E8B830]/10 rounded-xl flex items-center justify-center">
-              <Award className="w-5 h-5 text-[#E8B830]" />
-            </div>
-            <h2 className="text-2xl font-bold text-[#1A4FAD]">Importance of Cleaning</h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-5">
-            {[
-              { title: 'Prevents Gum Disease', desc: 'Removes bacterial plaque that leads to gingivitis and periodontitis before it causes damage.', icon: <Shield className="w-5 h-5" /> },
-              { title: 'Cavity Protection', desc: 'Eliminates tartar and plaque that your toothbrush can\'t reach, reducing cavity risk significantly.', icon: <CheckCircle className="w-5 h-5" /> },
-              { title: 'Brighter Appearance', desc: 'Surface stains from coffee, tea, and food are polished away, revealing a cleaner, whiter smile.', icon: <Sparkles className="w-5 h-5" /> },
-              { title: 'Supports Overall Health', desc: 'Poor oral health is linked to heart disease and diabetes — regular cleanings reduce systemic risk.', icon: <Heart className="w-5 h-5" /> },
-              { title: 'Early Detection', desc: 'Problems like early-stage decay or oral cancer are far easier — and less costly — to treat when caught early.', icon: <AlertTriangle className="w-5 h-5" /> },
-              { title: 'Fresh Breath', desc: 'Bacteria and food debris that cause persistent bad breath are thoroughly removed during each visit.', icon: <Stethoscope className="w-5 h-5" /> }
-            ].map((item, i) => (
-              <div key={i} className="flex items-start gap-4 p-5 bg-gray-50 rounded-xl">
-                <div className="w-10 h-10 bg-[#00C8E8]/10 rounded-xl flex items-center justify-center shrink-0 text-[#00C8E8]">
-                  {item.icon}
-                </div>
-                <div>
-                  <p className="font-bold text-gray-800">{item.title}</p>
-                  <p className="text-gray-600 text-sm mt-1">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* After Your Cleaning */}
-        <div className="bg-gradient-to-br from-[#1A4FAD] to-[#0D2A60] rounded-[2rem] p-8 md:p-10 mb-8 text-white">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
-              <CheckCircle className="w-5 h-5 text-[#E8B830]" />
-            </div>
-            <h2 className="text-2xl font-bold">After Your Cleaning — What to Do</h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-4">
-            {[
-              'Avoid eating or drinking for 30 minutes after fluoride treatment',
-              'Rinse with warm water if gums feel sensitive',
-              'Resume your normal brushing and flossing routine the same day',
-              'Use a soft-bristle toothbrush for 24 hours if gums are tender',
-              'Sensitivity to hot or cold may occur briefly — this is normal',
-              'Book your next appointment before leaving for continuity of care'
-            ].map((item, i) => (
-              <div key={i} className="flex items-start gap-3 bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/10">
-                <Check className="w-5 h-5 text-[#E8B830] shrink-0 mt-0.5" />
-                <span className="text-white/90 text-sm">{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="bg-gradient-to-r from-[#1A4FAD] to-[#0D2A60] rounded-[2rem] p-8 md:p-10 text-center text-white">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready for a Brighter, Healthier Smile?</h2>
-          <p className="text-white/80 mb-8 max-w-2xl mx-auto">Schedule your professional cleaning today and keep your teeth and gums in optimal condition.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/book" className="btn-golden-shine text-[#1a0a10] px-8 py-4 rounded-full font-bold shadow-xl shadow-[#E8B830]/30 hover:scale-105 transition-all flex items-center justify-center gap-3">
-              <CalendarIcon className="w-5 h-5" />
-              Book Cleaning
             </Link>
             <a href="tel:+233257091176" className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-[#1A4FAD] transition-all flex items-center justify-center gap-3">
               <Phone className="w-5 h-5" />
@@ -1385,8 +1243,7 @@ function StandardServiceTemplate({ service }: { service: any }) {
             <div className="space-y-6 mb-8">
               <div className="flex justify-between items-center pb-4 border-b border-gray-50">
                 <span className="text-gray-500 font-medium">Est. Duration</span>
-                <span className="font-bold text-gray-800 flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-[#00C8E8]" />
+                <span className="font-bold text-gray-800">
                   {service.duration}
                 </span>
               </div>
@@ -1481,9 +1338,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const hasRichContent = slug === "dental-implants";
   const isTeethWhitening = slug === "teeth-whitening";
   const isEmergencyDentistry = slug === "emergency-dentistry";
-  const isScalingPolishing = slug === "scaling-polishing";
   const isRootCanal = slug === "root-canal-treatment";
-  const showFaq = !hasRichContent && !isTeethWhitening && !isEmergencyDentistry && !isScalingPolishing && !isRootCanal;
+  const showFaq = !hasRichContent && !isTeethWhitening && !isEmergencyDentistry && !isRootCanal;
 
   const faqSchema = hasRichContent && service.richContent?.faqs ? {
     "@context": "https://schema.org",
@@ -1560,8 +1416,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <TeethWhiteningContent service={service} />
             ) : isEmergencyDentistry ? (
               <EmergencyDentistryContent service={service} />
-            ) : isScalingPolishing ? (
-              <ScalingPolishingContent service={service} />
             ) : isRootCanal ? (
               <RootCanalContent service={service} />
             ) : (

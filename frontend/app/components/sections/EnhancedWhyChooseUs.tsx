@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Sparkles, Shield, Heart, Clock, Award, CheckCircle } from "lucide-react";
+import { ArrowRight, Sparkles, Shield, Heart, Award, CheckCircle } from "lucide-react";
 import { useRef } from "react";
 
 const features = [
@@ -25,7 +25,7 @@ const features = [
     description: "Every treatment plan is tailored to your unique needs, goals, and comfort level — because your smile is one of a kind.",
   },
   {
-    icon: Clock,
+    icon: CheckCircle,
     number: "04",
     title: "Comfortable Environment",
     description: "From our welcoming facility to gentle techniques, we create a stress-free experience for patients of all ages.",

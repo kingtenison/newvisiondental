@@ -5,6 +5,16 @@ import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { Star, ArrowRight, ChevronDown, Play } from "lucide-react"
 
+const heroImages = [
+  "/images/hero/hero-1.jpg",
+  "/images/hero/hero-2.jpg",
+  "/images/hero/hero-3.jpg",
+  "/images/hero/hero-4.jpg",
+  "/images/hero/hero-5.jpg",
+  "/images/hero/hero-6.jpg",
+  "/images/hero/hero-7.jpg",
+]
+
 const swipeWords = [
   "One of the Best",
   "Ghana's Leading",
@@ -49,26 +59,42 @@ const SwipeText = ({ className }: { className?: string }) => {
 
 export default function EditorialHero() {
   const [mounted, setMounted] = useState(false)
+  const [currentImage, setCurrentImage] = useState(0)
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length)
+    }, 10000)
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image Slideshow */}
       <div className="absolute inset-0">
-        <Image
-          src="/images/hero/hero-image.jpg"
-          alt="New Vision Dental Premium Care"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-        {/* Dark Gradient Overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30" />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentImage}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={heroImages[currentImage]}
+              alt="New Vision Dental Premium Care"
+              fill
+              className="object-cover"
+              priority={currentImage === 0}
+              sizes="100vw"
+            />
+          </motion.div>
+        </AnimatePresence>
         {/* Bottom fade to blend into next section */}
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#0A0A0A] to-transparent" />
       </div>
@@ -122,6 +148,7 @@ export default function EditorialHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.6, duration: 0.8 }}
             className="text-sm sm:text-base md:text-lg lg:text-2xl text-white/70 leading-relaxed max-w-2xl mb-6 sm:mb-10 font-light"
+            style={{ textShadow: "0 1px 10px rgba(0,0,0,0.7), 0 2px 30px rgba(0,0,0,0.4)" }}
           >
             Expert dentists, transparent pricing, and uncompromising comfort. 
             Experience world-class dental care in a luxury environment.
@@ -167,7 +194,7 @@ export default function EditorialHero() {
             className="flex flex-wrap items-center gap-3 sm:gap-4 md:gap-6"
           >
             {[
-              { value: "2.5K+", label: "Happy Patients" },
+              { value: "10,000+", label: "Happy Patients" },
               { value: "4.9", label: "Rating", showStar: true },
               { value: "15+", label: "Years Experience" },
             ].map((stat, i) => (
