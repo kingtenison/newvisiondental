@@ -11,7 +11,7 @@ const locations = [
     name: "North Legon", 
     address: "Agbogba Road, North Legon, Accra",
     phone: "0559497906",
-    hours: "Mon: 8am-5pm, Tue: 8am-7pm, Wed-Fri: 8am-5pm, Sat: 8am-4pm",
+    hours: "Mon-Fri: 8:30am-5pm, Sat: 8:30am-5pm",
     slug: "dentist-north-legon",
     image: "/images/locations/north-legon-clinic.jpg",
     mapLink: "https://maps.google.com/?q=North+Legon+Accra"
@@ -20,7 +20,7 @@ const locations = [
     name: "Ashaley Botwe", 
     address: "School Junction, Ashaley Botwe, Accra",
     phone: "0257091176",
-    hours: "Mon: 8am-5pm, Tue: 8am-7pm, Wed-Fri: 8am-5pm, Sat: 8am-4pm",
+    hours: "Mon-Fri: 8:30am-5pm, Sat: 8:30am-5pm",
     slug: "dentist-ashaley-botwe",
     image: "/images/locations/ashaley-botwe-clinic.jpg",
     mapLink: "https://maps.google.com/?q=Ashaley+Botwe+Accra"
@@ -29,7 +29,7 @@ const locations = [
     name: "ACP Estate", 
     address: "ACP Estate Junction, Kwabenya, Accra",
     phone: "0545563839",
-    hours: "Mon: 8am-5pm, Tue: 8am-7pm, Wed-Fri: 8am-5pm, Sat: 8am-4pm",
+    hours: "Mon-Fri: 8:30am-5pm, Sat: 8:30am-5pm",
     slug: "dentist-acp-estate",
     image: "/images/locations/acp-estate-clinic.jpg",
     mapLink: "https://maps.google.com/?q=ACP+Estate+Kwabenya+Accra"

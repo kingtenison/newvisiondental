@@ -6,7 +6,7 @@ import Image from "next/image"
 import { 
   Stethoscope, ScanLine, Sparkles, Sun, Shield, PenTool, Heart, 
   MinusCircle, Smile, AlertTriangle, Scissors, ArrowRight, Star, Check, Clock, Calendar,
-  Crown, Droplets, ShieldCheck
+  Crown, Droplets, ShieldCheck, AlignHorizontalDistributeCenter
 } from "lucide-react"
 
 const servicesData = [
@@ -56,7 +56,7 @@ const servicesData = [
     icon: PenTool,
     rating: "4.8",
     duration: "1 Visit",
-    image: "/images/services/composite-restoration.jpg",
+    image: "/images/services/composite-restoration-v2.jpg",
     description: "Tooth-colored resin fillings to repair decay, fractures, chips, or wear in a single visit.",
     features: ["Natural-looking", "Bonds to tooth", "Minimal removal"],
   },
@@ -86,7 +86,7 @@ const servicesData = [
     icon: Crown,
     rating: "4.9",
     duration: "1 Visit",
-    image: "/images/services/crown-and-bridge.jpg",
+    image: "/images/services/crown-and-bridge.png",
     description: "Custom-made caps over damaged teeth and artificial teeth anchored to neighbours to restore shape, strength, and appearance.",
     features: ["Restores strength", "Improves chewing", "Enhances smile"],
   },
@@ -106,7 +106,7 @@ const servicesData = [
     icon: Sun,
     rating: "4.9",
     duration: "60 mins",
-    image: "/images/services/teeth-whitening.jpg",
+    image: "/images/services/teeth-whitening.png",
     description: "Professional whitening tailored to your needs — faster, safer, and more noticeable results than over-the-counter products.",
     features: ["Zero sensitivity", "Quick results", "Long-lasting"],
   },
@@ -149,6 +149,16 @@ const servicesData = [
     image: "/images/services/fissure-sealing.jpg",
     description: "Protective resin coating applied to the grooves of molars to prevent food and bacteria from causing decay.",
     features: ["Prevents cavities", "Painless", "Long-term protection"],
+  },
+  {
+    name: "Orthodontics (Braces)",
+    slug: "orthodontics-braces",
+    icon: AlignHorizontalDistributeCenter,
+    rating: "4.9",
+    duration: "12-24 Months",
+    image: "/images/services/braces.jpg",
+    description: "Correct misaligned teeth, overcrowding, and bite issues with braces for a straighter, healthier smile.",
+    features: ["Straighter teeth", "Improved bite", "Custom treatment plans"],
   },
 ]
 
@@ -207,7 +217,7 @@ export default function ServicesPreview() {
           className="flex flex-wrap justify-center gap-6 md:gap-12 mb-12 md:mb-16"
         >
           {[
-            { value: "14", label: "Services" },
+            { value: "15", label: "Services" },
             { value: "4.9", label: "Rating", showStar: true },
             { value: "10,000+", label: "Patients" },
             { value: "15+", label: "Years" },

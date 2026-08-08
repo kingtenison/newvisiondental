@@ -26,6 +26,7 @@ export async function GET() {
     'dental-implants',
     'fluoride-therapy-children',
     'fissure-sealing-children',
+    'orthodontics-braces',
   ];
 
   const locationSlugs = [

@@ -57,16 +57,6 @@ const team = [
     education: ["BDS - KNUST", "BSc Human Biology - KNUST"]
   },
   {
-    name: "Dr. Dennis Osae",
-    title: "General Dentist",
-    qualifications: "BSc, BDS",
-    experience: "9+ years",
-    speciality: "General, Restorative & Cosmetic Dentistry",
-    bio: "Dr. Dennis Osae is an experienced General Dentist dedicated to delivering comprehensive, patient-centered oral healthcare. He earned his Bachelor of Science (BSc) and Bachelor of Dental Surgery (BDS) from KNUST School of Medicine and Dentistry in 2017. With nearly a decade of clinical experience, Dr. Osae has built a reputation for his gentle demeanor, precision, and ability to make even the most anxious patients feel completely at ease in the dental chair. For Dr. Osae, successful dental care goes beyond technical excellence, it is about building trust. He takes a personalized approach to every treatment plan, ensuring: Open Communication — every procedure is explained clearly so you can make informed decisions about your oral health; Comfort-First Care — utilizing modern techniques to ensure procedures are as smooth, efficient, and pain-free as possible; Tailored Results — whether it is a routine checkup or a complex restorative procedure, treatments are customized to fit your lifestyle and long-term health goals. Dr. Osae provides a wide range of general dental services for families and individuals, including: Preventive & Routine Care, Restorative Dentistry, Cosmetic Treatments, and Oral Surgery.",
-    image: "/images/team/dr-dennis.jpg",
-    education: ["BSc - KNUST", "BDS - KNUST School of Medicine and Dentistry"]
-  },
-  {
     name: "Dr. Keith Kwesi Wiredu Sagoe",
     title: "Dental Surgeon",
     qualifications: "BDS",
@@ -87,24 +77,24 @@ function TeamCard({ member, index }: { member: typeof team[0]; index: number }) 
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group"
+      className="group h-full flex flex-col"
     >
       {/* Photo */}
-      <div className="relative rounded-t-2xl overflow-hidden bg-gradient-to-b from-white/10 to-transparent">
+      <div className="relative aspect-[4/5] rounded-t-2xl overflow-hidden bg-gradient-to-b from-white/10 to-transparent">
         <Image
           src={member.image}
           alt={member.name}
           width={400}
           height={500}
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          className="w-full h-auto object-cover object-top"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="w-full h-full object-cover object-top"
         />
       </div>
 
       {/* Content */}
-      <div className="relative p-5 rounded-b-2xl border border-t-0 border-[#E8B830]/20 bg-gradient-to-br from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8] shadow-lg">
+      <div className="relative p-5 flex-1 flex flex-col rounded-b-2xl border border-t-0 border-[#E8B830]/20 bg-gradient-to-br from-[#1A4FAD] via-[#0D2A60] to-[#00C8E8] shadow-lg">
         <div className="absolute top-0 right-0 w-32 h-32 bg-[#E8B830]/5 rounded-full blur-[60px]" />
-        <div className="relative">
+        <div className="relative flex flex-col h-full">
           <h3 className="text-lg font-bold text-white mb-1">{member.name}</h3>
           <p className="text-[#E8B830] text-sm font-semibold mb-2">{member.title}</p>
           <div className="flex items-center gap-2 mb-3">
@@ -113,7 +103,7 @@ function TeamCard({ member, index }: { member: typeof team[0]; index: number }) 
           </div>
           
           {/* Bio with expand/collapse */}
-          <div className="mb-4">
+          <div className="mb-4 flex-1">
             <p className={`text-white/70 text-sm leading-relaxed ${!expanded ? 'line-clamp-3' : ''}`}>
               {member.bio}
             </p>
@@ -390,7 +380,7 @@ export default function AboutPage() {
           </motion.div>
 
           {/* Remaining Team Members */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {team.map((member, index) => (
               <TeamCard key={index} member={member} index={index} />
             ))}

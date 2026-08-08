@@ -33,7 +33,7 @@ export default function OrganizationSchema() {
     ],
     "telephone": "+233257091176",
     "email": "info@newvisiondental.com",
-    "openingHours": ["Mo-Fr 08:00-17:00", "Sa 09:00-14:00"],
+    "openingHours": ["Mo-Fr 08:30-17:00", "Sa 08:30-17:00"],
     "sameAs": [
       "https://www.instagram.com/newvisiondental.clinic",
       "https://www.tiktok.com/@newvisiondental.clinic"

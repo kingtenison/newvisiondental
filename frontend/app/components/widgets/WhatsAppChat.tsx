@@ -25,7 +25,7 @@ const CLINIC_DATA = {
     "Ashaley Botwe": "School Junction, opposite Melcom",
     "ACP Estate": "ACP Junction, Kwabenya"
   },
-  hours: "Monday - Saturday: 8:00 AM - 6:00 PM",
+  hours: "Monday - Saturday: 8:30 AM - 5:00 PM",
   services: [
     "Consultation", "Dental X-Ray", "Scaling & Polishing", "Teeth Whitening", 
     "Dental Implants", "Root Canal", "Veneers", "Braces"

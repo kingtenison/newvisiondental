@@ -172,14 +172,23 @@ export default function GalleryClient({ images, categories }: { images: GalleryI
               <ChevronRight size={48} />
             </button>
             <motion.div
+              key={selectedImage.id}
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="max-w-4xl max-h-[80vh] w-full bg-[#1a0a10] rounded-2xl border border-[#E8B830]/20 overflow-hidden"
+              className="max-w-4xl max-h-[80vh] w-full bg-[#1a0a10] rounded-2xl border border-[#E8B830]/20 overflow-hidden flex flex-col"
+              onClick={(e) => e.stopPropagation()}
             >
-              <div className="p-10 text-center">
-                <div className="w-24 h-24 mx-auto bg-[#E8B830]/10 rounded-full flex items-center justify-center mb-6 border border-[#E8B830]/20">
-                  <Camera className="w-10 h-10 text-[#E8B830]" />
-                </div>
+              <div className="relative w-full h-[50vh] sm:h-[60vh] lg:h-[65vh] bg-black shrink-0">
+                <Image
+                  src={selectedImage.image_url}
+                  alt={selectedImage.title}
+                  fill
+                  sizes="(max-width: 896px) 100vw, 896px"
+                  className="object-contain"
+                  unoptimized={selectedImage.image_url?.includes('cloudinary') || selectedImage.image_url?.includes('supabase')}
+                />
+              </div>
+              <div className="p-6 text-center shrink-0">
                 <h3 className="text-white text-2xl font-bold mb-2">{selectedImage.title}</h3>
                 <p className="text-[#E8B830] text-sm font-medium mb-4">{selectedImage.category}</p>
                 {selectedImage.is_before_after && (

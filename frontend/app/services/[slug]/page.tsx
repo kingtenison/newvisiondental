@@ -4,7 +4,7 @@ import {
   Sparkles, Shield, Heart, Sun, Stethoscope, ScanLine, PenTool, MinusCircle, Smile, CheckCircle,
   ChevronRight, Star, Phone, Calendar as CalendarIcon,
   Check, Award, Users, MapPin, ArrowRight, AlertTriangle, Scissors, Utensils, Pill,
-  Crown, Droplets, ShieldCheck
+  Crown, Droplets, ShieldCheck, AlignHorizontalDistributeCenter
 } from "lucide-react";
 import { FadeIn } from "@/app/components/animations/FadeIn";
 import Image from "next/image";
@@ -64,7 +64,7 @@ const services = [
     slug: "teeth-whitening",
     duration: "60 mins",
     price: "From GHS 500",
-    image: "/images/services/teeth-whitening.jpg",
+    image: "/images/services/teeth-whitening.png",
     features: [
       "Customized Treatment Plans: Our dentists assess your teeth and decide on a whitening plan tailored to your needs and goals.",
       "Safe and Effective: Our European approved BlancOne whitening products protect your enamel while delivering stunning results.",
@@ -149,7 +149,7 @@ const services = [
     slug: "composite-restoration",
     duration: "1 visit",
     price: "From GHS 400",
-    image: "/images/services/composite-restoration.jpg",
+    image: "/images/services/composite-restoration-v2.jpg",
     features: [
       "Natural-looking tooth-colored resin",
       "Bonds directly to the tooth structure",
@@ -324,7 +324,7 @@ const services = [
     slug: "crown-bridge-recementation",
     duration: "1 Visit",
     price: "From GHS 800",
-    image: "/images/services/crown-and-bridge.jpg",
+    image: "/images/services/crown-and-bridge.png",
     features: [
       "Restores strength and functionality",
       "Improves chewing ability",
@@ -380,6 +380,31 @@ const services = [
       "Long-term cavity protection",
       "No drilling required",
       "Ideal for children and adults"
+    ]
+  },
+  {
+    name: "Orthodontics (Braces)",
+    description: "Correct misaligned teeth, overcrowding, and bite issues with braces",
+    longDescription: "Orthodontic treatment, commonly known as braces, is a specialized branch of dentistry focused on correcting misaligned teeth, overcrowding, gaps, and bite issues such as overbites, underbites, and crossbites. At New Vision Dental Clinic, we provide personalised orthodontic care using modern bracket systems and techniques to help patients of all ages achieve a straighter, healthier, and more confident smile.\n\nCrooked or misaligned teeth are more than a cosmetic concern — they can make cleaning difficult, increase the risk of decay and gum disease, cause uneven wear on tooth surfaces, and lead to jaw pain or discomfort. Orthodontic treatment addresses these functional issues while also enhancing the appearance of your smile.\n\nHow Orthodontic Treatment Works\n\nOrthodontic treatment works by applying gentle, controlled forces to teeth over time, gradually moving them into their ideal positions. The process begins with a comprehensive assessment including digital X-rays, photographs, and impressions to evaluate the alignment of your teeth and jaw. Based on these findings, a custom treatment plan is developed to address your specific needs.\n\nDuring treatment, brackets are bonded to the front surface of each tooth and connected by an archwire. The wire applies steady pressure to guide teeth into alignment. You will visit our clinic every 4–6 weeks so we can monitor progress and make adjustments as needed. Treatment typically spans 12–24 months depending on the complexity of the case.\n\nTypes of Braces We Offer\n\n• Metal Braces — Traditional bracket systems made from high-grade stainless steel. These are durable, cost-effective, and suitable for patients of all ages. Modern metal braces are smaller and more comfortable than ever before.\n• Ceramic Braces — Tooth-coloured brackets that blend with your natural teeth for a less noticeable appearance. They work the same way as metal braces but offer a more discreet option for patients concerned about aesthetics.\n• Self-Ligating Braces — These use a specialized clip mechanism instead of elastic ties to hold the archwire, reducing friction and potentially shortening treatment time with fewer adjustment visits.\n\nWho Can Benefit from Orthodontic Treatment?\n\nOrthodontic treatment is suitable for both teenagers and adults. While the most common age for braces is between 10 and 14, there is no upper age limit for treatment. Adults increasingly seek orthodontic care to improve their smile and correct long-standing bite issues. During your consultation, we will evaluate your oral health, discuss your goals, and recommend the most appropriate treatment option.\n\nCommon issues that orthodontic treatment can address include:\n• Crowded or overlapping teeth\n• Gaps between teeth\n• Overbite (upper teeth protrude over lower teeth)\n• Underbite (lower teeth protrude past upper teeth)\n• Crossbite (upper and lower teeth do not align properly)\n• Open bite (front teeth do not touch when mouth is closed)\n\nLife After Braces\n\nOnce active treatment is complete, a retainer is worn to maintain the new position of your teeth. Retainers are essential because teeth can shift back to their original positions without proper retention. We will provide detailed guidance on retainer wear and schedule follow-up appointments to ensure your results are stable and long-lasting.\n\nWhy Choose New Vision Dental Clinic for Orthodontic Treatment?\n• Personalised Treatment Plans: Every smile is different. We tailor each treatment plan to your individual needs, lifestyle, and goals.\n• Modern Technology: We use contemporary bracket systems and diagnostic tools to deliver efficient, effective treatment.\n• Experienced Team: Our dentists have the training and experience to manage a wide range of orthodontic cases.\n• Flexible Payment Options: We offer transparent pricing and payment plans to make orthodontic treatment accessible.\n• Comprehensive Care: From your initial consultation through retention, we support you at every stage of your orthodontic journey.\n\nIf you are considering orthodontic treatment for yourself or your child, we invite you to schedule a consultation at New Vision Dental Clinic. Our team will assess your needs and help you take the first step toward a straighter, healthier smile.",
+    icon: AlignHorizontalDistributeCenter,
+    slug: "orthodontics-braces",
+    duration: "12-24 Months",
+    price: "From GHS 3,000",
+    image: "/images/services/braces.jpg",
+    features: [
+      "Corrects misaligned and crowded teeth",
+      "Improves bite function and jaw comfort",
+      "Metal, ceramic, and self-ligating options available",
+      "Suitable for teenagers and adults",
+      "Personalised treatment plans with modern bracket systems",
+      "Retention program to maintain long-term results"
+    ],
+    benefits: [
+      "Straighter teeth and a more confident smile",
+      "Improved oral hygiene — aligned teeth are easier to clean",
+      "Reduced risk of decay and gum disease",
+      "Better chewing function and jaw comfort",
+      "Long-lasting results with proper retention"
     ]
   }
 ];

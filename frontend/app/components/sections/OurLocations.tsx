@@ -252,7 +252,7 @@ export default function OurLocations() {
           >
             <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-[#E8B830]" />
             <span className="text-gray-500 text-xs sm:text-sm">
-              Open <span className="text-gray-700 font-medium">Monday - Saturday</span>, 8:00AM - 6:00PM
+              Open <span className="text-gray-700 font-medium">Monday - Saturday</span>, 8:30AM - 5:00PM
             </span>
           </div>
         </motion.div>

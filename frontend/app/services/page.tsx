@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { 
   Stethoscope, ScanLine, Sparkles, Sun, Shield, PenTool, Heart, 
   MinusCircle, Smile, AlertTriangle, Scissors, ArrowRight, Star, Check,
-  Crown, Droplets, ShieldCheck
+  Crown, Droplets, ShieldCheck, AlignHorizontalDistributeCenter
 } from "lucide-react";
 
 const services = [
@@ -51,7 +51,7 @@ const services = [
     description: "Tooth-colored resin fillings to repair decay, fractures, chips, or wear in a single visit.",
     icon: PenTool,
     slug: "composite-restoration",
-    image: "/images/services/composite-restoration.jpg",
+    image: "/images/services/composite-restoration-v2.jpg",
     rating: "4.8",
     features: ["Natural-looking", "Bonds to tooth", "Minimal removal"]
   },
@@ -78,7 +78,7 @@ const services = [
     description: "Custom-made caps over damaged teeth and artificial teeth anchored to neighbours to restore shape, strength, and appearance.",
     icon: Crown,
     slug: "crown-bridge-recementation",
-    image: "/images/services/crown-and-bridge.jpg",
+    image: "/images/services/crown-and-bridge.png",
     rating: "4.9",
     features: ["Restores strength", "Improves chewing", "Enhances smile"]
   },
@@ -96,7 +96,7 @@ const services = [
     description: "Professional whitening tailored to your needs — faster, safer, and more noticeable results than over-the-counter products.",
     icon: Sun,
     slug: "teeth-whitening",
-    image: "/images/services/teeth-whitening.jpg",
+    image: "/images/services/teeth-whitening.png",
     rating: "4.9",
     features: ["Zero sensitivity", "Quick results", "Long-lasting"]
   },
@@ -136,13 +136,22 @@ const services = [
     rating: "5.0",
     features: ["Prevents cavities", "Painless", "Long-term protection"]
   },
+  {
+    name: "Orthodontics (Braces)",
+    description: "Correct misaligned teeth, overcrowding, and bite issues with braces for a straighter, healthier smile.",
+    icon: AlignHorizontalDistributeCenter,
+    slug: "orthodontics-braces",
+    image: "/images/services/braces.jpg",
+    rating: "4.9",
+    features: ["Straighter teeth", "Improved bite", "Custom treatment plans"]
+  },
 ];
 
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
   "name": "Dental Services in Accra - New Vision Dental Clinic",
-  "description": "Comprehensive dental services including consultation, X-ray, emergency dentistry, oral surgery, composite restoration, extraction, root canal, veneers, whitening, and implants in Accra, Ghana."
+  "description": "Comprehensive dental services including consultation, X-ray, emergency dentistry, oral surgery, composite restoration, extraction, root canal, veneers, whitening, implants, and orthodontics in Accra, Ghana."
 };
 
 export default function ServicesPage() {
@@ -203,7 +212,7 @@ export default function ServicesPage() {
               {/* Stats bar */}
               <div className="flex flex-wrap justify-center gap-6 md:gap-12 mt-4 pt-4 border-t border-white/15">
                 {[
-                  { value: "14", label: "Services" },
+                  { value: "15", label: "Services" },
                   { value: "4.9", label: "Rating", showStar: true },
                   { value: "10,000+", label: "Patients" },
                   { value: "15+", label: "Years" },

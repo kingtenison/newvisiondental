@@ -5,7 +5,7 @@ export const timeSlots = [
   "03:00 PM", "03:30 PM", "04:00 PM", "04:30 PM"
 ];
 
-// Service options matching the 14 services from the website
+// Service options matching the 15 services from the website
 export const services = [
   { id: 1, name: "Dental Consultation", duration: "30 mins", icon: "🔍" },
   { id: 2, name: "Dental X-Ray", duration: "15 mins", icon: "📸" },
@@ -21,6 +21,7 @@ export const services = [
   { id: 12, name: "Scaling & Polishing", duration: "45 mins", icon: "✨" },
   { id: 13, name: "Fluoride Therapy", duration: "20 mins", icon: "💧" },
   { id: 14, name: "Fissure Sealing", duration: "20 mins", icon: "🛡️" },
+  { id: 15, name: "Orthodontics (Braces)", duration: "12-24 Months", icon: "🦷" },
 ];
 
 // Helper to generate available dates (next 30 days)

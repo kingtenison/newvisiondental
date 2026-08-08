@@ -5,6 +5,7 @@ import { Shield, CheckCircle2 } from "lucide-react"
 
 // Matches your exact public/images/insurance folder and filenames
 const partners = [
+  { name: "ACE Insurance", img: "/images/insurance/ace-insurance.png" },
   { name: "Acacia", img: "/images/insurance/acacia.png" },
   { name: "Cosmopolitan", img: "/images/insurance/cosmopolitan.jpg" },
   { name: "Equity", img: "/images/insurance/equity.jpg" },
@@ -12,7 +13,8 @@ const partners = [
   { name: "Glico", img: "/images/insurance/glico.jpg" },
   { name: "Metropolitan", img: "/images/insurance/metropolitan.jpg" },
   { name: "Nationwide", img: "/images/insurance/nationwide.jpeg" },
-  { name: "Nexus", img: "/images/insurance/logo.webp" }
+  { name: "Nexus", img: "/images/insurance/logo.webp" },
+  { name: "Orange Insurance", img: "/images/insurance/orange-insurance.jpg" }
 ]
 
 export default function InsurancePartners() {
@@ -88,18 +90,18 @@ export default function InsurancePartners() {
             {partners.map((partner, i) => (
               <motion.div
                 key={i}
-                className="group relative h-28 sm:h-64 md:h-72 lg:h-80 bg-white/[0.03] flex items-center justify-center p-4 lg:p-6 transition-all duration-700 hover:bg-white/[0.08] border-[0.5px] border-white/5"
+                className="group relative h-28 sm:h-40 md:h-44 lg:h-48 bg-white flex items-center justify-center p-3 sm:p-5 lg:p-6 transition-all duration-700 hover:bg-white/[0.95] border border-black/5"
                 whileHover={{ zIndex: 1 }}
               >
                 {/* Subtle Hover Glow */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-br from-[#1A4FAD]/20 to-transparent" />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-br from-[#1A4FAD]/10 to-transparent" />
                 
-                <div className="relative w-full h-full max-w-[120px] max-h-[60px] sm:max-w-[320px] sm:max-h-[220px]">
+                <div className="relative w-full h-10 sm:h-14 md:h-16 lg:h-20 max-w-[140px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px]">
                   <Image
                     src={partner.img}
                     alt={partner.name}
                     fill
-                    className="object-contain transition-all duration-700 group-hover:scale-110 filter brightness-110"
+                    className="object-contain transition-all duration-700 group-hover:scale-110"
                     sizes="(max-width: 640px) 50vw, 33vw"
                   />
                 </div>

@@ -37,6 +37,7 @@ const footerLinks = {
     { name: "Scaling & Polishing", href: "/services/scaling-polishing" },
     { name: "Fluoride Therapy", href: "/services/fluoride-therapy-children" },
     { name: "Fissure Sealing", href: "/services/fissure-sealing-children" },
+    { name: "Orthodontics (Braces)", href: "/services/orthodontics-braces" },
   ],
   company: [
     { name: "About Us", href: "/about" },
@@ -140,7 +141,7 @@ export function Footer() {
                </a>
               <div className="flex items-center gap-2 text-white/60 text-xs lg:text-sm">
                 <Clock className="w-3 h-3 text-[#00C8E8]/60 shrink-0" />
-                Mon - Sat: 8:30am - 6:00pm
+                Mon - Sat: 8:30am - 5:00pm
               </div>
             </div>
 
