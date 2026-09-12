@@ -5,14 +5,24 @@ import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { Star, ArrowRight, ChevronDown, Play } from "lucide-react"
 
-const heroImages = [
-  "/images/hero/hero-1.jpg",
+const heroImagesDesktop = [
   "/images/hero/hero-2.jpg",
   "/images/hero/hero-3.jpg",
   "/images/hero/hero-4.jpg",
   "/images/hero/hero-5.jpg",
   "/images/hero/hero-6.jpg",
   "/images/hero/hero-7.jpg",
+  "/images/hero/hero-9.jpg",
+  "/images/hero/hero-10.jpg",
+  "/images/hero/hero-11.jpg",
+]
+
+const heroImagesMobile = [
+  "/images/hero/hero-m2.jpg",
+  "/images/hero/hero-m3.jpg",
+  "/images/hero/hero-m4.jpg",
+  "/images/hero/hero-m5.jpg",
+  "/images/hero/hero-m6.jpg",
 ]
 
 const swipeWords = [
@@ -60,17 +70,28 @@ const SwipeText = ({ className }: { className?: string }) => {
 export default function EditorialHero() {
   const [mounted, setMounted] = useState(false)
   const [currentImage, setCurrentImage] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     setMounted(true)
+    const check = () => setIsMobile(window.innerWidth < 768)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
   }, [])
+
+  const heroImages = isMobile ? heroImagesMobile : heroImagesDesktop
+
+  useEffect(() => {
+    setCurrentImage(0)
+  }, [isMobile])
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % heroImages.length)
     }, 10000)
     return () => clearInterval(interval)
-  }, [])
+  }, [heroImages.length])
 
   return (
     <section className="relative w-full h-screen overflow-hidden">

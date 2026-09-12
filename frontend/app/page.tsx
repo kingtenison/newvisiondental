@@ -16,7 +16,7 @@ export const metadata = {
     title: 'New Vision Dental Clinic - Premium Dental Care in Accra, Ghana',
     description: 'Premium dental care across Accra. Book your appointment today.',
     url: 'https://newvisiondentalclinic.com',
-    images: [{ url: '/images/hero/hero-image.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/images/hero/hero-1.jpg', width: 1200, height: 630 }],
   },
   alternates: {
     canonical: 'https://newvisiondentalclinic.com',
