@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { BOOKING_URL } from "@/app/lib/constants/booking";
 import { 
   Sparkles, Shield, Heart, Sun, Stethoscope, ScanLine, PenTool, MinusCircle, Smile, CheckCircle,
   ChevronRight, Star, Phone, Calendar as CalendarIcon,
@@ -569,7 +570,7 @@ function DentalImplantsRichContent({ service }: { service: any }) {
                 <span className="font-bold text-gray-800 text-right text-xs">Accra Hubs</span>
               </div>
             </div>
-            <Link href="/book" className="w-full btn-golden-shine text-[#1a0a10] px-6 py-4 rounded-2xl font-bold transition-all flex items-center justify-center gap-3 mb-4 shadow-xl shadow-[#E8B830]/20">
+            <Link href={BOOKING_URL} className="w-full btn-golden-shine text-[#1a0a10] px-6 py-4 rounded-2xl font-bold transition-all flex items-center justify-center gap-3 mb-4 shadow-xl shadow-[#E8B830]/20">
               <CalendarIcon className="w-5 h-5" />
               Book Consultation
             </Link>
@@ -802,7 +803,7 @@ function TeethWhiteningContent({ service }: { service: any }) {
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Achieve a Brighter Smile?</h2>
           <p className="text-white/80 mb-8 max-w-2xl mx-auto">Wondering what type of whitening is best for you? Call our office and let us help you transform your smile and boost your confidence with our expert whitening solutions!</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/book" className="btn-golden-shine text-[#1a0a10] px-8 py-4 rounded-full font-bold shadow-xl shadow-[#E8B830]/30 hover:scale-105 transition-all flex items-center justify-center gap-3">
+            <Link href={BOOKING_URL} className="btn-golden-shine text-[#1a0a10] px-8 py-4 rounded-full font-bold shadow-xl shadow-[#E8B830]/30 hover:scale-105 transition-all flex items-center justify-center gap-3">
               <CalendarIcon className="w-5 h-5" />
               Schedule Appointment
             </Link>
@@ -982,7 +983,7 @@ function EmergencyDentistryContent({ service }: { service: any }) {
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Dental Emergency? Call Now!</h2>
           <p className="text-white/80 mb-8 max-w-2xl mx-auto">Don&apos;t wait — contact us immediately for fast, compassionate emergency dental care. We&apos;re here to help when you need it most.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/book" className="btn-golden-shine text-[#1a0a10] px-8 py-4 rounded-full font-bold shadow-xl shadow-[#E8B830]/30 hover:scale-105 transition-all flex items-center justify-center gap-3">
+            <Link href={BOOKING_URL} className="btn-golden-shine text-[#1a0a10] px-8 py-4 rounded-full font-bold shadow-xl shadow-[#E8B830]/30 hover:scale-105 transition-all flex items-center justify-center gap-3">
               <CalendarIcon className="w-5 h-5" />
               Book Emergency Visit
             </Link>
@@ -1142,7 +1143,7 @@ function RootCanalContent({ service }: { service: any }) {
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Don&apos;t Wait — Save Your Tooth!</h2>
           <p className="text-white/80 mb-8 max-w-2xl mx-auto">If you&apos;re experiencing signs of infection, contact us today for gentle, expert root canal treatment.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/book" className="btn-golden-shine text-[#1a0a10] px-8 py-4 rounded-full font-bold shadow-xl shadow-[#E8B830]/30 hover:scale-105 transition-all flex items-center justify-center gap-3">
+            <Link href={BOOKING_URL} className="btn-golden-shine text-[#1a0a10] px-8 py-4 rounded-full font-bold shadow-xl shadow-[#E8B830]/30 hover:scale-105 transition-all flex items-center justify-center gap-3">
               <CalendarIcon className="w-5 h-5" />
               Book Consultation
             </Link>
@@ -1278,7 +1279,7 @@ function StandardServiceTemplate({ service }: { service: any }) {
               </div>
             </div>
             
-            <Link href="/book" className="w-full btn-golden-shine text-[#1a0a10] px-6 py-4 rounded-2xl font-bold transition-all flex items-center justify-center gap-3 mb-4 shadow-xl shadow-[#E8B830]/20">
+            <Link href={BOOKING_URL} className="w-full btn-golden-shine text-[#1a0a10] px-6 py-4 rounded-2xl font-bold transition-all flex items-center justify-center gap-3 mb-4 shadow-xl shadow-[#E8B830]/20">
               <CalendarIcon className="w-5 h-5" />
               Secure My Slot
             </Link>
@@ -1417,7 +1418,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </div>
               
               <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-10">
-                <Link href="/book" className="btn-golden-shine text-[#1a0a10] px-10 py-5 rounded-full font-bold shadow-2xl shadow-[#E8B830]/30 hover:scale-105 transition-all flex items-center gap-3 text-lg">
+                <Link href={BOOKING_URL} className="btn-golden-shine text-[#1a0a10] px-10 py-5 rounded-full font-bold shadow-2xl shadow-[#E8B830]/30 hover:scale-105 transition-all flex items-center gap-3 text-lg">
                   <CalendarIcon className="w-6 h-6" />
                   Reserve Your Visit
                 </Link>
@@ -1532,7 +1533,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 Book your consultation today and experience world-class dentistry in the heart of Accra.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                <Link href="/book" className="btn-golden-shine text-[#1a0a10] px-12 py-6 rounded-full font-bold text-xl shadow-2xl shadow-black/20 hover:scale-105 transition-all">
+                <Link href={BOOKING_URL} className="btn-golden-shine text-[#1a0a10] px-12 py-6 rounded-full font-bold text-xl shadow-2xl shadow-black/20 hover:scale-105 transition-all">
                   Book Appointment Now
                 </Link>
                 <div className="flex items-center gap-4 text-white/60">

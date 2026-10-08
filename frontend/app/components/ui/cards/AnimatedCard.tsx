@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
@@ -7,6 +7,7 @@ import Link from "next/link";
 import { ChevronRight, Calendar, Sparkles, Shield, Heart, Calendar as CalendarIcon, Baby, CheckCircle } from "lucide-react";
 import { AnimatedButton } from "@/app/components/ui/buttons/AnimatedButton";
 import { useState } from "react";
+import { BOOKING_URL } from "@/app/lib/constants/booking";
 
 interface AnimatedCardProps {
   children?: ReactNode;
@@ -34,7 +35,7 @@ export function AnimatedCard({
   duration,
   className = "",
   onClick,
-  bookHref = "/book",
+  bookHref = BOOKING_URL,
   icon
 }: AnimatedCardProps) {
   
@@ -165,7 +166,7 @@ export function ServiceCard({ service }: { service: any }) {
       image={service.image}
       badge={service.badge}
       duration={service.duration}
-      bookHref="/book"
+      bookHref={BOOKING_URL}
       icon={getIcon(service.iconName)}
     />
   );

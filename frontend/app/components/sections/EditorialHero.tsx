@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { Star, ArrowRight, ChevronDown, Play } from "lucide-react"
+import { BOOKING_URL } from "@/app/lib/constants/booking"
 
 const heroImagesDesktop = [
   "/images/hero/hero-2.jpg",
@@ -184,15 +185,15 @@ export default function EditorialHero() {
           >
             {/* Primary CTA */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-              <Link
-                href="/book"
+              <a
+                href={BOOKING_URL}
                 className="group relative inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-semibold overflow-hidden btn-golden-shine shadow-2xl shadow-[#E8B830]/30 hover:shadow-[#E8B830]/50 transition-shadow duration-300"
               >
                 <span className="relative z-10 flex items-center gap-2 sm:gap-3">
                   Book Your Visit
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
-              </Link>
+              </a>
             </motion.div>
             
             {/* Secondary CTA */}

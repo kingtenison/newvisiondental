@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Calendar, Clock, LogOut, User, MapPin, Phone, CalendarDays, Shield } from "lucide-react";
 import { supabase } from "@/app/lib/supabase";
+import { BOOKING_URL } from "@/app/lib/constants/booking";
 
 interface Appointment {
   id: string;
@@ -30,7 +31,7 @@ export default function DashboardClient({ user, appointments }: { user: { id: st
   };
 
   const quickActions = [
-    { label: "Book Appointment", href: "/book", icon: Calendar, desc: "Schedule your next visit" },
+    { label: "Book Appointment", href: BOOKING_URL, icon: Calendar, desc: "Schedule your next visit" },
     { label: "Our Services", href: "/services", icon: Shield, desc: "Browse treatments" },
     { label: "Our Locations", href: "/locations", icon: MapPin, desc: "Visit our closest branch" },
     { label: "Contact Us", href: "/contact", icon: Phone, desc: "Get in touch" },
@@ -81,7 +82,7 @@ export default function DashboardClient({ user, appointments }: { user: { id: st
             <div className="bg-gray-50 rounded-xl p-8 text-center border border-[#E8B830]/10">
               <Calendar className="w-12 h-12 text-[#E8B830]/30 mx-auto mb-3" />
               <p className="text-gray-500 mb-4">No upcoming appointments</p>
-              <Link href="/book" className="inline-flex items-center gap-2 px-6 py-3 bg-[#1A4FAD] text-white rounded-full text-sm font-semibold hover:bg-[#163E8A] transition-colors">Book an Appointment</Link>
+              <Link href={BOOKING_URL} className="inline-flex items-center gap-2 px-6 py-3 bg-[#1A4FAD] text-white rounded-full text-sm font-semibold hover:bg-[#163E8A] transition-colors">Book an Appointment</Link>
             </div>
           ) : (
             <div className="space-y-4">

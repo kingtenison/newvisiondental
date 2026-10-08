@@ -7,7 +7,6 @@ export async function GET() {
     { path: '/services', priority: '0.9', changefreq: 'weekly' },
     { path: '/locations', priority: '0.8', changefreq: 'monthly' },
     { path: '/blog', priority: '0.7', changefreq: 'weekly' },
-    { path: '/book', priority: '0.9', changefreq: 'monthly' },
     { path: '/gallery', priority: '0.5', changefreq: 'monthly' },
   ];
 

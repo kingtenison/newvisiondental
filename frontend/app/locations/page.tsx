@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { BOOKING_URL } from "@/app/lib/constants/booking";
 import { MapPin, Phone, Clock, ChevronRight, Sparkles } from "lucide-react";
 import { FadeIn } from "@/app/components/animations/FadeIn";
 import Image from "next/image";
@@ -107,7 +108,7 @@ export default function LocationsPage() {
           <FadeIn>
             <h2 className="text-3xl font-bold text-white mb-4">Visit Us Today</h2>
             <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">Experience quality dental care at any of our convenient locations.</p>
-            <Link href="/book" className="inline-flex items-center gap-2 bg-[#E8B830] text-[#1a0a10] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#B07820] transition-all shadow-xl">Book an Appointment</Link>
+            <Link href={BOOKING_URL} className="inline-flex items-center gap-2 bg-[#E8B830] text-[#1a0a10] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#B07820] transition-all shadow-xl">Book an Appointment</Link>
           </FadeIn>
         </div>
       </section>

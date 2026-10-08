@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, Calendar, Camera } from "lucide-react";
 import Link from "next/link";
+import { BOOKING_URL } from "@/app/lib/constants/booking";
 import { supabase } from "@/app/lib/supabase";
 
 interface GalleryImage {
@@ -166,7 +167,7 @@ export default function GalleryContent() {
           <div className="max-w-2xl mx-auto">
             <h2 className="text-xl sm:text-3xl md:text-5xl font-bold text-white mb-3 md:mb-5">Ready to Transform Your Smile?</h2>
             <p className="text-sm md:text-lg text-white/70 mb-4 md:mb-10 leading-relaxed hidden md:block">Book a consultation today and start your journey to a beautiful smile.</p>
-            <Link href="/book" className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold btn-golden-shine shadow-lg shadow-[#E8B830]/25 hover:shadow-xl hover:shadow-[#E8B830]/40 transition-all duration-300 hover:scale-105 text-sm md:text-base">
+            <Link href={BOOKING_URL} className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold btn-golden-shine shadow-lg shadow-[#E8B830]/25 hover:shadow-xl hover:shadow-[#E8B830]/40 transition-all duration-300 hover:scale-105 text-sm md:text-base">
               <span className="relative z-10 flex items-center gap-2"><Calendar className="w-4 h-4 md:w-5 md:h-5" /> Book Your Consultation</span>
             </Link>
           </div>

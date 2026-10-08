@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { BOOKING_URL } from "@/app/lib/constants/booking";
 import { MapPin, Phone, ChevronRight, Calendar, Award, Users, ArrowLeft, Sparkles, Navigation } from "lucide-react";
 import { FadeIn } from "@/app/components/animations/FadeIn";
 import Image from "next/image";
@@ -236,7 +237,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                       </div>
                     </div>
 
-                    <Link href="/book" className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#1A4FAD] text-white rounded-xl font-semibold text-sm hover:bg-[#163E8A] transition-colors mb-3">
+                    <Link href={BOOKING_URL} className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#1A4FAD] text-white rounded-xl font-semibold text-sm hover:bg-[#163E8A] transition-colors mb-3">
                       <Calendar className="w-4 h-4" /> Book Appointment
                     </Link>
 
@@ -321,7 +322,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                   Book your appointment today and experience quality dental care at our {location.name} clinic.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
-                  <Link href="/book" className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#E8B830] text-[#1a0a10] text-sm font-semibold rounded-full hover:bg-[#E8B830] transition-colors shadow-lg shadow-[#E8B830]/25">
+                  <Link href={BOOKING_URL} className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#E8B830] text-[#1a0a10] text-sm font-semibold rounded-full hover:bg-[#E8B830] transition-colors shadow-lg shadow-[#E8B830]/25">
                     <Calendar className="w-4 h-4" /> Book Appointment
                   </Link>
                   <a href={`tel:${location.phone}`} className="inline-flex items-center gap-2 px-8 py-3.5 bg-white/10 text-white text-sm font-medium rounded-full border border-white/15 hover:bg-white/20 transition-all">

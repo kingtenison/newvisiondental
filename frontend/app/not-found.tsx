@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { BOOKING_URL } from '@/app/lib/constants/booking';
 
 export default function NotFound() {
   return (
@@ -17,7 +18,7 @@ export default function NotFound() {
             Back to Home
           </Link>
           <Link
-            href="/book"
+            href={BOOKING_URL}
             className="inline-flex items-center justify-center px-8 py-3 rounded-full text-sm font-semibold border-2 border-[#1A4FAD] text-[#1A4FAD] hover:bg-[#1A4FAD]/5 transition-all duration-300"
           >
             Book Appointment

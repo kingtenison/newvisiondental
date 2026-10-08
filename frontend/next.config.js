@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
@@ -36,6 +36,20 @@ const nextConfig = {
     // Cloudinary/Unsplash already serve optimized images
     minimumCacheTTL: 60 * 60 * 24,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+  },
+  async redirects() {
+    return [
+      {
+        source: '/book',
+        destination: 'https://newvisiondental.dentalkingsoftware.com/book/appointment',
+        permanent: false,
+      },
+      {
+        source: '/book/:path*',
+        destination: 'https://newvisiondental.dentalkingsoftware.com/book/appointment',
+        permanent: false,
+      },
+    ]
   },
 }
 

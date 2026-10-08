@@ -1,6 +1,8 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { CheckCircle, Calendar, Clock, User, Phone, Mail, ArrowLeft } from "lucide-react";
+
+import { BOOKING_URL } from "@/app/lib/constants/booking";
 
 export const metadata: Metadata = {
   title: "Appointment Confirmed",
@@ -22,10 +24,10 @@ export default function ConfirmationPage({ searchParams }: ConfirmationPageProps
       <div className="min-h-screen bg-[#F2F4F8] dark:bg-[#222222] pt-[72px] md:pt-20">
         <div className="container mx-auto px-4 py-20 text-center">
           <h1 className="text-2xl font-bold text-gray-800 dark:text-white">No appointment found</h1>
-          <Link href="/book" className="mt-4 inline-flex items-center gap-2 text-primary hover:underline">
+          <a href={BOOKING_URL} className="mt-4 inline-flex items-center gap-2 text-primary hover:underline">
             <ArrowLeft className="w-4 h-4" />
             Book an appointment
-          </Link>
+          </a>
         </div>
       </div>
     );
@@ -93,12 +95,12 @@ export default function ConfirmationPage({ searchParams }: ConfirmationPageProps
             </div>
             
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link
-                href="/book"
+              <a
+                href={BOOKING_URL}
                 className="bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-primary-dark transition text-center"
               >
                 Book Another Appointment
-              </Link>
+              </a>
               <Link
                 href="/"
                 className="border-2 border-primary text-primary px-6 py-2 rounded-full font-medium hover:bg-primary hover:text-white transition text-center"

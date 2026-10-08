@@ -3,6 +3,7 @@ import Script from "next/script"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { Star, ArrowRight, Calendar } from "lucide-react"
+import { BOOKING_URL } from "@/app/lib/constants/booking"
 
 export default function PatientReviews() {
   return (
@@ -84,8 +85,8 @@ export default function PatientReviews() {
           transition={{ delay: 0.6, duration: 0.7 }}
           className="text-center mt-10 sm:mt-12 md:mt-14"
         >
-          <Link
-            href="/book"
+          <a
+            href={BOOKING_URL}
             className="group relative inline-flex items-center justify-center px-8 sm:px-10 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold overflow-hidden btn-golden-shine shadow-xl shadow-[#E8B830]/25 hover:shadow-2xl hover:shadow-[#E8B830]/40 transition-shadow duration-300 hover:scale-105"
           >
             <span className="relative z-10 flex items-center gap-2 sm:gap-3">
@@ -93,7 +94,7 @@ export default function PatientReviews() {
               Book Consultation
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </span>
-          </Link>
+          </a>
         </motion.div>
       </div>
 

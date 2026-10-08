@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { MapPin, ArrowRight, Clock, Phone, Sparkles, Calendar } from "lucide-react"
+import { BOOKING_URL } from "@/app/lib/constants/booking"
 
 const branches = [
   { 
@@ -265,8 +266,8 @@ export default function OurLocations() {
           transition={{ delay: 0.6, duration: 0.7 }}
           className="text-center mt-8 sm:mt-10"
         >
-          <Link
-            href="/book"
+          <a
+            href={BOOKING_URL}
             className="group relative inline-flex items-center justify-center px-8 sm:px-10 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-semibold overflow-hidden btn-golden-shine shadow-xl shadow-[#E8B830]/25 hover:shadow-2xl hover:shadow-[#E8B830]/40 transition-shadow duration-300 hover:scale-105"
           >
             <span className="relative z-10 flex items-center gap-2 sm:gap-3">
@@ -274,7 +275,7 @@ export default function OurLocations() {
               Book Consultation
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </span>
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>

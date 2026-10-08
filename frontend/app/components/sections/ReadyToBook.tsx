@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, Calendar, CheckCircle, Phone } from "lucide-react"
+import { BOOKING_URL } from "@/app/lib/constants/booking"
 
 // Benefit item
 const BenefitItem = ({ text, delay }: { text: string; delay: number }) => (
@@ -93,13 +94,13 @@ export default function ReadyToBook() {
                 transition={{ delay: 0.8, duration: 0.7 }}
                 className="flex flex-row items-center gap-2 sm:gap-5"
               >
-                <Link
-                  href="/book"
+                <a
+                  href={BOOKING_URL}
                   className="group relative flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 sm:gap-3 px-4 py-3 sm:px-10 sm:py-5 bg-[#E8B830] text-[#0A0A0A] font-extrabold rounded-full overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(232,184,48,0.5)] hover:scale-105 active:scale-95 text-xs sm:text-base whitespace-nowrap"
                 >
                   <span className="relative z-10">Book Now</span>
                   <ArrowRight className="w-3 h-3 sm:w-6 sm:h-6 transition-transform duration-300 group-hover:translate-x-1" />
-                </Link>
+                </a>
                 
                 <Link
                   href="tel:+233257091176"

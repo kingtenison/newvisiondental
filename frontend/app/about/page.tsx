@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Users, Award, Heart, Target, Eye, Star, Phone, Calendar, MapPin, Sparkles, Check, ChevronDown } from "lucide-react";
+import { BOOKING_URL } from "@/app/lib/constants/booking";
 
 const featuredDoctor = {
   name: "Dr. Felix Govina",
@@ -576,7 +577,7 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-row items-center justify-center gap-2 md:gap-4">
               <Link
-                href="/book"
+                href={BOOKING_URL}
                 className="inline-flex items-center gap-2 px-4 py-2 md:px-8 md:py-4 rounded-full font-semibold btn-golden-shine shadow-lg shadow-[#E8B830]/25 hover:shadow-xl hover:shadow-[#E8B830]/40 transition-all duration-300 hover:scale-105 text-sm md:text-base"
               >
                 <span className="relative z-10 flex items-center gap-2">

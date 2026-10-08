@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import { supabase } from '@/app/lib/supabase'
 import { motion, AnimatePresence } from 'framer-motion'
+import { BOOKING_URL } from '@/app/lib/constants/booking'
 
 const navIcons = [
   { href: "/", label: "Home", icon: Home },
@@ -34,7 +35,7 @@ END:VCARD`
 const mobileNavItems = [
   { href: "/", label: "Home", icon: Home },
   { href: "/services", label: "Services", icon: Stethoscope },
-  { href: "/book", label: "Book", icon: Calendar, isPrimary: true },
+  { href: BOOKING_URL, label: "Book", icon: Calendar, isPrimary: true },
   { href: "/gallery", label: "Gallery", icon: ImageIcon },
   { href: "/about", label: "About", icon: Info },
   { href: "tel:+2330559497906", label: "Call", icon: Phone, isCall: true },
@@ -219,13 +220,13 @@ export function Header() {
                   </button>
                 </>
               ) : (
-                  <Link
-                    href="/book"
+                  <a
+                    href={BOOKING_URL}
                     className="p-3 btn-golden-shine rounded-full shadow-lg shadow-[#E8B830]/25 hover:shadow-xl transition-shadow duration-300"
                     title="Book Now"
                   >
                   <Stethoscope className="w-5 h-5" />
-                </Link>
+                </a>
               )
             )}
           </motion.nav>
@@ -398,12 +399,12 @@ export function Header() {
                             Log in
                           </Link>
                           {/* Book Now - Golden Shine Button */}
-                          <Link
-                            href="/book"
+                          <a
+                            href={BOOKING_URL}
                             className="group relative inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-semibold overflow-hidden btn-golden-shine shadow-lg shadow-[#E8B830]/25 hover:shadow-xl hover:shadow-[#E8B830]/30 transition-shadow duration-300 hover:scale-105"
                           >
                             <span className="relative z-10">Book Now</span>
-                          </Link>
+                          </a>
                         </>
                       )
                     ) : (
@@ -420,13 +421,13 @@ export function Header() {
       {/* Mobile Bottom Navigation */}
       <nav className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-t border-gray-200 shadow-2xl shadow-black/10">
         <div className="flex items-center justify-between px-2 py-1">
-          {[{ href: "/", label: "Home", icon: Home }, { href: "/services", label: "Services", icon: Stethoscope }, { href: "/book", label: "Book", icon: Calendar, isPrimary: true }, { href: "/gallery", label: "Gallery", icon: ImageIcon }, { href: "/about", label: "About", icon: Info }].map((item) => {
+          {[{ href: "/", label: "Home", icon: Home }, { href: "/services", label: "Services", icon: Stethoscope }, { href: BOOKING_URL, label: "Book", icon: Calendar, isPrimary: true }, { href: "/gallery", label: "Gallery", icon: ImageIcon }, { href: "/about", label: "About", icon: Info }].map((item) => {
             const Icon = item.icon
             const isBookNow = item.isPrimary
             
             if (isBookNow) {
               return (
-                <Link
+                <a
                   key={item.href}
                   href={item.href}
                   className="flex flex-col items-center justify-center py-2 -mt-5"
@@ -435,7 +436,7 @@ export function Header() {
                     <Icon className="w-5 h-5" />
                   </div>
                   <span className="text-[9px] font-semibold text-[#E8B830]">{item.label}</span>
-                </Link>
+                </a>
               )
             }
             
@@ -562,13 +563,13 @@ export function Header() {
                         >
                           Log in
                         </Link>
-                        <Link
-                          href="/book"
+                        <a
+                          href={BOOKING_URL}
                           className="block w-full px-6 py-3 btn-golden-shine rounded-full text-center shadow-lg shadow-[#E8B830]/25"
                           onClick={() => setMobileOpen(false)}
                         >
                           Book Now
-                        </Link>
+                        </a>
                       </div>
                     )
                   ) : (

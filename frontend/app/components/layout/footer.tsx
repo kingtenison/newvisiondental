@@ -13,6 +13,7 @@ import {
   ArrowRight,
   Calendar
 } from "lucide-react"
+import { BOOKING_URL } from "@/app/lib/constants/booking"
 
 // Custom TikTok Icon component with official brand design
 const TikTokIcon = ({ className }: { className?: string }) => (
@@ -45,13 +46,13 @@ const footerLinks = {
     { name: "Gallery", href: "/gallery" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
-    { name: "Book Appointment", href: "/book" },
+    { name: "Book Appointment", href: BOOKING_URL },
   ],
   sitemap: [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "All Services", href: "/services" },
-    { name: "Book Online", href: "/book" },
+    { name: "Book Online", href: BOOKING_URL },
     { name: "Our Locations", href: "/locations" },
     { name: "Gallery", href: "/gallery" },
     { name: "Blog", href: "/blog" },
@@ -301,13 +302,13 @@ export function Footer() {
           <div className="col-span-3 sm:col-span-2 lg:col-span-1">
             <h4 className="text-white font-semibold text-xs lg:text-sm tracking-wider uppercase mb-3 hidden sm:block">&nbsp;</h4>
             <div className="flex flex-wrap items-center gap-2">
-              <Link
-                href="/book"
+              <a
+                href={BOOKING_URL}
                 className="inline-flex items-center gap-1.5 px-4 py-3 bg-[#E8B830] text-[#0A0A0A] text-xs lg:text-sm font-bold rounded-full hover:shadow-[0_0_20px_rgba(232,184,48,0.4)] hover:scale-105 transition-all duration-300 uppercase tracking-wide"
               >
                 <Calendar className="w-3 h-3" />
                 Book Now
-              </Link>
+              </a>
               <a
                 href="tel:+2330559497906"
                 className="inline-flex items-center gap-1.5 px-4 py-3 bg-white/5 text-white text-xs lg:text-sm font-bold rounded-full border border-white/20 hover:border-[#00C8E8]/50 hover:bg-[#00C8E8]/10 hover:text-[#00C8E8] transition-all duration-300 uppercase tracking-wide group"

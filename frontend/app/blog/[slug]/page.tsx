@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BOOKING_URL } from "@/app/lib/constants/booking";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { motion } from "framer-motion";
@@ -228,7 +229,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   <Sparkles className="w-8 h-8 text-[#E8B830] mb-3" />
                   <h3 className="text-white font-bold mb-2">Need Dental Advice?</h3>
                   <p className="text-white/60 text-sm mb-4">Book a consultation with our expert dentists today.</p>
-                  <Link href="/book" className="inline-flex items-center gap-2 px-5 py-3 bg-[#E8B830] text-[#1a0a10] rounded-full text-sm font-semibold hover:bg-[#E8B830] transition-colors">
+                  <Link href={BOOKING_URL} className="inline-flex items-center gap-2 px-5 py-3 bg-[#E8B830] text-[#1a0a10] rounded-full text-sm font-semibold hover:bg-[#E8B830] transition-colors">
                     Book Now
                     <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -275,7 +276,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   More Articles
                 </span>
               </Link>
-              <Link href="/book" className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold border-2 border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">
+              <Link href={BOOKING_URL} className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold border-2 border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300">
                 <Calendar className="w-5 h-5" />
                 Book Consultation
               </Link>

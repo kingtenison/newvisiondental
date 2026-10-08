@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Sparkles, Shield, Heart, Award, CheckCircle } from "lucide-react";
+import { BOOKING_URL } from "@/app/lib/constants/booking";
 import { useRef } from "react";
 
 const features = [
@@ -149,13 +150,13 @@ export default function EnhancedWhyChooseUs() {
               transition={{ delay: 0.7 }}
               className="mt-10 sm:mt-12 lg:mt-8"
             >
-              <Link
-                href="/book"
+              <a
+                href={BOOKING_URL}
                 className="group inline-flex items-center justify-center gap-3 sm:gap-4 px-6 py-3 sm:px-10 sm:py-5 lg:px-16 lg:py-6 bg-[#E8B830] text-[#0A0A0A] font-black rounded-full transition-all duration-300 hover:shadow-[0_0_50px_rgba(232,184,48,0.45)] hover:scale-105 active:scale-95 uppercase tracking-widest text-xs sm:text-sm lg:text-xl"
               >
                 Book Appointment
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 group-hover:translate-x-2 transition-transform duration-300" />
-              </Link>
+              </a>
             </motion.div>
           </div>
 
