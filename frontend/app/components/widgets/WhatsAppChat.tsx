@@ -165,6 +165,12 @@ export default function WhatsAppChat() {
   }
 
   const openWhatsApp = (context?: string) => {
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", "click_whatsapp", {
+        event_category: "conversion",
+        event_label: context || "general inquiry",
+      });
+    }
     const encodedMessage = encodeURIComponent(`Hi New Vision! I was just chatting with your Clinical Concierge about: "${context || 'general inquiry'}"`)
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank")
   }
