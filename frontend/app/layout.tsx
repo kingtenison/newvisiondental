@@ -11,12 +11,14 @@ const siteUrl = 'https://newvisiondentalclinic.com';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'New Vision Dental Clinic | Best Dental Clinic in Accra, Ghana',
+    default: 'Dental Clinic in Accra, Ghana | New Vision Dental Clinic',
     template: '%s | New Vision Dental Clinic',
   },
   description: 'Award-winning dental care across Accra, Ghana with 3 modern branches in North Legon, Ashaley Botwe & ACP Estate Kwabenya. Specialists in dental implants, BlancOne teeth whitening, root canals, braces & emergency dental care. Rated 4.9/5.',
   keywords: [
+    'dental clinic',
     'dental clinic Accra',
+    'dental clinic in Accra Ghana',
     'best dental clinic in Ghana',
     'dentist in Accra Ghana',
     'dentist North Legon',
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_GH',
     siteName: 'New Vision Dental Clinic',
-    title: 'New Vision Dental Clinic | Best Dental Clinic in Accra, Ghana',
+    title: 'Dental Clinic in Accra, Ghana | New Vision Dental Clinic',
     description: 'Premier dental care across Accra, Ghana. 3 modern clinics in North Legon, Ashaley Botwe & ACP Estate. Implants, whitening, root canals, braces & emergency care.',
     url: siteUrl,
     images: [

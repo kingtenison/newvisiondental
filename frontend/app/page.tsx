@@ -11,10 +11,13 @@ import InsurancePartners from './components/sections/InsurancePartners'
 import WhatsAppChat from './components/widgets/WhatsAppChat'
 
 export const metadata: Metadata = {
-  title: 'Best Dental Clinic in Accra, Ghana | New Vision Dental Clinic',
+  title: 'Dental Clinic in Accra, Ghana | Best Dentist | New Vision Dental Clinic',
   description: 'Experience premier dental care in Accra, Ghana. 3 modern clinics in North Legon, Ashaley Botwe & ACP Estate Kwabenya. Dental implants, BlancOne teeth whitening, root canals, braces & emergency dentistry. Book online.',
   keywords: [
+    'dental clinic',
     'dental clinic Accra',
+    'dental clinic in Accra Ghana',
+    'best dental clinic in Accra',
     'best dentist in Accra Ghana',
     'dentist North Legon',
     'dentist Ashaley Botwe',
@@ -24,10 +27,11 @@ export const metadata: Metadata = {
     'root canal treatment Accra',
     'emergency dentist Accra',
     'braces Ghana price',
+    'dental clinic near me',
     'New Vision Dental Clinic',
   ],
   openGraph: {
-    title: 'Best Dental Clinic in Accra, Ghana | New Vision Dental Clinic',
+    title: 'Dental Clinic in Accra, Ghana | Best Dentist | New Vision Dental Clinic',
     description: 'Premier dental care across Accra. Dental implants, teeth whitening, root canals, braces & emergency dentistry across 3 modern clinics.',
     url: 'https://newvisiondentalclinic.com',
     siteName: 'New Vision Dental Clinic',

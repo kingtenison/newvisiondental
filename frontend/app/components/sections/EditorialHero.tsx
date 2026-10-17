@@ -154,7 +154,7 @@ export default function EditorialHero() {
                 transition={{ delay: 1.1, duration: 0.6 }}
                 className="block text-white"
               >
-                in Ghana
+                in Accra, Ghana
               </motion.span>
             </h1>
             
@@ -172,11 +172,10 @@ export default function EditorialHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.6, duration: 0.8 }}
-            className="text-sm sm:text-base md:text-lg lg:text-2xl text-white/70 leading-relaxed max-w-2xl mb-6 sm:mb-10 font-light"
+            className="text-sm sm:text-base md:text-lg lg:text-2xl text-white/80 leading-relaxed max-w-2xl mb-6 sm:mb-10 font-light"
             style={{ textShadow: "0 1px 10px rgba(0,0,0,0.7), 0 2px 30px rgba(0,0,0,0.4)" }}
           >
-            Expert dentists, transparent pricing, and uncompromising comfort. 
-            Experience world-class dental care in a luxury environment.
+            Accra&apos;s premier dental clinic with 3 modern branches in North Legon, Ashaley Botwe &amp; ACP Estate Kwabenya. Experienced dentists, transparent pricing, and gentle, pain-free oral care.
           </motion.p>
 
           {/* CTA Buttons - Left Aligned */}
