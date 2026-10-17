@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
+  const baseUrl = 'https://newvisiondentalclinic.com';
+
   return {
     rules: [
       {
@@ -9,19 +11,34 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/admin', '/dashboard', '/api'],
       },
       {
-        userAgent: 'Googlebot',
+        userAgent: [
+          'Googlebot',
+          'Bingbot',
+          'Slurp',
+          'DuckDuckBot',
+          'Baiduspider',
+          'YandexBot',
+        ],
         allow: '/',
         disallow: ['/admin', '/dashboard', '/api'],
       },
+      // Explicitly allow AI Search and Answer Engine bots for AEO (Perplexity, ChatGPT Search, Claude, Gemini)
       {
-        userAgent: 'GPTBot',
-        disallow: '/',
-      },
-      {
-        userAgent: 'CCBot',
-        disallow: '/',
+        userAgent: [
+          'GPTBot',
+          'ChatGPT-User',
+          'PerplexityBot',
+          'ClaudeBot',
+          'Claude-Web',
+          'Applebot',
+          'Google-Extended',
+          'CCBot',
+        ],
+        allow: '/',
+        disallow: ['/admin', '/dashboard', '/api'],
       },
     ],
-    sitemap: 'https://newvisiondentalclinic.com/sitemap.xml',
+    sitemap: `${baseUrl}/sitemap.xml`,
+    host: baseUrl,
   };
 }

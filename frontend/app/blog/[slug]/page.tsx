@@ -75,8 +75,51 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   
   await incrementViewCount(post.id);
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `https://newvisiondentalclinic.com/blog/${slug}#article`,
+    "headline": post.title,
+    "description": post.excerpt || post.title,
+    "image": post.image_url ? [post.image_url] : ["https://newvisiondentalclinic.com/images/hero/hero-1.jpg"],
+    "datePublished": post.published_at || new Date().toISOString(),
+    "dateModified": post.updated_at || post.published_at || new Date().toISOString(),
+    "author": {
+      "@type": "Person",
+      "name": post.author_name || "Dr. Felix Govina",
+      "jobTitle": "Lead Dental Surgeon",
+      "url": "https://newvisiondentalclinic.com/about"
+    },
+    "publisher": {
+      "@id": "https://newvisiondentalclinic.com/#organization"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://newvisiondentalclinic.com/blog/${slug}`
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://newvisiondentalclinic.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://newvisiondentalclinic.com/blog" },
+      { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://newvisiondentalclinic.com/blog/${slug}` }
+    ]
+  };
+
   return (
-    <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 overflow-x-hidden">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 overflow-x-hidden">
 
       {/* Hero Section — blue gradient */}
       <section className="relative w-full overflow-hidden">
@@ -286,5 +329,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </section>
 
     </div>
+    </>
   );
 }

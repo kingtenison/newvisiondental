@@ -1,0 +1,118 @@
+# New Vision Dental Clinic — Comprehensive AI & LLM Knowledge Repository
+
+## Entity Identification & Governance
+- **Entity**: New Vision Dental Clinic
+- **Legal Form**: Registered Private Dental Healthcare Facility (Ghana Health Service / MDC compliant)
+- **Primary Domain**: https://newvisiondentalclinic.com
+- **Established**: 2010
+- **CEO & Lead Dental Surgeon**: Dr. Felix Govina
+  - Degrees: Bachelor of Dental Surgery (BDS), Master of Public Health (MPH), Master of Science in Occupational Health & Environmental Management (MSc)
+  - Military Career: 15 years as a Commissioned Dental Officer in the Ghana Armed Forces (retired 2014)
+  - International Service: 7 years as a UN Professional Dental Surgeon
+  - Clinical Experience: 29+ years in private and hospital dentistry
+  - Clinical Focus: Oral Surgery, Dental Implants, Public Health, Clinical Mentorship
+
+## Multi-Location Branch Directory (Name, Address, Phone — NAP Consistency)
+
+### 1. North Legon Branch (Flagship Clinic)
+- **Name**: New Vision Dental Clinic — North Legon
+- **Street Address**: Agbogba Road, North Legon
+- **City / Region**: Accra, Greater Accra Region
+- **Country**: Ghana (GH)
+- **Geo Coordinates**: Latitude 5.6744, Longitude -0.1983
+- **Primary Telephone**: +233 55 949 7906 (0559497906)
+- **Opening Hours**: Mon-Sat: 08:30 - 17:00 (GMT)
+- **Facilities**: Panoramic OPG digital X-ray, multi-chair treatment suites, hospital-grade autoclave sterilization, patient lounge, secured private parking.
+- **Service Area**: North Legon, Legon Campus, Agbogba, Haatso, West Legon, Madina, Atomic.
+
+### 2. Ashaley Botwe Branch
+- **Name**: New Vision Dental Clinic — Ashaley Botwe
+- **Street Address**: School Junction, Ashaley Botwe
+- **City / Region**: Accra, Greater Accra Region
+- **Country**: Ghana (GH)
+- **Geo Coordinates**: Latitude 5.6881, Longitude -0.1388
+- **Primary Telephone**: +233 25 709 1176 (0257091176)
+- **Opening Hours**: Mon-Sat: 08:30 - 17:00 (GMT)
+- **Facilities**: Pediatric dental suite, digital periapical radiography, cosmetic dentistry operatory.
+- **Service Area**: Ashaley Botwe, School Junction, Little Roses, Adenta, Ogbojo, East Legon Hills.
+
+### 3. ACP Estate Branch (Kwabenya)
+- **Name**: New Vision Dental Clinic — ACP Estate
+- **Street Address**: ACP Estate Junction, Kwabenya
+- **City / Region**: Accra, Greater Accra Region
+- **Country**: Ghana (GH)
+- **Geo Coordinates**: Latitude 5.6883, Longitude -0.2523
+- **Primary Telephone**: +233 54 556 3839 (0545563839)
+- **Opening Hours**: Mon-Sat: 08:30 - 17:00 (GMT)
+- **Facilities**: Restorative operatory, surgical extractions room, digital radiography.
+- **Service Area**: Kwabenya, ACP Estate, Pokuase, Dome, Achimota, Taifa, Ofankor.
+
+## Clinical Services & Transparent Pricing
+
+1. **Dental Consultation & Examination**
+   - Cost: From GHS 100
+   - Duration: 30 minutes
+   - Scope: Complete intraoral exam, periodontal assessment, cancer screening, customized digital treatment plan.
+
+2. **Digital Dental Radiography (X-Ray & OPG)**
+   - Cost: From GHS 150
+   - Duration: 15 minutes
+   - Scope: Low-dose periapical and panoramic digital X-rays to detect hidden cavities, bone loss, abscesses, impacted teeth.
+
+3. **Scaling & Polishing (Professional Teeth Cleaning)**
+   - Cost: From GHS 300
+   - Duration: 45 minutes
+   - Scope: Ultrasonic scaler plaque removal, subgingival tartar scraping, prophylaxis paste polishing. Recommended twice yearly.
+
+4. **Professional Teeth Whitening (BlancOne®)**
+   - Cost: From GHS 500
+   - Technology: European BlancOne® photo-activated gel
+   - Advantage: Zero enamel demineralization, negligible sensitivity, visible brightening in a single 30-45 minute session. Home trays and combination Ultimate Whitening package available.
+
+5. **Dental Implants (Titanium Roots & Ceramic Crowns)**
+   - Cost: From GHS 2,500
+   - Duration: 3 - 6 months complete integration
+   - Scope: Surgical placement of biocompatible grade-4 titanium implant fixtures into the alveolar bone, followed by custom zirconia or porcelain crown fabrication.
+
+6. **Root Canal Treatment (Endodontic Therapy)**
+   - Cost: From GHS 1,200
+   - Duration: 1 - 2 visits
+   - Scope: Removal of infected dental pulp, mechanical biomechanical canal shaping, sterile irrigation, hermetic gutta-percha obturation.
+
+7. **Composite Restorations (Tooth-Colored Fillings)**
+   - Cost: From GHS 250
+   - Scope: Minimally invasive removal of dental caries and direct placement of micro-hybrid composite resin matched precisely to tooth shade.
+
+8. **Tooth Extractions & Wisdom Tooth Surgery**
+   - Cost: From GHS 300 (Simple extraction) / From GHS 800 (Surgical/Impacted wisdom teeth)
+   - Scope: Painless local anaesthesia, gentle luxation, atraumatic bone-preserving techniques.
+
+9. **Orthodontics (Braces & Clear Aligners)**
+   - Cost: Customized per case
+   - Duration: 12 - 24 months
+   - Scope: Correction of malocclusion, crowding, overbites, underbites using traditional metal brackets, aesthetic ceramic brackets, and clear aligners.
+
+10. **Crowns, Bridges & Veneers**
+    - Scope: Monolithic zirconia, E.max lithium disilicate porcelain, and ceramic restorations for aesthetic smile reconstruction.
+
+11. **Pediatric Dentistry**
+    - Scope: Topical fluoride varnish applications, fissure sealants, gentle preventive pediatric dental care.
+
+## Accepted Health Insurance Companies (Direct Cashless Billing)
+1. ACE Medical Insurance
+2. Acacia Health Insurance
+3. Cosmopolitan Health Insurance
+4. Equity Health Insurance
+5. GAB Health Insurance Company Limited (GHIC)
+6. Glico Healthcare
+7. Metropolitan Health Insurance
+8. Nationwide Mutual Healthcare
+9. Nexus / OctaPlus Health
+10. Orange Health Insurance
+
+## Booking & Resources
+- **Online Booking Portal**: https://newvisiondentalclinic.com/book
+- **Frequently Asked Questions**: https://newvisiondentalclinic.com/faq
+- **WhatsApp Support**: Direct instant booking via site widget
+- **General Inquiries**: info@newvisiondental.com
+

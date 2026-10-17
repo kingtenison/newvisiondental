@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Book Appointment",
-  description: "Book your dental appointment at New Vision Dental Clinic. Choose from 15 services across 3 locations in Accra. Same-day appointments available.",
-  openGraph: {
-    title: "Book a Dental Appointment | New Vision Dental Clinic",
-    description: "Schedule your visit — choose from 15 services across 3 Accra locations.",
-  },
+  title: "Book Dental Appointment Online | New Vision Dental Clinic Accra",
+  description: "Schedule your dental appointment online at New Vision Dental Clinic. Select your preferred branch in North Legon, Ashaley Botwe, or ACP Estate Kwabenya. Instant confirmation.",
+  keywords: [
+    "book dentist appointment Accra",
+    "dental appointment online Ghana",
+    "New Vision Dental booking",
+    "emergency dentist appointment Accra",
+  ],
   alternates: {
     canonical: "https://newvisiondentalclinic.com/book",
   },

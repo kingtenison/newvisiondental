@@ -117,8 +117,11 @@ export default function EditorialHero() {
             />
           </motion.div>
         </AnimatePresence>
+        {/* Left-to-right gradient for text legibility, fading completely to the right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent pointer-events-none" />
+
         {/* Bottom fade to blend into next section */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#0A0A0A] to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#0A0A0A] to-transparent pointer-events-none" />
       </div>
 
       {/* Main Content - Left Aligned */}

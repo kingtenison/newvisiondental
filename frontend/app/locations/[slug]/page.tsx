@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BOOKING_URL } from "@/app/lib/constants/booking";
-import { MapPin, Phone, ChevronRight, Calendar, Award, Users, ArrowLeft, Sparkles, Navigation } from "lucide-react";
+import { MapPin, Phone, ChevronRight, Calendar, Award, Users, ArrowLeft, Sparkles, Navigation, HelpCircle, CheckCircle2 } from "lucide-react";
 import { FadeIn } from "@/app/components/animations/FadeIn";
 import Image from "next/image";
 
@@ -17,7 +17,9 @@ const locations = [
     mapEmbed: "https://maps.google.com/maps?q=Agbogba+Road,+North+Legon,+Accra,+Ghana&t=&z=15&ie=UTF8&iwloc=&output=embed",
     description: "Our flagship clinic on Agbogba Road serves the North Legon community with comprehensive dental care. Equipped with state-of-the-art technology and staffed by experienced professionals.",
     facilities: ["Modern treatment rooms", "Digital X-ray facilities", "Sterilization center", "Comfortable waiting area", "Ample parking space"],
-    services: ["Teeth Whitening", "Dental Implants", "Root Canal Treatment", "Braces & Orthodontics", "Children's Dentistry", "Dental Cleaning"]
+    services: ["Teeth Whitening", "Dental Implants", "Root Canal Treatment", "Braces & Orthodontics", "Children's Dentistry", "Dental Cleaning"],
+    geo: { lat: 5.6744, lng: -0.1983 },
+    areaServed: ["North Legon", "Agbogba", "Haatso", "Legon Campus", "West Legon", "Atomic", "Madina", "Accra"],
   },
   { 
     name: "Ashaley Botwe", 
@@ -30,7 +32,9 @@ const locations = [
     mapEmbed: "https://maps.google.com/maps?q=School+Junction,+Ashaley+Botwe,+Accra,+Ghana&t=&z=15&ie=UTF8&iwloc=&output=embed",
     description: "Conveniently located at School Junction, our Ashaley Botwe clinic provides accessible dental care for families in the area with a warm, welcoming environment.",
     facilities: ["Modern treatment rooms", "Digital X-ray facilities", "Sterilization center", "Comfortable waiting area", "Ample parking space"],
-    services: ["Teeth Whitening", "Dental Implants", "Root Canal Treatment", "Braces & Orthodontics", "Children's Dentistry", "Dental Cleaning"]
+    services: ["Teeth Whitening", "Dental Implants", "Root Canal Treatment", "Braces & Orthodontics", "Children's Dentistry", "Dental Cleaning"],
+    geo: { lat: 5.6881, lng: -0.1388 },
+    areaServed: ["Ashaley Botwe", "School Junction", "Little Roses", "Adenta", "Ogbojo", "East Legon Hills", "Accra"],
   },
   { 
     name: "ACP Estate", 
@@ -43,7 +47,9 @@ const locations = [
     mapEmbed: "https://maps.google.com/maps?q=ACP+Estate+Junction,+Kwabenya,+Accra,+Ghana&t=&z=15&ie=UTF8&iwloc=&output=embed",
     description: "Serving the Kwabenya community from ACP Estate Junction, this clinic offers top-quality dental services in a modern, comfortable setting.",
     facilities: ["Modern treatment rooms", "Digital X-ray facilities", "Sterilization center", "Comfortable waiting area", "Ample parking space"],
-    services: ["Teeth Whitening", "Dental Implants", "Root Canal Treatment", "Braces & Orthodontics", "Children's Dentistry", "Dental Cleaning"]
+    services: ["Teeth Whitening", "Dental Implants", "Root Canal Treatment", "Braces & Orthodontics", "Children's Dentistry", "Dental Cleaning"],
+    geo: { lat: 5.6883, lng: -0.2523 },
+    areaServed: ["Kwabenya", "ACP Estate", "Pokuase", "Achimota", "Dome", "Taifa", "Ofankor", "Accra"],
   },
 ];
 
@@ -52,11 +58,39 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const location = locations.find(l => l.slug === slug);
   if (!location) return { title: "Location Not Found" };
   return {
-    title: `${location.name} Dental Clinic`,
-    description: `Visit New Vision Dental Clinic at ${location.name}, ${location.address}. Book your appointment for expert dental care.`,
+    title: `Best Dentist in ${location.name}, Accra | New Vision Dental Clinic`,
+    description: `Looking for an expert dentist in ${location.name}? New Vision Dental Clinic provides dental implants, BlancOne teeth whitening, root canals, braces & cleaning at ${location.address}. Call ${location.phone} to book.`,
+    keywords: [
+      `dentist ${location.name}`,
+      `dental clinic ${location.name}`,
+      `dentist in ${location.name} Accra`,
+      `dental care ${location.name}`,
+      `teeth whitening ${location.name}`,
+      `dental implants ${location.name}`,
+      'dental clinic Accra',
+      'dentist Ghana',
+    ],
     openGraph: {
-      title: `${location.name} Dental Clinic | New Vision Dental Clinic`,
-      description: `Visit us at ${location.address}. Expert dental care in ${location.name}.`,
+      title: `Best Dentist in ${location.name}, Accra | New Vision Dental Clinic`,
+      description: `Visit New Vision Dental Clinic in ${location.name} at ${location.address}. High-end dental care, transparent pricing, and insurance accepted.`,
+      url: `https://newvisiondentalclinic.com/locations/${slug}`,
+      siteName: 'New Vision Dental Clinic',
+      locale: 'en_GH',
+      type: 'website',
+      images: [
+        {
+          url: location.image,
+          width: 1200,
+          height: 630,
+          alt: `New Vision Dental Clinic — ${location.name} Branch in Accra, Ghana`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `Best Dentist in ${location.name}, Accra | New Vision Dental Clinic`,
+      description: `Visit New Vision Dental Clinic in ${location.name} at ${location.address}. Call ${location.phone} to book.`,
+      images: [location.image],
     },
     alternates: {
       canonical: `https://newvisiondentalclinic.com/locations/${slug}`,
@@ -78,22 +112,122 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "DentalClinic",
-    "name": `New Vision Dental Clinic - ${location.name}`,
+    "@type": ["Dentist", "DentalClinic", "LocalBusiness"],
+    "@id": `https://newvisiondentalclinic.com/locations/${slug}#clinic`,
+    "name": `New Vision Dental Clinic — ${location.name}`,
     "description": location.description,
+    "url": `https://newvisiondentalclinic.com/locations/${slug}`,
+    "image": `https://newvisiondentalclinic.com${location.image}`,
+    "telephone": `+233${location.phone.replace(/^0/, "")}`,
+    "priceRange": "GHS 100 - GHS 5,000",
+    "currenciesAccepted": "GHS",
+    "paymentAccepted": "Cash, Credit Card, Visa, Mastercard, Mobile Money, Insurance",
+    "parentOrganization": {
+      "@id": "https://newvisiondentalclinic.com/#organization"
+    },
     "address": {
       "@type": "PostalAddress",
       "streetAddress": location.address.split(",")[0],
-      "addressLocality": location.address.split(",")[1]?.trim() || "Accra",
+      "addressLocality": location.name,
+      "addressRegion": "Greater Accra",
+      "postalCode": "00233",
       "addressCountry": "GH"
     },
-    "telephone": location.phone,
-    "openingHours": location.hours
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": location.geo.lat,
+      "longitude": location.geo.lng
+    },
+    "hasMap": location.mapLink,
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:30",
+        "closes": "17:00"
+      }
+    ],
+    "areaServed": location.areaServed.map(area => ({
+      "@type": "Place",
+      "name": area
+    })),
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "ratingCount": 185
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://newvisiondentalclinic.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Locations",
+        "item": "https://newvisiondentalclinic.com/locations"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": location.name,
+        "item": `https://newvisiondentalclinic.com/locations/${slug}`
+      }
+    ]
+  };
+
+  const localFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": `Where is the New Vision Dental Clinic in ${location.name}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `Our ${location.name} branch is located at ${location.address}. Directions and Google Maps navigation are available directly on this page.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `What are the opening hours for ${location.name} clinic?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `Our ${location.name} branch is open Monday through Saturday from 8:30 AM to 5:00 PM.`
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `Can I use my private health insurance at ${location.name}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, all our locations including " + location.name + " accept direct billing with 10 major insurance providers including Acacia, Nationwide, Glico, Metropolitan, Cosmopolitan, Equity, ACE, GAB, OctaPlus, and Orange Health."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `How can I book an appointment at ${location.name}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `You can book online at https://newvisiondentalclinic.com/book or call our ${location.name} clinic directly on ${location.phone}.`
+        }
+      }
+    ]
   };
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localFaqSchema) }} />
 
       <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 overflow-x-hidden">
         {/* Hero */}
@@ -306,6 +440,39 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                 <Navigation className="w-4 h-4" /> Get Directions
               </a>
             </div>
+          </div>
+        </section>
+
+        {/* Local FAQs for AEO & Featured Snippets */}
+        <section className="w-full bg-white py-16 border-t border-gray-100">
+          <div className="w-full px-4 sm:px-6 lg:px-12 max-w-5xl mx-auto">
+            <FadeIn>
+              <div className="text-center mb-10">
+                <span className="text-[#E8B830] text-xs font-bold uppercase tracking-widest inline-flex items-center gap-1.5 mb-2">
+                  <Sparkles className="w-3.5 h-3.5" /> Frequently Asked Questions
+                </span>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+                  {location.name} Dental Clinic FAQs
+                </h2>
+                <p className="text-gray-500 text-sm sm:text-base mt-2 max-w-xl mx-auto">
+                  Key details about directions, accepted insurance, appointments, and emergency dental care at our {location.name} branch.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                {localFaqSchema.mainEntity.map((faq, index) => (
+                  <div key={index} className="p-5 sm:p-6 rounded-2xl bg-gray-50 border border-gray-200">
+                    <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 flex items-start gap-2.5">
+                      <HelpCircle className="w-5 h-5 text-[#1A4FAD] shrink-0 mt-0.5" />
+                      {faq.name}
+                    </h3>
+                    <p className="text-gray-600 text-sm sm:text-base leading-relaxed pl-7">
+                      {faq.acceptedAnswer.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </FadeIn>
           </div>
         </section>
 

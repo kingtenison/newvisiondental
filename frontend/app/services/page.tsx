@@ -34,7 +34,7 @@ const services = [
     description: "Immediate treatment for severe toothaches, knocked-out teeth, broken restorations, and other urgent dental issues.",
     icon: AlertTriangle,
     slug: "emergency-dentistry",
-    image: "/images/services/emergency-dentistry.jpg",
+    image: "/images/services/emergency-dentistry-v2.jpg",
     rating: "4.9",
     features: ["Same-day care", "Pain relief", "Compassionate team"]
   },
@@ -43,7 +43,7 @@ const services = [
     description: "Expert surgical services including tooth extractions, wisdom tooth removal, abscess treatment, and gum surgery.",
     icon: Scissors,
     slug: "minor-oral-surgery",
-    image: "/images/services/minor-oral-surgery.jpg",
+    image: "/images/services/minor-oral-surgery-v2.jpg",
     rating: "4.9",
     features: ["Local anaesthesia", "Sterile environment", "Aftercare support"]
   },

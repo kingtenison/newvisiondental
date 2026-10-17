@@ -261,8 +261,54 @@ const stats = [
 ];
 
 export default function AboutPage() {
+  const aboutSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": "https://newvisiondentalclinic.com/about#webpage",
+        "url": "https://newvisiondentalclinic.com/about",
+        "name": "About Dr. Felix Govina & New Vision Dental Clinic",
+        "description": "Learn about Dr. Felix Govina (BDS, MPH, MSc) and New Vision Dental Clinic in Accra, Ghana.",
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://newvisiondentalclinic.com" },
+            { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://newvisiondentalclinic.com/about" }
+          ]
+        },
+        "mainEntity": {
+          "@type": "Person",
+          "@id": "https://newvisiondentalclinic.com/about#dr-felix-govina",
+          "name": "Dr. Felix Govina",
+          "honorificPrefix": "Dr.",
+          "honorificSuffix": "BDS, MPH, MSc",
+          "jobTitle": "Founder, CEO & Lead Dental Surgeon",
+          "worksFor": {
+            "@id": "https://newvisiondentalclinic.com/#organization"
+          },
+          "image": "https://newvisiondentalclinic.com/images/team/CEO.jpg",
+          "description": "Seasoned dental surgeon with over 29 years of clinical practice in dentistry, public health, and occupational safety. Served 15 years as a military dental officer in the Ghana Armed Forces and 7 years as a UN professional dentist.",
+          "alumniOf": "University of Ghana Dental School",
+          "knowsAbout": [
+            "Dentistry",
+            "Oral Surgery",
+            "Dental Implants",
+            "Public Health",
+            "Occupational Health & Environmental Management"
+          ]
+        }
+      }
+    ]
+  };
+
   return (
-    <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 overflow-x-hidden">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
+      <div className="min-h-screen bg-[#F2F4F8] pt-[72px] md:pt-20 overflow-x-hidden">
 
       {/* Hero Section — simplified */}
       <section className="relative w-full min-h-[25vh] md:min-h-[35vh] flex flex-col overflow-hidden">
@@ -600,5 +646,6 @@ export default function AboutPage() {
       </section>
 
     </div>
+    </>
   );
 }

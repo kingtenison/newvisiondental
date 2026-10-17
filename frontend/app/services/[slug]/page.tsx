@@ -250,7 +250,7 @@ const services = [
     slug: "emergency-dentistry",
     duration: "Same-Day",
     price: "From GHS 200",
-    image: "/images/services/emergency-dentistry.jpg",
+    image: "/images/services/emergency-dentistry-v2.jpg",
     features: [
       "Same-Day Appointments: We prioritize dental emergencies and strive to see you as quickly as possible, often on the same day. We offer extended hours, including Saturday appointments and in some cases, Sunday appointments.",
       "Comprehensive Services: From pain relief to restorative solutions, we address a wide range of dental emergencies efficiently.",
@@ -281,7 +281,7 @@ const services = [
     slug: "minor-oral-surgery",
     duration: "Varies",
     price: "From GHS 300",
-    image: "/images/services/minor-oral-surgery.jpg",
+    image: "/images/services/minor-oral-surgery-v2.jpg",
     features: [
       "Tooth extractions (simple and surgical)",
       "Surgical extraction of wisdom teeth",
@@ -1314,12 +1314,40 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const service = services.find(s => s.slug === slug);
   if (!service) return { title: "Service Not Found" };
+  const serviceTitle = `${service.name} in Accra, Ghana | New Vision Dental Clinic`;
+  const serviceDesc = `${service.name} at New Vision Dental Clinic in Accra. ${service.description}. Expert dental surgeons, modern tech, and transparent pricing ${service.price ? `(${service.price})` : ''}. Book today.`;
   return {
-    title: service.name,
-    description: service.description,
+    title: serviceTitle,
+    description: serviceDesc,
+    keywords: [
+      `${service.name.toLowerCase()} Accra`,
+      `${service.name.toLowerCase()} Ghana`,
+      `${service.name.toLowerCase()} cost Accra`,
+      'dental clinic Accra',
+      'dentist Ghana',
+      'New Vision Dental Clinic',
+    ],
     openGraph: {
-      title: `${service.name} | New Vision Dental Clinic`,
-      description: service.description,
+      title: serviceTitle,
+      description: serviceDesc,
+      url: `https://newvisiondentalclinic.com/services/${slug}`,
+      siteName: 'New Vision Dental Clinic',
+      locale: 'en_GH',
+      type: 'article',
+      images: [
+        {
+          url: service.image,
+          width: 1200,
+          height: 630,
+          alt: `${service.name} at New Vision Dental Clinic Accra, Ghana`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: serviceTitle,
+      description: serviceDesc,
+      images: [service.image],
     },
     alternates: {
       canonical: `https://newvisiondentalclinic.com/services/${slug}`,
@@ -1335,20 +1363,30 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     notFound();
   }
 
+  const numericPriceMatch = service.price?.match(/\d[\d,]*/);
+  const numericPrice = numericPriceMatch ? numericPriceMatch[0].replace(/,/g, '') : undefined;
+
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
+    "@type": ["MedicalProcedure", "MedicalWebPage"],
+    "@id": `https://newvisiondentalclinic.com/services/${slug}#procedure`,
     "name": service.name,
-    "description": service.description,
+    "description": service.longDescription || service.description,
+    "bodyLocation": "Mouth",
+    "relevantSpecialty": "Dentistry",
+    "image": `https://newvisiondentalclinic.com${service.image}`,
+    "url": `https://newvisiondentalclinic.com/services/${slug}`,
     "provider": {
-      "@type": "DentalClinic",
-      "name": "New Vision Dental Clinic",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Accra",
-        "addressCountry": "GH"
+      "@id": "https://newvisiondentalclinic.com/#organization"
+    },
+    ...(numericPrice ? {
+      "offers": {
+        "@type": "Offer",
+        "price": numericPrice,
+        "priceCurrency": "GHS",
+        "availability": "https://schema.org/InStock"
       }
-    }
+    } : {})
   };
 
   const breadcrumbSchema = {

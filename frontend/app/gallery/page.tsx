@@ -5,11 +5,22 @@ import GalleryClient from "@/app/components/GalleryClient";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Smile Gallery",
-  description: "See real patient transformations at New Vision Dental Clinic. Browse before and after photos of teeth whitening, implants, veneers, and more.",
+  title: "Smile Transformation Gallery | Before & After Dental Care Accra",
+  description: "See real patient smile transformations at New Vision Dental Clinic in Accra, Ghana. Browse verified before and after photos of BlancOne teeth whitening, dental implants, veneers, and orthodontics.",
+  keywords: [
+    "smile gallery Accra",
+    "before and after teeth whitening Ghana",
+    "dental implants before after Accra",
+    "cosmetic dentistry results Ghana",
+    "dental clinic transformations Accra",
+  ],
   openGraph: {
-    title: "Smile Gallery | New Vision Dental Clinic",
-    description: "Real patient transformations — browse before and after photos.",
+    title: "Smile Transformation Gallery | Before & After Dental Care Accra",
+    description: "Real patient transformations — browse verified before and after dental photos at New Vision Dental Clinic.",
+    url: "https://newvisiondentalclinic.com/gallery",
+    siteName: "New Vision Dental Clinic",
+    locale: "en_GH",
+    type: "website",
   },
   alternates: {
     canonical: "https://newvisiondentalclinic.com/gallery",

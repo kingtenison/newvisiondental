@@ -90,13 +90,13 @@ export default function InsurancePartners() {
             {partners.map((partner, i) => (
               <motion.div
                 key={i}
-                className="group relative h-28 sm:h-40 md:h-44 lg:h-48 bg-white flex items-center justify-center p-3 sm:p-5 lg:p-6 transition-all duration-700 hover:bg-white/[0.95] border border-black/5"
+                className="group relative h-28 sm:h-36 md:h-40 lg:h-44 bg-white flex items-center justify-center p-2 sm:p-3 lg:p-4 transition-all duration-700 hover:bg-white/[0.95] border border-black/5"
                 whileHover={{ zIndex: 1 }}
               >
                 {/* Subtle Hover Glow */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-br from-[#1A4FAD]/10 to-transparent" />
                 
-                <div className="relative w-full h-10 sm:h-14 md:h-16 lg:h-20 max-w-[140px] sm:max-w-[200px] md:max-w-[240px] lg:max-w-[280px]">
+                <div className="relative w-full h-20 sm:h-24 md:h-28 lg:h-32 max-w-[92%] flex items-center justify-center">
                   <Image
                     src={partner.img}
                     alt={partner.name}

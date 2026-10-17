@@ -5,11 +5,23 @@ import BlogClient from "@/app/components/BlogClient";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Dental Health Blog",
-  description: "Expert dental health tips, guides, and insights from New Vision Dental Clinic. Learn about oral hygiene, treatments, and maintaining a healthy smile.",
+  title: "Dental Health Blog & Expert Oral Care Guides | New Vision Dental Clinic Accra",
+  description: "Expert dental health tips, oral hygiene advice & treatment insights from Dr. Felix Govina and the dental surgery team at New Vision Dental Clinic in Accra, Ghana.",
+  keywords: [
+    "dental health blog Ghana",
+    "dentist advice Accra",
+    "oral hygiene tips",
+    "teeth whitening guide Ghana",
+    "dental implants guide",
+    "New Vision Dental Clinic blog",
+  ],
   openGraph: {
-    title: "Dental Health Blog | New Vision Dental Clinic",
-    description: "Expert dental health tips, guides, and insights from New Vision Dental Clinic.",
+    title: "Dental Health Blog & Expert Guides | New Vision Dental Clinic",
+    description: "Expert dental health tips, guides, and insights from New Vision Dental Clinic in Accra, Ghana.",
+    url: "https://newvisiondentalclinic.com/blog",
+    siteName: "New Vision Dental Clinic",
+    locale: "en_GH",
+    type: "website",
   },
   alternates: {
     canonical: "https://newvisiondentalclinic.com/blog",

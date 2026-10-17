@@ -83,7 +83,7 @@ export function Header() {
   const handleCallLocation = (phone: string) => {
     window.location.href = `tel:+233${phone}`
   }
-  const isBlueNavPage = pathname === '/services' || pathname.startsWith('/services/') || pathname === '/gallery' || pathname === '/about' || pathname === '/blog' || pathname.startsWith('/blog/') || pathname === '/admin' || pathname.startsWith('/admin/') || pathname === '/dashboard' || pathname.startsWith('/dashboard/')
+  const isBlueNavPage = pathname === '/services' || pathname.startsWith('/services/') || pathname === '/gallery' || pathname === '/about' || pathname === '/blog' || pathname.startsWith('/blog/') || pathname === '/faq' || pathname === '/admin' || pathname.startsWith('/admin/') || pathname === '/dashboard' || pathname.startsWith('/dashboard/')
 
   const mainNavLinks = [
     { href: "/", label: "Home" },
@@ -91,6 +91,7 @@ export function Header() {
     { href: "/gallery", label: "Gallery" },
     { href: "/about", label: "About" },
     { href: "/blog", label: "Blog" },
+    { href: "/faq", label: "FAQs" },
   ]
 
   const [desktopContactOpen, setDesktopContactOpen] = useState(false)
